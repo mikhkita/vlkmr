@@ -30,6 +30,9 @@ function fancyOpen(el){
 			// $(".fancybox-wrap").removeClass("beforeClose");
 			// $(".fancybox-wrap").addClass("afterClose");
 		},
+		tpl: {
+            closeBtn : '<a title="Close" class="fancybox-close" style="display:none;" href="javascript:;"></a>',
+        },
         padding:0
     }); 
     // $('html').addClass('fancybox-lock'); 
@@ -40,22 +43,36 @@ function fancyOpen(el){
 var customHandlers = [];
 
 $(document).ready(function(){	
-	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+	var rePhone = /^\+*\d{6,15}$/,
 		tePhone = '+7 (999) 999-99-99';
 
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
 	});
 
+	if( isMobile ){
+        $(".b-marker .b-label, .b-marker span").each(function(){
+        	$(this).addClass("fancy").attr("href", $(this).attr("data-href"));
+        });
+    }
+
+	$("img.zoom").each(function(){
+		$(this).wrap("<a href='"+$(this).attr("src")+"' class='fancy-img'></a>");
+		$(this).removeClass("zoom");
+	});
+
 	$(".ajax").parents("form").each(function(){
 		$(this).validate({
 			rules: {
 				email: 'email',
-				phone: 'customPhone'
+				phone: 'customPhone',
+				'EMAIL': 'email',
+				'PHONE': 'customPhone',
+				'TELEPHONE' : 'customPhone'
 			}
 		});
-		if( $(this).find("input[name=phone]").length ){
-			$(this).find("input[name=phone]").mask(tePhone,{placeholder:" "});
+		if( $(this).find("input[name=phone],input[name=PHONE]").length ){
+			$(this).find("input[name=phone],input[name=PHONE]").mask(tePhone,{placeholder:" "});
 		}
 	});
 
@@ -69,7 +86,7 @@ $(document).ready(function(){
 	whenScroll();
 
 	$(".fancy").each(function(){
-		var $popup = $($(this).attr("data-block")),
+		var $popup = $($(this).attr("href")),
 			$this = $(this);
 		$this.fancybox({
 			padding : 0,
@@ -83,6 +100,9 @@ $(document).ready(function(){
 			closeEffect : 'drop',
 			nextEffect  : 'elastic',
 			prevEffect  : 'elastic',
+			tpl: {
+	            closeBtn : '<a title="Close" class="fancybox-close" style="display:none;" href="javascript:;"></a>',
+	        },
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();
@@ -135,6 +155,7 @@ $(document).ready(function(){
 
 	$(".ajax").parents("form").submit(function(){
   		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+  			$(this).removeClass("no-validate");
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 
@@ -149,21 +170,21 @@ $(document).ready(function(){
 			  	url: $(this).attr("action"),
 			  	data:  $this.serialize(),
 				success: function(msg){
-					var $form;
+					var $link;
 					if( msg == "1" ){
-						$form = $thanks;
+						$link = $this.find(".b-thanks-link");
 					}else{
-						$form = $("#b-popup-error");
+						$link = $(".b-error-link");
 					}
 
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
 						customHandlers[$this.attr("data-afterAjax")]($this);
 					}
 
-					fancyOpen($form);
+					$link.click();
 				},
 				error: function(){
-					fancyOpen($("#b-popup-error"));	
+					$(".b-error-link").click();	
 				},
 				complete: function(){
 					$this.find(".ajax").removeAttr("onclick");
@@ -172,6 +193,7 @@ $(document).ready(function(){
 			});
   		}else{
   			$(this).find("input.error,select.error,textarea.error").eq(0).focus();
+  			$(this).addClass("no-validate");
   		}
   		return false;
   	});
