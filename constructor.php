@@ -38,12 +38,18 @@
 	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/KitProgress.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/countUp.js"></script>
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+
+
 <script>
 var myWidth,
 	isMobile = false,
@@ -228,6 +234,164 @@ isRetina = (isMobile)?false:retina();
 					<li><a href="#">О нас</a></li>
 				</ul>
 				<h1 class="b-title">Конструктор декоров</h1>
+				
+<!--Конструктор-->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var height = 100;
+			    //$('.repeatPrev[title]').qtip();
+
+
+
+
+			/*Доработать значения*/
+			/*Зафиксировать панель*/
+			$(window).scroll(function(){
+				if ($('.panelFloor').hasClass("showContent"))
+				{
+					height = 400;
+				}else{
+					height = 100;
+				}
+				  if($(this).scrollTop() > 600)
+				  {
+				    //console.log($(this).scrollTop());	
+				  	$('.toolbar').addClass("panelFixed");
+				  	$('.emptyBlock').addClass("showContent");
+				  	$('.emptyBlock').removeClass("hideContent");
+				  	$('.emptyBlock').css("height", height);
+				  }
+				  /*высота - размер картинки*/
+				  if($(this).scrollTop() > 1300|| $(this).scrollTop() < 600)
+				  {
+				    //console.log($(this).scrollTop());	
+				  	$('.toolbar').removeClass("panelFixed");
+				  	$('.emptyBlock').removeClass("showContent");
+				  	$('.emptyBlock').addClass("hideContent");
+				  }
+				});
+			/*Сочетание клавиш*/
+			$(document).keydown(function(e){
+
+				if(event.ctrlKey && e.which == 90)
+				{
+					console.log("Press Cntr+Z");
+					$('.repeatPrev').click();
+					return false;
+				}
+				else if(event.ctrlKey && e.which == 89){
+					console.log("Press Cntr+Y");
+					$('.repeatNext').click();
+					return false;
+				}
+			});
+			/*Панель с полами*/
+			$('.layers').click(function(){
+				$('.panelFloor').toggleClass("showContent");
+			})
+		});
+	</script>
+				<div class="windowConstructor">
+				<div class="toolbar">
+					<div class="panelDecor">
+
+						<div class="repeatBlock">
+							<div class="floater">
+							<div class="content">
+								<div class="repeatPrev" title="Отменить">
+									<span class="icon-back-arrow"></span>
+								</div>
+								<div class="repeatNext" title="Повторить">
+									<span class="icon-back-arrow-right"></span>
+								</div>
+							</div>
+							</div>
+						</div>
+						
+						<div class="setTextures">
+							<div class="floater">
+							<div class="content">
+								<div class="arrowPrev">
+									<span class="icon-left-arrow"></span>
+								</div>
+							</div>
+							</div>
+							<div class="textures">
+								
+							<div class="currentTexture"><img src="i/decor-1.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-2.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-3.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-4.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-4.jpg" width="60px" height="60px"></div>
+							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px"></div>
+
+							</div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.textures').slick({
+      	nextArrow: $('.arrowNext'),
+	    prevArrow: $('.arrowPrev'),
+	    dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 6,
+		slidesToScroll: 1,
+      });
+    });
+  </script>
+
+							<div class="setTexturesRight">
+								<div class="floater">
+								<div class="content">
+									<div class="arrowNext">
+										<span class="icon-right-arrow"></span>
+									</div>
+									<div class="iconMore">
+										<span class="icon-more"></span>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="shareBlock">
+							<div class="floater">
+							<div class="content">
+								<div class="layers">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="share">
+									<span class="icon-share"></span>
+								</div>
+							</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="panelFloor">
+						<img src="i/Room.png"  ><!--JPG!!-->
+						<img src="i/Room.png"  >
+						<img src="i/Room.png"  >
+					</div>
+				</div>
+
+				<div class="emptyBlock hideContent">
+				
+				</div>
+
+				<div class="imageRoom">
+					<img id="room" src="i/Room.png"  >
+				</div>
+
+				</div>
+
+
+
 				
 			</div>
 		</div>
