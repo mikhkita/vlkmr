@@ -3654,4 +3654,32 @@ div.fancybox-inner{
 	width: 100%;
 }
 
+/*Для SVG*/
+
+.rel{
+	max-width: 100%;
+	height: 1010px;
+	position: relative;
+}
+
+.classSVG{
+	fill-rule:evenodd;
+	opacity: 0;
+}
+
+.classSVGFront{ 
+	fill-rule:evenodd;
+	opacity: 0;
+}
+
+#room, #roomSVG, #roomSVGFront, #roomSVGBack{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.classSVGback{
+	fill: url(#woodStart); 
+	fill-rule:evenodd;
+}
 /*----------------------------------------------*/

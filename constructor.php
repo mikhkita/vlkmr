@@ -384,9 +384,170 @@ isRetina = (isMobile)?false:retina();
 				
 				</div>
 
-				<div class="imageRoom">
+				<!--<div class="imageRoom">
 					<img id="room" src="i/Room.png"  >
-				</div>
+				</div>-->
+
+				<div class="rel">
+
+<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+		
+		<title>Гостиная</title>
+
+		 <defs>
+		 	
+		 	
+		<!--Текстуры-->
+			<pattern id="woodStart" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="200" height="350" transform="rotate(90, 75, 75)">
+		     	</image>
+		    </pattern>
+
+		 </defs>
+
+		<polygon class="classSVGback" id="blockUp1Back" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
+		<polygon class="classSVGback" id="blockUp2Back" points="352.97 170.82 464.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
+		<polygon class="classSVGback" id="blockUp3Back" points="463.85 66.66 464.09 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+
+		<path class="classSVGback" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
+		<path class="classSVGback" id="blockMiddle1Back" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
+		<path class="classSVGback" id="blockMiddle2Back" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
+		<path class="classSVGback" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
+		<path class="classSVGback" id="blockMiddle3Back" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
+		<path class="classSVGback" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+
+		<path class="classSVGback" id="blockDown1Back" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
+		<path class="classSVGback" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
+		<path class="classSVGback" id="blockDown2Back" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
+		<path class="classSVGback" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
+		<path class="classSVGback" id="blockDown3Back" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
+		<path class="classSVGback" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
+
+	</svg>
+
+<!--Это задний слой - он и будет изменяться-->
+	<svg id="roomSVG" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+		
+		<title>Гостиная</title>
+
+		 <defs>
+		 	
+		 	
+		 	<clipPath id="clipping">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+		<!--Текстуры-->
+			<pattern id="wood" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/back.jpg" x="0" y="-100" width="200" height="350" transform="rotate(90, 75, 75)">
+		     	</image>
+		    </pattern>
+
+		 </defs>
+
+		<polygon class="classSVG" id="blockUp1" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
+		<polygon class="classSVG" id="blockUp2" points="352.97 170.82 464.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
+		<polygon class="classSVG" id="blockUp3" points="463.85 66.66 464.09 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+
+		<path class="classSVG" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
+		<path class="classSVG" id="blockMiddle1" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
+		<path class="classSVG" id="blockMiddle2" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
+		<path class="classSVG" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
+		<path class="classSVG" id="blockMiddle3" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
+		<path class="classSVG" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+
+		<path class="classSVG" id="blockDown1" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
+		<path class="classSVG" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
+		<path class="classSVG" id="blockDown2" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
+		<path class="classSVG" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
+		<path class="classSVG" id="blockDown3" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
+		<path class="classSVG" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
+
+	</svg>
+
+	<img id="room" src="i/Room.png" width="100%">
+
+<!--Это передний слой - он отслеживает клики и меняет задний слой-->
+	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+		
+		<title>Гостиная</title>
+		<polygon class="classSVGFront" id="blockUp1Front" data-id="blockUp1" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
+		<polygon class="classSVGFront" id="blockUp2Front" data-id="blockUp2" points="352.97 170.82 464.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
+		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" points="463.85 66.66 464.09 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+
+		<path class="classSVGFront" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
+		<path class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
+		<path class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
+		<path class="classSVGFront" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
+		<path class="classSVGFront" id="blockMiddle3Front" data-id="blockMiddle3" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
+		<path class="classSVGFront" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+
+		<path class="classSVGFront" id="blockDown1Front" data-id="blockDown1" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
+		<path class="classSVGFront" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
+		<path class="classSVGFront" id="blockDown2Front" data-id="blockDown2" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
+		<path class="classSVGFront" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
+		<path class="classSVGFront" id="blockDown3Front" data-id="blockDown3" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
+		<path class="classSVGFront" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
+
+		
+	</svg>
+
+	<script type="text/javascript">
+    	$(document).ready(function()
+    	{
+    		var clickElem;
+    		var offset;
+    		var parent;
+    		$('.classSVGFront').click(function(e){
+    			//this - элемент по которому кликнули
+			    clickElem = $(this).attr("data-id");
+			    //console.log('\'#'+clickElem+'\'');
+			    $('#'+clickElem).css({"fill":"url(#wood)"});
+
+			    offset = $(this).position();
+			    parent = $('.rel').offset();
+
+			    $('#'+clickElem).css({"fill":"url(#wood)"});
+			    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
+			    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
+			    
+				$('#clipping circle').attr({
+				  	'cx': relativeX + '%',
+				  	'cy': relativeY + '%'
+				});
+				$('#'+clickElem).css({
+				  	//"clip-path": "circle("+30+"px at "+relativeX+"px "+relativeY+"px)",
+				  	"clip-path":"url(#clipping)",
+				  	"opacity" : "1"
+				  });
+				 console.log($('#clipping circle').attr('cx'), $('#clipping circle').attr('cy'), clickElem, offset, $('#room').width(), e.pageX);
+				 
+				 $('#clipping circle').css({
+				  	'r': 0
+				 });
+
+				  $('#clipping circle').animate(
+					  {
+					  	'r': 125
+					  },{
+					   		duration: 1250,
+					   		step: function(now, fx) {
+					   			$(this).attr({"r": now});
+					   			$('.classSVGFront').click(function(){
+					   				$('#'+clickElem).css({"clip-path": "none"});
+					   				$('#clipping circle').css({
+									  	'r': 0
+									 });
+					   			})
+					   			
+					   		},
+					   		complete: function() {
+					   		}
+
+						});
+			});
+    	});
+    </script>
+</div>
 
 				</div>
 
