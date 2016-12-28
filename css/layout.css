@@ -3458,6 +3458,10 @@ div.fancybox-inner{
 	width: 100%;
 }
 
+.toolbar{
+	z-index: 10;
+}
+
 .windowConstructor{
 	height: 1000px;
 }
@@ -3578,6 +3582,7 @@ div.fancybox-inner{
 }
 
 .currentTexture{
+	box-sizing: border-box;
 	display: inline-block;
 	width: 60px;
 	height: 60px;
@@ -3678,8 +3683,21 @@ div.fancybox-inner{
 	left: 0;
 }
 
-.classSVGback{
-	fill: url(#woodStart); 
+/*.classSVGback{
+	fill: url(#decor-1Up); 
+	fill-rule:evenodd;
+}*/
+
+#blockUp1Back, #blockUp2Back, #blockUp3Back{
+	fill: url(#decor-1Up); 
+	fill-rule:evenodd;
+}
+#blockMiddle1Back, #blockMiddle2Back, #blockMiddle3Back{
+	fill: url(#decor-1Middle); 
+	fill-rule:evenodd;
+}
+#blockDown1Back, #blockDown2Back, #blockDown3Back{
+	fill: url(#decor-1Down); 
 	fill-rule:evenodd;
 }
 /*----------------------------------------------*/
