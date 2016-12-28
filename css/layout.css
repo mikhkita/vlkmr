@@ -3458,6 +3458,10 @@ div.fancybox-inner{
 	width: 100%;
 }
 
+.toolbar{
+	z-index: 10;
+}
+
 .windowConstructor{
 	height: 1000px;
 }
@@ -3678,8 +3682,18 @@ div.fancybox-inner{
 	left: 0;
 }
 
-.classSVGback{
-	fill: url(#woodStart); 
+#blockUp1Back, #blockUp2Back, #blockUp3Back{
+	fill: url(#woodStartUp); 
+	fill-rule:evenodd;
+}
+
+#blockMiddle1Back, #blockMiddle2Back, #blockMiddle3Back{
+	fill: url(#woodStartMiddle); 
+	fill-rule:evenodd;
+}
+
+#blockDown1Back, #blockDown2Back, #blockDown3Back{
+	fill: url(#woodStartDown); 
 	fill-rule:evenodd;
 }
 /*----------------------------------------------*/

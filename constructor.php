@@ -240,7 +240,7 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var height = 100;
-			    //$('.repeatPrev[title]').qtip();
+			    $('.repeatPrev[title]').qtip();
 
 
 
@@ -339,7 +339,7 @@ isRetina = (isMobile)?false:retina();
 		infinite: true,
 		speed: 300,
 		slidesToShow: 6,
-		slidesToScroll: 1,
+		slidesToScroll: 6,
       });
     });
   </script>
@@ -398,8 +398,16 @@ isRetina = (isMobile)?false:retina();
 		 	
 		 	
 		<!--Текстуры-->
-			<pattern id="woodStart" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="200" height="350" transform="rotate(90, 75, 75)">
+			<pattern id="woodStartUp" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="woodStartMiddle" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="woodStartDown" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -433,7 +441,32 @@ isRetina = (isMobile)?false:retina();
 		 <defs>
 		 	
 		 	
-		 	<clipPath id="clipping">
+		 	<clipPath id="clippingUp1">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingUp2">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingUp3">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingMiddle1">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingMiddle2">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingMiddle3">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+
+			<clipPath id="clippingDown1">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingDown2">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clippingDown3">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
 		<!--Текстуры-->
@@ -494,7 +527,7 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
     	$(document).ready(function()
     	{
-    		var clickElem;
+    		/*var clickElem;
     		var offset;
     		var parent;
     		$('.classSVGFront').click(function(e){
@@ -532,20 +565,118 @@ isRetina = (isMobile)?false:retina();
 					   		duration: 1250,
 					   		step: function(now, fx) {
 					   			$(this).attr({"r": now});
-					   			$('.classSVGFront').click(function(){
+					   			/*$('.classSVGFront').click(function(){
 					   				$('#'+clickElem).css({"clip-path": "none"});
 					   				$('#clipping circle').css({
 									  	'r': 0
 									 });
-					   			})
+					   			})*/
 					   			
-					   		},
+					   		/*},
 					   		complete: function() {
+					   				$('#'+clickElem).css({"clip-path": ""});
 					   		}
 
 						});
+			});*/
+
+
+			// construct
+			function areaSVG(path, circle, radius){
+			   this.path = path;
+			   this.circle = circle;
+			   this.radius = radius;
+			   this.animateSVG = function(x, y){
+			   	//console.log(path, circle);
+			   	circle.attr({
+				  	'cx': x + '%',
+				  	'cy': y + '%'
+				});
+				var circleID = circle.parent().attr("id");
+				path.css({
+				  	//"clip-path": "circle("+30+"px at "+relativeX+"px "+relativeY+"px)",
+				  	"clip-path":"url(#"+circleID+")",
+				  	"opacity" : "1"
+				  });
+				circle.css({
+				  	'r': 0
+				 });
+				circle.animate(
+					  {
+					  	'r': radius
+					  },{
+					  		duration: 500,
+					   		step: function(now, fx) {
+					   			$(this).attr({"r": now});
+					   		}
+					  });
+
+			   };
+			};
+
+			/* --------------------------- */
+			var blockUp1 = new areaSVG($('#blockUp1'), $('#clippingUp1 circle'), 120);
+			var blockUp2 = new areaSVG($('#blockUp2'), $('#clippingUp2 circle'), 150);
+			var blockUp3 = new areaSVG($('#blockUp3'), $('#clippingUp3 circle'), 195);
+			var blockMiddle1 = new areaSVG($('#blockMiddle1'), $('#clippingMiddle1 circle'), 90);
+			var blockMiddle2 = new areaSVG($('#blockMiddle2'), $('#clippingMiddle2 circle'), 120);
+			var blockMiddle3 = new areaSVG($('#blockMiddle3'), $('#clippingMiddle3 circle'), 160);
+			var blockDown1 = new areaSVG($('#blockDown1'), $('#clippingDown1 circle'), 125);
+			var blockDown2 = new areaSVG($('#blockDown2'), $('#clippingDown2 circle'), 150);
+			var blockDown3 = new areaSVG($('#blockDown3'), $('#clippingDown3 circle'), 195);
+
+			var clickElem;
+	    	var offset;
+	    	var parent;
+
+			//Кликнули по любой области SVG
+			$('.classSVGFront').click(function(e){
+				//Получаем элемент из центрального слоя
+				clickElem = $(this).attr("data-id");
+
+				$('#'+clickElem).css({"fill":"url(#wood)"});
+
+				offset = $(this).position();
+			    parent = $('.rel').offset();
+
+			    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
+			    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
+
+				switch(clickElem){
+					case "blockUp1":
+						blockUp1.animateSVG(relativeX, relativeY);
+						break
+					case "blockUp2":
+						blockUp2.animateSVG(relativeX, relativeY);
+						break
+					case "blockUp3":
+						blockUp3.animateSVG(relativeX, relativeY);
+						break
+					case "blockMiddle1":
+						blockMiddle1.animateSVG(relativeX, relativeY);
+						break
+					case "blockMiddle2":
+						blockMiddle2.animateSVG(relativeX, relativeY);
+						break
+					case "blockMiddle3":
+						blockMiddle3.animateSVG(relativeX, relativeY);
+						break
+					case "blockDown1":
+						blockDown1.animateSVG(relativeX, relativeY);
+						break
+					case "blockDown2":
+						blockDown2.animateSVG(relativeX, relativeY);
+						break
+					case "blockDown3":
+						blockDown3.animateSVG(relativeX, relativeY);
+						break
+				}
+
 			});
-    	});
+
+
+		});
+
     </script>
 </div>
 
