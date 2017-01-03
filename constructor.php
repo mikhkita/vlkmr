@@ -240,20 +240,22 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var height = 100;
-			    //$('.repeatPrev[title]').qtip();
+			$('.windowConstructor').css("height", $(window).height());
+			$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({"height": $(window).height() - height});
+			$('.rel').css({"width": $('#room').width()});
+
+			  $('.repeatPrev[title]').qtip();
 
 
-
-
-			/*Доработать значения*/
-			/*Зафиксировать панель*/
+			//Доработать значения
+			//Зафиксировать панель
 			$(window).scroll(function(){
-				if ($('.panelFloor').hasClass("showContent"))
+				/*if ($('.panelFloor').hasClass("showContent"))
 				{
 					height = 400;
 				}else{
 					height = 100;
-				}
+				}*/
 				  if($(this).scrollTop() > 600)
 				  {
 				    //console.log($(this).scrollTop());	
@@ -262,8 +264,8 @@ isRetina = (isMobile)?false:retina();
 				  	$('.emptyBlock').removeClass("hideContent");
 				  	$('.emptyBlock').css("height", height);
 				  }
-				  /*высота - размер картинки*/
-				  if($(this).scrollTop() > 1300|| $(this).scrollTop() < 600)
+				  //= высота - размер картинки
+				  if($(this).scrollTop() > 1400|| $(this).scrollTop() < 600)
 				  {
 				    //console.log($(this).scrollTop());	
 				  	$('.toolbar').removeClass("panelFixed");
@@ -271,22 +273,22 @@ isRetina = (isMobile)?false:retina();
 				  	$('.emptyBlock').addClass("hideContent");
 				  }
 				});
-			/*Сочетание клавиш*/
+			//Сочетание клавиш
 			$(document).keydown(function(e){
 
-				if(event.ctrlKey && e.which == 90)
+				if(e.ctrlKey && e.which == 90)
 				{
 					console.log("Press Cntr+Z");
-					$('.repeatPrev').click();
+					$('.repeatPrevClick').click();
 					return false;
 				}
-				else if(event.ctrlKey && e.which == 89){
+				else if(e.ctrlKey && e.which == 89){
 					console.log("Press Cntr+Y");
-					$('.repeatNext').click();
+					$('.repeatNextClick').click();
 					return false;
 				}
 			});
-			/*Панель с полами*/
+			//Панель с полами
 			$('.layers').click(function(){
 				$('.panelFloor').toggleClass("showContent");
 			})
@@ -299,10 +301,10 @@ isRetina = (isMobile)?false:retina();
 						<div class="repeatBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="repeatPrev" title="Отменить">
+								<div class="repeatPrev repeatPrevClick" title="Отменить">
 									<span class="icon-back-arrow"></span>
 								</div>
-								<div class="repeatNext" title="Повторить">
+								<div class="repeatNext repeatNextClick" title="Повторить">
 									<span class="icon-back-arrow-right"></span>
 								</div>
 							</div>
@@ -388,9 +390,11 @@ isRetina = (isMobile)?false:retina();
 					<img id="room" src="i/Room.png"  >
 				</div>-->
 
-				<div class="rel">
-
-<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+		<div class="rel">
+			<div class="fullSize">
+				<span class="icon-full-size"></span>
+			</div>
+		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
 
@@ -492,6 +496,16 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 		    <pattern id="decor-8Down" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+			<pattern id="woodStartUp" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="woodStartMiddle" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="woodStartDown" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -560,27 +574,27 @@ isRetina = (isMobile)?false:retina();
 
 		 </defs>
 
-		<polygon class="classSVG" id="blockUp1" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
-		<polygon class="classSVG" id="blockUp2" points="352.97 170.82 463.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
-		<polygon class="classSVG" id="blockUp3" points="463.85 66.66 463.55 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+		<polygon class="classSVG default" id="blockUp1" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
+		<polygon class="classSVG default" id="blockUp2" points="352.97 170.82 463.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
+		<polygon class="classSVG default" id="blockUp3" points="463.85 66.66 463.55 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
 
 		<path class="classSVG" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
-		<path class="classSVG" id="blockMiddle1" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
-		<path class="classSVG" id="blockMiddle2" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
+		<path class="classSVG default" id="blockMiddle1" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
+		<path class="classSVG default" id="blockMiddle2" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
 		<path class="classSVG" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
-		<path class="classSVG" id="blockMiddle3" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
+		<path class="classSVG default" id="blockMiddle3" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
 		<path class="classSVG" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
 
-		<path class="classSVG" id="blockDown1" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
+		<path class="classSVG default" id="blockDown1" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
 		<path class="classSVG" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
-		<path class="classSVG" id="blockDown2" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
+		<path class="classSVG default" id="blockDown2" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
 		<path class="classSVG" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
-		<path class="classSVG" id="blockDown3" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
+		<path class="classSVG default" id="blockDown3" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
 		<path class="classSVG" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
 
 	</svg>
 
-	<img id="room" src="i/Room.png" width="100%">
+	<img id="room" src="i/Room.png">
 
 <!--Это передний слой - он отслеживает клики и меняет задний слой-->
 	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
@@ -603,65 +617,11 @@ isRetina = (isMobile)?false:retina();
 		<path class="classSVGFront" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
 		<path class="classSVGFront" id="blockDown3Front" data-id="blockDown3" data-location="Down" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
 		<path class="classSVGFront" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
-
-		
 	</svg>
 
 	<script type="text/javascript">
     	$(document).ready(function()
     	{
-    		/*var clickElem;
-    		var offset;
-    		var parent;
-    		$('.classSVGFront').click(function(e){
-    			//this - элемент по которому кликнули
-			    clickElem = $(this).attr("data-id");
-			    //console.log('\'#'+clickElem+'\'');
-			    $('#'+clickElem).css({"fill":"url(#wood)"});
-
-			    offset = $(this).position();
-			    parent = $('.rel').offset();
-
-			    $('#'+clickElem).css({"fill":"url(#wood)"});
-			    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
-			    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
-			    
-				$('#clipping circle').attr({
-				  	'cx': relativeX + '%',
-				  	'cy': relativeY + '%'
-				});
-				$('#'+clickElem).css({
-				  	//"clip-path": "circle("+30+"px at "+relativeX+"px "+relativeY+"px)",
-				  	"clip-path":"url(#clipping)",
-				  	"opacity" : "1"
-				  });
-				 console.log($('#clipping circle').attr('cx'), $('#clipping circle').attr('cy'), clickElem, offset, $('#room').width(), e.pageX);
-				 
-				 $('#clipping circle').css({
-				  	'r': 0
-				 });
-
-				  $('#clipping circle').animate(
-					  {
-					  	'r': 125
-					  },{
-					   		duration: 1250,
-					   		step: function(now, fx) {
-					   			$(this).attr({"r": now});
-					   			/*$('.classSVGFront').click(function(){
-					   				$('#'+clickElem).css({"clip-path": "none"});
-					   				$('#clipping circle').css({
-									  	'r': 0
-									 });
-					   			})*/
-					   			
-					   		/*},
-					   		complete: function() {
-					   				$('#'+clickElem).css({"clip-path": ""});
-					   		}
-
-						});
-			});*/
 			var currentTexture;
 			var prevTexture;
 			//Выбор текстуры
@@ -675,16 +635,67 @@ isRetina = (isMobile)?false:retina();
 
 			//Отменить/Повторить
 			var stack = [];
+			//Заполняем стек начальными текстурами
+			$('.default').each(function(){
+				var stackAdd = new clickArea($(this).attr("id"), $(this).css("fill"));
+				stack.push(stackAdd);
+			});
 			var stackRepeat = [];
 			//Отменить
-			$('.repeatPrev').click(function(e){
+			$('.repeatPrevClick').click(function(e){
 				if(stack.length != 0)
 				{
-					//как-то отменить анимацию
-					//$('#'+stack.pop()).css({"fill":"url(#woodStartUp)"});
+					var lastElemStack = stack.pop();
+					var prevElemStack;
+					stack.forEach(function(item, i, stack){
+						if(item.path === lastElemStack.path)
+						{
+							prevElemStack = item;
+						}
+					});
+					if(prevElemStack != undefined)
+						{
+							console.log("stack", stack);
+							//теперь нужно поменять текстуры
+							$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
+							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});
+							stackRepeat.push(lastElemStack);
+						}
+					else{
+						stack.push(lastElemStack);
+					}
+					if(stack.length > 9)
+					{
+						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
+						
+					}else{
+						$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
+						
+					}
+					if(stackRepeat.length > 0)
+					{
+						$('.repeatNext').removeClass('repeatNext').addClass('repeatNext2');
+					}
+					else{
+						$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
+					}
 				}
 			});
 
+			//Повторить
+			$('.repeatNextClick').click(function(e){
+				if(stackRepeat.length != 0){
+					console.log("stackRepeat", stackRepeat);
+					var lastElemStackRepeat= stackRepeat.pop();
+					$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
+					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});
+					stack.push(lastElemStackRepeat);
+					$(this).removeClass('repeatNext').addClass('repeatNext2');
+				}
+				else{
+					$(this).removeClass('repeatNext2').addClass('repeatNext');
+				}
+			});
 
 			//Анимация
 			function areaSVG(path, circle, radius){
@@ -699,7 +710,6 @@ isRetina = (isMobile)?false:retina();
 				});
 				var circleID = circle.parent().attr("id");
 				path.css({
-				  	//"clip-path": "circle("+30+"px at "+relativeX+"px "+relativeY+"px)",
 				  	"clip-path":"url(#"+circleID+")",
 				  	"opacity" : "1"
 				  });
@@ -721,6 +731,13 @@ isRetina = (isMobile)?false:retina();
 
 			   };
 			};
+
+			//Объект SVG + текстура (для отменить/повторить)
+			function clickArea(path, texture)
+			{
+				this.path = path;
+				this.texture = texture;
+			}
 
 			/* --------------------------- */
 			var blockUp1 = new areaSVG($('#blockUp1'), $('#clippingUp1 circle'), 120);
@@ -753,7 +770,16 @@ isRetina = (isMobile)?false:retina();
 				    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 
-				    stack.push(clickElem);
+				    //Добавить текущий SVG и текстуру в стек
+				    var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("data-id") + dataLocation + ")");
+				    stack.push(stackObj);
+				    if(stack.length > 9){
+						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
+					}else{
+						$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
+					}
+					stackRepeat = [];
+					$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
 
 					switch(clickElem){
 						case "blockUp1":
@@ -787,9 +813,8 @@ isRetina = (isMobile)?false:retina();
 				}
 
 			});
-
-
 		});
+
 
     </script>
 </div>

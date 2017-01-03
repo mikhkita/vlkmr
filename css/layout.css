@@ -3454,7 +3454,7 @@ div.fancybox-inner{
   -moz-osx-font-smoothing: grayscale;
 }
 
-#room, .toolbar, .windowConstructor{
+.toolbar, .windowConstructor{
 	width: 100%;
 }
 
@@ -3462,12 +3462,12 @@ div.fancybox-inner{
 	z-index: 10;
 }
 
-.windowConstructor{
+/*.windowConstructor{
 	height: 1000px;
-}
+}*/
 
 .imageRoom{
-	width: 92%;
+	width: auto;
 	margin: 0 auto;
 }
 
@@ -3499,7 +3499,7 @@ div.fancybox-inner{
 	position: absolute;
 }
 
-.repeatPrev, .repeatNext, .layers, .share{
+.repeatPrev, .repeatPrev2, .repeatNext, .repeatNext2, .layers, .share{
 	display: inline-block;
 	width: 45px;
 	height: 45px;
@@ -3513,13 +3513,25 @@ div.fancybox-inner{
 	cursor: pointer;
 }
 
-.icon-back-arrow:before{
+.repeatPrev .icon-back-arrow:before{
+	color:#888;
+	font-size: 25px;
+	content: "\e90d";
+}
+
+.repeatNext .icon-back-arrow-right:before{
+	color:#888;
+	font-size: 25px;
+	content: "\e90e";
+}
+
+.repeatPrev2 .icon-back-arrow:before{
 	color:#000;
 	font-size: 25px;
 	content: "\e90d";
 }
 
-.icon-back-arrow-right:before{
+.repeatNext2 .icon-back-arrow-right:before{
 	color:#000;
 	font-size: 25px;
 	content: "\e90e";
@@ -3531,7 +3543,7 @@ div.fancybox-inner{
 	margin-left: 135px;
 }
 
-.arrowPrev, .arrowNext, .iconMore{
+.arrowPrev, .arrowNext, .iconMore, .fullSize{
 	display: inline-block;
 	width: 32px;
 	height: 32px;
@@ -3543,6 +3555,19 @@ div.fancybox-inner{
 	margin: 14px 0;
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+.fullSize{
+	position: absolute;
+	top: 25px;
+	right: -50px;
+}
+
+.icon-full-size:before{
+	color:#888;
+	font-size: 15px;
+	content: "\e90c";
+	font-weight: 700;
 }
 
 .arrowPrev{
@@ -3589,11 +3614,7 @@ div.fancybox-inner{
 	margin: 0 10px;
 }
 
-.setTexturesRight{
-	float: right;
-}
-
-.shareBlock{
+.setTexturesRight, .shareBlock{
 	float: right;
 }
 
@@ -3662,14 +3683,15 @@ div.fancybox-inner{
 /*Для SVG*/
 
 .rel{
-	max-width: 100%;
-	height: 1010px;
+	/*max-width: 100%;*/
+	/*display: inline;*/
 	position: relative;
+	margin: 0 auto;
+	/*height: 1000px;*/
 }
 
 .classSVG{
 	fill-rule:evenodd;
-	opacity: 0;
 }
 
 .classSVGFront{ 
@@ -3678,26 +3700,26 @@ div.fancybox-inner{
 }
 
 #room, #roomSVG, #roomSVGFront, #roomSVGBack{
+	/*width: 100%;*/
 	position: absolute;
 	top: 0;
 	left: 0;
-}
 
+}
 /*.classSVGback{
 	fill: url(#decor-1Up); 
 	fill-rule:evenodd;
 }*/
 
-#blockUp1Back, #blockUp2Back, #blockUp3Back{
+#blockUp1, #blockUp2, #blockUp3, #blockUp1Back, #blockUp2Back, #blockUp3Back{
 	fill: url(#decor-1Up); 
 	fill-rule:evenodd;
 }
-#blockMiddle1Back, #blockMiddle2Back, #blockMiddle3Back{
+#blockMiddle1, #blockMiddle2, #blockMiddle3, #blockMiddle1Back, #blockMiddle2Back,
+#blockMiddle3Back{
 	fill: url(#decor-1Middle); 
 	fill-rule:evenodd;
 }
-#blockDown1Back, #blockDown2Back, #blockDown3Back{
-	fill: url(#decor-1Down); 
-	fill-rule:evenodd;
-}
+#blockDown1, #blockDown2, #blockDown3, #blockDown1Back, #blockDown2Back, #blockDown3Back{
+	fill: url(#decor-1Down);
 /*----------------------------------------------*/
