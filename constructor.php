@@ -227,7 +227,7 @@ isRetina = (isMobile)?false:retina();
 		</div>
 	</div>
 	<div class="b b-content">
-		<div class="b-wide-block b-margin">
+		<div class="b-wide-block b-margin" style="padding-bottom: 0px;">
 			<div class="b-block">
 				<ul class="b-breadcrumbs clearfix">
 					<li><a href="#">Главная</a></li>
@@ -238,12 +238,45 @@ isRetina = (isMobile)?false:retina();
 <!--Конструктор-->
 
 	<script type="text/javascript">
+		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
-			$('.windowConstructor').css("height", $(window).height());
-			$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({"height": $(window).height() - height});
-			$('.rel').css({"width": $('#room').width()});
-
+			//$('.windowConstructor').css("height", $(window).height());
+			$(window).load(function(){
+				console.log("before room: ", $('#room').width());
+				$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({"height": $(window).height() - height});
+				console.log("before: ", $('#room').width());
+				$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
+				console.log("after: ", $('#room').width());
+				console.log("after: ", $('#room').height());
+			});
+			$('.fullSize').click(function(){
+				if(checkSize === false){
+					var curWidth = $('#room').width();
+					$('#room').css({
+						"height": "auto",
+						"width": $('.b-wide-block').width()});
+					var autoHeight = $('#room').height();
+					$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
+						{
+							height: autoHeight,
+							width: $('.b-wide-block').width()
+						});
+					checkSize = true;
+				}else{
+					var curHeight = $('#room').height();
+					$('#room').css({
+						"height": $(window).height() - height,
+						"width": "auto"});
+					var autoWidth = $('#room').width();
+					$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+						{
+							height: $(window).height() - height,
+							width: autoWidth
+						});
+					checkSize = false;
+				}
+			});
 			  $('.repeatPrev[title]').qtip();
 
 
@@ -389,11 +422,13 @@ isRetina = (isMobile)?false:retina();
 				<!--<div class="imageRoom">
 					<img id="room" src="i/Room.png"  >
 				</div>-->
-
-		<div class="rel">
+			</div><!--WindowCons-->
+		</div><!--b-block-->
+		<div class="relBackground">
 			<div class="fullSize">
 				<span class="icon-full-size"></span>
 			</div>
+		<div class="rel">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
@@ -814,19 +849,11 @@ isRetina = (isMobile)?false:retina();
 
 			});
 		});
-
-
-    </script>
-</div>
-
-				</div>
-
-
-
-				
+    	</script>
+			</div><!--rel-->
 			</div>
-		</div>
-	</div>
+		</div><!--b-wide-->
+	</div><!--b-content-->
 	<div class="b b-main-footer">
 		<div class="b-wide-block">
 			<div class="b-block b-block-one clearfix">

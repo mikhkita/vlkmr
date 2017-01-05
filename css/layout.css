@@ -3558,9 +3558,10 @@ div.fancybox-inner{
 }
 
 .fullSize{
+	background-color: #fff;
 	position: absolute;
-	top: 25px;
-	right: -50px;
+	right: 16px;
+	z-index: 1;
 }
 
 .icon-full-size:before{
@@ -3690,6 +3691,12 @@ div.fancybox-inner{
 	/*height: 1000px;*/
 }
 
+.relBackground{
+	position: relative;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+
 .classSVG{
 	fill-rule:evenodd;
 }
@@ -3722,4 +3729,5 @@ div.fancybox-inner{
 }
 #blockDown1, #blockDown2, #blockDown3, #blockDown1Back, #blockDown2Back, #blockDown3Back{
 	fill: url(#decor-1Down);
+}
 /*----------------------------------------------*/
