@@ -324,7 +324,14 @@ isRetina = (isMobile)?false:retina();
 			//Панель с полами
 			$('.layers').click(function(){
 				$('.panelFloor').toggleClass("showContent");
-			})
+			});
+			//Раскрывающаяся панель с декорами
+			$('.iconMore').click(function(){
+				$('.allTextures').toggleClass("showContent");
+				$('.allTextures').css({
+					"max-height": $(window).height() - 100
+				});
+			});
 		});
 	</script>
 				<div class="windowConstructor">
@@ -362,6 +369,14 @@ isRetina = (isMobile)?false:retina();
 							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
 							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
 							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
+							<div class="currentTexture"><img src="i/decor-1.jpg" width="60px" height="60px" data-id="decor-1"></div>
+							<div class="currentTexture"><img src="i/decor-2.jpg" width="60px" height="60px" data-id="decor-2"></div>
+							<div class="currentTexture"><img src="i/decor-3.jpg" width="60px" height="60px" data-id="decor-3"></div>
+							<div class="currentTexture"><img src="i/decor-4.jpg" width="60px" height="60px" data-id="decor-4"></div>
+							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px" data-id="decor-5"></div>
+							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
+							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
+							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
 
 							</div>
 
@@ -374,7 +389,7 @@ isRetina = (isMobile)?false:retina();
 		infinite: true,
 		speed: 300,
 		slidesToShow: 6,
-		slidesToScroll: 6,
+		slidesToScroll: 6
       });
     });
   </script>
@@ -412,6 +427,26 @@ isRetina = (isMobile)?false:retina();
 						<img src="i/Room.png"  ><!--JPG!!-->
 						<img src="i/Room.png"  >
 						<img src="i/Room.png"  >
+					</div>
+					<div style="position: relative;">
+						<div class="allTextures">
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+						</div>
 					</div>
 				</div>
 
@@ -657,17 +692,30 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
     	$(document).ready(function()
     	{
+    		var shiftSlider = 6;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
-					prevTexture.children().css("border-radius", "");
+					prevTexture.children().css("border", "0px");
 				currentTexture = $(this);
-				prevTexture = $(this)
-				$(this).children().css("border-radius", "50%");
+				console.log("!!!!! ", $(this).children());
+				prevTexture = $(this);
+				$(this).children().css({
+					"border": "3px solid #483434",
+					"box-sizing": "border-box"
+				});
 			});
-
+			$('.currentTexture2').click(function(e){
+				console.log(e);
+		        e.preventDefault();
+		        slideIndex = $(this).index();
+		        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
+		        console.log("currentTexture",$('.currentTexture').eq(slideIndex), "slideIndex", slideIndex, "this", $(this));
+		        $('.currentTexture').eq(slideIndex + shiftSlider).click();
+		        $('.allTextures').toggleClass("showContent");
+		    });
 			//Отменить/Повторить
 			var stack = [];
 			//Заполняем стек начальными текстурами
