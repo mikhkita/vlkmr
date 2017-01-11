@@ -241,6 +241,21 @@ isRetina = (isMobile)?false:retina();
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
+			$(window).resize(function(){
+					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+						"height": $(window).height() - height,
+						"width": "auto"
+					});
+					if($('#room').width() > $(window).width())
+					{
+						$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+							"height": "auto",
+							"width": $(window).width()
+						});
+					}
+					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
+					checkSize = false;
+			});
 			//$('.windowConstructor').css("height", $(window).height());
 			$(window).load(function(){
 				console.log("before room: ", $('#room').width());
@@ -277,18 +292,25 @@ isRetina = (isMobile)?false:retina();
 					checkSize = false;
 				}
 			});
-			  $('.repeatPrev[title]').qtip();
+			  /*$('.repeatPrev[title]').qtip({
+			  	position: {
+			        target: $(document),
+				        adjust: {
+				            scroll: false // Can be ommited (e.g. default behaviour)
+				        }
+			    }
+			  });*/
 
 
 			//Доработать значения
 			//Зафиксировать панель
-			$(window).scroll(function(){
-				/*if ($('.panelFloor').hasClass("showContent"))
+			/*$(window).scroll(function(){
+				if ($('.panelFloor').hasClass("showContent"))
 				{
 					height = 400;
 				}else{
 					height = 100;
-				}*/
+				}
 				  if($(this).scrollTop() > 600)
 				  {
 				    //console.log($(this).scrollTop());	
@@ -305,11 +327,35 @@ isRetina = (isMobile)?false:retina();
 				  	$('.emptyBlock').removeClass("showContent");
 				  	$('.emptyBlock').addClass("hideContent");
 				  }
-				});
+				});*/
 			//Сочетание клавиш
+			var pressCtrl = false;
+			var pressCmd = false;
+			$(document).keyup(function(e){
+				if(e.which === 17 || e.which === 91){
+					pressCtrl = false;
+					pressCmd = false;
+				}
+			});
 			$(document).keydown(function(e){
+				if(e.which === 17 || e.which === 91){
+					pressCtrl = true;
+					pressCmd = true;
+				}
+				console.log(e, pressCtrl, pressCmd);
+				if((pressCtrl === true || pressCmd === true) && e.which == 89)
+				{
+					console.log("Press Cntr+Y");
+					$('.repeatNextClick').click();
+					return false;
+				}else if((pressCtrl === true || pressCmd === true) && e.which == 90){
+					console.log("Press Cntr+Z");
+					$('.repeatPrevClick').click();
+					return false;
+				}
 
-				if(e.ctrlKey && e.which == 90)
+			});
+				/*if(e.ctrlKey && e.which == 90)
 				{
 					console.log("Press Cntr+Z");
 					$('.repeatPrevClick').click();
@@ -319,8 +365,7 @@ isRetina = (isMobile)?false:retina();
 					console.log("Press Cntr+Y");
 					$('.repeatNextClick').click();
 					return false;
-				}
-			});
+				}*/
 			//Панель с полами
 			$('.layers').click(function(){
 				$('.panelFloor').toggleClass("showContent");
@@ -388,8 +433,8 @@ isRetina = (isMobile)?false:retina();
 	    dots: false,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 6,
-		slidesToScroll: 6
+		slidesToShow: 8,
+		slidesToScroll: 8
       });
     });
   </script>
@@ -692,18 +737,18 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
     	$(document).ready(function()
     	{
-    		var shiftSlider = 6;//менять в зависимости от ширины окна
+    		var shiftSlider = 8;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
-					prevTexture.children().css("border", "0px");
+					prevTexture.children().css("box-shadow", "");
 				currentTexture = $(this);
 				console.log("!!!!! ", $(this).children());
 				prevTexture = $(this);
 				$(this).children().css({
-					"border": "3px solid #483434",
+					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
 				});
 			});
@@ -714,8 +759,19 @@ isRetina = (isMobile)?false:retina();
 		        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
 		        console.log("currentTexture",$('.currentTexture').eq(slideIndex), "slideIndex", slideIndex, "this", $(this));
 		        $('.currentTexture').eq(slideIndex + shiftSlider).click();
-		        $('.allTextures').toggleClass("showContent");
+		        $('.allTextures').removeClass("showContent");
 		    });
+		    //Закрыть панель с декорами по клику вне его
+		    $(document).click(function (e){ 
+		    	if($('.allTextures').hasClass("showContent") === true)
+		    	{
+					var div = $(".allTextures, .iconMore"); 
+					if (!div.is(e.target) // если клик был не по нашему блоку
+					    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+							$('.allTextures').removeClass("showContent"); // скрываем его
+					}
+				}
+			});
 			//Отменить/Повторить
 			var stack = [];
 			//Заполняем стек начальными текстурами
@@ -855,7 +911,13 @@ isRetina = (isMobile)?false:retina();
 
 				    //Добавить текущий SVG и текстуру в стек
 				    var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("data-id") + dataLocation + ")");
-				    stack.push(stackObj);
+				    console.log(stackObj.path != stack[stack.length - 1].path, stackObj.texture != stack[stack.length - 1].texture);
+				    if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
+				    {
+				    	console.log("add!");
+				    	stack.push(stackObj);
+				    }
+				    
 				    if(stack.length > 9){
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{

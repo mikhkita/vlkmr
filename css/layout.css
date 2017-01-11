@@ -3472,7 +3472,7 @@ div.fancybox-inner{
 }
 
 .panelDecor{
-	height: 60px;
+	height: 66px;
 	padding: 20px 0;
 	background-color: #fff;
 	width: 100%;
@@ -3538,9 +3538,10 @@ div.fancybox-inner{
 }
 
 .setTextures{
-	width: 645px;
+	width: 745px;
+	height: 66px;
 	display: inline-block;
-	margin-left: 135px;
+	margin-left: 85px;
 }
 
 .arrowPrev, .arrowNext, .iconMore, .fullSize{
@@ -3603,14 +3604,15 @@ div.fancybox-inner{
 
 .textures{
 	display: inline-block;
-	width: 500px;
-	height: 60px;
+	width: 600px;
+	height: 66px;
 }
 
 .allTextures{
 	max-width: 1160px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 10px 10px 10px 10px;
 	display: none;
 	position: absolute;
 	top: 0;
@@ -3618,6 +3620,7 @@ div.fancybox-inner{
 	z-index: 1;
 	background-color: #fff;
 	overflow: auto;
+	box-sizing: border-box;
 }
 
 .currentTexture{
@@ -3636,8 +3639,8 @@ div.fancybox-inner{
 	margin: 10px;
 }
 
-.currentTexture2 img:hover{
-	border: 3px solid #483434;
+.currentTexture2:hover{
+	box-shadow: 0 0 0 4px #483434;
 	box-sizing: border-box;
 }
 
@@ -3700,6 +3703,10 @@ div.fancybox-inner{
 	box-sizing: border-box;
 }
 
+.slick-track{
+	height: 66px;
+	padding-top: 3px;
+}
 /*-----------*/
 
 .emptyBlock{
