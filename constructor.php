@@ -343,14 +343,14 @@ isRetina = (isMobile)?false:retina();
 					pressCmd = true;
 				}
 				console.log(e, pressCtrl, pressCmd);
-				if((pressCtrl === true || pressCmd === true) && e.which == 89)
+				if((pressCtrl === true || pressCmd === true) && e.which == 90)
 				{
-					console.log("Press Cntr+Y");
-					$('.repeatNextClick').click();
-					return false;
-				}else if((pressCtrl === true || pressCmd === true) && e.which == 90){
 					console.log("Press Cntr+Z");
 					$('.repeatPrevClick').click();
+					return false;
+				}else if((pressCtrl === true || pressCmd === true) && e.which == 89){
+					console.log("Press Cntr+Y");
+					$('.repeatNextClick').click();
 					return false;
 				}
 
@@ -469,9 +469,9 @@ isRetina = (isMobile)?false:retina();
 					</div>
 
 					<div class="panelFloor">
-						<img src="i/Room.png"  ><!--JPG!!-->
-						<img src="i/Room.png"  >
-						<img src="i/Room.png"  >
+						<img src="i/Room2.png"  ><!--JPG!!-->
+						<img src="i/Room2.png"  >
+						<img src="i/Room2.png"  >
 					</div>
 					<div style="position: relative;">
 						<div class="allTextures">
@@ -518,7 +518,7 @@ isRetina = (isMobile)?false:retina();
 		 	
 		<!--Текстуры-->
 			<pattern id="decor-1Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75) translate(-30,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="decor-1Middle" width="100%" height="100%">
@@ -611,6 +611,8 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 		    <pattern id="decor-8Down" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        </image>
+		    </pattern>
 			<pattern id="woodStartUp" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
 		     	</image>
@@ -626,24 +628,18 @@ isRetina = (isMobile)?false:retina();
 
 		 </defs>
 
-		<polygon class="classSVGback" id="blockUp1Back" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
-		<polygon class="classSVGback" id="blockUp2Back" points="352.97 170.82 463.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
-		<polygon class="classSVGback" id="blockUp3Back" points="463.85 66.66 463.55 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+		<polygon class="classSVGback" id="blockUp1Back" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
+		<polygon class="classSVGback" id="blockUp2Back" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
+		<polygon class="classSVGback" id="blockUp3Back" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
 
-		<path class="classSVGback" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
-		<path class="classSVGback" id="blockMiddle1Back" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
-		<path class="classSVGback" id="blockMiddle2Back" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
-		<path class="classSVGback" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
-		<path class="classSVGback" id="blockMiddle3Back" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
-		<path class="classSVGback" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+		<polygon class="classSVGback" id="blockMiddle1Back" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
+		<polygon class="classSVGback" id="blockMiddle2Back" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
+		<polygon class="classSVGback" id="blockMiddle3Back" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
 
-		<path class="classSVGback" id="blockDown1Back" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
-		<path class="classSVGback" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
-		<path class="classSVGback" id="blockDown2Back" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
-		<path class="classSVGback" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
-		<path class="classSVGback" id="blockDown3Back" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
-		<path class="classSVGback" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
-
+		<polygon class="classSVGback" id="blockDown1Back" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
+		<path class="classSVGback" id="blockDown2Back" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
+		<path class="classSVGback" id="blockDown3Back" d="M459.6,348.5l0.2-0.5h1.2l147.6,13.8l0.5,0.5l0.2,0.2v112l-0.2,0.2h-0.2l-149-31.3l-0.2-0.5L459.6,348.5  L459.6,348.5z"/>
+		<path class="classSVGback" d="M608.7,362l1.4,0l1,0.5l-0.1,111.3l-0.7,0.5l-1,0.2l0-111.8l-0.5-0.2l-0.2-0.5L608.7,362L608.7,362z"/>
 	</svg>
 
 <!--Это задний слой - он и будет изменяться-->
@@ -689,49 +685,39 @@ isRetina = (isMobile)?false:retina();
 
 		 </defs>
 
-		<polygon class="classSVG default" id="blockUp1" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
-		<polygon class="classSVG default" id="blockUp2" points="352.97 170.82 463.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
-		<polygon class="classSVG default" id="blockUp3" points="463.85 66.66 463.55 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+		<polygon class="classSVG default" id="blockUp1" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
+		<polygon class="classSVG default" id="blockUp2" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
+		<polygon class="classSVG default" id="blockUp3" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
 
-		<path class="classSVG" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
-		<path class="classSVG default" id="blockMiddle1" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
-		<path class="classSVG default" id="blockMiddle2" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
-		<path class="classSVG" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
-		<path class="classSVG default" id="blockMiddle3" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
-		<path class="classSVG" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+		<polygon class="classSVG default" id="blockMiddle1" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
+		<polygon class="classSVG default" id="blockMiddle2" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
+		<polygon class="classSVG default" id="blockMiddle3" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
 
-		<path class="classSVG default" id="blockDown1" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
-		<path class="classSVG" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
-		<path class="classSVG default" id="blockDown2" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
-		<path class="classSVG" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
-		<path class="classSVG default" id="blockDown3" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
-		<path class="classSVG" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
+		<polygon class="classSVG default" id="blockDown1" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
+		<path class="classSVG default" id="blockDown2" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
+		<path class="classSVG default" id="blockDown3" d="M459.6,348.5l0.2-0.5h1.2l147.6,13.8l0.5,0.5l0.2,0.2v112l-0.2,0.2h-0.2l-149-31.3l-0.2-0.5L459.6,348.5  L459.6,348.5z"/>
+		<path class="classSVG" d="M608.7,362l1.4,0l1,0.5l-0.1,111.3l-0.7,0.5l-1,0.2l0-111.8l-0.5-0.2l-0.2-0.5L608.7,362L608.7,362z"/>
 
 	</svg>
 
-	<img id="room" src="i/Room.png">
+	<img id="room" src="i/Room2.png">
 
 <!--Это передний слой - он отслеживает клики и меняет задний слой-->
 	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
-		<polygon class="classSVGFront" id="blockUp1Front" data-id="blockUp1" data-location="Up" points="267.05 182.58 353.06 172.9 352.93 92.28 267.05 113.94 267.05 182.58"/>
-		<polygon class="classSVGFront" id="blockUp2Front" data-id="blockUp2" data-location="Up" points="352.97 170.82 463.89 156.94 464.06 65.36 352.73 93.78 352.97 170.82"/>
-		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" data-location="Up" points="463.85 66.66 463.55 155.46 613.37 135.54 613.37 30.66 463.85 66.66"/>
+		<polygon class="classSVGFront" id="blockUp1Front" data-id="blockUp1" data-location="Up" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
+		<polygon class="classSVGFront" id="blockUp2Front" data-id="blockUp2" data-location="Up" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
+		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" data-location="Up" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
 
-		<path class="classSVGFront" d="M347.79,301.2H348l0.72,0.49V337h-1V301.2Z"/>
-		<path class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" data-location="Middle" d="M264,297.84l84,3.6v35.28L264,329v-31.2Z"/>
-		<path class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" data-location="Middle" d="M348.75,301.92l0.24-.24,109.2,4.8V346.8L348.75,336.72v-34.8Z"/>
-		<path class="classSVGFront" d="M458.19,306.48h1.68v40.08l-1.68.24V306.48Z"/>
-		<path class="classSVGFront" id="blockMiddle3Front" data-id="blockMiddle3" data-location="Middle" d="M460.11,306.48v40.08l0.48,0.48,148.56,13.68V313Z"/>
-		<path class="classSVGFront" d="M609.15,313h2.16l0.24,0.24v47l-0.72.48h-1.68V313Z"/>
+		<polygon class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" data-location="Middle" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
+		<polygon class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" data-location="Middle" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
+		<polygon class="classSVGFront" id="blockMiddle3Front" data-id="blockMiddle3" data-location="Middle" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
 
-		<path class="classSVGFront" id="blockDown1Front" data-id="blockDown1" data-location="Down" d="M263.79,330h1.44l82.32,7.68V420h-0.72l-44.88-9.36-38.16-34.08-0.24-3.36V330.48Z"/>
-		<path class="classSVGFront" d="M347.55,337.68l1.2,0.72V420h-1.2V337.68Z"/>
-		<path class="classSVGFront" id="blockDown2Front" data-id="blockDown2" data-location="Down" d="M348.75,338.16v82.08l0.24,0.24L457.71,443h0.48V348l-107.52-9.84A10.52,10.52,0,0,0,348.75,338.16Z"/>
-		<path class="classSVGFront" d="M458.19,348s0,0,1,.24l0.48,0.48V442.8l-1,.24h-0.48V348Z"/>
-		<path class="classSVGFront" id="blockDown3Front" data-id="blockDown3" data-location="Down" d="M459.63,349l0.24-.48h1.2l147.6,13.68,0.48,0.48,0.24,0.24V474l-0.24.24h-0.24l-149-31-0.24-.48V349Z"/>
-		<path class="classSVGFront" d="M608.91,362.16h1l1,0.48V473.52l-0.72.48-0.72.24V362.88l-0.48-.24-0.24-.48h0.24Z"/>
+		<polygon class="classSVGFront" id="blockDown1Front" data-id="blockDown1" data-location="Down" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
+		<path class="classSVGFront" id="blockDown2Front" data-id="blockDown2" data-location="Down" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
+		<path class="classSVGFront" id="blockDown3Front" data-id="blockDown3" data-location="Down" d="M459.6,348.5l0.2-0.5h1.2l147.6,13.8l0.5,0.5l0.2,0.2v112l-0.2,0.2h-0.2l-149-31.3l-0.2-0.5L459.6,348.5  L459.6,348.5z"/>
+		<path d="M608.7,362l1.4,0l1,0.5l-0.1,111.3l-0.7,0.5l-1,0.2l0-111.8l-0.5-0.2l-0.2-0.5L608.7,362L608.7,362z"/>
 	</svg>
 
 	<script type="text/javascript">
@@ -772,6 +758,7 @@ isRetina = (isMobile)?false:retina();
 					}
 				}
 			});
+			
 			//Отменить/Повторить
 			var stack = [];
 			//Заполняем стек начальными текстурами
