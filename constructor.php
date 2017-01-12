@@ -517,8 +517,86 @@ isRetina = (isMobile)?false:retina();
 		 	
 		 	
 		<!--Текстуры-->
-			<pattern id="decor-1Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75) translate(-30,0)">
+
+			<pattern id="imageblockUp1Back" width="100%" height="100%">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+			    </image>
+			</pattern>
+			<pattern id="imageblockUp2Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockUp3Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle3Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown1Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown2Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown3Back" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+
+		    <pattern id="imageblockUp1" width="100%" height="100%">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(82, 75, 75)">
+			    </image>
+			</pattern>
+			<pattern id="imageblockUp2" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="0" width="300" height="350" transform=" scale(-0.9,0.7)rotate(98, 75, 75)translate(48,0)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockUp3" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(82, 75, 75) translate(30,0)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle1" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle2" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockMiddle3" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown1" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown2" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblockDown3" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		     	</image>
+		    </pattern>
+
+
+
+
+			<!--<pattern id="decor-1Up" width="100%" height="100%">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="decor-1Middle" width="100%" height="100%">
@@ -624,7 +702,7 @@ isRetina = (isMobile)?false:retina();
 		    <pattern id="woodStartDown" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
-		    </pattern>
+		    </pattern>-->
 
 		 </defs>
 
@@ -851,7 +929,8 @@ isRetina = (isMobile)?false:retina();
 					   			$(this).attr({"r": now});
 					   		},
 					   		complete: function(){
-					   			$('#'+clickEl+'Back').css({"fill": "url(#"+currentTexture.children().attr("data-id")+ dataLoc + ")"});
+					   			//$('#'+clickEl+'Back').css({"fill": "url(#image"+clickEl+")"});
+					   			$('#image'+clickEl+'Back').children().attr("xlink:href", currentTexture.children().attr("src"));
 					   		}
 					  });
 
@@ -886,10 +965,12 @@ isRetina = (isMobile)?false:retina();
 				if(currentTexture != undefined)
 				{
 					//Получаем элемент из центрального слоя
-					clickElem = $(this).attr("data-id");
-					dataLocation = $(this).attr("data-location");
-					$('#'+clickElem).css({"fill": "url(#"+currentTexture.children().attr("data-id")+ dataLocation + ")"});
-
+					clickElem = $(this).attr("data-id");//blockUp1
+					//dataLocation = $(this).attr("data-location");//Up
+					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
+					//закинуть текущую текстуру в pattern
+					$('#image'+clickElem).children().attr("xlink:href", currentTexture.children().attr("src"));
+					console.log("#image", $('#image'+clickElem));
 					offset = $(this).position();
 				    parent = $('.rel').offset();
 
@@ -897,7 +978,7 @@ isRetina = (isMobile)?false:retina();
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 
 				    //Добавить текущий SVG и текстуру в стек
-				    var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("data-id") + dataLocation + ")");
+				    var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + dataLocation + ")");
 				    console.log(stackObj.path != stack[stack.length - 1].path, stackObj.texture != stack[stack.length - 1].texture);
 				    if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
 				    {

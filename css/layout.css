@@ -3751,16 +3751,78 @@ div.fancybox-inner{
 	fill-rule:evenodd;
 }*/
 
-#blockUp1, #blockUp2, #blockUp3, #blockUp1Back, #blockUp2Back, #blockUp3Back{
-	fill: url(#decor-1Up); 
+#blockUp1Back{
+	fill: url(#imageblockUp1Back); 
 	fill-rule:evenodd;
 }
-#blockMiddle1, #blockMiddle2, #blockMiddle3, #blockMiddle1Back, #blockMiddle2Back,
+#blockUp2Back{
+	fill: url(#imageblockUp2Back); 
+	fill-rule:evenodd;
+}
+#blockUp3Back{
+	fill: url(#imageblockUp3Back); 
+	fill-rule:evenodd;
+}
+#blockUp1{
+	fill: url(#imageblockUp1); 
+	fill-rule:evenodd;
+}
+#blockUp2{
+	fill: url(#imageblockUp2); 
+	fill-rule:evenodd;
+}
+#blockUp3{
+	fill: url(#imageblockUp3); 
+	fill-rule:evenodd;
+}
+
+
+#blockMiddle1Back{
+	fill: url(#imageblockMiddle1Back); 
+	fill-rule:evenodd;
+}
+#blockMiddle2Back{
+	fill: url(#imageblockMiddle2Back); 
+	fill-rule:evenodd;
+}
 #blockMiddle3Back{
-	fill: url(#decor-1Middle); 
+	fill: url(#imageblockMiddle3Back); 
 	fill-rule:evenodd;
 }
-#blockDown1, #blockDown2, #blockDown3, #blockDown1Back, #blockDown2Back, #blockDown3Back{
-	fill: url(#decor-1Down);
+#blockMiddle1{
+	fill: url(#imageblockMiddle1); 
+	fill-rule:evenodd;
+}
+#blockMiddle2{
+	fill: url(#imageblockMiddle2); 
+	fill-rule:evenodd;
+}
+#blockMiddle3{
+	fill: url(#imageblockMiddle3); 
+	fill-rule:evenodd;
+}
+#blockDown1Back{
+	fill: url(#imageblockDown1Back);
+	fill-rule:evenodd;
+}
+#blockDown2Back{
+	fill: url(#imageblockDown2Back);
+	fill-rule:evenodd;
+}
+#blockDown3Back{
+	fill: url(#imageblockDown3Back);
+	fill-rule:evenodd;
+}
+#blockDown1{
+	fill: url(#imageblockDown1);
+	fill-rule:evenodd;
+}
+#blockDown2{
+	fill: url(#imageblockDown2);
+	fill-rule:evenodd;
+}
+#blockDown3{
+	fill: url(#imageblockDown3);
+	fill-rule:evenodd;
 }
 /*----------------------------------------------*/
