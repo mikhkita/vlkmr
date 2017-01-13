@@ -246,50 +246,50 @@ isRetina = (isMobile)?false:retina();
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
-					if($('#room').width() > $(window).width())
+					console.log($('#room').width() > $('.b-wide-block').width());
+					if($('#room').width() > $('.b-wide-block').width())
 					{
 						$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 							"height": "auto",
-							"width": $(window).width()
+							"width": $('.b-wide-block').width()
 						});
 					}
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					checkSize = false;
 			});
 			//$('.windowConstructor').css("height", $(window).height());
+			//После загрузки страницы вызываем ресайз
 			$(window).load(function(){
-				console.log("before room: ", $('#room').width());
-				$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({"height": $(window).height() - height});
-				console.log("before: ", $('#room').width());
-				$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-				console.log("after: ", $('#room').width());
-				console.log("after: ", $('#room').height());
+				$(window).resize();
 			});
 			$('.fullSize').click(function(){
-				if(checkSize === false){
-					var curWidth = $('#room').width();
-					$('#room').css({
-						"height": "auto",
-						"width": $('.b-wide-block').width()});
-					var autoHeight = $('#room').height();
-					$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
-						{
-							height: autoHeight,
-							width: $('.b-wide-block').width()
-						});
-					checkSize = true;
-				}else{
-					var curHeight = $('#room').height();
-					$('#room').css({
-						"height": $(window).height() - height,
-						"width": "auto"});
-					var autoWidth = $('#room').width();
-					$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
-						{
-							height: $(window).height() - height,
-							width: autoWidth
-						});
-					checkSize = false;
+				
+				{
+					if(checkSize === false){
+						var curWidth = $('#room').width();
+						$('#room').css({
+							"height": "auto",
+							"width": $('.b-wide-block').width()});
+						var autoHeight = $('#room').height();
+						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
+							{
+								height: autoHeight,
+								width: $('.b-wide-block').width()
+							});
+						checkSize = true;
+					}else if(checkSize === true && $('.rel').height() > $(window).height() - 100){
+						var curHeight = $('#room').height();
+						$('#room').css({
+							"height": $(window).height() - height,
+							"width": "auto"});
+						var autoWidth = $('#room').width();
+						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+							{
+								height: $(window).height() - height,
+								width: autoWidth
+							});
+						checkSize = false;
+					}
 				}
 			});
 			  /*$('.repeatPrev[title]').qtip({
@@ -519,15 +519,15 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 			<pattern id="imageblockUp1Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-20" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="35" width="300" height="240" transform=" scale(-1,1)rotate(103, 75, 75)translate(23,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-30" width="300" height="240" transform="rotate(77, 75, 75) translate(1,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
@@ -535,7 +535,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-5" y="0" width="220" height="350" transform="scale(-1,1) rotate(88, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3Back" width="100%" height="100%">
@@ -547,24 +547,24 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-12" y="0" width="220" height="350" transform="scale(-1,1) rotate(85, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="5" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblockUp1" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(82, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-20" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="0" width="300" height="350" transform=" scale(-0.9,0.7)rotate(98, 75, 75)translate(48,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="35" width="300" height="240" transform=" scale(-1,1)rotate(103, 75, 75)translate(23,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(82, 75, 75) translate(30,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-30" width="300" height="240" transform="rotate(77, 75, 75) translate(1,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1" width="100%" height="100%">
@@ -572,7 +572,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-5" y="0" width="220" height="350" transform="scale(-1,1) rotate(88, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3" width="100%" height="100%">
@@ -584,11 +584,11 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-12" y="0" width="220" height="350" transform="scale(-1,1) rotate(85, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="5" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -841,7 +841,7 @@ isRetina = (isMobile)?false:retina();
 			var stack = [];
 			//Заполняем стек начальными текстурами
 			$('.default').each(function(){
-				var stackAdd = new clickArea($(this).attr("id"), $(this).css("fill"));
+				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
 				stack.push(stackAdd);
 			});
 			var stackRepeat = [];
@@ -861,8 +861,10 @@ isRetina = (isMobile)?false:retina();
 						{
 							console.log("stack", stack);
 							//теперь нужно поменять текстуры
-							$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
-							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});
+							/*$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
+							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
+							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
+							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
 							stackRepeat.push(lastElemStack);
 						}
 					else{
@@ -891,8 +893,10 @@ isRetina = (isMobile)?false:retina();
 				if(stackRepeat.length != 0){
 					console.log("stackRepeat", stackRepeat);
 					var lastElemStackRepeat= stackRepeat.pop();
-					$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
-					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});
+					/*$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
+					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
+					$('#image'+lastElemStackRepeat.path).children().attr("xlink:href", lastElemStackRepeat.texture);
+					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
 				}
@@ -978,9 +982,20 @@ isRetina = (isMobile)?false:retina();
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 
 				    //Добавить текущий SVG и текстуру в стек
-				    var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + dataLocation + ")");
-				    console.log(stackObj.path != stack[stack.length - 1].path, stackObj.texture != stack[stack.length - 1].texture);
-				    if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
+				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + dataLocation + ")");
+				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
+				    console.log(stack);
+				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
+
+				    //искать в стеке такое же сочетание path+texture
+				    var elemRepeat = false;
+				    stack.forEach(function(item, i, stack){
+				    	if(stackObj.path === item.path && stackObj.texture === item.texture)
+				    	{
+				    		elemRepeat = true;
+				    	}
+				    })
+				    if(elemRepeat === false)
 				    {
 				    	console.log("add!");
 				    	stack.push(stackObj);
