@@ -3613,10 +3613,6 @@ div.fancybox-inner{
 	width: 100%;
 	margin: 0 auto;
 	padding: 10px 10px 10px 10px;
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
 	z-index: 1;
 	background-color: #fff;
 	overflow: auto;
