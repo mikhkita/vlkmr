@@ -371,9 +371,7 @@ isRetina = (isMobile)?false:retina();
 				$('.panelFloor').toggleClass("showContent");
 			});
 			//Раскрывающаяся панель с декорами
-			$('.iconMore').children().fancybox({
-					
-				});
+			$('.iconMore').fancybox();
 			/*$('.iconMore').click(function(){
 				$('.allTextures').toggleClass("showContent");
 				$('.allTextures').css({
@@ -416,7 +414,7 @@ isRetina = (isMobile)?false:retina();
 							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px" data-id="decor-5"></div>
 							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
 							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.png" width="60px" height="60px" data-id="decor-8"></div>
+							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
 							<div class="currentTexture"><img src="i/decor-1.jpg" width="60px" height="60px" data-id="decor-1"></div>
 							<div class="currentTexture"><img src="i/decor-2.jpg" width="60px" height="60px" data-id="decor-2"></div>
 							<div class="currentTexture"><img src="i/decor-3.jpg" width="60px" height="60px" data-id="decor-3"></div>
@@ -424,7 +422,7 @@ isRetina = (isMobile)?false:retina();
 							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px" data-id="decor-5"></div>
 							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
 							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.png" width="60px" height="60px" data-id="decor-8"></div>
+							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
 
 							</div>
 
@@ -448,8 +446,8 @@ isRetina = (isMobile)?false:retina();
 									<div class="arrowNext">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore">
-										<a class="icon-more" href="#b-popup-decors"></a>
+									<div class="iconMore" href="#b-popup-decors">
+										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
 								</div>
@@ -504,39 +502,39 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 			<pattern id="imageblockUp1Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -544,154 +542,41 @@ isRetina = (isMobile)?false:retina();
 
 
 		    <pattern id="imageblockUp1" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2" width="100%" height="100%">
-		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-
-
-
-
-			<!--<pattern id="decor-1Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-1Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-1Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-2Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-2Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-2Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-3Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-3Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-3Down" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="decor-4Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-4.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-4Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-4.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-4Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-4.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-5Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-5.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-5Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-5.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-5Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-5.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-6Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-6.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-6Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-6.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-6Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-6.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-7Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-7.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-7Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-7.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-7Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-7.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-8Up" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-8Middle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="decor-8Down" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		        </image>
-		    </pattern>
-			<pattern id="woodStartUp" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="woodStartMiddle" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(95, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="woodStartDown" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/front.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>-->
-
 		 </defs>
 
 		<polygon class="classSVGback" id="blockUp1Back" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
@@ -742,11 +627,6 @@ isRetina = (isMobile)?false:retina();
 			<clipPath id="clippingDown3">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-		<!--Текстуры-->
-			<pattern id="wood" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-100" width="200" height="350" transform="rotate(90, 75, 75)">
-		     	</image>
-		    </pattern>
 
 		 </defs>
 
@@ -809,6 +689,7 @@ isRetina = (isMobile)?false:retina();
 		        console.log("currentTexture",$('.currentTexture').eq(slideIndex), "slideIndex", slideIndex, "this", $(this));
 		        $('.currentTexture').eq(slideIndex + shiftSlider).click();
 		        $('.allTextures').removeClass("showContent");
+		        $.fancybox.close();
 		    });
 		    //Закрыть панель с декорами по клику вне его
 		    /*$(document).click(function (e){ 
@@ -1126,12 +1007,76 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div id="b-popup-decors">
-						<div class="b-popup" >
-							<a href="#" class="b-popup-close" title="Закрыть"></a>
-							<div class="b-three-color"></div>
-							<h2 class="b-title">Place your inquiry</h2>
+			<div class="b-popup" >
+				<a href="#" class="b-popup-close" title="Закрыть"></a>
+					<div class="b-three-color"></div>
+					<h2 class="b-title">Выберите декор</h2>
 
-							<div class="allTextures">
+						<div class="allTextures">
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
 							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
 							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
 							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
@@ -1149,8 +1094,8 @@ isRetina = (isMobile)?false:retina();
 							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
 							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
 						</div>
-						</div>
-					</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
