@@ -242,6 +242,7 @@ isRetina = (isMobile)?false:retina();
 		$(document).ready(function(){
 			var height = 100;
 			$(window).resize(function(){
+				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
@@ -255,9 +256,9 @@ isRetina = (isMobile)?false:retina();
 						});
 					}
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-					checkSize = false;
+					//checkSize = false;
+				}
 			});
-			//$('.windowConstructor').css("height", $(window).height());
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(){
 				$(window).resize();
@@ -355,17 +356,6 @@ isRetina = (isMobile)?false:retina();
 				}
 
 			});
-				/*if(e.ctrlKey && e.which == 90)
-				{
-					console.log("Press Cntr+Z");
-					$('.repeatPrevClick').click();
-					return false;
-				}
-				else if(e.ctrlKey && e.which == 89){
-					console.log("Press Cntr+Y");
-					$('.repeatNextClick').click();
-					return false;
-				}*/
 			//Панель с полами
 			$('.layers').click(function(){
 				$('.panelFloor').toggleClass("showContent");
@@ -491,7 +481,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="fullSize">
 				<span class="icon-full-size"></span>
 			</div>
-		<div class="rel">
+		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
@@ -832,10 +822,11 @@ isRetina = (isMobile)?false:retina();
 
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
-				if(currentTexture != undefined)
+				clickElem = $(this).attr("data-id");//blockUp1
+				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
 					//Получаем элемент из центрального слоя
-					clickElem = $(this).attr("data-id");//blockUp1
+					
 					//dataLocation = $(this).attr("data-location");//Up
 					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
@@ -855,7 +846,7 @@ isRetina = (isMobile)?false:retina();
 
 				    //искать в стеке такое же сочетание path+texture
 				    var elemRepeat = false;
-				    stack.forEach(function(item, i, stack){
+				    /*stack.forEach(function(item, i, stack){
 				    	if(stackObj.path === item.path && stackObj.texture === item.texture)
 				    	{
 				    		elemRepeat = true;
@@ -865,8 +856,8 @@ isRetina = (isMobile)?false:retina();
 				    {
 				    	console.log("add!");
 				    	stack.push(stackObj);
-				    }
-				    
+				    }*/
+				    stack.push(stackObj);
 				    if(stack.length > 9){
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{

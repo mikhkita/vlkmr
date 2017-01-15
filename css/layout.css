@@ -3715,6 +3715,12 @@ div.fancybox-inner{
 .rel{
 	/*max-width: 100%;*/
 	/*display: inline;*/
+	-moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	position: relative;
 	margin: 0 auto;
 	/*height: 1000px;*/
@@ -3759,6 +3765,10 @@ div.fancybox-inner{
 	fill: url(#imageblockUp3Back); 
 	fill-rule:evenodd;
 }
+#blockUp4Back{
+	fill: url(#imageblockUp4Back); 
+	fill-rule:evenodd;
+}
 #blockUp1{
 	fill: url(#imageblockUp1); 
 	fill-rule:evenodd;
@@ -3769,6 +3779,10 @@ div.fancybox-inner{
 }
 #blockUp3{
 	fill: url(#imageblockUp3); 
+	fill-rule:evenodd;
+}
+#blockUp4{
+	fill: url(#imageblockUp4); 
 	fill-rule:evenodd;
 }
 
@@ -3797,6 +3811,8 @@ div.fancybox-inner{
 	fill: url(#imageblockMiddle3); 
 	fill-rule:evenodd;
 }
+
+
 #blockDown1Back{
 	fill: url(#imageblockDown1Back);
 	fill-rule:evenodd;

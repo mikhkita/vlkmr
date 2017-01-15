@@ -242,6 +242,7 @@ isRetina = (isMobile)?false:retina();
 		$(document).ready(function(){
 			var height = 100;
 			$(window).resize(function(){
+				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
@@ -255,9 +256,9 @@ isRetina = (isMobile)?false:retina();
 						});
 					}
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-					checkSize = false;
+					//checkSize = false;
+				}
 			});
-			//$('.windowConstructor').css("height", $(window).height());
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(){
 				$(window).resize();
@@ -355,17 +356,6 @@ isRetina = (isMobile)?false:retina();
 				}
 
 			});
-				/*if(e.ctrlKey && e.which == 90)
-				{
-					console.log("Press Cntr+Z");
-					$('.repeatPrevClick').click();
-					return false;
-				}
-				else if(e.ctrlKey && e.which == 89){
-					console.log("Press Cntr+Y");
-					$('.repeatNextClick').click();
-					return false;
-				}*/
 			//Панель с полами
 			$('.layers').click(function(){
 				$('.panelFloor').toggleClass("showContent");
@@ -491,7 +481,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="fullSize">
 				<span class="icon-full-size"></span>
 			</div>
-		<div class="rel">
+		<div class="rel" unselectable="on">
 
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
 		
@@ -503,35 +493,35 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 			<pattern id="imageblockUp1Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="0" width="300" height="240" transform="rotate(86.5, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26" y="0" width="300" height="240" transform="rotate(86.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp4Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-21.5" y="-50" width="300" height="240" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-50" y="-30" width="300" height="240" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-45" y="-70" width="300" height="240" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-50" width="300" height="240" transform="rotate(94.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-70" width="300" height="240" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -539,46 +529,46 @@ isRetina = (isMobile)?false:retina();
 
 
 		    <pattern id="imageblockUp1" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="0" width="300" height="240" transform="rotate(86.5, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26" y="0" width="300" height="240" transform="rotate(86.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp4" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-21.5" y="-50" width="300" height="240" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1" width="100%" height="100%">
-		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-50" y="-30" width="300" height="240" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-45" y="-70" width="300" height="240" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-50" width="300" height="240" transform="rotate(94.5, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-70" width="300" height="240" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 
 		 </defs>
 		 <polygon class="classSVGback" id="blockUp1Back" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
 		<polygon class="classSVGback" id="blockUp2Back" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGback" id="blockUp3Back" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGback" id="blockUp4Back" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGback" id="blockUp3Back" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGback" id="blockUp4Back" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
 		<polygon class="classSVGback" id="blockMiddle1Back" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGback" id="blockMiddle2Back" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGback" id="blockDown1Back" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGback" id="blockMiddle2Back" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGback" id="blockDown1Back" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
 		<polygon class="classSVGback" id="blockDown2Back" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
@@ -617,11 +607,11 @@ isRetina = (isMobile)?false:retina();
 
 		<polygon class="classSVG default" id="blockUp1" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
 		<polygon class="classSVG default" id="blockUp2" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVG default" id="blockUp3" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVG default" id="blockUp4" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVG default" id="blockUp3" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVG default" id="blockUp4" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
 		<polygon class="classSVG default" id="blockMiddle1" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVG default" id="blockMiddle2" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVG default" id="blockDown1" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVG default" id="blockMiddle2" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVG default" id="blockDown1" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
 		<polygon class="classSVG default" id="blockDown2" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
@@ -633,12 +623,13 @@ isRetina = (isMobile)?false:retina();
 		<title>Гостиная</title>
 		<polygon class="classSVGFront" id="blockUp1Front" data-id="blockUp1" data-location="Up" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
 		<polygon class="classSVGFront" id="blockUp2Front" data-id="blockUp2" data-location="Up" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" data-location="Up" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGFront" id="blockUp4Front" data-id="blockUp4" data-location="Up" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" data-location="Up" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" data-location="Up" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGFront" id="blockDown1Front" data-id="blockDown1" data-location="Up" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGFront" id="blockDown2Front" data-id="blockDown2" data-location="Up" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" data-location="Up" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGFront" id="blockUp4Front" data-id="blockUp4" data-location="Up"
+		points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+		<polygon class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" data-location="Middle" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" data-location="Middle" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGFront" id="blockDown1Front" data-id="blockDown1" data-location="Down" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVGFront" id="blockDown2Front" data-id="blockDown2" data-location="Down" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
 	<script type="text/javascript">
@@ -793,14 +784,14 @@ isRetina = (isMobile)?false:retina();
 			}
 
 			/* --------------------------- */
-			var blockUp1 = new areaSVG($('#blockUp1'), $('#clippingUp1 circle'), 120);
-			var blockUp2 = new areaSVG($('#blockUp2'), $('#clippingUp2 circle'), 150);
-			var blockUp3 = new areaSVG($('#blockUp3'), $('#clippingUp3 circle'), 195);
-			var blockUp4 = new areaSVG($('#blockUp4'), $('#clippingUp4 circle'), 90);
-			var blockMiddle1 = new areaSVG($('#blockMiddle1'), $('#clippingMiddle1 circle'), 125);
-			var blockMiddle2 = new areaSVG($('#blockMiddle2'), $('#clippingMiddle2 circle'), 160);
-			var blockDown1 = new areaSVG($('#blockDown1'), $('#clippingDown1 circle'), 125);
-			var blockDown2 = new areaSVG($('#blockDown2'), $('#clippingDown2 circle'), 150);
+			var blockUp1 = new areaSVG($('#blockUp1'), $('#clippingUp1 circle'), 100);
+			var blockUp2 = new areaSVG($('#blockUp2'), $('#clippingUp2 circle'), 135);
+			var blockUp3 = new areaSVG($('#blockUp3'), $('#clippingUp3 circle'), 165);
+			var blockUp4 = new areaSVG($('#blockUp4'), $('#clippingUp4 circle'), 135);
+			var blockMiddle1 = new areaSVG($('#blockMiddle1'), $('#clippingMiddle1 circle'), 185);
+			var blockMiddle2 = new areaSVG($('#blockMiddle2'), $('#clippingMiddle2 circle'), 210);
+			var blockDown1 = new areaSVG($('#blockDown1'), $('#clippingDown1 circle'), 200);
+			var blockDown2 = new areaSVG($('#blockDown2'), $('#clippingDown2 circle'), 210);
 
 			var clickElem;
 			var dataLocation;
@@ -809,10 +800,11 @@ isRetina = (isMobile)?false:retina();
 
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
-				if(currentTexture != undefined)
+				clickElem = $(this).attr("data-id");//blockUp1
+				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
 					//Получаем элемент из центрального слоя
-					clickElem = $(this).attr("data-id");//blockUp1
+					
 					//dataLocation = $(this).attr("data-location");//Up
 					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
@@ -832,7 +824,7 @@ isRetina = (isMobile)?false:retina();
 
 				    //искать в стеке такое же сочетание path+texture
 				    var elemRepeat = false;
-				    stack.forEach(function(item, i, stack){
+				    /*stack.forEach(function(item, i, stack){
 				    	if(stackObj.path === item.path && stackObj.texture === item.texture)
 				    	{
 				    		elemRepeat = true;
@@ -842,8 +834,8 @@ isRetina = (isMobile)?false:retina();
 				    {
 				    	console.log("add!");
 				    	stack.push(stackObj);
-				    }
-				    
+				    }*/
+				    stack.push(stackObj);
 				    if(stack.length > 8){
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{
