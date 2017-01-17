@@ -350,12 +350,12 @@ isRetina = (isMobile)?false:retina();
 			});
 			  $('.repeatPrev[title]').qtip({
 			  	position: {
-			        container: $('.repeatBlock .content'),
-			        adjust: {
-
-            y: -200
-        }
-			    }
+	                my: 'bottom center',
+	                at: 'top center'
+	            },
+	            style: {
+	                classes: 'qtip-shadow qtip-rounded'
+	            }
 			  });
 
 
