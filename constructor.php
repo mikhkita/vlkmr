@@ -99,9 +99,9 @@ isRetina = (isMobile)?false:retina();
 	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
 
-
+<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
 	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-  	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+  	
 
 
 <script>
@@ -301,6 +301,7 @@ isRetina = (isMobile)?false:retina();
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
+				}
 					console.log($('#room').width() > $('.b-wide-block').width());
 					if($('#room').width() > $('.b-wide-block').width())
 					{
@@ -311,7 +312,7 @@ isRetina = (isMobile)?false:retina();
 					}
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					//checkSize = false;
-				}
+				
 			});
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(){
@@ -347,14 +348,15 @@ isRetina = (isMobile)?false:retina();
 					}
 				}
 			});
-			  /*$('.repeatPrev[title]').qtip({
+			  $('.repeatPrev[title]').qtip({
 			  	position: {
-			        target: $(document),
-				        adjust: {
-				            scroll: false // Can be ommited (e.g. default behaviour)
-				        }
+			        container: $('.repeatBlock .content'),
+			        adjust: {
+
+            y: -200
+        }
 			    }
-			  });*/
+			  });
 
 
 			//Доработать значения
@@ -482,14 +484,14 @@ isRetina = (isMobile)?false:retina();
 		slidesToScroll: 8,
 		responsive: [
 			    {
-			      breakpoint: 1240,
+			      breakpoint: 1241,
 			      settings: {
-			        slidesToShow: 4,
-			        slidesToScroll: 4
+			        slidesToShow: 5,
+			        slidesToScroll: 5
 			      }
 			    },
 			    {
-			      breakpoint: 768,
+			      breakpoint: 1025,
 			      settings: {
 			        slidesToShow: 3,
 			        slidesToScroll: 3
@@ -729,15 +731,25 @@ isRetina = (isMobile)?false:retina();
 	<script type="text/javascript">
     	$(document).ready(function()
     	{
-    		var shiftSlider = 8;//менять в зависимости от ширины окна
+    		var shiftSlider;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			$(window).resize(function(){
+				if(window.innerWidth >= 1240){
+					shiftSlider = 8;
+				}
+				if(window.innerWidth < 1240 && window.innerWidth > 1024){
+					shiftSlider = 5;
+				}
+				if(window.innerWidth <= 1024 && window.innerWidth > 768){
+					shiftSlider = 3;
+				}
+			});
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
 					prevTexture.children().css("box-shadow", "");
 				currentTexture = $(this);
-				console.log("!!!!! ", $(this).children());
 				prevTexture = $(this);
 				$(this).children().css({
 					"box-shadow": "0 0 0 3px #483434",
@@ -745,7 +757,6 @@ isRetina = (isMobile)?false:retina();
 				});
 			});
 			$('.currentTexture2').click(function(e){
-				console.log(e);
 		        e.preventDefault();
 		        slideIndex = $(this).index();
 		        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
