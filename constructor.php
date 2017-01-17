@@ -16,15 +16,6 @@
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 
-	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1240px)" href="css/layout-tablet.css" />
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css" />
-
-	<? if( $mobile ): ?>
-			<meta name="viewport" content="width=750, user-scalable=no">
-	<? else: ?>
-			<meta name="viewport" content="width=device-width, user-scalable=no">
-	<? endif; ?>
-
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
@@ -45,6 +36,69 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<script>
+var myWidth,
+	isMobile = false,
+	isRetina = false,
+	slideout = false;
+
+if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+} else if( document.documentElement && ( document.documentElement.clientWidth || 
+document.documentElement.clientHeight ) ) {
+    myWidth = document.documentElement.clientWidth;
+} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    myWidth = document.body.clientWidth;
+}
+
+window.addEventListener("orientationchange", onOrientation, false);
+
+function onOrientation() {
+    if( device.mobile() ){
+    	if( window.orientation == 0 ){
+	        document.getElementById("viewport").setAttribute("content", "width=750, user-scalable=no");
+	    }else{
+	        document.getElementById("viewport").setAttribute("content", "width=768, user-scalable=no");
+	    }
+    }else if( device.tablet() ){
+    	if( window.orientation == 0 ){
+	        document.getElementById("viewport").setAttribute("content", "width=768, user-scalable=no");
+	    }else{
+	        document.getElementById("viewport").setAttribute("content", "width=device-width, user-scalable=no");
+	    }
+    }
+
+    if( slideout != false )
+        slideout.close();
+}
+onOrientation();
+
+function retina(){
+	var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+        (min--moz-device-pixel-ratio: 1.5),\
+        (-o-min-device-pixel-ratio: 3/2),\
+        (min-resolution: 1.5dppx)";
+	if (window.devicePixelRatio > 1)
+	    return true;
+	if (window.matchMedia && window.matchMedia(mediaQuery).matches)
+	    return true;
+	return false;
+}
+
+if( myWidth < 768 ){
+	isMobile = true;
+	body.className += " mobile";
+}
+
+isRetina = (isMobile)?false:retina();
+
+</script>
+
+	<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1240px)" href="css/layout-tablet.css" />
+	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
+
 
 	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
