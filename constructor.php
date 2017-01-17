@@ -425,7 +425,26 @@ isRetina = (isMobile)?false:retina();
 		infinite: true,
 		speed: 300,
 		slidesToShow: 8,
-		slidesToScroll: 8
+		slidesToScroll: 8,
+		responsive: [
+			    {
+			      breakpoint: 1240,
+			      settings: {
+			        slidesToShow: 4,
+			        slidesToScroll: 4
+			      }
+			    },
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 3
+			      }
+			    }
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			  ]
       });
     });
   </script>
@@ -569,17 +588,17 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 		 </defs>
 
-		<polygon class="classSVGback" id="blockUp1Back" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
-		<polygon class="classSVGback" id="blockUp2Back" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
-		<polygon class="classSVGback" id="blockUp3Back" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
+		<polygon class="classSVGback"  id="blockUp1Back" fill="url(#imageblockUp1Back)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
+		<polygon class="classSVGback" id="blockUp2Back" fill="url(#imageblockUp2Back)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
+		<polygon class="classSVGback" id="blockUp3Back" fill="url(#imageblockUp3Back)" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
 
-		<polygon class="classSVGback" id="blockMiddle1Back" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
-		<polygon class="classSVGback" id="blockMiddle2Back" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
-		<polygon class="classSVGback" id="blockMiddle3Back" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
+		<polygon class="classSVGback" id="blockMiddle1Back" fill="url(#imageblockMiddle1Back)" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
+		<polygon class="classSVGback" id="blockMiddle2Back" fill="url(#imageblockMiddle2Back)" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
+		<polygon class="classSVGback" id="blockMiddle3Back" fill="url(#imageblockMiddle3Back)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
 
-		<polygon class="classSVGback" id="blockDown1Back" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
-		<path class="classSVGback" id="blockDown2Back" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
-		<polygon class="classSVGback" id="blockDown3Back" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "/>
+		<polygon class="classSVGback" id="blockDown1Back" fill="url(#imageblockDown1Back)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
+		<path class="classSVGback" id="blockDown2Back" fill="url(#imageblockDown2Back)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
+		<polygon class="classSVGback" id="blockDown3Back" fill="url(#imageblockDown3Back)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "/>
 	</svg>
 
 <!--Это задний слой - он и будет изменяться-->
@@ -620,17 +639,17 @@ isRetina = (isMobile)?false:retina();
 
 		 </defs>
 
-		<polygon class="classSVG default" id="blockUp1" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
-		<polygon class="classSVG default" id="blockUp2" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
-		<polygon class="classSVG default" id="blockUp3" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
+		<polygon class="classSVG default" id="blockUp1" fill="url(#imageblockUp1)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"/>
+		<polygon class="classSVG default" id="blockUp2" fill="url(#imageblockUp2)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"/>
+		<polygon class="classSVG default" id="blockUp3" fill="url(#imageblockUp3)"  points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"/>
 
-		<polygon class="classSVG default" id="blockMiddle1" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
-		<polygon class="classSVG default" id="blockMiddle2" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
-		<polygon class="classSVG default" id="blockMiddle3" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
+		<polygon class="classSVG default" id="blockMiddle1" fill="url(#imageblockMiddle1)"  points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "/>
+		<polygon class="classSVG default" id="blockMiddle2" fill="url(#imageblockMiddle2)"  points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "/>
+		<polygon class="classSVG default" id="blockMiddle3" fill="url(#imageblockMiddle3)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "/>
 
-		<polygon class="classSVG default" id="blockDown1" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
-		<path class="classSVG default" id="blockDown2" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
-		<polygon class="classSVG default" id="blockDown3" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "/>
+		<polygon class="classSVG default" id="blockDown1" fill="url(#imageblockDown1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "/>
+		<path class="classSVG default" id="blockDown2" fill="url(#imageblockDown2)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"/>
+		<polygon class="classSVG default" id="blockDown3" fill="url(#imageblockDown3)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "/>
 
 	</svg>
 

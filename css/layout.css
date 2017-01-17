@@ -3541,7 +3541,7 @@ div.fancybox-inner{
 	width: 745px;
 	height: 66px;
 	display: inline-block;
-	margin-left: 85px;
+	margin-left: 73px;
 }
 
 .arrowPrev, .arrowNext, .iconMore, .fullSize{
@@ -3553,7 +3553,7 @@ div.fancybox-inner{
 	background-color: #f4f4f4;
 	text-align: center;
 	padding-top: 8px;
-	margin: 14px 0;
+	margin: 15px 0;
 	box-sizing: border-box;
 	cursor: pointer;
 }
@@ -3753,7 +3753,7 @@ div.fancybox-inner{
 	fill-rule:evenodd;
 }*/
 
-#blockUp1Back{
+/*#blockUp1Back{
 	fill: url(#imageblockUp1Back); 
 	fill-rule:evenodd;
 }
@@ -3836,5 +3836,48 @@ div.fancybox-inner{
 #blockDown3{
 	fill: url(#imageblockDown3);
 	fill-rule:evenodd;
+}*/
+
+@media screen and (min-width: 768px) and (max-width: 1240px){
+	.windowConstructor{
+		width: 768px;
+		margin: 0 auto;
+	}
+	.textures {
+	    width: 300px;
+	}
+	.setTextures {
+	    width: 440px;
+	    margin-left: 28px;
+	}
+	.arrowPrev {
+		margin-right: 7px;
+	}
+	/*body, .b-wide-block, .b-block {
+		min-width: 768px !important;
+	}
+	.b-block {
+		width: 768px !important;
+	    margin: 0px auto;
+	}*/
 }
+@media screen and (max-width: 768px){
+	.textures {
+	    width: 225px;
+	}
+	.setTextures {
+	    width: 375px;
+	    margin-left: 73px;
+	}
+	/*.b-block {
+	    width: 100%;
+	    min-width: 768px;
+	    margin: 0px auto;
+	    padding: 0px 20px;
+	}*/
+	.arrowPrev, .arrowNext {
+		padding-top: 0px;
+	}
+}
+
 /*----------------------------------------------*/

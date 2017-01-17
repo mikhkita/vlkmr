@@ -425,7 +425,26 @@ isRetina = (isMobile)?false:retina();
 		infinite: true,
 		speed: 300,
 		slidesToShow: 8,
-		slidesToScroll: 8
+		slidesToScroll: 8,
+		responsive: [
+			    {
+			      breakpoint: 1240,
+			      settings: {
+			        slidesToShow: 4,
+			        slidesToScroll: 4
+			      }
+			    },
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 3
+			      }
+			    }
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			  ]
       });
     });
   </script>
@@ -562,14 +581,14 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 		 </defs>
-		 <polygon class="classSVGback" id="blockUp1Back" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVGback" id="blockUp2Back" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGback" id="blockUp3Back" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGback" id="blockUp4Back" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGback" id="blockMiddle1Back" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGback" id="blockMiddle2Back" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGback" id="blockDown1Back" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGback" id="blockDown2Back" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		 <polygon class="classSVGback" id="blockUp1Back" fill="url(#imageblockUp1Back)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+		<polygon class="classSVGback" id="blockUp2Back" fill="url(#imageblockUp2Back)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+		<polygon class="classSVGback" id="blockUp3Back" fill="url(#imageblockUp3Back)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGback" id="blockUp4Back" fill="url(#imageblockUp4Back)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+		<polygon class="classSVGback" id="blockMiddle1Back" fill="url(#imageblockMiddle1Back)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVGback" id="blockMiddle2Back" fill="url(#imageblockMiddle2Back)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGback" id="blockDown1Back" fill="url(#imageblockDown1Back)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVGback" id="blockDown2Back" fill="url(#imageblockDown2Back)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
 <!--Это задний слой - он и будет изменяться-->
@@ -605,14 +624,14 @@ isRetina = (isMobile)?false:retina();
 
 		 </defs>
 
-		<polygon class="classSVG default" id="blockUp1" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVG default" id="blockUp2" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVG default" id="blockUp3" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVG default" id="blockUp4" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVG default" id="blockMiddle1" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVG default" id="blockMiddle2" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVG default" id="blockDown1" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVG default" id="blockDown2" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		<polygon class="classSVG default" id="blockUp1" fill="url(#imageblockUp1)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+		<polygon class="classSVG default" id="blockUp2" fill="url(#imageblockUp2)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+		<polygon class="classSVG default" id="blockUp3" fill="url(#imageblockUp3)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVG default" id="blockUp4" fill="url(#imageblockUp4)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+		<polygon class="classSVG default" id="blockMiddle1" fill="url(#imageblockMiddle1)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVG default" id="blockMiddle2" fill="url(#imageblockMiddle2)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVG default" id="blockDown1" fill="url(#imageblockDown1)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVG default" id="blockDown2" fill="url(#imageblockDown2)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
 	<img id="room" src="i/RoomWall.png">
