@@ -348,13 +348,37 @@ isRetina = (isMobile)?false:retina();
 					}
 				}
 			});
-			  $('.repeatPrev[title]').qtip({
+			  $('.repeatPrev[title], .repeatNext[title], .arrowPrev[title], .arrowNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
-	                at: 'top center'
+	                at: 'top center',
+	                adjust: {
+			            y: -5
+			        }
 	            },
 	            style: {
-	                classes: 'qtip-shadow qtip-rounded'
+        			classes: 'qtipCustom qtip-light',
+        			/*border: {
+						width: 0
+					},*/
+	            	tip: {
+	            		width: 16, height: 8
+	            	}
+	            }
+			  });
+			  $('.fullSize[title]').qtip({
+			  		position: {
+	                my: 'right center',
+	                at: 'left center',
+	                adjust: {
+			            x: -5
+			        }
+	            },
+	            style: {
+        			classes: 'qtipCustom qtipCustomWhite qtip-light',
+	            	tip: {
+	            		width: 16, height: 8
+	            	}
 	            }
 			  });
 
@@ -446,7 +470,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="setTextures">
 							<div class="floater">
 							<div class="content">
-								<div class="arrowPrev">
+								<div class="arrowPrev" title="Назад">
 									<span class="icon-left-arrow"></span>
 								</div>
 							</div>
@@ -508,10 +532,10 @@ isRetina = (isMobile)?false:retina();
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
-									<div class="arrowNext">
+									<div class="arrowNext" title="Вперёд">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors">
+									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -522,10 +546,10 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers">
+								<div class="layers" title="Выбор декора пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share">
+								<div class="share" title="Поделиться">
 									<span class="icon-share"></span>
 								</div>
 							</div>
@@ -553,7 +577,7 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
-			<div class="fullSize">
+			<div class="fullSize" title="Во весь экран">
 				<span class="icon-full-size"></span>
 			</div>
 		<div class="rel" unselectable="on">
