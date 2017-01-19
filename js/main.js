@@ -148,7 +148,7 @@ $(document).ready(function(){
             $("html").removeClass("touch-locked");
         });
 
-        slideout = new Slideout({
+        /*slideout = new Slideout({
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
             'padding': 500,
@@ -158,7 +158,7 @@ $(document).ready(function(){
 
         slideout.on('open', function() {
             $(".b-menu-overlay").show();
-        });
+        });*/
     }
 
     $("body").on("click", ".b-orange-butt", function(){
@@ -189,8 +189,8 @@ $(document).ready(function(){
 
     setTimeout(calcMenuOverlay, 1000);
 
-    if( isMobile || isSmallTablet )
-        new FastClick(document.body);
+    /*if( isMobile || isSmallTablet )
+        new FastClick(document.body);*/
 
     if( isMobile || isSmallTablet ){
         $(".b-text table").wrap('<div class="b-table-wrap b-slideout-not-touch clearfix"></div>');

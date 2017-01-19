@@ -5,7 +5,6 @@ body {
 }
 body {
 	min-width: 1024px;
-	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 }
 a{

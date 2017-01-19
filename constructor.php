@@ -357,7 +357,7 @@ isRetina = (isMobile)?false:retina();
 			        }
 	            },
 	            style: {
-        			classes: 'qtipCustom qtip-light',
+        			classes: 'qtipFont qtipCustom qtip-light',
         			/*border: {
 						width: 0
 					},*/
@@ -375,7 +375,7 @@ isRetina = (isMobile)?false:retina();
 			        }
 	            },
 	            style: {
-        			classes: 'qtipCustom qtipCustomWhite qtip-light',
+        			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
 	            	tip: {
 	            		width: 16, height: 8
 	            	}
@@ -510,15 +510,24 @@ isRetina = (isMobile)?false:retina();
 			    {
 			      breakpoint: 1241,
 			      settings: {
-			        slidesToShow: 5,
-			        slidesToScroll: 5
+			        slidesToShow: 6,
+			        slidesToScroll: 6
 			      }
 			    },
 			    {
-			      breakpoint: 1025,
+			      breakpoint: 1024,
 			      settings: {
 			        slidesToShow: 3,
 			        slidesToScroll: 3
+			      }
+			    },
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    	arrows: false,
+			    	speed: 400,
+			        slidesToShow: 1,
+			        slidesToScroll: 1
 			      }
 			    }
 			    // You can unslick at a given breakpoint now by adding:
@@ -763,10 +772,16 @@ isRetina = (isMobile)?false:retina();
 					shiftSlider = 8;
 				}
 				if(window.innerWidth < 1240 && window.innerWidth > 1024){
-					shiftSlider = 5;
+					shiftSlider = 6;
 				}
 				if(window.innerWidth <= 1024 && window.innerWidth > 768){
 					shiftSlider = 3;
+				}
+				if(window.innerWidth <= 768){
+					shiftSlider = 1;
+					$('.currentTexture').click(function(e){
+						$('.iconMore').click();
+					});
 				}
 			});
 			//Выбор текстуры

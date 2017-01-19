@@ -3759,6 +3759,10 @@ div.fancybox-inner{
 	background-color: #fff;
 }
 
+.fancybox-title{
+	visibility: hidden !important;
+}
+
 /*.qtipCustom{
 	border: 0;
 }*/
@@ -3855,22 +3859,22 @@ div.fancybox-inner{
 
 @media screen and (min-width: 1024px) and (max-width: 1240px){
 	.windowConstructor{
-		width: 850px;
-		margin: 0 auto;
+		width: 960px;
+		margin: 0;
 	}
 	.textures {
-	    width: 375px;
+	    width: 450px;
 	}
 	.setTextures {
-	    width: 515px;
-	    margin-left: 32px;
+	    width: 590px;
+	    margin-left: 50px;
 	}
 	.arrowPrev {
 		margin-right: 7px;
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
 	.windowConstructor{
 		width: 700px;
 	}
@@ -3886,16 +3890,67 @@ div.fancybox-inner{
 	}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 	.textures {
-	    width: 225px;
+	    width: 170px;
 	}
 	.setTextures {
-	    width: 375px;
-	    margin-left: 30px;
+	    width: 220px;
+	    margin-left: 55px;
 	}
+
+	.currentTexture img{
+		width: 130px;
+	}
+
 	.windowConstructor, .fullSize{
-		font-size: 15px;
+
+	}
+
+	.repeatPrev, .repeatPrev2, .repeatNext, .repeatNext2, .layers, .share{
+		width: 66px;
+		height: 66px;;
+		padding-top: 15px;
+		margin: 0 20px 0 0;
+	}
+
+	.share{
+		margin: 0;
+	}
+
+	.icon-back-arrow:before, .icon-back-arrow-right:before, .icon-layers:before, .icon-share:before
+	{
+		font-size: 36px !important;
+	}
+
+	.iconMore, .fullSize{
+		width: 46px;
+		height: 46px;
+		padding-top: 10px;
+		margin: 10px 0;
+	}
+
+	.fullSize{
+		margin: 10px;
+	}
+
+	.icon-more:before, .icon-full-size:before{
+		font-size: 25px !important;
+	}
+
+	.arrowNext, .arrowPrev{
+		display: none;
+	}
+
+	.qtipFont .qtip-content{
+		font-size: 16px;
+		padding: 12px 24px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.iconMore, .fullSize{
+		padding-top: 5px;
 	}
 }
 
