@@ -3675,12 +3675,17 @@ div.fancybox-inner{
 /*----Пол----*/
 
 .panelFloor{
-	width: 100%;
-	max-width: 1160px;
-	padding: 30px;
+	width: 1160px;
+	padding: 15px;
+	margin: 0 auto;
 	background-color: #fff;
 	box-sizing: border-box;
 	display: none;
+	position: absolute;
+	top: 0;
+	left:50%;
+	margin-left:-580px;
+	z-index: 10;
 }
 
 .showContent{
@@ -3761,6 +3766,10 @@ div.fancybox-inner{
 
 .fancybox-title{
 	visibility: hidden !important;
+}
+
+.allTextures{
+
 }
 
 /*.qtipCustom{
@@ -3872,6 +3881,14 @@ div.fancybox-inner{
 	.arrowPrev {
 		margin-right: 7px;
 	}
+	.allTextures{
+		max-width: 920px;
+		padding: 10px 0 10px 5px;
+	}
+	.panelFloor{
+		width: 960px;
+		margin-left:-490px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -3887,6 +3904,14 @@ div.fancybox-inner{
 	}
 	.arrowPrev {
 		margin-right: 7px;
+	}
+	.allTextures{
+		max-width: 695px;
+		padding: 10px 0px 10px 5px;
+	}
+	.panelFloor{
+		width: 700px;
+		margin-left:-350px;
 	}
 }
 
@@ -3945,6 +3970,14 @@ div.fancybox-inner{
 	.qtipFont .qtip-content{
 		font-size: 16px;
 		padding: 12px 24px;
+	}
+	.allTextures{
+		max-width: 650px;
+		padding: 10px 0 10px 5px;
+	}
+	.panelFloor{
+		width: 650px;
+		margin-left:-325px;
 	}
 }
 

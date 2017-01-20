@@ -566,12 +566,6 @@ isRetina = (isMobile)?false:retina();
 						</div>
 
 					</div>
-
-					<div class="panelFloor">
-						<img src="i/Room2.png"  ><!--JPG!!-->
-						<img src="i/Room2.png"  >
-						<img src="i/Room2.png"  >
-					</div>
 					
 						
 				</div>
@@ -586,6 +580,11 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
+		<div class="panelFloor">
+						<img src="i/Room2.png"  ><!--JPG!!-->
+						<img src="i/Room2.png"  >
+						<img src="i/Room2.png"  >
+					</div>
 			<div class="fullSize" title="Во весь экран">
 				<span class="icon-full-size"></span>
 			</div>
@@ -779,9 +778,6 @@ isRetina = (isMobile)?false:retina();
 				}
 				if(window.innerWidth <= 768){
 					shiftSlider = 1;
-					$('.currentTexture').click(function(e){
-						$('.iconMore').click();
-					});
 				}
 			});
 			//Выбор текстуры
@@ -794,6 +790,9 @@ isRetina = (isMobile)?false:retina();
 					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
 				});
+				if(window.innerWidth <= 768){
+					$('.iconMore').click();
+				}
 			});
 			$('.currentTexture2').click(function(e){
 		        e.preventDefault();
