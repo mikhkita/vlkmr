@@ -3744,6 +3744,7 @@ div.fancybox-inner{
     user-select: none;
 	position: relative;
 	margin: 0 auto;
+	transform-origin: center top 0px;
 	/*height: 1000px;*/
 }
 

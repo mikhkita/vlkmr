@@ -36,6 +36,8 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.panzoom.min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
 
 	<script>
 var myWidth,
@@ -588,7 +590,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="fullSize" title="Во весь экран">
 				<span class="icon-full-size"></span>
 			</div>
-		<div class="rel" unselectable="on">
+		<div class="rel panzoom-elements" id="hammerElement" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
@@ -766,6 +768,64 @@ isRetina = (isMobile)?false:retina();
     		var shiftSlider;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			/*$('.panzoom-elements').panzoom({ 
+				transition: false,
+				disablePan: false,
+  				disableZoom: true
+			});*/
+
+			var image = document.getElementById('hammerElement');
+			var webpage = document.querySelector('#hammerElement')
+
+var mc = new Hammer.Manager(image);
+
+var pinch = new Hammer.Pinch();
+var pan = new Hammer.Pan();
+
+pinch.recognizeWith(pan);
+
+mc.add([pinch, pan]);
+
+var adjustScale = 1;
+var adjustDeltaX = 0;
+var adjustDeltaY = 0;
+
+var currentScale = null;
+var currentDeltaX = null;
+var currentDeltaY = null;
+
+// Prevent long press saving on mobiles.
+webpage.addEventListener('touchstart', function (e) {
+    e.preventDefault()
+});
+
+// Handles pinch and pan events/transforming at the same time;
+mc.on("pinch pan", function (ev) {
+
+    var transforms = [];
+
+    // Adjusting the current pinch/pan event properties using the previous ones set when they finished touching
+    currentScale = adjustScale * ev.scale;
+    currentDeltaX = adjustDeltaX + (ev.deltaX / currentScale);
+    currentDeltaY = adjustDeltaY + (ev.deltaY / currentScale);
+
+    // Concatinating and applying parameters.
+    transforms.push('scale(' + currentScale + ')');
+	transforms.push('translate(' + currentDeltaX + 'px,' + currentDeltaY + 'px)');
+    webpage.style.transform = transforms.join(' ');
+
+});
+
+
+mc.on("panend pinchend", function (ev) {
+
+    // Saving the final transforms for adjustment next time the user interacts.
+    adjustScale = currentScale;
+    adjustDeltaX = currentDeltaX;
+    adjustDeltaY = currentDeltaY;
+
+});
+
 			$(window).resize(function(){
 				if(window.innerWidth >= 1240){
 					shiftSlider = 8;
