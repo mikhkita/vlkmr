@@ -16,15 +16,6 @@
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 
-	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1240px)" href="css/layout-tablet.css" />
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css" />
-
-	<? if( $mobile ): ?>
-			<meta name="viewport" content="width=750, user-scalable=no">
-	<? else: ?>
-			<meta name="viewport" content="width=device-width, user-scalable=no">
-	<? endif; ?>
-
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
@@ -46,8 +37,71 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
+	<script>
+var myWidth,
+	isMobile = false,
+	isRetina = false,
+	slideout = false;
+
+if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+} else if( document.documentElement && ( document.documentElement.clientWidth || 
+document.documentElement.clientHeight ) ) {
+    myWidth = document.documentElement.clientWidth;
+} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    myWidth = document.body.clientWidth;
+}
+
+window.addEventListener("orientationchange", onOrientation, false);
+
+function onOrientation() {
+    if( device.mobile() ){
+    	if( window.orientation == 0 ){
+	        document.getElementById("viewport").setAttribute("content", "width=750, user-scalable=no");
+	    }else{
+	        document.getElementById("viewport").setAttribute("content", "width=768, user-scalable=no");
+	    }
+    }else if( device.tablet() ){
+    	if( window.orientation == 0 ){
+	        document.getElementById("viewport").setAttribute("content", "width=768, user-scalable=no");
+	    }else{
+	        document.getElementById("viewport").setAttribute("content", "width=device-width, user-scalable=no");
+	    }
+    }
+
+    if( slideout != false )
+        slideout.close();
+}
+onOrientation();
+
+function retina(){
+	var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+        (min--moz-device-pixel-ratio: 1.5),\
+        (-o-min-device-pixel-ratio: 3/2),\
+        (min-resolution: 1.5dppx)";
+	if (window.devicePixelRatio > 1)
+	    return true;
+	if (window.matchMedia && window.matchMedia(mediaQuery).matches)
+	    return true;
+	return false;
+}
+
+if( myWidth < 768 ){
+	isMobile = true;
+	body.className += " mobile";
+}
+
+isRetina = (isMobile)?false:retina();
+
+</script>
+
+	<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1240px)" href="css/layout-tablet.css" />
+	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
 	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-  	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+  	
 
 
 <script>
@@ -234,7 +288,7 @@ isRetina = (isMobile)?false:retina();
 					<li><a href="#">О нас</a></li>
 				</ul>
 				<h1 class="b-title">Конструктор декоров</h1>
-				
+					
 <!--Конструктор-->
 
 	<script type="text/javascript">
@@ -247,6 +301,7 @@ isRetina = (isMobile)?false:retina();
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
+				}
 					console.log($('#room').width() > $('.b-wide-block').width());
 					if($('#room').width() > $('.b-wide-block').width())
 					{
@@ -257,7 +312,7 @@ isRetina = (isMobile)?false:retina();
 					}
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					//checkSize = false;
-				}
+				
 			});
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(){
@@ -293,14 +348,39 @@ isRetina = (isMobile)?false:retina();
 					}
 				}
 			});
-			  /*$('.repeatPrev[title]').qtip({
+			  $('.repeatPrev[title], .repeatNext[title], .arrowPrev[title], .arrowNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
 			  	position: {
-			        target: $(document),
-				        adjust: {
-				            scroll: false // Can be ommited (e.g. default behaviour)
-				        }
-			    }
-			  });*/
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -5
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+        			/*border: {
+						width: 0
+					},*/
+	            	tip: {
+	            		width: 16, height: 8
+	            	}
+	            }
+			  });
+			  $('.fullSize[title]').qtip({
+			  		position: {
+	                my: 'right center',
+	                at: 'left center',
+	                adjust: {
+			            x: -5
+			        }
+	            },
+	            style: {
+        			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
+	            	tip: {
+	            		width: 16, height: 8
+	            	}
+	            }
+			  });
 
 
 			//Доработать значения
@@ -390,7 +470,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="setTextures">
 							<div class="floater">
 							<div class="content">
-								<div class="arrowPrev">
+								<div class="arrowPrev" title="Назад">
 									<span class="icon-left-arrow"></span>
 								</div>
 							</div>
@@ -428,17 +508,26 @@ isRetina = (isMobile)?false:retina();
 		slidesToScroll: 8,
 		responsive: [
 			    {
-			      breakpoint: 1240,
+			      breakpoint: 1241,
 			      settings: {
-			        slidesToShow: 4,
-			        slidesToScroll: 4
+			        slidesToShow: 6,
+			        slidesToScroll: 6
 			      }
 			    },
 			    {
-			      breakpoint: 768,
+			      breakpoint: 1024,
 			      settings: {
 			        slidesToShow: 3,
 			        slidesToScroll: 3
+			      }
+			    },
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    	arrows: false,
+			    	speed: 400,
+			        slidesToShow: 1,
+			        slidesToScroll: 1
 			      }
 			    }
 			    // You can unslick at a given breakpoint now by adding:
@@ -452,10 +541,10 @@ isRetina = (isMobile)?false:retina();
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
-									<div class="arrowNext">
+									<div class="arrowNext" title="Вперёд">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors">
+									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -466,24 +555,17 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers">
+								<div class="layers" title="Выбор декора пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share">
+								<div class="share" title="Поделиться">
 									<span class="icon-share"></span>
 								</div>
 							</div>
 							</div>
 						</div>
 
-					</div>
-
-					<div class="panelFloor">
-						<img src="i/RoomWall.png"  ><!--JPG!!-->
-						<img src="i/RoomWall.png"  >
-						<img src="i/RoomWall.png"  >
-					</div>
-					
+					</div>	
 						
 				</div>
 
@@ -497,8 +579,13 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
-			<div class="fullSize">
-				<span class="icon-full-size"></span>
+		<!--<div class="panelFloor">
+						<img src="i/RoomWall.png"  >
+						<img src="i/RoomWall.png"  >
+						<img src="i/RoomWall.png"  >
+					</div>-->
+			<div class="fullSize" title="Во весь экран">
+				<span class="icon-full-size" ></span>
 			</div>
 		<div class="rel" unselectable="on">
 
@@ -657,6 +744,20 @@ isRetina = (isMobile)?false:retina();
     		var shiftSlider = 8;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			$(window).resize(function(){
+				if(window.innerWidth >= 1240){
+					shiftSlider = 8;
+				}
+				if(window.innerWidth < 1240 && window.innerWidth > 1024){
+					shiftSlider = 6;
+				}
+				if(window.innerWidth <= 1024 && window.innerWidth > 768){
+					shiftSlider = 3;
+				}
+				if(window.innerWidth <= 768){
+					shiftSlider = 1;
+				}
+			});
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
@@ -668,6 +769,9 @@ isRetina = (isMobile)?false:retina();
 					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
 				});
+				if(window.innerWidth <= 768){
+					$('.iconMore').click();
+				}
 			});
 			$('.currentTexture2').click(function(e){
 				console.log(e);

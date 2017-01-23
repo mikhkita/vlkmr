@@ -3638,6 +3638,10 @@ div.fancybox-inner{
 	box-shadow: 0 0 0 4px #483434;
 	box-sizing: border-box;
 }
+.currentTexture img:hover{
+	box-shadow: 0 0 0 3px #c4c4c4;
+	box-sizing: border-box;
+}
 
 .setTexturesRight, .shareBlock{
 	float: right;
@@ -3699,14 +3703,15 @@ div.fancybox-inner{
 .floorIMG{
 	position: relative;
 	display: inline-block;
-	width: 33%;
+	width: 31%;
 	box-sizing: border-box;
+	margin: 10px;
 }
 
-.floorIMG:hover{
+/*.floorIMG:hover{
 	box-shadow: 0 0 0 4px #483434;
 	box-sizing: border-box;
-}
+}*/
 
 .floorIMG img{
 	position: absolute;
@@ -3899,7 +3904,10 @@ div.fancybox-inner{
 	}
 	.panelFloor{
 		width: 960px;
-		margin-left:-490px;
+		margin-left:-480px;
+	}
+	.floorIMG{
+		width: 30%;
 	}
 }
 
@@ -3924,6 +3932,10 @@ div.fancybox-inner{
 	.panelFloor{
 		width: 700px;
 		margin-left:-350px;
+	}
+	.floorIMG{
+		width: 30%;
+		margin: 5px;
 	}
 }
 
@@ -3990,6 +4002,11 @@ div.fancybox-inner{
 	.panelFloor{
 		width: 650px;
 		margin-left:-325px;
+	}
+	.floorIMG{
+		display: block;
+		width: 30%;
+		margin: 5px auto;
 	}
 }
 

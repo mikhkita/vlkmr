@@ -357,7 +357,7 @@ isRetina = (isMobile)?false:retina();
 			        }
 	            },
 	            style: {
-        			classes: 'qtipCustom qtip-light',
+        			classes: 'qtipFont qtipCustom qtip-light',
         			/*border: {
 						width: 0
 					},*/
@@ -375,7 +375,7 @@ isRetina = (isMobile)?false:retina();
 			        }
 	            },
 	            style: {
-        			classes: 'qtipCustom qtipCustomWhite qtip-light',
+        			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
 	            	tip: {
 	            		width: 16, height: 8
 	            	}
@@ -520,6 +520,15 @@ isRetina = (isMobile)?false:retina();
 			        slidesToShow: 3,
 			        slidesToScroll: 3
 			      }
+			    },
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    	arrows: false,
+			    	speed: 400,
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
 			    }
 			    // You can unslick at a given breakpoint now by adding:
 			    // settings: "unslick"
@@ -622,89 +631,89 @@ isRetina = (isMobile)?false:retina();
 		 	
 		<!--Текстуры-->
 <pattern id="imageblockLeft1Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft4Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240">
 			    </image>
 			</pattern>
 			<pattern id="imageblockLeft5Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft6Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft7Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblockCenter1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="300" height="240" transform="rotate(90, 75, 75) scale(1,1.2)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="300" height="240" transform="rotate(90, 75, 75) scale(1,1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter4Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter5Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="-80" width="300" height="240" transform="scale(1, 0.2) rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter6Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter7Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblockRight1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight4Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="0" width="300" height="240" transform="scale(0.5, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight5Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight6Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight7Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="300" height="240">
 		     	</image>
 		    </pattern>
 
@@ -714,89 +723,89 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 <pattern id="imageblockLeft1" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockLeft2" width="100%" height="100%">
-		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
+		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="0" width="300" height="240" transform="scale(0.5, 1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft4" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240">
+			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-32" y="-50" width="300" height="240">
 			    </image>
 			</pattern>
 			<pattern id="imageblockLeft5" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-20" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft6" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockLeft7" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-5" y="-30" width="300" height="240">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblockCenter1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="300" height="240" transform="rotate(90, 75, 75) scale(1,1.2)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-100" width="300" height="240" transform="rotate(90, 75, 75) scale(1,1.2)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="0" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter4" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-7" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter5" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-15" y="-80" width="300" height="240" transform="scale(1, 0.5) rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter6" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockCenter7" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-3" y="-80" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblockRight1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-50" width="300" height="240" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight4" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="0" width="300" height="240" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight5" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-26.5" y="0" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight6" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="300" height="240">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockRight7" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="300" height="240">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-8.png" x="-10" y="-100" width="300" height="240">
 		     	</image>
 		    </pattern>
 
@@ -991,6 +1000,9 @@ isRetina = (isMobile)?false:retina();
 				if(window.innerWidth <= 1024 && window.innerWidth > 768){
 					shiftSlider = 3;
 				}
+				if(window.innerWidth <= 768){
+					shiftSlider = 1;
+				}
 			});
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
@@ -1002,6 +1014,9 @@ isRetina = (isMobile)?false:retina();
 					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
 				});
+				if(window.innerWidth <= 768){
+					$('.iconMore').click();
+				}
 			});
 			$('.currentTexture2').click(function(e){
 		        e.preventDefault();
