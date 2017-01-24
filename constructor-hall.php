@@ -1142,8 +1142,8 @@ isRetina = (isMobile)?false:retina();
 					   			//$('#'+clickEl+'Back').css({"fill": "url(#image"+clickEl+")"});
 					   			$('#image'+clickEl+'Back').children().attr("xlink:href", currentTexture.children().attr("src"));
 					   			$('#image'+clickEl+'Back').children().attr({
-									"x": $('#image'+clickElem).children().attr("x"),
-									"y": $('#image'+clickElem).children().attr("y")
+									"x": $('#image'+clickEl).children().attr("x"),
+									"y": $('#image'+clickEl).children().attr("y")
 								});
 					   		}
 					  });

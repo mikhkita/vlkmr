@@ -601,39 +601,39 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 			<pattern id="imageblockUp1Back" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="200" height="320" transform=" scale(-1,1) rotate(100, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image rand-min-x="-130" rand-max-x="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		       <image rand-min-x="-150" rand-max-x="-20" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image rand-min-x="-140" rand-max-x="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image rand-min-x="-90" rand-max-x="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image rand-min-x="-100" rand-max-x="-30" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3Back" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image rand-min-x="-65" rand-max-x="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 
@@ -641,39 +641,39 @@ isRetina = (isMobile)?false:retina();
 
 
 		    <pattern id="imageblockUp1" width="100%" height="100%">
-			    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="300" height="240" transform="rotate(80, 75, 75)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)">
 			    </image>
 			</pattern>
 			<pattern id="imageblockUp2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="300" height="240" transform=" scale(-1,1) rotate(100, 75, 75)translate(23,0)">
+		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-17" y="35" width="200" height="320" transform=" scale(-1,1) rotate(100, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockUp3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="300" height="240" transform="rotate(80, 75, 75)">
+		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image rand-min-x="-130" rand-max-x="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle2" width="100%" height="100%">
-		       <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="220" height="350" transform="scale(-1,1) rotate(86, 75, 75)">
+		       <image rand-min-x="-150" rand-max-x="-20" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockMiddle3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="220" height="350" transform="rotate(94, 75, 75)">
+		        <image rand-min-x="-140" rand-max-x="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown1" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image rand-min-x="-90" rand-max-x="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown2" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="220" height="350" transform="scale(-1,1) rotate(82, 75, 75)">
+		        <image rand-min-x="-100" rand-max-x="-30" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblockDown3" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="220" height="350" transform="rotate(98, 75, 75)">
+		        <image rand-min-x="-65" rand-max-x="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
 		     	</image>
 		    </pattern>
 		 </defs>
@@ -978,6 +978,10 @@ mc.on("pinchend", function (ev) {
 					   		complete: function(){
 					   			//$('#'+clickEl+'Back').css({"fill": "url(#image"+clickEl+")"});
 					   			$('#image'+clickEl+'Back').children().attr("xlink:href", currentTexture.children().attr("src"));
+					   			$('#image'+clickEl+'Back').children().attr({
+									"x": $('#image'+clickEl).children().attr("x"),
+									"y": $('#image'+clickEl).children().attr("y")
+								});
 					   		}
 					  });
 
@@ -1052,6 +1056,14 @@ mc.on("pinchend", function (ev) {
 					}
 					stackRepeat = [];
 					$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
+
+					//Рандомная закраска
+					var randX = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-x") - $('#image'+clickElem).children().attr("rand-min-x") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-x");
+					var randY = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-y") - $('#image'+clickElem).children().attr("rand-min-y") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-y");
+					$('#image'+clickElem).children().attr({
+						"x": randX,
+						"y": randY
+					});
 
 					switch(clickElem){
 						case "blockUp1":
