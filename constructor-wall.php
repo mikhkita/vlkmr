@@ -867,7 +867,7 @@ isRetina = (isMobile)?false:retina();
 			   this.path = path;
 			   this.circle = circle;
 			   this.radius = radius;
-			   this.animateSVG = function(x, y, clickEl, dataLoc){
+			   this.animateSVG = function(x, y, clickEl, currentTextureLoc){
 			   	//console.log(path, circle);
 			   	circle.attr({
 				  	'cx': x + '%',
@@ -890,9 +890,8 @@ isRetina = (isMobile)?false:retina();
 					   			$(this).attr({"r": now});
 					   		},
 					   		complete: function(){
-					   			//$('#'+clickEl+'Back').css({"fill": "url(#image"+clickEl+")"});
-					   			$('#image'+clickEl+'Back').children().attr("xlink:href", currentTexture.children().attr("src"));
 					   			$('#image'+clickEl+'Back').children().attr({
+					   				"xlink:href": currentTextureLoc.children().attr("src"),
 									"x": $('#image'+clickEl).children().attr("x"),
 									"y": $('#image'+clickEl).children().attr("y")
 								});
@@ -920,7 +919,7 @@ isRetina = (isMobile)?false:retina();
 			var blockDown2 = new areaSVG($('#blockDown2'), $('#clippingDown2 circle'), 210);
 
 			var clickElem;
-			var dataLocation;
+			var currentTexture;
 	    	var offset;
 	    	var parent;
 
@@ -931,7 +930,7 @@ isRetina = (isMobile)?false:retina();
 				{
 					//Получаем элемент из центрального слоя
 					
-					//dataLocation = $(this).attr("data-location");//Up
+					//currentTexture = $(this).attr("data-location");//Up
 					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
 					$('#image'+clickElem).children().attr("xlink:href", currentTexture.children().attr("src"));
@@ -943,7 +942,7 @@ isRetina = (isMobile)?false:retina();
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 
 				    //Добавить текущий SVG и текстуру в стек
-				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + dataLocation + ")");
+				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + currentTexture + ")");
 				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
 				    console.log(stack);
 				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
@@ -980,28 +979,28 @@ isRetina = (isMobile)?false:retina();
 
 					switch(clickElem){
 						case "blockUp1":
-							blockUp1.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockUp1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockUp2":
-							blockUp2.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockUp2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockUp3":
-							blockUp3.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockUp3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockUp4":
-							blockUp4.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockUp4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockMiddle1":
-							blockMiddle1.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockMiddle1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockMiddle2":
-							blockMiddle2.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockMiddle2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockDown1":
-							blockDown1.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockDown1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockDown2":
-							blockDown2.animateSVG(relativeX, relativeY, clickElem, dataLocation);
+							blockDown2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 					}
 				}
