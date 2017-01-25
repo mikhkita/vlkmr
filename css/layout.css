@@ -3617,6 +3617,9 @@ div.fancybox-inner{
 	overflow: auto;
 	box-sizing: border-box;
 }
+.b-title-constrictor{
+	margin: 30px 30px 10px 30px;
+}
 
 .currentTexture{
 	box-sizing: border-box;

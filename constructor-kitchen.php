@@ -862,14 +862,14 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVG default" id="block8" fill="url(#imageblock8)" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
 		<polygon class="classSVG default" id="block9" fill="url(#imageblock9)"  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
 		<polygon class="classSVG default" id="block10" fill="url(#imageblock10)" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
-		<polygon class="classSVG default" id="block11" fill="url(#imageblock11)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+		<polygon class="classSVG default" data-connect="true" id="block11" fill="url(#imageblock11)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
 		<polygon class="classSVG default" id="block12" fill="url(#imageblock12)" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVG default" id="block13" fill="url(#imageblock13)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVG default" id="block14" fill="url(#imageblock14)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
-		<polygon class="classSVG default" id="floor" data-id="floor" fill="url(#floorPattern)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
+		<polygon class="classSVG default" data-connect="true" id="block13" fill="url(#imageblock13)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVG default" data-connect="true" id="block14" fill="url(#imageblock14)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+		<polygon class="classSVG" id="floor" data-id="floor" fill="url(#floorPattern)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
 	2633.2,1465.9 2636.2,1260.1 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
 		<polygon class="classSVG default" id="block15" fill="url(#imageblock15)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
-		<polygon class="classSVG default" id="block16" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+		<polygon class="classSVG default" data-connect="true" id="block16" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
 
 	</svg>
 
@@ -893,7 +893,7 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
 		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
 		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
-		<polygon class="classSVGFront" id="floor" data-id="floor" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
+		<polygon class="classSVGFront" id="floorF" data-id="floor" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
 	2633.2,1465.9 2636.2,1260.1 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
 		<polygon class="classSVGFront" id="block15Front" data-id="block15" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
 		<!--<polygon class="classSVGFront" id="block16Front" data-id="block16" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>-->
@@ -968,6 +968,8 @@ isRetina = (isMobile)?false:retina();
 				stack.push(stackAdd);
 			});
 			var stackRepeat = [];
+			var checkConnectPrev = false;
+			var checkConnectNext = false;
 			//Отменить
 			$('.repeatPrevClick').click(function(e){
 				if(stack.length != 0)
@@ -988,6 +990,11 @@ isRetina = (isMobile)?false:retina();
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
 							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							console.log($('#'+prevElemStack.path).attr("data-connect"));
+							if($('#'+prevElemStack.path).attr("data-connect") === "true" && checkConnectPrev === false){
+								checkConnectPrev = true;
+								$('.repeatPrevClick').click();
+							}
 							stackRepeat.push(lastElemStack);
 						}
 					else{
@@ -1008,6 +1015,7 @@ isRetina = (isMobile)?false:retina();
 					else{
 						$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
 					}
+					checkConnectPrev = false;
 				}
 			});
 
@@ -1022,6 +1030,11 @@ isRetina = (isMobile)?false:retina();
 					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
+					if($('#'+lastElemStackRepeat.path).attr("data-connect") === "true" && checkConnectNext === false){
+							checkConnectNext = true;
+							$('.repeatNextClick').click();
+						}
+					checkConnectNext = false;
 				}
 				else{
 					$(this).removeClass('repeatNext2').addClass('repeatNext');
