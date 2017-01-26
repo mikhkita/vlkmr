@@ -1217,8 +1217,9 @@ isRetina = (isMobile)?false:retina();
 									"x": $('#image'+clickEl).children().attr("x"),
 									"y": $('#image'+clickEl).children().attr("y")
 								});
-								var stackObj = new clickArea(clickEl, $('#image'+clickEl).children().attr("xlink:href"));
+								var stackObj = new clickArea(clickEl, $('#image'+clickElem).children().attr("xlink:href"));
 								stack.push(stackObj);
+								console.log(stack);
 					   		}
 					  });
 
@@ -1325,9 +1326,7 @@ isRetina = (isMobile)?false:retina();
 							blockLeft2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft7, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
-							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
 							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
-							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
 							break
 						case "blockLeft3":
 							blockLeft3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1336,9 +1335,7 @@ isRetina = (isMobile)?false:retina();
 							blockLeft4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft2, #imageblockLeft7').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
-							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
 							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
-							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
 							break
 						case "blockLeft5":
 							blockLeft5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1350,9 +1347,7 @@ isRetina = (isMobile)?false:retina();
 							blockLeft7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft2, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
-							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
 							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
-							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
 							break
 						case "blockCenter1":
 							blockCenter1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1370,13 +1365,11 @@ isRetina = (isMobile)?false:retina();
 							blockCenter5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockCenter6').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockCenter6.animateSVG(relativeX, relativeY, "blockCenter6", currentTexture);
-							stack.push(new clickArea("blockCenter6", $('#imageblockCenter6').children().attr("xlink:href")));
 							break
 						case "blockCenter6":
 							blockCenter6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockCenter5').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockCenter5.animateSVG(relativeX, relativeY, "blockCenter5", currentTexture);
-							stack.push(new clickArea("blockCenter5", $('#imageblockCenter5').children().attr("xlink:href")));
 							break
 						case "blockCenter7":
 							blockCenter7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1388,9 +1381,7 @@ isRetina = (isMobile)?false:retina();
 							blockRight2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight5, #imageblockRight4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
-							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
 							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
-							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
 							break
 						case "blockRight3":
 							blockRight3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1399,17 +1390,13 @@ isRetina = (isMobile)?false:retina();
 							blockRight4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight5, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
-							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
 							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
-							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
 							break
 						case "blockRight5":
 							blockRight5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight4, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
-							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
 							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
-							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
 							break
 						case "blockRight6":
 							blockRight6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
