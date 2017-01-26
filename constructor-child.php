@@ -627,190 +627,189 @@ isRetina = (isMobile)?false:retina();
 		<title>Гостиная</title>
 			<defs>
 		<!--Текстуры-->
-<!--<pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+<pattern id="imageblock1Back" width="100%" height="100%">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock2Back" width="100%" height="100%">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-800" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock3Back" width="100%" height="100%">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="-700"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock4Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-30" y="-100" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock5Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-100" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock6Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-120" y="-300" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock7Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-150" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock8Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-350" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock9Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-140" y="-150" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock10Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="-222" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock11Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-80" y="-120" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock12Back" width="100%" height="100%">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock13Back" width="100%" height="100%">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock14Back" width="100%" height="100%">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock15Back" width="100%" height="100%">
+		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock16Back" width="100%" height="100%">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock17Back" width="100%" height="100%">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-500" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock18Back" width="100%" height="100%">
+		       <image rand-min-x="-250" rand-max-x="0" rand-min-y="-1000" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="1000" height="1600" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock19Back" width="100%" height="100%">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock20Back" width="100%" height="100%">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock21Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="imageblock22Back" width="100%" height="100%">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft2Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		    <pattern id="floorPatternBack" width="100%" height="100%">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="0" width="2000" height="320" >
 		     	</image>
 		    </pattern>
--->
 
 <pattern id="imageblock1" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock2" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-800" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="-700"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-30" y="-100" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock5" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-100" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-120" y="-300" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-150" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock8" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-350" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-140" y="-150" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="-222" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock11" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-80" y="-120" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock12" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock13" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock15" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock17" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-500" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-250" rand-max-x="0" rand-min-y="-1000" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="1000" height="1600" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock22" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPattern" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="0" width="2000" height="320" >
 		     	</image>
 		    </pattern>
 		 </defs>
@@ -838,7 +837,7 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGback" id="block20Back" fill="url(#imageblock20Back)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
 		<polygon class="classSVGback" id="block21Back" fill="url(#imageblock21Back)" points="1260.5,1034 1942.8,1103.7 1942.8,1271 1271.7,1167.8 1260.5,1165.7 "/>
 		<polygon class="classSVGback" id="block22Back" fill="url(#imageblock22Back)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
-		<polygon class="classSVG default" id="floorBack" fill="url(#floorPatternBack)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 
+		<polygon class="classSVGback" id="floorBack" fill="url(#floorPatternBack)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 
 			2406,1402.1 2406,1574 -8,1574 "/>
 
 	</svg>
@@ -1162,30 +1161,30 @@ isRetina = (isMobile)?false:retina();
 			}
 
 			/* --------------------------- */
-			var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 80);
-			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 260);
-			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 260);
-			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 150);
-			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 80);
-			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 100);
-			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 260);
-			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 80);
-			var block9 = new areaSVG($('#block9'), $('#clipping9 circle'), 260);
-			var block10 = new areaSVG($('#block10'), $('#clipping10 circle'), 260);
-			var block11 = new areaSVG($('#block11'), $('#clipping11 circle'), 150);
-			var block12 = new areaSVG($('#block12'), $('#clipping12 circle'), 80);
-			var block13 = new areaSVG($('#block13'), $('#clipping13 circle'), 100);
-			var block14 = new areaSVG($('#block14'), $('#clipping14 circle'), 260);
-			var block15 = new areaSVG($('#block15'), $('#clipping15 circle'), 80);
-			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 260);
-			var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 260);
-			var block18 = new areaSVG($('#block18'), $('#clipping18 circle'), 150);
-			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 80);
-			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 100);
-			var block21 = new areaSVG($('#block21'), $('#clipping21 circle'), 260);
-			var block22 = new areaSVG($('#block22'), $('#clipping22 circle'), 260);
+			var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 1350);
+			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 600);
+			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 600);
+			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 400);
+			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 400);
+			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 400);
+			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 400);
+			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 400);
+			var block9 = new areaSVG($('#block9'), $('#clipping9 circle'), 400);
+			var block10 = new areaSVG($('#block10'), $('#clipping10 circle'), 400);
+			var block11 = new areaSVG($('#block11'), $('#clipping11 circle'), 400);
+			var block12 = new areaSVG($('#block12'), $('#clipping12 circle'), 200);
+			var block13 = new areaSVG($('#block13'), $('#clipping13 circle'), 200);
+			var block14 = new areaSVG($('#block14'), $('#clipping14 circle'), 200);
+			var block15 = new areaSVG($('#block15'), $('#clipping15 circle'), 400);
+			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 800);
+			var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 350);
+			var block18 = new areaSVG($('#block18'), $('#clipping18 circle'), 800);
+			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 300);
+			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 300);
+			var block21 = new areaSVG($('#block21'), $('#clipping21 circle'), 800);
+			var block22 = new areaSVG($('#block22'), $('#clipping22 circle'), 800);
 
-			var floor = new areaSVG($('#floor'), $('#clippingFloor circle'), 125);
+			//var floor = new areaSVG($('#floor'), $('#clippingFloor circle'), 125);
 
 			var clickElem;
 	    	var offset;
@@ -1229,7 +1228,7 @@ isRetina = (isMobile)?false:retina();
 				    	stack.push(stackObj);
 				    }*/
 				    stack.push(stackObj);
-				    if(stack.length > 22){//Если с анимацией пола то 22
+				    if(stack.length > 22){
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{
 						$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');

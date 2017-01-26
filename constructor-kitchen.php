@@ -636,7 +636,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock2Back" width="100%" height="100%">
-		       	<image rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(91, 200, 200)">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3Back" width="100%" height="100%">
@@ -644,7 +644,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4Back" width="100%" height="100%">
-			    <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-250" rand-max-y="50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5Back" width="100%" height="100%">
@@ -705,7 +705,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock2" width="100%" height="100%">
-		       	<image rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(91, 200, 200)">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
@@ -713,7 +713,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-			    <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-250" rand-max-y="50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5" width="100%" height="100%">

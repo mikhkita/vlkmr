@@ -3608,17 +3608,17 @@ div.fancybox-inner{
 }
 
 .allTextures{
-	max-width: 1160px;
+	max-width: 1130px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 10px 5px 10px 10px;
+	padding: 40px 50px 50px 50px;
 	z-index: 1;
 	background-color: #fff;
 	overflow: auto;
 	box-sizing: border-box;
 }
 .b-title-constrictor{
-	margin: 30px 30px 10px 30px;
+	margin: 67px 67px 0px 67px !important;
 }
 
 .currentTexture{
@@ -3789,10 +3789,6 @@ div.fancybox-inner{
 	visibility: hidden !important;
 }
 
-.allTextures{
-
-}
-
 /*.qtipCustom{
 	border: 0;
 }*/
@@ -3903,8 +3899,11 @@ div.fancybox-inner{
 		margin-right: 7px;
 	}
 	.allTextures{
-		max-width: 920px;
-		padding: 10px 0 10px 5px;
+		max-width: 895px;
+		padding: 40px 45px 50px 50px;
+	}
+	.b-title-constrictor{
+		margin-bottom: -28px;
 	}
 	.panelFloor{
 		width: 960px;
@@ -3930,8 +3929,8 @@ div.fancybox-inner{
 		margin-right: 7px;
 	}
 	.allTextures{
-		max-width: 695px;
-		padding: 10px 0px 10px 5px;
+		max-width: 670px;
+		padding: 40px 50px 50px 50px;
 	}
 	.panelFloor{
 		width: 700px;
@@ -3954,10 +3953,6 @@ div.fancybox-inner{
 
 	.currentTexture img{
 		width: 130px;
-	}
-
-	.windowConstructor, .fullSize{
-
 	}
 
 	.repeatPrev, .repeatPrev2, .repeatNext, .repeatNext2, .layers, .share{
@@ -4000,8 +3995,8 @@ div.fancybox-inner{
 		padding: 12px 24px;
 	}
 	.allTextures{
-		max-width: 650px;
-		padding: 10px 0 10px 5px;
+		max-width: 630px;
+		padding: 40px 40px 50px 50px;
 	}
 	.panelFloor{
 		width: 650px;
