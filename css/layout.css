@@ -3563,7 +3563,9 @@ div.fancybox-inner{
 	right: 16px;
 	z-index: 10;
 }
-
+.icon-left-arrow{
+	display: none;
+}
 .icon-full-size:before{
 	color:#888;
 	font-size: 15px;
@@ -3683,7 +3685,7 @@ div.fancybox-inner{
 
 .panelFloor{
 	width: 1160px;
-	padding: 15px;
+	padding: 0 0 40px 0;
 	margin: 0 auto;
 	background-color: #fff;
 	box-sizing: border-box;
@@ -3695,32 +3697,38 @@ div.fancybox-inner{
 	z-index: 10;
 }
 
-.showContent{
+/*.showContent{
 	display: block;
 }
 
 .hideContent{
 	display: none;
-}
+}*/
 
 .floorIMG{
 	position: relative;
 	display: inline-block;
-	width: 31%;
+	width: 28%;
 	box-sizing: border-box;
-	margin: 10px;
+	margin: 5px 20px 10px 20px;
+	line-height: 0;
 }
 
-/*.floorIMG:hover{
-	box-shadow: 0 0 0 4px #483434;
+.floorIMG:hover{
+	box-shadow: 0 0 0 10px #483435 inset;
 	box-sizing: border-box;
-}*/
+}
 
 .floorIMG img{
+	position: relative;
+	width: 100%;
+	z-index: -1; 
+}
+.floorIMG svg{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	z-index: -2; 
 }
 
 .slick-track{
@@ -3774,11 +3782,14 @@ div.fancybox-inner{
 
 }
 
+.qtipCustom{
+	border-color: #f4f4f4 !important;
+}
 .qtipCustom .qtip-content{
-	font-size: 12px;
+	font-size: 15px;
 	background-color: #f4f4f4;
 	font-weight: 700;
-	padding: 8px 16px;
+	padding: 14px 20px; 
 }
 
 .qtipCustomWhite .qtip-content{
