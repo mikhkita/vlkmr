@@ -585,11 +585,11 @@ isRetina = (isMobile)?false:retina();
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern1" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
-								<polygon fill="url(#floorPattern1)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								<polygon fill="url(#floorPattern1)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
 						</div>
@@ -597,11 +597,11 @@ isRetina = (isMobile)?false:retina();
 							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern2" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
-								<polygon fill="url(#floorPattern2)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								<polygon fill="url(#floorPattern2)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
 						</div>
@@ -609,11 +609,11 @@ isRetina = (isMobile)?false:retina();
 							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern3" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
-								<polygon fill="url(#floorPattern3)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								<polygon fill="url(#floorPattern3)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
 						</div>
@@ -716,7 +716,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPatternBack" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="0" width="2000" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
 		     	</image>
 		    </pattern>
 
@@ -809,7 +809,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPattern" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="0" width="2000" height="320" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
 		     	</image>
 		    </pattern>
 		 </defs>

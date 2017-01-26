@@ -348,7 +348,7 @@ isRetina = (isMobile)?false:retina();
 					}
 				}
 			});
-			  $('.repeatPrev[title], .repeatNext[title], .arrowPrev[title], .arrowNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
+			  $('.repeatPrev[title], .repeatNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -470,7 +470,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="setTextures">
 							<div class="floater">
 							<div class="content">
-								<div class="arrowPrev" title="Назад">
+								<div class="arrowPrev">
 									<span class="icon-left-arrow"></span>
 								</div>
 							</div>
@@ -541,7 +541,7 @@ isRetina = (isMobile)?false:retina();
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
-									<div class="arrowNext" title="Вперёд">
+									<div class="arrowNext">
 										<span class="icon-right-arrow"></span>
 									</div>
 									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
