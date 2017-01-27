@@ -291,6 +291,30 @@ isRetina = (isMobile)?false:retina();
 <!--Конструктор-->
 
 	<script type="text/javascript">
+	/*(function ($) {
+	$.event.special.load = {
+		add: function (hollaback) {
+			if ( this.nodeType === 1 && this.tagName.toLowerCase() === 'img' && this.src !== '' ) {
+				// Image is already complete, fire the hollaback (fixes browser issues were cached
+				// images isn't triggering the load event)
+				if ( this.complete || this.readyState === 4 ) {
+					hollaback.handler.apply(this);
+				}
+
+				// Check if data URI images is supported, fire 'error' event if not
+				else if ( this.readyState === 'uninitialized' && this.src.indexOf('data:') === 0 ) {
+					$(this).trigger('error');
+				}
+				
+				else {
+					$(this).bind('load', hollaback.handler);
+				}
+			}
+		}
+	};
+}(jQuery));*/
+
+
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
@@ -309,14 +333,17 @@ isRetina = (isMobile)?false:retina();
 							"width": $('.b-wide-block').width()
 						});
 					}
+					$('.rel').css("display", "block");
+					bar.animate(1);
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					//checkSize = false;
 				
 			});
 			//После загрузки страницы вызываем ресайз
-			$(window).load(function(){
+			$(window).load(function(e){
 				$(window).resize();
 			});
+			//$('#room').load();
 			$('.fullSize').click(function(){
 					if(checkSize === false){
 						var curWidth = $('#room').width();
@@ -506,10 +533,16 @@ isRetina = (isMobile)?false:retina();
 				});
 			});*/
 			//var ProgressBar = require('progressbar.min.js');
+			$('#room').load(function(){
+				console.log("room!!!!!!!!!!");
+			});
+			/*$('.currentTexture img').load(function(){
+				console.log("textures!!!!!!!!!!!!!");
+			});*/
 			var bar = new ProgressBar.Circle('#progressbar', {
 			  strokeWidth: 10,
 			  easing: 'easeInOut',
-			  duration: 1400,
+			  duration: 1000,
 			  color: '#483435',
 			  trailColor: '#eee',
 			  svgStyle: null,
@@ -526,7 +559,7 @@ isRetina = (isMobile)?false:retina();
 			});
 			bar.text.style.fontSize = '20px';
 			bar.text.style.fontWeight = 700;
-			bar.animate(1.0);
+			bar.animate(0.5);
 		});
 	</script>
 				<div class="windowConstructor">
@@ -701,7 +734,7 @@ isRetina = (isMobile)?false:retina();
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>
-		<div class="rel" unselectable="on">
+		<div class="rel" style="display: none" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 		
 		<title>Гостиная</title>
