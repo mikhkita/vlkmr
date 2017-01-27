@@ -318,6 +318,11 @@ isRetina = (isMobile)?false:retina();
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
+			$('.relBackground').css({"height": $(window).height() - height});
+			$('.progressbarContain').css({
+				"top": ($(window).height() - height)/2 - 40,
+				"left": ($(window).width())/2 - 40
+			});
 			$(window).resize(function(){
 				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -336,12 +341,14 @@ isRetina = (isMobile)?false:retina();
 					$('.rel').css("display", "block");
 					bar.animate(1);
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
+					$('.relBackground').css({"height": $('#room').height()});
 					//checkSize = false;
 				
 			});
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(e){
 				$(window).resize();
+				$('.progressbarContain').fadeOut(300);
 			});
 			//$('#room').load();
 			$('.fullSize').click(function(){
@@ -692,6 +699,11 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
+		<div class="progressbarContain">
+			<div id="progressbar">
+			</div>
+		</div>
+		
 		<div class="panelFloor">
 						<div class="floorIMG" data-src="i/FloorKitchen-1.jpg">
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
@@ -1471,9 +1483,6 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div><!--b-wide-->
 	</div><!--b-content-->
-	<div id="progressbar">
-		
-	</div>
 	<div class="b b-main-footer">
 		<div class="b-wide-block">
 			<div class="b-block b-block-one clearfix">
