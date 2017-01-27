@@ -37,6 +37,10 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="js/progressbar.min.js"></script>
+
 	<script>
 var myWidth,
 	isMobile = false,
@@ -98,11 +102,6 @@ isRetina = (isMobile)?false:retina();
 	<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1240px)" href="css/layout-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
-
-<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
-	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-  	
-
 
 <script>
 var myWidth,
@@ -331,7 +330,7 @@ isRetina = (isMobile)?false:retina();
 								width: $('.b-wide-block').width()
 							});
 						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить в экран');
-						$('.icon-left-arrow').css("display", "inline-block");
+						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
 						checkSize = true;
 					}else 
@@ -347,7 +346,7 @@ isRetina = (isMobile)?false:retina();
 									width: autoWidth
 								});
 							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину экрана');
-							$('.icon-left-arrow').css("display", "none");
+							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
 							checkSize = false;
 					}
@@ -506,6 +505,28 @@ isRetina = (isMobile)?false:retina();
 					"max-height": $(window).height() - 100
 				});
 			});*/
+			//var ProgressBar = require('progressbar.min.js');
+			var bar = new ProgressBar.Circle('#progressbar', {
+			  strokeWidth: 10,
+			  easing: 'easeInOut',
+			  duration: 1400,
+			  color: '#483435',
+			  trailColor: '#eee',
+			  svgStyle: null,
+			  step: function(state, circle) {
+
+			    var value = Math.round(circle.value() * 100);
+			    if (value === 0) {
+			      circle.setText('');
+			    } else {
+			      circle.setText(value+'%');
+			    }
+
+			  }
+			});
+			bar.text.style.fontSize = '20px';
+			bar.text.style.fontWeight = 700;
+			bar.animate(1.0);
 		});
 	</script>
 				<div class="windowConstructor">
@@ -678,7 +699,7 @@ isRetina = (isMobile)?false:retina();
 					</div>
 			<div class="fullSize" title="Во всю ширину экрана">
 				<span class="icon-full-size"></span>
-				<span class="icon-left-arrow"></span>
+				<span class="icon-small-size"></span>
 			</div>
 		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
@@ -1417,6 +1438,9 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div><!--b-wide-->
 	</div><!--b-content-->
+	<div id="progressbar">
+		
+	</div>
 	<div class="b b-main-footer">
 		<div class="b-wide-block">
 			<div class="b-block b-block-one clearfix">

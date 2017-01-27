@@ -3429,11 +3429,11 @@ div.fancybox-inner{
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h9sspt');
-  src:  url('fonts/icomoon.eot?h9sspt#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h9sspt') format('truetype'),
-    url('fonts/icomoon.woff?h9sspt') format('woff'),
-    url('fonts/icomoon.svg?h9sspt#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?94e0gy');
+  src:  url('fonts/icomoon.eot?94e0gy#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?94e0gy') format('truetype'),
+    url('fonts/icomoon.woff?94e0gy') format('woff'),
+    url('fonts/icomoon.svg?94e0gy#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3563,13 +3563,19 @@ div.fancybox-inner{
 	right: 16px;
 	z-index: 10;
 }
-.icon-left-arrow{
+.icon-small-size{
 	display: none;
 }
 .icon-full-size:before{
 	color:#888;
 	font-size: 15px;
 	content: "\e90c";
+	font-weight: 700;
+}
+.icon-small-size:before {
+	color:#888;
+	font-size: 15px;
+	content: "\e910";
 	font-weight: 700;
 }
 
@@ -3800,6 +3806,11 @@ div.fancybox-inner{
 	visibility: hidden !important;
 }
 
+#progressbar{
+	width: 80px;
+	height: 80px;
+}
+
 /*.qtipCustom{
 	border: 0;
 }*/
@@ -3993,7 +4004,7 @@ div.fancybox-inner{
 		margin: 10px;
 	}
 
-	.icon-more:before, .icon-full-size:before{
+	.icon-more:before, .icon-full-size:before, .icon-small-size:before {
 		font-size: 25px !important;
 	}
 

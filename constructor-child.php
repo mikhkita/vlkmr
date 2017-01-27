@@ -319,8 +319,6 @@ isRetina = (isMobile)?false:retina();
 				$(window).resize();
 			});
 			$('.fullSize').click(function(){
-				
-				{
 					if(checkSize === false){
 						var curWidth = $('#room').width();
 						$('#room').css({
@@ -332,23 +330,30 @@ isRetina = (isMobile)?false:retina();
 								height: autoHeight,
 								width: $('.b-wide-block').width()
 							});
+						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить в экран');
+						$('.icon-left-arrow').css("display", "inline-block");
+						$('.icon-full-size').css("display", "none");
 						checkSize = true;
-					}else if(checkSize === true && $('.rel').height() > $(window).height() - 100){
-						var curHeight = $('#room').height();
-						$('#room').css({
-							"height": $(window).height() - height,
-							"width": "auto"});
-						var autoWidth = $('#room').width();
-						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
-							{
-								height: $(window).height() - height,
-								width: autoWidth
-							});
-						checkSize = false;
+					}else 
+						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
+							var curHeight = $('#room').height();
+							$('#room').css({
+								"height": $(window).height() - height,
+								"width": "auto"});
+							var autoWidth = $('#room').width();
+							$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+								{
+									height: $(window).height() - height,
+									width: autoWidth
+								});
+							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину экрана');
+							$('.icon-left-arrow').css("display", "none");
+							$('.icon-full-size').css("display", "inline-block");
+							checkSize = false;
 					}
-				}
 			});
-			  $('.repeatPrev[title], .repeatNext[title], .arrowPrev[title], .arrowNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
+
+			  $('.repeatPrev[title], .repeatNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -358,13 +363,28 @@ isRetina = (isMobile)?false:retina();
 	            },
 	            style: {
         			classes: 'qtipFont qtipCustom qtip-light',
-        			/*border: {
-						width: 0
-					},*/
 	            	tip: {
-	            		width: 16, height: 8
+	            		width: 22, height: 11, border: 0
 	            	}
 	            }
+			  });
+			  $('.iconMore[title]').qtip({
+			  	position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -5
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            },
+	            hide: {
+			        event: 'click mouseleave'
+			    }
 			  });
 			  $('.fullSize[title]').qtip({
 			  		position: {
@@ -377,9 +397,26 @@ isRetina = (isMobile)?false:retina();
 	            style: {
         			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
 	            	tip: {
-	            		width: 16, height: 8
+	            		width: 22, height: 11
 	            	}
 	            }
+			  });
+			  $('.currentTexture, .currentTexture2').each(function(){
+			  	$(this).children().qtip({
+			  		position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -8
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            }
+			  	});
 			  });
 
 
@@ -437,8 +474,29 @@ isRetina = (isMobile)?false:retina();
 
 			});
 			//Панель с полами
+			var clickLayers = false;
 			$('.layers').click(function(){
+				if($('.panelFloor').hasClass("showContent")){
+					$('.panelFloor').fadeOut(350);
+				}else{
+					$('.panelFloor').fadeIn(350);
+				}
 				$('.panelFloor').toggleClass("showContent");
+				clickLayers = true;
+			});
+			//Закрыть панель с декорами по клику вне его
+		    $(document).click(function (e){
+		    	if($('.panelFloor').hasClass("showContent") === true && clickLayers === false)
+		    	{
+		    		
+			    		var div = $(".panelFloor"); 
+						if (!div.is(e.target) // если клик был не по нашему блоку
+						    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+								$('.panelFloor').fadeOut(350);
+								$('.panelFloor').toggleClass("showContent");
+						}
+				}
+				clickLayers = false;
 			});
 			//Раскрывающаяся панель с декорами
 			$('.iconMore').fancybox();
@@ -620,6 +678,7 @@ isRetina = (isMobile)?false:retina();
 					</div>
 			<div class="fullSize" title="Во весь экран">
 				<span class="icon-full-size"></span>
+				<span class="icon-left-arrow"></span>
 			</div>
 		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
@@ -940,11 +999,11 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVG default" id="block16" fill="url(#imageblock16)" points="1399,323.3 1100.7,288.7 1095,290.7 1094.5,961.9 1101.9,961.9 1399.3,943 "/>
 		<polygon class="classSVG default" id="block17" fill="url(#imageblock17)" points="2251.1,911.6 1960.6,933.7 1959,1047 1973,1047 2266.7,1013.3 2266.7,913.7 "/>
 		<path class="classSVG default" id="block18" fill="url(#imageblock18)" d="M1534.2,922.2V883c0,0,109.8-127,320.8-125s411.7,155.7,411.7,155.7l-15.6-2l-290.4,22L1534.2,922.2z"/>
-		<polygon class="classSVG default" id="block19" fill="url(#imageblock19)" points="1260.5,1034 1260.5,1165.7 1271.7,1167.8 1271.7,1172 1267.5,1172.4 1267.3,1271.4 1248.1,1271.4 
+		<polygon class="classSVG default" id="block19" data-connect="2" fill="url(#imageblock19)" points="1260.5,1034 1260.5,1165.7 1271.7,1167.8 1271.7,1172 1267.5,1172.4 1267.3,1271.4 1248.1,1271.4 
 			1248.1,1034 "/>
-		<polygon class="classSVG default" id="block20" fill="url(#imageblock20)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
-		<polygon class="classSVG default" id="block21" fill="url(#imageblock21)" points="1260.5,1034 1942.8,1103.7 1942.8,1271 1271.7,1167.8 1260.5,1165.7 "/>
-		<polygon class="classSVG default" id="block22" fill="url(#imageblock22)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
+		<polygon class="classSVG default" id="block20" data-connect="2" fill="url(#imageblock20)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
+		<polygon class="classSVG default" id="block21" data-connect="3" fill="url(#imageblock21)" points="1260.5,1034 1942.8,1103.7 1942.8,1271 1271.7,1167.8 1260.5,1165.7 "/>
+		<polygon class="classSVG default" id="block22" data-connect="3" fill="url(#imageblock22)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
 		<polygon class="classSVG" id="floor" fill="url(#floorPattern)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 
 			2406,1402.1 2406,1574 -8,1574 "/>
 
@@ -1054,6 +1113,10 @@ isRetina = (isMobile)?false:retina();
 				stack.push(stackAdd);
 			});
 			var stackRepeat = [];
+			var checkConnectPrev = false;
+			var checkConnectPrevThree = 0;
+			var checkConnectNext = false;
+			var checkConnectNextThree = 0;
 			//Отменить
 			$('.repeatPrevClick').click(function(e){
 				if(stack.length != 0)
@@ -1074,12 +1137,22 @@ isRetina = (isMobile)?false:retina();
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
 							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							console.log($('#'+prevElemStack.path).attr("data-connect"));
+							if($('#'+prevElemStack.path).attr("data-connect") === "2" && checkConnectPrev === false){
+								checkConnectPrev = true;
+								$('.repeatPrevClick').click();
+							}
+							if($('#'+prevElemStack.path).attr("data-connect") === "3" && checkConnectPrevThree < 2){
+								checkConnectPrevThree++;
+								console.log(checkConnectPrevThree);
+								$('.repeatPrevClick').click();
+							}
 							stackRepeat.push(lastElemStack);
 						}
 					else{
 						stack.push(lastElemStack);
 					}
-					if(stack.length > 22)
+					if(stack.length > 21)
 					{
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 						
@@ -1094,6 +1167,8 @@ isRetina = (isMobile)?false:retina();
 					else{
 						$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
 					}
+					checkConnectPrev = false;
+					checkConnectPrevThree = 0;
 				}
 			});
 
@@ -1108,6 +1183,16 @@ isRetina = (isMobile)?false:retina();
 					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
+					if($('#'+lastElemStackRepeat.path).attr("data-connect") === "2" && checkConnectNext === false){
+							checkConnectNext = true;
+							$('.repeatNextClick').click();
+					}
+					if($('#'+lastElemStackRepeat.path).attr("data-connect") === "3" && checkConnectNextThree < 2){
+							checkConnectNextThree++;
+							$('.repeatNextClick').click();
+					}
+					checkConnectNext = false;
+					checkConnectNextThree = 0;
 				}
 				else{
 					$(this).removeClass('repeatNext2').addClass('repeatNext');
@@ -1147,6 +1232,9 @@ isRetina = (isMobile)?false:retina();
 									"x": $('#image'+clickEl).children().attr("x"),
 									"y": $('#image'+clickEl).children().attr("y")
 								});
+								var stackObj = new clickArea(clickEl, $('#image'+clickEl).children().attr("xlink:href"));
+				    			stack.push(stackObj);
+				    			console.log(stack);
 					   		}
 					  });
 
@@ -1179,8 +1267,8 @@ isRetina = (isMobile)?false:retina();
 			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 800);
 			var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 350);
 			var block18 = new areaSVG($('#block18'), $('#clipping18 circle'), 800);
-			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 300);
-			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 300);
+			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 800);
+			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 800);
 			var block21 = new areaSVG($('#block21'), $('#clipping21 circle'), 800);
 			var block22 = new areaSVG($('#block22'), $('#clipping22 circle'), 800);
 
@@ -1210,8 +1298,7 @@ isRetina = (isMobile)?false:retina();
 
 				    //Добавить текущий SVG и текстуру в стек
 				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") +  + ")");
-				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
-				    console.log(stack);
+				    //console.log(stack);
 				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
 
 				    //искать в стеке такое же сочетание path+texture
@@ -1227,7 +1314,6 @@ isRetina = (isMobile)?false:retina();
 				    	console.log("add!");
 				    	stack.push(stackObj);
 				    }*/
-				    stack.push(stackObj);
 				    if(stack.length > 22){
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{
@@ -1301,15 +1387,25 @@ isRetina = (isMobile)?false:retina();
 							break
 						case "block19":
 							block19.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock20').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block20.animateSVG(81,80, "block20", currentTexture);
 							break
 						case "block20":
 							block20.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock19').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block19.animateSVG(52,73, "block19", currentTexture);
 							break
 						case "block21":
 							block21.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock20, #imageblock19').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block20.animateSVG(relativeX, relativeY, "block20", currentTexture);
+							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
 							break
 						case "block22":
 							block22.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock20, #imageblock19').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block20.animateSVG(relativeX, relativeY, "block20", currentTexture);
+							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
 							break
 						case "floor":
 							floor.animateSVG(relativeX, relativeY, clickElem, currentTexture);
