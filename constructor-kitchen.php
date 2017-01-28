@@ -648,7 +648,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock5Back" width="100%" height="100%">
-		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6Back" width="100%" height="100%">
@@ -660,7 +660,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock8Back" width="100%" height="100%">
-		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9Back" width="100%" height="100%">
@@ -717,7 +717,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock5" width="100%" height="100%">
-		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6" width="100%" height="100%">
@@ -729,7 +729,7 @@ isRetina = (isMobile)?false:retina();
 			    </image>
 			</pattern>
 			<pattern id="imageblock8" width="100%" height="100%">
-		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9" width="100%" height="100%">

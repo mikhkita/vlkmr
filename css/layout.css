@@ -3625,8 +3625,8 @@ div.fancybox-inner{
 	overflow: auto;
 	box-sizing: border-box;
 }
-.b-title-constrictor{
-	margin: 67px 67px 0px 67px !important;
+.b-title-constructor{
+	margin: 45px 67px -10px 67px !important;
 }
 
 .currentTexture{
@@ -3926,7 +3926,7 @@ div.fancybox-inner{
 		max-width: 895px;
 		padding: 40px 45px 50px 50px;
 	}
-	.b-title-constrictor{
+	.b-title-constructor{
 		margin-bottom: -28px;
 	}
 	.panelFloor{

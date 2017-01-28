@@ -40,6 +40,7 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
 	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="js/progressbar.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 
 	<script>
 var myWidth,
@@ -318,11 +319,22 @@ isRetina = (isMobile)?false:retina();
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
+			$('#room').imagesLoaded( function() {
+				bar.animate(1);
+			});
 			$('.relBackground').css({"height": $(window).height() - height});
 			$('.progressbarContain').css({
-				"top": ($(window).height() - height)/2 - 40,
-				"left": ($(window).width())/2 - 40
+				"top": ($(window).height() - height)/2 - 40
 			});
+			if($(window).width() < $('.b-wide-block').width()){
+				$('.progressbarContain').css({
+					"left": ($(window).width())/2 - 40
+				});
+			}else{
+				$('.progressbarContain').css({
+					"left": ($('.relBackground').width())/2 - 40
+				});
+			}
 			$(window).resize(function(){
 				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -339,9 +351,8 @@ isRetina = (isMobile)?false:retina();
 						});
 					}
 					$('.rel').css("display", "block");
-					bar.animate(1);
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-					$('.relBackground').css({"height": $('#room').height()});
+					$('.relBackground').css({"height": ""});
 					//checkSize = false;
 				
 			});
@@ -363,7 +374,7 @@ isRetina = (isMobile)?false:retina();
 								height: autoHeight,
 								width: $('.b-wide-block').width()
 							});
-						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить в экран');
+						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
 						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
 						checkSize = true;
@@ -379,7 +390,7 @@ isRetina = (isMobile)?false:retina();
 									height: $(window).height() - height,
 									width: autoWidth
 								});
-							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину экрана');
+							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
 							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
 							checkSize = false;
@@ -539,10 +550,6 @@ isRetina = (isMobile)?false:retina();
 					"max-height": $(window).height() - 100
 				});
 			});*/
-			//var ProgressBar = require('progressbar.min.js');
-			$('#room').load(function(){
-				console.log("room!!!!!!!!!!");
-			});
 			/*$('.currentTexture img').load(function(){
 				console.log("textures!!!!!!!!!!!!!");
 			});*/
@@ -566,7 +573,7 @@ isRetina = (isMobile)?false:retina();
 			});
 			bar.text.style.fontSize = '20px';
 			bar.text.style.fontWeight = 700;
-			bar.animate(0.5);
+			bar.animate(0.4);
 		});
 	</script>
 				<div class="windowConstructor">
@@ -663,7 +670,7 @@ isRetina = (isMobile)?false:retina();
 									<div class="arrowNext">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
+									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -674,7 +681,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers" title="Выбор декора пола">
+								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
 								<div class="share" title="Поделиться">
@@ -742,7 +749,7 @@ isRetina = (isMobile)?false:retina();
 							<img src="i/RoomHall.png">
 						</div>
 					</div>
-			<div class="fullSize" title="Во всю ширину экрана">
+			<div class="fullSize" title="Во всю ширину">
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>
@@ -840,7 +847,7 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 		    <pattern id="floorPatternBack" width="100%" height="100%">
-		        <image rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-10" y="0" width="600" height="120">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 
@@ -932,7 +939,7 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 		    <pattern id="floorPattern" width="100%" height="100%">
-		        <image rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-10" y="0" width="600" height="120">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 		 </defs>
@@ -1037,10 +1044,6 @@ isRetina = (isMobile)?false:retina();
 			<clipPath id="clippingRight7">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingFloor">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-
 
 		 </defs>
 
@@ -1152,7 +1155,18 @@ isRetina = (isMobile)?false:retina();
 
 			//Выбор пола
 			$('.floorIMG').click(function(e){
-				$('#floorPattern, #floorPatternBack').children().attr("xlink:href", $(this).attr("data-src"));
+				var currentFloor = $(this);
+				$('#floorPatternBack').children().attr("xlink:href", currentFloor.attr("data-src"));
+				$('#floor').animate({
+				    opacity: 0
+				  },
+				  {
+					duration: 600,
+					complete: function(){
+						$('#floorPattern').children().attr("xlink:href", currentFloor.attr("data-src"));
+						$('#floor').css("opacity", 1);
+					}
+					});
 				$('.layers').click();
 			});
 			
@@ -1164,6 +1178,7 @@ isRetina = (isMobile)?false:retina();
 				stack.push(stackAdd);
 			});
 			var stackRepeat = [];
+			var stackCancel = false;
 			var checkConnectPrev = false;
 			var checkConnectPrevThree = 0;
 			var checkConnectNext = false;
@@ -1188,6 +1203,7 @@ isRetina = (isMobile)?false:retina();
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
 							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							stackCancel = true;
 							console.log($('#'+prevElemStack.path).attr("data-connect"));
 							if($('#'+prevElemStack.path).attr("data-connect") === "2" && checkConnectPrev === false){
 								checkConnectPrev = true;
@@ -1276,16 +1292,25 @@ isRetina = (isMobile)?false:retina();
 					  		duration: 550,
 					   		step: function(now, fx) {
 					   			$(this).attr({"r": now});
+					   			if(stackCancel === true){
+					   				$('#image'+clickEl).children().attr({
+										"x": tempX,
+										"y": tempY
+									});
+									console.log("EXIT");
+									return
+					   			}
 					   		},
 					   		complete: function(){
-					   			$('#image'+clickEl+'Back').children().attr({
-					   				"xlink:href": currentTextureLoc.children().attr("src"),
-									"x": $('#image'+clickEl).children().attr("x"),
-									"y": $('#image'+clickEl).children().attr("y")
-								});
-								var stackObj = new clickArea(clickEl, $('#image'+clickElem).children().attr("xlink:href"));
-								stack.push(stackObj);
-								console.log(stack);
+					   			console.log(stackCancel);
+					   			if(stackCancel === false){
+						   			$('#image'+clickEl+'Back').children().attr({
+						   				"xlink:href": currentTextureLoc.children().attr("src"),
+										"x": $('#image'+clickEl).children().attr("x"),
+										"y": $('#image'+clickEl).children().attr("y")
+									});
+								stackCancel = false;
+						   		}
 					   		}
 					  });
 
@@ -1324,11 +1349,11 @@ isRetina = (isMobile)?false:retina();
 			var blockRight6 = new areaSVG($('#blockRight6'), $('#clippingRight6 circle'), 90);
 			var blockRight7 = new areaSVG($('#blockRight7'), $('#clippingRight7 circle'), 90);
 
-			var floor = new areaSVG($('#floor'), $('#clippingFloor circle'), 125);
-
 			var clickElem;
 	    	var offset;
 	    	var parent;
+	    	var tempX;
+	    	var tempY;
 
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
@@ -1367,7 +1392,9 @@ isRetina = (isMobile)?false:retina();
 				    	console.log("add!");
 				    	stack.push(stackObj);
 				    }*/
-				    //stack.push(stackObj);
+				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
+					stack.push(stackObj);
+					console.log(stack);
 				    if(stack.length > 21){//Если с анимацией пола то 22
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{
@@ -1375,7 +1402,9 @@ isRetina = (isMobile)?false:retina();
 					}
 					stackRepeat = [];
 					$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
-
+					//сохраняем старые координаты перед закраской
+					tempX = $('#image'+clickElem).children().attr("x");
+					tempY = $('#image'+clickElem).children().attr("y");
 					//Рандомная закраска
 					var randX = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-x") - $('#image'+clickElem).children().attr("rand-min-x") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-x");
 					var randY = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-y") - $('#image'+clickElem).children().attr("rand-min-y") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-y");
@@ -1383,7 +1412,7 @@ isRetina = (isMobile)?false:retina();
 						"x": randX,
 						"y": randY
 					});
-
+					stackCancel = false;
 					switch(clickElem){
 						case "blockLeft1":
 							blockLeft1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1392,7 +1421,9 @@ isRetina = (isMobile)?false:retina();
 							blockLeft2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft7, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
+							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
 							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
+							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
 							break
 						case "blockLeft3":
 							blockLeft3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1401,7 +1432,9 @@ isRetina = (isMobile)?false:retina();
 							blockLeft4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft2, #imageblockLeft7').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
+							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
 							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
+							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
 							break
 						case "blockLeft5":
 							blockLeft5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1413,7 +1446,9 @@ isRetina = (isMobile)?false:retina();
 							blockLeft7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockLeft2, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
+							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
 							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
+							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
 							break
 						case "blockCenter1":
 							blockCenter1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1431,11 +1466,13 @@ isRetina = (isMobile)?false:retina();
 							blockCenter5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockCenter6').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockCenter6.animateSVG(relativeX, relativeY, "blockCenter6", currentTexture);
+							stack.push(new clickArea("blockCenter6", $('#imageblockCenter6').children().attr("xlink:href")));
 							break
 						case "blockCenter6":
 							blockCenter6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockCenter5').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockCenter5.animateSVG(relativeX, relativeY, "blockCenter5", currentTexture);
+							stack.push(new clickArea("blockCenter5", $('#imageblockCenter5').children().attr("xlink:href")));
 							break
 						case "blockCenter7":
 							blockCenter7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1447,7 +1484,9 @@ isRetina = (isMobile)?false:retina();
 							blockRight2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight5, #imageblockRight4').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
+							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
 							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
+							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
 							break
 						case "blockRight3":
 							blockRight3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
@@ -1456,22 +1495,24 @@ isRetina = (isMobile)?false:retina();
 							blockRight4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight5, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
+							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
 							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
+							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
+
 							break
 						case "blockRight5":
 							blockRight5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							$('#imageblockRight4, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
 							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
+							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
 							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
+							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
 							break
 						case "blockRight6":
 							blockRight6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 						case "blockRight7":
 							blockRight7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "floor":
-							floor.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 					}
 				}
@@ -1580,7 +1621,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="b-popup" >
 				<a href="#" class="b-popup-close" title="Закрыть"></a>
 					<div class="b-three-color"></div>
-					<h2 class="b-title b-title-constrictor">Выберите декор</h2>
+					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
 							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
