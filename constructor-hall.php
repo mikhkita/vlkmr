@@ -759,89 +759,89 @@ isRetina = (isMobile)?false:retina();
 		<title>Гостиная</title>
 			<defs>
 		<!--Текстуры-->
-<pattern id="imageblockLeft1Back" width="100%" height="100%">
+<pattern id="imageblock1Back" width="100%" height="100%">
 			    <image rand-min-x="0" rand-max-x="-50" rand-min-y="-70" rand-max-y="-40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-40" width="100" height="160" transform="rotate(90, 25, 25)">
 			    </image>
 			</pattern>
-			<pattern id="imageblockLeft2Back" width="100%" height="100%">
+			<pattern id="imageblock2Back" width="100%" height="100%">
 		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft3Back" width="100%" height="100%">
+		    <pattern id="imageblock3Back" width="100%" height="100%">
 		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft4Back" width="100%" height="100%">
+		    <pattern id="imageblock4Back" width="100%" height="100%">
 			    <image rand-min-x="-40" rand-max-x="0" rand-min-y="-40" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="120" height="192">
 			    </image>
 			</pattern>
-			<pattern id="imageblockLeft5Back" width="100%" height="100%">
+			<pattern id="imageblock5Back" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft6Back" width="100%" height="100%">
+		    <pattern id="imageblock6Back" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="-30" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft7Back" width="100%" height="100%">
+		    <pattern id="imageblock7Back" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="-30" width="200" height="320">
 		     	</image>
 		    </pattern>
 
-		    <pattern id="imageblockCenter1Back" width="100%" height="100%">
+		    <pattern id="imageblock8Back" width="100%" height="100%">
 		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-7" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter2Back" width="100%" height="100%">
+		    <pattern id="imageblock9Back" width="100%" height="100%">
 		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="0" rand-max-y="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-15" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter3Back" width="100%" height="100%">
+		    <pattern id="imageblock10Back" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter4Back" width="100%" height="100%">
+		    <pattern id="imageblock11Back" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-7" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter5Back" width="100%" height="100%">
+		    <pattern id="imageblock12Back" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-15" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter6Back" width="100%" height="100%">
+		    <pattern id="imageblock13Back" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter7Back" width="100%" height="100%">
+		    <pattern id="imageblock14Back" width="100%" height="100%">
 		        <image rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 
-		    <pattern id="imageblockRight1Back" width="100%" height="100%">
+		    <pattern id="imageblock15Back" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight2Back" width="100%" height="100%">
+		    <pattern id="imageblock16Back" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-50" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight3Back" width="100%" height="100%">
+		    <pattern id="imageblock17Back" width="100%" height="100%">
 		        <image rand-min-x="-80" rand-max-x="0" rand-min-y="0" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight4Back" width="100%" height="100%">
+		    <pattern id="imageblock18Back" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-70" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight5Back" width="100%" height="100%">
+		    <pattern id="imageblock19Back" width="100%" height="100%">
 		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight6Back" width="100%" height="100%">
+		    <pattern id="imageblock20Back" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="-100" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight7Back" width="100%" height="100%">
+		    <pattern id="imageblock21Back" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
@@ -851,89 +851,89 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 
-<pattern id="imageblockLeft1" width="100%" height="100%">
+<pattern id="imageblock1" width="100%" height="100%">
 			    <image rand-min-x="0" rand-max-x="-50" rand-min-y="-70" rand-max-y="-40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="-40" width="100" height="160" transform="rotate(90, 25, 25)">
 			    </image>
 			</pattern>
-			<pattern id="imageblockLeft2" width="100%" height="100%">
+			<pattern id="imageblock2" width="100%" height="100%">
 		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft3" width="100%" height="100%">
+		    <pattern id="imageblock3" width="100%" height="100%">
 		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft4" width="100%" height="100%">
+		    <pattern id="imageblock4" width="100%" height="100%">
 			    <image rand-min-x="-40" rand-max-x="0" rand-min-y="-40" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="120" height="192">
 			    </image>
 			</pattern>
-			<pattern id="imageblockLeft5" width="100%" height="100%">
+			<pattern id="imageblock5" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft6" width="100%" height="100%">
+		    <pattern id="imageblock6" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="-30" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockLeft7" width="100%" height="100%">
+		    <pattern id="imageblock7" width="100%" height="100%">
 		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-5" y="-30" width="200" height="320">
 		     	</image>
 		    </pattern>
 
-		    <pattern id="imageblockCenter1" width="100%" height="100%">
+		    <pattern id="imageblock8" width="100%" height="100%">
 		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-7" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter2" width="100%" height="100%">
+		    <pattern id="imageblock9" width="100%" height="100%">
 		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="0" rand-max-y="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-15" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter3" width="100%" height="100%">
+		    <pattern id="imageblock10" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter4" width="100%" height="100%">
+		    <pattern id="imageblock11" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-7" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter5" width="100%" height="100%">
+		    <pattern id="imageblock12" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-15" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter6" width="100%" height="100%">
+		    <pattern id="imageblock13" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockCenter7" width="100%" height="100%">
+		    <pattern id="imageblock14" width="100%" height="100%">
 		        <image rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 
-		    <pattern id="imageblockRight1" width="100%" height="100%">
+		    <pattern id="imageblock15" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight2" width="100%" height="100%">
+		    <pattern id="imageblock16" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-50" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight3" width="100%" height="100%">
+		    <pattern id="imageblock17" width="100%" height="100%">
 		        <image rand-min-x="-80" rand-max-x="0" rand-min-y="0" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight4" width="100%" height="100%">
+		    <pattern id="imageblock18" width="100%" height="100%">
 		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-70" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight5" width="100%" height="100%">
+		    <pattern id="imageblock19" width="100%" height="100%">
 		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight6" width="100%" height="100%">
+		    <pattern id="imageblock20" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="-100" width="100" height="160">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockRight7" width="100%" height="100%">
+		    <pattern id="imageblock21" width="100%" height="100%">
 		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-10" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
@@ -944,29 +944,29 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 		 </defs>
 
-		<polygon class="classSVGback" id="blockLeft1Back" fill="url(#imageblockLeft1Back)" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
-		<polygon class="classSVGback" id="blockLeft2Back" fill="url(#imageblockLeft2Back)" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
-		<polygon class="classSVGback" id="blockLeft3Back" fill="url(#imageblockLeft3Back)" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
-		<rect x="93" y="130.3" class="classSVGback" id="blockLeft4Back" fill="url(#imageblockLeft4Back)" width="50.5" height="143.7"/>
-		<rect x="93" y="89.3" class="classSVGback" id="blockLeft5Back" fill="url(#imageblockLeft5Back)" width="52" height="41"/>
-		<rect x="93" y="274" class="classSVGback" id="blockLeft6Back" fill="url(#imageblockLeft6Back)" width="52" height="70.8"/>
-		<rect x="143.5" y="130.3" class="classSVGback" id="blockLeft7Back" fill="url(#imageblockLeft7Back)" width="1.5" height="143.7"/>
+		<polygon class="classSVGback" id="block1Back" fill="url(#imageblock1Back)" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+		<polygon class="classSVGback" id="block2Back" fill="url(#imageblock2Back)" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+		<polygon class="classSVGback" id="block3Back" fill="url(#imageblock3Back)" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+		<rect x="93" y="130.3" class="classSVGback" id="block4Back" fill="url(#imageblock4Back)" width="50.5" height="143.7"/>
+		<rect x="93" y="89.3" class="classSVGback" id="block5Back" fill="url(#imageblock5Back)" width="52" height="41"/>
+		<rect x="93" y="274" class="classSVGback" id="block6Back" fill="url(#imageblock6Back)" width="52" height="70.8"/>
+		<rect x="143.5" y="130.3" class="classSVGback" id="block7Back" fill="url(#imageblock7Back)" width="1.5" height="143.7"/>
 
-		<rect x="162.7" y="148" class="classSVGback" id="blockCenter1Back" fill="url(#imageblockCenter1Back)"  width="190.3" height="33.7"/>
-		<rect x="193.8" y="320.6" class="classSVGback" id="blockCenter2Back" fill="url(#imageblockCenter2Back)"  width="125.5" height="23.3"/>
-		<path class="classSVGback" id="blockCenter3Back" fill="url(#imageblockCenter3Back)"  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
-		<path class="classSVGback" id="blockCenter4Back" fill="url(#imageblockCenter4Back)" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
-		<polygon class="classSVGback" id="blockCenter5Back" fill="url(#imageblockCenter5Back)" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
-		<polygon class="classSVGback" id="blockCenter6Back" fill="url(#imageblockCenter6Back)" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
-		<polygon class="classSVGback" id="blockCenter7Back" fill="url(#imageblockCenter7Back)" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+		<rect x="162.7" y="148" class="classSVGback" id="block8Back" fill="url(#imageblock8Back)"  width="190.3" height="33.7"/>
+		<rect x="193.8" y="320.6" class="classSVGback" id="block9Back" fill="url(#imageblock9Back)"  width="125.5" height="23.3"/>
+		<path class="classSVGback" id="block10Back" fill="url(#imageblock10Back)"  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+		<path class="classSVGback" id="block11Back" fill="url(#imageblock11Back)" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+		<polygon class="classSVGback" id="block12Back" fill="url(#imageblock12Back)" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+		<polygon class="classSVGback" id="block13Back" fill="url(#imageblock13Back)" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+		<polygon class="classSVGback" id="block14Back" fill="url(#imageblock14Back)" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
 
-		<polygon class="classSVGback" id="blockRight1Back" fill="url(#imageblockRight1Back)" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
-		<rect x="374" y="170.4" class="classSVGback" id="blockRight2Back" fill="url(#imageblockRight2Back)" width="41.4" height="103.6"/>
-		<polygon class="classSVGback" id="blockRight3Back" fill="url(#imageblockRight3Back)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
-		<polygon class="classSVGback" id="blockRight4Back" fill="url(#imageblockRight4Back)" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
-		<rect x="372.2" y="170.4" class="classSVGback" id="blockRight5Back" fill="url(#imageblockRight5Back)" width="1.8" height="103.6"/>
-		<polygon class="classSVGback" id="blockRight6Back" fill="url(#imageblockRight6Back)" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
-		<rect x="372.2" y="274" class="classSVGback" id="blockRight7Back" fill="url(#imageblockRight7Back)" width="43.2" height="69.9"/>
+		<polygon class="classSVGback" id="block15Back" fill="url(#imageblock15Back)" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
+		<rect x="374" y="170.4" class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" width="41.4" height="103.6"/>
+		<polygon class="classSVGback" id="block17Back" fill="url(#imageblock17Back)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
+		<polygon class="classSVGback" id="block18Back" fill="url(#imageblock18Back)" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+		<rect x="372.2" y="170.4" class="classSVGback" id="block19Back" fill="url(#imageblock19Back)" width="1.8" height="103.6"/>
+		<polygon class="classSVGback" id="block20Back" fill="url(#imageblock20Back)" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+		<rect x="372.2" y="274" class="classSVGback" id="block21Back" fill="url(#imageblock21Back)" width="43.2" height="69.9"/>
 
 		<polygon class="classSVGback" id="floorBack" fill="url(#floorPatternBack)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 
@@ -979,97 +979,97 @@ isRetina = (isMobile)?false:retina();
 
 		 <defs>
 		 	
-		 	<clipPath id="clippingLeft1">
+		 	<clipPath id="clipping1">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft2">
+			<clipPath id="clipping2">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft3">
+			<clipPath id="clipping3">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft4">
+			<clipPath id="clipping4">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft5">
+			<clipPath id="clipping5">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft6">
+			<clipPath id="clipping6">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingLeft7">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-
-			<clipPath id="clippingCenter1">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter2">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter3">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter4">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter5">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter6">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clippingCenter7">
+			<clipPath id="clipping7">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
 
-			<clipPath id="clippingRight1">
+			<clipPath id="clipping8">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight2">
+			<clipPath id="clipping9">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight3">
+			<clipPath id="clipping10">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight4">
+			<clipPath id="clipping11">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight5">
+			<clipPath id="clipping12">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight6">
+			<clipPath id="clipping13">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingRight7">
+			<clipPath id="clipping14">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+
+			<clipPath id="clipping15">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping16">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping17">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping18">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping19">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping20">
+			     <circle cx="300" cy="150" r="50"/>
+			</clipPath>
+			<clipPath id="clipping21">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
 
 		 </defs>
 
-		<polygon class="classSVG default" id="blockLeft1" fill="url(#imageblockLeft1)" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
-		<polygon class="classSVG default" data-connect="3" id="blockLeft2" fill="url(#imageblockLeft2)" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
-		<polygon class="classSVG default" id="blockLeft3" fill="url(#imageblockLeft3)" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
-		<rect x="93" y="130.3" class="classSVG default" data-connect="3" id="blockLeft4" fill="url(#imageblockLeft4)" width="50.5" height="143.7"/>
-		<rect x="93" y="89.3" class="classSVG default" id="blockLeft5" fill="url(#imageblockLeft5)" width="52" height="41"/>
-		<rect x="93" y="274" class="classSVG default" id="blockLeft6" fill="url(#imageblockLeft6)" width="52" height="70.8"/>
-		<rect x="143.5" y="130.3" class="classSVG default" data-connect="3" id="blockLeft7" fill="url(#imageblockLeft7)" width="1.5" height="143.7"/>
+		<polygon class="classSVG default" id="block1" fill="url(#imageblock1)" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+		<polygon class="classSVG default" data-connect="3" id="block2" fill="url(#imageblock2)" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+		<polygon class="classSVG default" id="block3" fill="url(#imageblock3)" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+		<rect x="93" y="130.3" class="classSVG default" data-connect="3" id="block4" fill="url(#imageblock4)" width="50.5" height="143.7"/>
+		<rect x="93" y="89.3" class="classSVG default" id="block5" fill="url(#imageblock5)" width="52" height="41"/>
+		<rect x="93" y="274" class="classSVG default" id="block6" fill="url(#imageblock6)" width="52" height="70.8"/>
+		<rect x="143.5" y="130.3" class="classSVG default" data-connect="3" id="block7" fill="url(#imageblock7)" width="1.5" height="143.7"/>
 
-		<rect x="162.7" y="148" class="classSVG default" id="blockCenter1" fill="url(#imageblockCenter1)"  width="190.3" height="33.7"/>
-		<rect x="193.8" y="320.6" class="classSVG default" id="blockCenter2" fill="url(#imageblockCenter2)"  width="125.5" height="23.3"/>
-		<path class="classSVG default" id="blockCenter3" fill="url(#imageblockCenter3)"  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
-		<path class="classSVG default" id="blockCenter4" fill="url(#imageblockCenter4)" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
-		<polygon class="classSVG default" data-connect="2" id="blockCenter5" fill="url(#imageblockCenter5)" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
-		<polygon class="classSVG default" data-connect="2" id="blockCenter6" fill="url(#imageblockCenter6)" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
-		<polygon class="classSVG default" id="blockCenter7" fill="url(#imageblockCenter7)" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+		<rect x="162.7" y="148" class="classSVG default" id="block8" fill="url(#imageblock8)"  width="190.3" height="33.7"/>
+		<rect x="193.8" y="320.6" class="classSVG default" id="block9" fill="url(#imageblock9)"  width="125.5" height="23.3"/>
+		<path class="classSVG default" id="block10" fill="url(#imageblock10)"  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+		<path class="classSVG default" id="block11" fill="url(#imageblock11)" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+		<polygon class="classSVG default" data-connect="2" id="block12" fill="url(#imageblock12)" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+		<polygon class="classSVG default" data-connect="2" id="block13" fill="url(#imageblock13)" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+		<polygon class="classSVG default" id="block14" fill="url(#imageblock14)" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
 
-		<polygon class="classSVG default" id="blockRight1" fill="url(#imageblockRight1)" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
-		<rect x="374" y="170.4" class="classSVG default" data-connect="3" id="blockRight2" fill="url(#imageblockRight2)" width="41.4" height="103.6"/>
-		<polygon class="classSVG default" id="blockRight3" fill="url(#imageblockRight3)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
-		<polygon class="classSVG default" data-connect="3" id="blockRight4" fill="url(#imageblockRight4)" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
-		<rect x="372.2" y="170.4" class="classSVG default" data-connect="3" id="blockRight5" fill="url(#imageblockRight5)" width="1.8" height="103.6"/>
-		<polygon class="classSVG default" id="blockRight6" fill="url(#imageblockRight6)" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
-		<rect x="372.2" y="274" class="classSVG default" id="blockRight7" fill="url(#imageblockRight7)" width="43.2" height="69.9"/>
+		<polygon class="classSVG default" id="block15" fill="url(#imageblock15)" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
+		<rect x="374" y="170.4" class="classSVG default" data-connect="3" id="block16" fill="url(#imageblock16)" width="41.4" height="103.6"/>
+		<polygon class="classSVG default" id="block17" fill="url(#imageblock17)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
+		<polygon class="classSVG default" data-connect="3" id="block18" fill="url(#imageblock18)" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+		<rect x="372.2" y="170.4" class="classSVG default" data-connect="3" id="block19" fill="url(#imageblock19)" width="1.8" height="103.6"/>
+		<polygon class="classSVG default" id="block20" fill="url(#imageblock20)" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+		<rect x="372.2" y="274" class="classSVG default" id="block21" fill="url(#imageblock21)" width="43.2" height="69.9"/>
 
 		<polygon class="classSVG" id="floor" fill="url(#floorPattern)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 
@@ -1082,34 +1082,96 @@ isRetina = (isMobile)?false:retina();
 		
 		<title>Гостиная</title>
 
-		<polygon class="classSVGFront" id="blockLeft1Front" data-id="blockLeft1" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
-		<polygon class="classSVGFront" id="blockLeft2Front" data-id="blockLeft2" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
-		<polygon class="classSVGFront" id="blockLeft3Front" data-id="blockLeft3" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
-		<rect x="93" y="130.3" class="classSVGFront" id="blockLeft4Front" data-id="blockLeft4" width="50.5" height="143.7"/>
-		<rect x="93" y="89.3" class="classSVGFront" id="blockLeft5Front" data-id="blockLeft5" width="52" height="41"/>
-		<rect x="93" y="274" class="classSVGFront" id="blockLeft6Front" data-id="blockLeft6" width="52" height="70.8"/>
-		<rect x="143.5" y="130.3" class="classSVGFront" id="blockLeft7Front" data-id="blockLeft7" width="1.5" height="143.7"/>
+		<polygon class="classSVGFront" id="block1Front" data-id="block1" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+		<polygon class="classSVGFront" id="block2Front" data-id="block2" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+		<polygon class="classSVGFront" id="block3Front" data-id="block3" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+		<rect x="93" y="130.3" class="classSVGFront" id="block4Front" data-id="block4" width="50.5" height="143.7"/>
+		<rect x="93" y="89.3" class="classSVGFront" id="block5Front" data-id="block5" width="52" height="41"/>
+		<rect x="93" y="274" class="classSVGFront" id="block6Front" data-id="block6" width="52" height="70.8"/>
+		<rect x="143.5" y="130.3" class="classSVGFront" id="block7Front" data-id="block7" width="1.5" height="143.7"/>
 
-		<rect x="162.7" y="148" class="classSVGFront" id="blockCenter1Front" data-id="blockCenter1" width="190.3" height="33.7"/>
-		<rect x="193.8" y="320.6" class="classSVGFront" id="blockCenter2Front" data-id="blockCenter2" width="125.5" height="23.3"/>
-		<path class="classSVGFront" id="blockCenter3Front" data-id="blockCenter3" d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
-		<path class="classSVGFront" id="blockCenter4Front" data-id="blockCenter4" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
-		<polygon class="classSVGFront" id="blockCenter5Front" data-id="blockCenter5" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
-		<polygon class="classSVGFront" id="blockCenter6Front" data-id="blockCenter6" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
-		<polygon class="classSVGFront" id="blockCenter7Front" data-id="blockCenter7" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+		<rect x="162.7" y="148" class="classSVGFront" id="block8Front" data-id="block8" width="190.3" height="33.7"/>
+		<rect x="193.8" y="320.6" class="classSVGFront" id="block9Front" data-id="block9" width="125.5" height="23.3"/>
+		<path class="classSVGFront" id="block10Front" data-id="block10" d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+		<path class="classSVGFront" id="block11Front" data-id="block11" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
 
-		<polygon class="classSVGFront" id="blockRight1Front" data-id="blockRight1" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
-		<rect x="374" y="170.4" class="classSVGFront" id="blockRight2Front" data-id="blockRight2" width="41.4" height="103.6"/>
-		<polygon class="classSVGFront" id="blockRight3Front" data-id="blockRight3" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
-		<polygon class="classSVGFront" id="blockRight4Front" data-id="blockRight4" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
-		<rect x="372.2" y="170.4" class="classSVGFront" id="blockRight5Front" data-id="blockRight5" width="1.8" height="103.6"/>
-		<polygon class="classSVGFront" id="blockRight6Front" data-id="blockRight6" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
-		<rect x="372.2" y="274" class="classSVGFront" id="blockRight7Front" data-id="blockRight7" width="43.2" height="69.9"/>
+		<polygon class="classSVGFront" id="block15Front" data-id="block15" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
+		<rect x="374" y="170.4" class="classSVGFront" id="block16Front" data-id="block16" width="41.4" height="103.6"/>
+		<polygon class="classSVGFront" id="block17Front" data-id="block17" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
+		<polygon class="classSVGFront" id="block18Front" data-id="block18" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+		<rect x="372.2" y="170.4" class="classSVGFront" id="block19Front" data-id="block19" width="1.8" height="103.6"/>
+		<polygon class="classSVGFront" id="block20Front" data-id="block20" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+		<rect x="372.2" y="274" class="classSVGFront" id="block21Front" data-id="block21" width="43.2" height="69.9"/>
 
 		<polygon class="classSVGFront" id="floorF" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 	</svg>
 
 	<script type="text/javascript">
+		var urlCommands = (function () {
+		var self = this;
+		this.hash = false;
+		this.commands = {};
+		this.floor = "";
+		this.events = {};
+
+		$(window).bind('hashchange', function() {
+			self.init();
+		});
+
+		this.init = function() {
+			this.hash = window.location.hash;
+			this.commands = {};
+			if( ~self.hash.indexOf('#') ) {
+				var data = self.hash;
+				if(~data.indexOf('|')){
+					var checkFloor = data.replace('#','').split('|');
+					$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/FloorKitchen-"+checkFloor[0]+".jpg");
+					data = checkFloor[1];
+					this.floor = checkFloor[0];
+					console.log(checkFloor);
+				}
+				var data = data.split(',');
+				this.commands = data;
+				for (var i in data) {
+					if(data[i] > 0 && data[i] < 4)//4 заменить на количество декоров
+					{
+						$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+					}
+				}
+			}
+			return this;
+		},
+
+		this.urlPush = function(position, texture) {
+			self.commands[position] = texture;
+			//console.log(self.commands);
+		}
+		this.urlPushFloor = function(texture) {
+			this.floor = texture;
+		}
+		this.urlUpdate = function(){
+			var url = '#';
+			if(this.floor != "")
+			{
+				url += this.floor+'|'
+			}
+			for (var i in self.commands)
+			{
+				url += self.commands[i]+',';
+			}
+			url = url.slice(0,-1);
+			this.hash = url;
+			window.history.pushState(null, null, url);
+			}
+
+		this.init();
+		return this;
+	})();
+
+
     	$(document).ready(function()
     	{
     		var shiftSlider;//менять в зависимости от ширины окна
@@ -1167,6 +1229,9 @@ isRetina = (isMobile)?false:retina();
 						$('#floor').css("opacity", 1);
 					}
 					});
+				var pushFloor = currentFloor.attr("data-src").split(/(\d)/);
+				urlCommands.urlPushFloor(pushFloor[1]);
+				urlCommands.urlUpdate();
 				$('.layers').click();
 			});
 			
@@ -1285,6 +1350,11 @@ isRetina = (isMobile)?false:retina();
 				circle.css({
 				  	'r': 0
 				 });
+				//Изменение хэша
+				var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
+					var textureEl = currentTextureLoc.children().attr("src").split(/(\d)/);
+					urlCommands.urlPush(positionEl, textureEl[1]);
+					urlCommands.urlUpdate();
 				circle.animate(
 					  {
 					  	'r': radius
@@ -1297,7 +1367,6 @@ isRetina = (isMobile)?false:retina();
 										"x": tempX,
 										"y": tempY
 									});
-									console.log("EXIT");
 									return
 					   			}
 					   		},
@@ -1325,29 +1394,29 @@ isRetina = (isMobile)?false:retina();
 			}
 
 			/* --------------------------- */
-			var blockLeft1 = new areaSVG($('#blockLeft1'), $('#clippingLeft1 circle'), 80);
-			var blockLeft2 = new areaSVG($('#blockLeft2'), $('#clippingLeft2 circle'), 260);
-			var blockLeft3 = new areaSVG($('#blockLeft3'), $('#clippingLeft3 circle'), 260);
-			var blockLeft4 = new areaSVG($('#blockLeft4'), $('#clippingLeft4 circle'), 260);
-			var blockLeft5 = new areaSVG($('#blockLeft5'), $('#clippingLeft5 circle'), 80);
-			var blockLeft6 = new areaSVG($('#blockLeft6'), $('#clippingLeft6 circle'), 100);
-			var blockLeft7 = new areaSVG($('#blockLeft7'), $('#clippingLeft7 circle'), 260);
+			var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 80);
+			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 260);
+			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 260);
+			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 260);
+			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 80);
+			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 100);
+			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 260);
 
-			var blockCenter1 = new areaSVG($('#blockCenter1'), $('#clippingCenter1 circle'), 220);
-			var blockCenter2 = new areaSVG($('#blockCenter2'), $('#clippingCenter2 circle'), 150);
-			var blockCenter3 = new areaSVG($('#blockCenter3'), $('#clippingCenter3 circle'), 70);
-			var blockCenter4 = new areaSVG($('#blockCenter4'), $('#clippingCenter4 circle'), 70);
-			var blockCenter5 = new areaSVG($('#blockCenter5'), $('#clippingCenter5 circle'), 220);
-			var blockCenter6 = new areaSVG($('#blockCenter6'), $('#clippingCenter6 circle'), 220);
-			var blockCenter7 = new areaSVG($('#blockCenter7'), $('#clippingCenter7 circle'), 220);
+			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 220);
+			var block9 = new areaSVG($('#block9'), $('#clipping9 circle'), 150);
+			var block10 = new areaSVG($('#block10'), $('#clipping10 circle'), 70);
+			var block11 = new areaSVG($('#block11'), $('#clipping11 circle'), 70);
+			var block12 = new areaSVG($('#block12'), $('#clipping12 circle'), 220);
+			var block13 = new areaSVG($('#block13'), $('#clipping13 circle'), 220);
+			var block14 = new areaSVG($('#block14'), $('#clipping14 circle'), 220);
 
-			var blockRight1 = new areaSVG($('#blockRight1'), $('#clippingRight1 circle'), 250);
-			var blockRight2 = new areaSVG($('#blockRight2'), $('#clippingRight2 circle'), 250);
-			var blockRight3 = new areaSVG($('#blockRight3'), $('#clippingRight3 circle'), 80);
-			var blockRight4 = new areaSVG($('#blockRight4'), $('#clippingRight4 circle'), 250);
-			var blockRight5 = new areaSVG($('#blockRight5'), $('#clippingRight5 circle'), 250);
-			var blockRight6 = new areaSVG($('#blockRight6'), $('#clippingRight6 circle'), 90);
-			var blockRight7 = new areaSVG($('#blockRight7'), $('#clippingRight7 circle'), 90);
+			var block15 = new areaSVG($('#block15'), $('#clipping15 circle'), 250);
+			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 250);
+			var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 80);
+			var block18 = new areaSVG($('#block18'), $('#clipping18 circle'), 250);
+			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 250);
+			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 90);
+			var block21 = new areaSVG($('#block21'), $('#clipping21 circle'), 90);
 
 			var clickElem;
 	    	var offset;
@@ -1357,7 +1426,7 @@ isRetina = (isMobile)?false:retina();
 
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
-				clickElem = $(this).attr("data-id");//blockUp1
+				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
 					//Получаем элемент из центрального слоя
@@ -1414,105 +1483,105 @@ isRetina = (isMobile)?false:retina();
 					});
 					stackCancel = false;
 					switch(clickElem){
-						case "blockLeft1":
-							blockLeft1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block1":
+							block1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockLeft2":
-							blockLeft2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockLeft7, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
-							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
-							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
-							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
+						case "block2":
+							block2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock7, #imageblock4').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
+							stack.push(new clickArea("block7", $('#imageblock7').children().attr("xlink:href")));
+							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
+							stack.push(new clickArea("block4", $('#imageblock4').children().attr("xlink:href")));
 							break
-						case "blockLeft3":
-							blockLeft3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block3":
+							block3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockLeft4":
-							blockLeft4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockLeft2, #imageblockLeft7').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
-							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
-							blockLeft7.animateSVG(relativeX, relativeY, "blockLeft7", currentTexture);
-							stack.push(new clickArea("blockLeft7", $('#imageblockLeft7').children().attr("xlink:href")));
+						case "block4":
+							block4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock2, #imageblock7').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
+							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
+							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
+							stack.push(new clickArea("block7", $('#imageblock7').children().attr("xlink:href")));
 							break
-						case "blockLeft5":
-							blockLeft5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block5":
+							block5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockLeft6":
-							blockLeft6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block6":
+							block6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockLeft7":
-							blockLeft7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockLeft2, #imageblockLeft4').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockLeft2.animateSVG(relativeX, relativeY, "blockLeft2", currentTexture);
-							stack.push(new clickArea("blockLeft2", $('#imageblockLeft2').children().attr("xlink:href")));
-							blockLeft4.animateSVG(relativeX, relativeY, "blockLeft4", currentTexture);
-							stack.push(new clickArea("blockLeft4", $('#imageblockLeft4').children().attr("xlink:href")));
+						case "block7":
+							block7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock2, #imageblock4').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
+							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
+							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
+							stack.push(new clickArea("block4", $('#imageblock4').children().attr("xlink:href")));
 							break
-						case "blockCenter1":
-							blockCenter1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block8":
+							block8.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockCenter2":
-							blockCenter2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block9":
+							block9.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockCenter3":
-							blockCenter3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block10":
+							block10.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockCenter4":
-							blockCenter4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block11":
+							block11.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockCenter5":
-							blockCenter5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockCenter6').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockCenter6.animateSVG(relativeX, relativeY, "blockCenter6", currentTexture);
-							stack.push(new clickArea("blockCenter6", $('#imageblockCenter6').children().attr("xlink:href")));
+						case "block12":
+							block12.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock13').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block13.animateSVG(relativeX, relativeY, "block13", currentTexture);
+							stack.push(new clickArea("block13", $('#imageblock13').children().attr("xlink:href")));
 							break
-						case "blockCenter6":
-							blockCenter6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockCenter5').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockCenter5.animateSVG(relativeX, relativeY, "blockCenter5", currentTexture);
-							stack.push(new clickArea("blockCenter5", $('#imageblockCenter5').children().attr("xlink:href")));
+						case "block13":
+							block13.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock12').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block12.animateSVG(relativeX, relativeY, "block12", currentTexture);
+							stack.push(new clickArea("block12", $('#imageblock12').children().attr("xlink:href")));
 							break
-						case "blockCenter7":
-							blockCenter7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block14":
+							block14.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockRight1":
-							blockRight1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block15":
+							block15.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockRight2":
-							blockRight2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockRight5, #imageblockRight4').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
-							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
-							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
-							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
+						case "block16":
+							block16.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock18, #imageblock19').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);
+							stack.push(new clickArea("block18", $('#imageblock18').children().attr("xlink:href")));
+							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
+							stack.push(new clickArea("block19", $('#imageblock19').children().attr("xlink:href")));
 							break
-						case "blockRight3":
-							blockRight3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block17":
+							block17.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockRight4":
-							blockRight4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockRight5, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockRight5.animateSVG(relativeX, relativeY, "blockRight5", currentTexture);
-							stack.push(new clickArea("blockRight5", $('#imageblockRight5').children().attr("xlink:href")));
-							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
-							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
+						case "block18":
+							block18.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock19, #imageblock16').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
+							stack.push(new clickArea("block19", $('#imageblock19').children().attr("xlink:href")));
+							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
+							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
 
 							break
-						case "blockRight5":
-							blockRight5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblockRight4, #imageblockRight2').children().attr("xlink:href", currentTexture.children().attr("src"));
-							blockRight4.animateSVG(relativeX, relativeY, "blockRight4", currentTexture);
-							stack.push(new clickArea("blockRight4", $('#imageblockRight4').children().attr("xlink:href")));
-							blockRight2.animateSVG(relativeX, relativeY, "blockRight2", currentTexture);
-							stack.push(new clickArea("blockRight2", $('#imageblockRight2').children().attr("xlink:href")));
+						case "block19":
+							block19.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+							$('#imageblock16, #imageblock18').children().attr("xlink:href", currentTexture.children().attr("src"));
+							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
+							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
+							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);
+							stack.push(new clickArea("block18", $('#imageblock18').children().attr("xlink:href")));
 							break
-						case "blockRight6":
-							blockRight6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block20":
+							block20.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockRight7":
-							blockRight7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block21":
+							block21.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 					}
 				}
