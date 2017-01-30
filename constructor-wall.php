@@ -37,6 +37,11 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="js/progressbar.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
 	<script>
 var myWidth,
 	isMobile = false,
@@ -98,12 +103,7 @@ isRetina = (isMobile)?false:retina();
 	<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1240px)" href="css/layout-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
-
-<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
-	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-  	
-
-
+  
 <script>
 var myWidth,
 	isMobile = false,
@@ -295,6 +295,22 @@ isRetina = (isMobile)?false:retina();
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
+			$('#room').imagesLoaded( function() {
+				bar.animate(1);
+			});
+			$('.relBackground').css({"height": $(window).height() - height});
+			$('.progressbarContain').css({
+				"top": ($(window).height() - height)/2 - 40
+			});
+			if($(window).width() < $('.b-wide-block').width()){
+				$('.progressbarContain').css({
+					"left": ($(window).width())/2 - 40
+				});
+			}else{
+				$('.progressbarContain').css({
+					"left": ($('.relBackground').width())/2 - 40
+				});
+			}
 			$(window).resize(function(){
 				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -310,17 +326,19 @@ isRetina = (isMobile)?false:retina();
 							"width": $('.b-wide-block').width()
 						});
 					}
+					$('.rel').css("display", "block");
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
+					$('.relBackground').css({"height": ""});
 					//checkSize = false;
 				
 			});
 			//После загрузки страницы вызываем ресайз
-			$(window).load(function(){
+			$(window).load(function(e){
 				$(window).resize();
+				$('.progressbarContain').fadeOut(300);
 			});
+			//$('#room').load();
 			$('.fullSize').click(function(){
-				
-				{
 					if(checkSize === false){
 						var curWidth = $('#room').width();
 						$('#room').css({
@@ -332,23 +350,30 @@ isRetina = (isMobile)?false:retina();
 								height: autoHeight,
 								width: $('.b-wide-block').width()
 							});
+						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+						$('.icon-small-size').css("display", "inline-block");
+						$('.icon-full-size').css("display", "none");
 						checkSize = true;
-					}else if(checkSize === true && $('.rel').height() > $(window).height() - 100){
-						var curHeight = $('#room').height();
-						$('#room').css({
-							"height": $(window).height() - height,
-							"width": "auto"});
-						var autoWidth = $('#room').width();
-						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
-							{
-								height: $(window).height() - height,
-								width: autoWidth
-							});
-						checkSize = false;
+					}else 
+						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
+							var curHeight = $('#room').height();
+							$('#room').css({
+								"height": $(window).height() - height,
+								"width": "auto"});
+							var autoWidth = $('#room').width();
+							$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+								{
+									height: $(window).height() - height,
+									width: autoWidth
+								});
+							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
+							$('.icon-small-size').css("display", "none");
+							$('.icon-full-size').css("display", "inline-block");
+							checkSize = false;
 					}
-				}
 			});
-			  $('.repeatPrev[title], .repeatNext[title], .arrowPrev[title], .arrowNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
+
+			  $('.repeatPrev[title], .repeatNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -358,13 +383,28 @@ isRetina = (isMobile)?false:retina();
 	            },
 	            style: {
         			classes: 'qtipFont qtipCustom qtip-light',
-        			/*border: {
-						width: 0
-					},*/
 	            	tip: {
-	            		width: 16, height: 8
+	            		width: 22, height: 11, border: 0
 	            	}
 	            }
+			  });
+			  $('.iconMore[title]').qtip({
+			  	position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -5
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            },
+	            hide: {
+			        event: 'click mouseleave'
+			    }
 			  });
 			  $('.fullSize[title]').qtip({
 			  		position: {
@@ -377,9 +417,26 @@ isRetina = (isMobile)?false:retina();
 	            style: {
         			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
 	            	tip: {
-	            		width: 16, height: 8
+	            		width: 22, height: 11
 	            	}
 	            }
+			  });
+			  $('.currentTexture, .currentTexture2').each(function(){
+			  	$(this).children().qtip({
+			  		position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -8
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            }
+			  	});
 			  });
 
 
@@ -436,10 +493,7 @@ isRetina = (isMobile)?false:retina();
 				}
 
 			});
-			//Панель с полами
-			$('.layers').click(function(){
-				$('.panelFloor').toggleClass("showContent");
-			});
+			
 			//Раскрывающаяся панель с декорами
 			$('.iconMore').fancybox();
 			/*$('.iconMore').click(function(){
@@ -448,6 +502,30 @@ isRetina = (isMobile)?false:retina();
 					"max-height": $(window).height() - 100
 				});
 			});*/
+			/*$('.currentTexture img').load(function(){
+				console.log("textures!!!!!!!!!!!!!");
+			});*/
+			var bar = new ProgressBar.Circle('#progressbar', {
+			  strokeWidth: 10,
+			  easing: 'easeInOut',
+			  duration: 1000,
+			  color: '#483435',
+			  trailColor: '#eee',
+			  svgStyle: null,
+			  step: function(state, circle) {
+
+			    var value = Math.round(circle.value() * 100);
+			    if (value === 0) {
+			      circle.setText('');
+			    } else {
+			      circle.setText(value+'%');
+			    }
+
+			  }
+			});
+			bar.text.style.fontSize = '20px';
+			bar.text.style.fontWeight = 700;
+			bar.animate(0.4);
 		});
 	</script>
 				<div class="windowConstructor">
@@ -544,7 +622,7 @@ isRetina = (isMobile)?false:retina();
 									<div class="arrowNext" title="Вперёд">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
+									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -555,7 +633,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers" title="Выбор декора пола">
+								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
 								<div class="share" title="Поделиться">
@@ -579,15 +657,15 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
-		<!--<div class="panelFloor">
-						<img src="i/RoomWall.png"  >
-						<img src="i/RoomWall.png"  >
-						<img src="i/RoomWall.png"  >
-					</div>-->
-			<div class="fullSize" title="Во весь экран">
-				<span class="icon-full-size" ></span>
+		<div class="progressbarContain">
+			<div id="progressbar">
 			</div>
-		<div class="rel" unselectable="on">
+		</div>
+			<div class="fullSize" title="Во всю ширину">
+				<span class="icon-full-size"></span>
+				<span class="icon-small-size"></span>
+			</div>
+		<div class="rel" style="display: none" unselectable="on">
 
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
 		
@@ -598,83 +676,83 @@ isRetina = (isMobile)?false:retina();
 		 	
 		<!--Текстуры-->
 
-			<pattern id="imageblockUp1Back" width="100%" height="100%">
+			<pattern id="imageblock1Back" width="100%" height="100%">
 			    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
 			    </image>
 			</pattern>
-			<pattern id="imageblockUp2Back" width="100%" height="100%">
+			<pattern id="imageblock2Back" width="100%" height="100%">
 		        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockUp3Back" width="100%" height="100%">
+		    <pattern id="imageblock3Back" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockUp4Back" width="100%" height="100%">
+		    <pattern id="imageblock4Back" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockMiddle1Back" width="100%" height="100%">
+		    <pattern id="imageblock5Back" width="100%" height="100%">
 		       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockMiddle2Back" width="100%" height="100%">
+		    <pattern id="imageblock6Back" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockDown1Back" width="100%" height="100%">
+		    <pattern id="imageblock7Back" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockDown2Back" width="100%" height="100%">
+		    <pattern id="imageblock8Back" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 
 
 
-		    <pattern id="imageblockUp1" width="100%" height="100%">
+		    <pattern id="imageblock1" width="100%" height="100%">
 			    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
 			    </image>
 			</pattern>
-			<pattern id="imageblockUp2" width="100%" height="100%">
+			<pattern id="imageblock2" width="100%" height="100%">
 		        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockUp3" width="100%" height="100%">
+		    <pattern id="imageblock3" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockUp4" width="100%" height="100%">
+		    <pattern id="imageblock4" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockMiddle1" width="100%" height="100%">
+		    <pattern id="imageblock5" width="100%" height="100%">
 		       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockMiddle2" width="100%" height="100%">
+		    <pattern id="imageblock6" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockDown1" width="100%" height="100%">
+		    <pattern id="imageblock7" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblockDown2" width="100%" height="100%">
+		    <pattern id="imageblock8" width="100%" height="100%">
 		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
 		     	</image>
 		    </pattern>
 
 		 </defs>
-		 <polygon class="classSVGback" id="blockUp1Back" fill="url(#imageblockUp1Back)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVGback" id="blockUp2Back" fill="url(#imageblockUp2Back)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGback" id="blockUp3Back" fill="url(#imageblockUp3Back)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGback" id="blockUp4Back" fill="url(#imageblockUp4Back)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGback" id="blockMiddle1Back" fill="url(#imageblockMiddle1Back)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGback" id="blockMiddle2Back" fill="url(#imageblockMiddle2Back)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGback" id="blockDown1Back" fill="url(#imageblockDown1Back)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGback" id="blockDown2Back" fill="url(#imageblockDown2Back)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		 <polygon class="classSVGback" id="block1Back" fill="url(#imageblock1Back)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+		<polygon class="classSVGback" id="block2Back" fill="url(#imageblock2Back)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+		<polygon class="classSVGback" id="block3Back" fill="url(#imageblock3Back)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGback" id="block4Back" fill="url(#imageblock4Back)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+		<polygon class="classSVGback" id="block5Back" fill="url(#imageblock5Back)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVGback" id="block6Back" fill="url(#imageblock6Back)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGback" id="block7Back" fill="url(#imageblock7Back)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVGback" id="block8Back" fill="url(#imageblock8Back)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
 <!--Это задний слой - он и будет изменяться-->
@@ -683,41 +761,41 @@ isRetina = (isMobile)?false:retina();
 		<title>Гостиная</title>
 
 		 <defs>
-		 	<clipPath id="clippingUp1">
+		 	<clipPath id="clipping1">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingUp2">
+			<clipPath id="clipping2">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingUp3">
+			<clipPath id="clipping3">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingUp4">
+			<clipPath id="clipping4">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingMiddle1">
+			<clipPath id="clipping5">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingMiddle2">
+			<clipPath id="clipping6">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingDown1">
+			<clipPath id="clipping7">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
-			<clipPath id="clippingDown2">
+			<clipPath id="clipping8">
 			     <circle cx="300" cy="150" r="50"/>
 			</clipPath>
 
 		 </defs>
 
-		<polygon class="classSVG default" id="blockUp1" fill="url(#imageblockUp1)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVG default" id="blockUp2" fill="url(#imageblockUp2)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVG default" id="blockUp3" fill="url(#imageblockUp3)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVG default" id="blockUp4" fill="url(#imageblockUp4)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVG default" id="blockMiddle1" fill="url(#imageblockMiddle1)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVG default" id="blockMiddle2" fill="url(#imageblockMiddle2)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVG default" id="blockDown1" fill="url(#imageblockDown1)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVG default" id="blockDown2" fill="url(#imageblockDown2)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		<polygon class="classSVG default" id="block1" fill="url(#imageblock1)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+		<polygon class="classSVG default" id="block2" fill="url(#imageblock2)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+		<polygon class="classSVG default" id="block3" fill="url(#imageblock3)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVG default" id="block4" fill="url(#imageblock4)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+		<polygon class="classSVG default" id="block5" fill="url(#imageblock5)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVG default" id="block6" fill="url(#imageblock6)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVG default" id="block7" fill="url(#imageblock7)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVG default" id="block8" fill="url(#imageblock8)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
 	<img id="room" src="i/RoomWall.png">
@@ -726,23 +804,112 @@ isRetina = (isMobile)?false:retina();
 	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
 		
 		<title>Гостиная</title>
-		<polygon class="classSVGFront" id="blockUp1Front" data-id="blockUp1" data-location="Up" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVGFront" id="blockUp2Front" data-id="blockUp2" data-location="Up" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGFront" id="blockUp3Front" data-id="blockUp3" data-location="Up" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGFront" id="blockUp4Front" data-id="blockUp4" data-location="Up"
+		<polygon class="classSVGFront" id="block1Front" data-id="block1" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+		<polygon class="classSVGFront" id="block2Front" data-id="block2" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+		<polygon class="classSVGFront" id="block3Front" data-id="block3" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+		<polygon class="classSVGFront" id="block4Front" data-id="block4" 
 		points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGFront" id="blockMiddle1Front" data-id="blockMiddle1" data-location="Middle" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGFront" id="blockMiddle2Front" data-id="blockMiddle2" data-location="Middle" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGFront" id="blockDown1Front" data-id="blockDown1" data-location="Down" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGFront" id="blockDown2Front" data-id="blockDown2" data-location="Down" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+		<polygon class="classSVGFront" id="block5Front" data-id="block5"  points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+		<polygon class="classSVGFront" id="block6Front" data-id="block6"  points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+		<polygon class="classSVGFront" id="block7Front" data-id="block7"  points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+		<polygon class="classSVGFront" id="block8Front" data-id="block8" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
 	</svg>
 
+	<div id="default-hash" data-hash="3,3,3,3,3,3,3,3" data-countSVG="8" data-countTextures="3"></div>
+
 	<script type="text/javascript">
+
+		var urlCommands = (function () {
+		var self = this;
+		this.hash = "";
+		this.commands = {};
+		this.floor = "";
+		this.events = {};
+		this.default = {};
+		this.countSVG = $('#default-hash').attr("data-countSVG");
+		this.countTextures = $('#default-hash').attr("data-countTextures");
+
+		$(window).bind('hashchange', function() {
+			self.parse();
+			urlCommands.urlUpdate();
+		});
+
+		this.init = function() {
+				if($('.panelFloor').length)
+				{
+					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
+					this.floor = parseFloor[1];
+				}
+				for(var i=0; i < +this.countSVG; i++)
+				{
+					var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
+					this.commands[i] = parseTexture[1];
+					this.default[i] = parseTexture[1];
+				}
+			this.urlUpdate();
+		}
+
+		this.parse = function() {
+			this.hash = window.location.hash;
+			this.commands = {};
+			if( ~self.hash.indexOf('#') ) {
+				var data = self.hash;
+				data = data.replace('#','').split(',');
+				if(+this.countSVG === data.length)
+				{
+				this.commands = data;
+					for (var i in data) {
+						if(+data[i] > 0 && +data[i] < +this.countTextures + 1)
+						{
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+						}else{
+							//брать дефолтный
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
+							this.commands[i] = this.default[i];
+						}
+					}
+				}else{
+					this.init();
+				}
+			}
+			return this;
+		}
+		/*this.valid = function(){
+
+		}*/
+
+		this.urlPush = function(position, texture) {
+			self.commands[position] = texture;
+			//console.log(self.commands);
+		}
+		this.urlPushFloor = function(texture) {
+			this.floor = texture;
+		}
+		this.urlUpdate = function(){
+			var url = '#';
+			if(this.floor != "")
+			{
+				url += this.floor+'|'
+			}
+			for (var i in self.commands)
+			{
+				url += self.commands[i]+',';
+			}
+			url = url.slice(0,-1);
+			this.hash = url;
+			window.history.pushState(null, null, url);
+			}
+
+		this.parse();
+		return this;
+	})();
+
     	$(document).ready(function()
     	{
     		var shiftSlider = 8;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			urlCommands.init();
 			$(window).resize(function(){
 				if(window.innerWidth >= 1240){
 					shiftSlider = 8;
@@ -782,20 +949,10 @@ isRetina = (isMobile)?false:retina();
 		        $('.allTextures').removeClass("showContent");
 		        $.fancybox.close();
 		    });
-		    //Закрыть панель с декорами по клику вне его
-		    /*$(document).click(function (e){ 
-		    	if($('.allTextures').hasClass("showContent") === true)
-		    	{
-					var div = $(".allTextures, .iconMore"); 
-					if (!div.is(e.target) // если клик был не по нашему блоку
-					    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-							$('.allTextures').removeClass("showContent"); // скрываем его
-					}
-				}
-			});*/
-			
+		    
 			//Отменить/Повторить
 			var stack = [];
+			var stackCancel = false;
 			//Заполняем стек начальными текстурами
 			$('.default').each(function(){
 				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
@@ -822,6 +979,11 @@ isRetina = (isMobile)?false:retina();
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
 							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							var positionElStack = lastElemStack.path.slice(5) - 1;
+							var textureElStack = prevElemStack.texture.split(/(\d)/);
+							urlCommands.urlPush(positionElStack, textureElStack[1]);
+							urlCommands.urlUpdate();
+							stackCancel = true;
 							stackRepeat.push(lastElemStack);
 						}
 					else{
@@ -854,6 +1016,10 @@ isRetina = (isMobile)?false:retina();
 					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
 					$('#image'+lastElemStackRepeat.path).children().attr("xlink:href", lastElemStackRepeat.texture);
 					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
+					var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
+					var textureElStackR = lastElemStackRepeat.texture.split(/(\d)/);
+					urlCommands.urlPush(positionElStackR, textureElStackR[1]);
+					urlCommands.urlUpdate();
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
 				}
@@ -864,11 +1030,11 @@ isRetina = (isMobile)?false:retina();
 
 			//Анимация
 			function areaSVG(path, circle, radius){
+
 			   this.path = path;
 			   this.circle = circle;
 			   this.radius = radius;
 			   this.animateSVG = function(x, y, clickEl, currentTextureLoc){
-			   	//console.log(path, circle);
 			   	circle.attr({
 				  	'cx': x + '%',
 				  	'cy': y + '%'
@@ -881,6 +1047,11 @@ isRetina = (isMobile)?false:retina();
 				circle.css({
 				  	'r': 0
 				 });
+				//Изменение хэша
+				var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
+					var textureEl = currentTextureLoc.children().attr("src").split(/(\d)/);
+					urlCommands.urlPush(positionEl, textureEl[1]);
+					urlCommands.urlUpdate();
 				circle.animate(
 					  {
 					  	'r': radius
@@ -888,13 +1059,24 @@ isRetina = (isMobile)?false:retina();
 					  		duration: 550,
 					   		step: function(now, fx) {
 					   			$(this).attr({"r": now});
+					   			if(stackCancel === true){
+					   				$('#image'+clickEl).children().attr({
+										"x": tempX,
+										"y": tempY
+									});
+									return
+					   			}
 					   		},
 					   		complete: function(){
-					   			$('#image'+clickEl+'Back').children().attr({
-					   				"xlink:href": currentTextureLoc.children().attr("src"),
-									"x": $('#image'+clickEl).children().attr("x"),
-									"y": $('#image'+clickEl).children().attr("y")
-								});
+					   			console.log(stackCancel);
+					   			if(stackCancel === false){
+						   			$('#image'+clickEl+'Back').children().attr({
+						   				"xlink:href": currentTextureLoc.children().attr("src"),
+										"x": $('#image'+clickEl).children().attr("x"),
+										"y": $('#image'+clickEl).children().attr("y")
+									});
+								stackCancel = false;
+						   		}
 					   		}
 					  });
 
@@ -909,23 +1091,25 @@ isRetina = (isMobile)?false:retina();
 			}
 
 			/* --------------------------- */
-			var blockUp1 = new areaSVG($('#blockUp1'), $('#clippingUp1 circle'), 100);
-			var blockUp2 = new areaSVG($('#blockUp2'), $('#clippingUp2 circle'), 135);
-			var blockUp3 = new areaSVG($('#blockUp3'), $('#clippingUp3 circle'), 165);
-			var blockUp4 = new areaSVG($('#blockUp4'), $('#clippingUp4 circle'), 135);
-			var blockMiddle1 = new areaSVG($('#blockMiddle1'), $('#clippingMiddle1 circle'), 185);
-			var blockMiddle2 = new areaSVG($('#blockMiddle2'), $('#clippingMiddle2 circle'), 210);
-			var blockDown1 = new areaSVG($('#blockDown1'), $('#clippingDown1 circle'), 200);
-			var blockDown2 = new areaSVG($('#blockDown2'), $('#clippingDown2 circle'), 210);
+			var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 100);
+			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 135);
+			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 165);
+			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 135);
+			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 185);
+			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 210);
+			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 200);
+			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 210);
 
 			var clickElem;
 			var currentTexture;
 	    	var offset;
 	    	var parent;
+	    	var tempX;
+	    	var tempY;
 
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
-				clickElem = $(this).attr("data-id");//blockUp1
+				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
 					//Получаем элемент из центрального слоя
@@ -968,7 +1152,9 @@ isRetina = (isMobile)?false:retina();
 					}
 					stackRepeat = [];
 					$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
-
+					//сохраняем старые координаты перед закраской
+					tempX = $('#image'+clickElem).children().attr("x");
+					tempY = $('#image'+clickElem).children().attr("y");
 					//Рандомная закраска
 					var randX = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-x") - $('#image'+clickElem).children().attr("rand-min-x") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-x");
 					var randY = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-y") - $('#image'+clickElem).children().attr("rand-min-y") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-y");
@@ -976,31 +1162,32 @@ isRetina = (isMobile)?false:retina();
 						"x": randX,
 						"y": randY
 					});
+					stackCancel = false;
 
 					switch(clickElem){
-						case "blockUp1":
-							blockUp1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block1":
+							block1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockUp2":
-							blockUp2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block2":
+							block2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockUp3":
-							blockUp3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block3":
+							block3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockUp4":
-							blockUp4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block4":
+							block4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockMiddle1":
-							blockMiddle1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block5":
+							block5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockMiddle2":
-							blockMiddle2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block6":
+							block6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockDown1":
-							blockDown1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block7":
+							block7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
-						case "blockDown2":
-							blockDown2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
+						case "block8":
+							block8.animateSVG(relativeX, relativeY, clickElem, currentTexture);
 							break
 					}
 				}
@@ -1109,7 +1296,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="b-popup" >
 				<a href="#" class="b-popup-close" title="Закрыть"></a>
 					<div class="b-three-color"></div>
-					<h2 class="b-title">Выберите декор</h2>
+					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
 							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>

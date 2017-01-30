@@ -3626,7 +3626,7 @@ div.fancybox-inner{
 	box-sizing: border-box;
 }
 .b-title-constructor{
-	margin: 45px 67px -10px 67px !important;
+	margin: 60px 70px -10px 70px !important;
 }
 
 .currentTexture{
@@ -3924,7 +3924,7 @@ div.fancybox-inner{
 	}
 	.allTextures{
 		max-width: 895px;
-		padding: 40px 45px 50px 50px;
+		padding: 40px 45px 50px 53px;
 	}
 	.b-title-constructor{
 		margin-bottom: -28px;
@@ -3954,7 +3954,6 @@ div.fancybox-inner{
 	}
 	.allTextures{
 		max-width: 670px;
-		padding: 40px 50px 50px 50px;
 	}
 	.panelFloor{
 		width: 700px;
@@ -4020,7 +4019,7 @@ div.fancybox-inner{
 	}
 	.allTextures{
 		max-width: 630px;
-		padding: 40px 40px 50px 50px;
+		padding: 40px 40px 50px 53px;
 	}
 	.panelFloor{
 		width: 650px;

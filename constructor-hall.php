@@ -292,29 +292,6 @@ isRetina = (isMobile)?false:retina();
 <!--Конструктор-->
 
 	<script type="text/javascript">
-	/*(function ($) {
-	$.event.special.load = {
-		add: function (hollaback) {
-			if ( this.nodeType === 1 && this.tagName.toLowerCase() === 'img' && this.src !== '' ) {
-				// Image is already complete, fire the hollaback (fixes browser issues were cached
-				// images isn't triggering the load event)
-				if ( this.complete || this.readyState === 4 ) {
-					hollaback.handler.apply(this);
-				}
-
-				// Check if data URI images is supported, fire 'error' event if not
-				else if ( this.readyState === 'uninitialized' && this.src.indexOf('data:') === 0 ) {
-					$(this).trigger('error');
-				}
-				
-				else {
-					$(this).bind('load', hollaback.handler);
-				}
-			}
-		}
-	};
-}(jQuery));*/
-
 
 		var checkSize = false;
 		$(document).ready(function(){
@@ -1109,19 +1086,41 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGFront" id="floorF" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 	</svg>
 
+	<div id="default-hash" data-hash="2|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2" data-countSVG="22" data-countTextures="3"></div>
+
 	<script type="text/javascript">
 		var urlCommands = (function () {
 		var self = this;
-		this.hash = false;
+		this.hash = "";
 		this.commands = {};
 		this.floor = "";
 		this.events = {};
+		this.default = {};
+		this.countSVG = $('#default-hash').attr("data-countSVG");
+		this.countTextures = $('#default-hash').attr("data-countTextures");
 
 		$(window).bind('hashchange', function() {
-			self.init();
+			self.parse();
+			//this.urlUpdate();
 		});
 
 		this.init = function() {
+				if($('.panelFloor').length)
+				{
+					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
+					this.floor = parseFloor[1];
+				}
+				for(var i=0; i < +this.countSVG - 1; i++)
+				{
+					var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
+					this.commands[i] = parseTexture[1];
+					this.default[i] = parseTexture[1];
+				}
+			this.urlUpdate();
+		}
+
+		this.parse = function() {
+			console.log("+++++++");
 			this.hash = window.location.hash;
 			this.commands = {};
 			if( ~self.hash.indexOf('#') ) {
@@ -1135,16 +1134,30 @@ isRetina = (isMobile)?false:retina();
 					console.log(checkFloor);
 				}
 				var data = data.split(',');
+				if(this.countSVG - 1 === data.length)
+				{
 				this.commands = data;
-				for (var i in data) {
-					if(data[i] > 0 && data[i] < 4)//4 заменить на количество декоров
-					{
-						$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+					for (var i in data) {
+						if(+data[i] > 0 && +data[i] < +this.countTextures)
+						{
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+						}else{
+							console.log(this.default[i]);
+							//брать дефолтный
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
+							this.commands[i] = this.default[i];
+							this.urlUpdate();
+						}
 					}
+				}else{
+					this.init();
 				}
 			}
 			return this;
-		},
+		}
+		/*this.valid = function(){
+
+		}*/
 
 		this.urlPush = function(position, texture) {
 			self.commands[position] = texture;
@@ -1166,9 +1179,10 @@ isRetina = (isMobile)?false:retina();
 			url = url.slice(0,-1);
 			this.hash = url;
 			window.history.pushState(null, null, url);
+			console.log(window.history.length, window.history.state);
 			}
 
-		this.init();
+		this.parse();
 		return this;
 	})();
 
@@ -1178,6 +1192,7 @@ isRetina = (isMobile)?false:retina();
     		var shiftSlider;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			urlCommands.init();
 			$(window).resize(function(){
 				if(window.innerWidth >= 1240){
 					shiftSlider = 8;

@@ -37,6 +37,11 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
+	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="js/progressbar.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
 	<script>
 var myWidth,
 	isMobile = false,
@@ -98,10 +103,6 @@ isRetina = (isMobile)?false:retina();
 	<link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1240px)" href="css/layout-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 751px) and (max-width: 1023px)" href="css/layout-small-tablet.css" />
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 750px)" href="css/layout-mobile.css" />
-
-<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css"/>
-	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-  	
 
 
 <script>
@@ -295,6 +296,22 @@ isRetina = (isMobile)?false:retina();
 		var checkSize = false;
 		$(document).ready(function(){
 			var height = 100;
+			$('#room').imagesLoaded( function() {
+				bar.animate(1);
+			});
+			$('.relBackground').css({"height": $(window).height() - height});
+			$('.progressbarContain').css({
+				"top": ($(window).height() - height)/2 - 40
+			});
+			if($(window).width() < $('.b-wide-block').width()){
+				$('.progressbarContain').css({
+					"left": ($(window).width())/2 - 40
+				});
+			}else{
+				$('.progressbarContain').css({
+					"left": ($('.relBackground').width())/2 - 40
+				});
+			}
 			$(window).resize(function(){
 				if(checkSize === false){
 					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -310,14 +327,18 @@ isRetina = (isMobile)?false:retina();
 							"width": $('.b-wide-block').width()
 						});
 					}
+					$('.rel').css("display", "block");
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
+					$('.relBackground').css({"height": ""});
 					//checkSize = false;
 				
 			});
 			//После загрузки страницы вызываем ресайз
-			$(window).load(function(){
+			$(window).load(function(e){
 				$(window).resize();
+				$('.progressbarContain').fadeOut(300);
 			});
+			//$('#room').load();
 			$('.fullSize').click(function(){
 					if(checkSize === false){
 						var curWidth = $('#room').width();
@@ -330,8 +351,8 @@ isRetina = (isMobile)?false:retina();
 								height: autoHeight,
 								width: $('.b-wide-block').width()
 							});
-						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить в экран');
-						$('.icon-left-arrow').css("display", "inline-block");
+						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
 						checkSize = true;
 					}else 
@@ -346,8 +367,8 @@ isRetina = (isMobile)?false:retina();
 									height: $(window).height() - height,
 									width: autoWidth
 								});
-							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину экрана');
-							$('.icon-left-arrow').css("display", "none");
+							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
+							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
 							checkSize = false;
 					}
@@ -506,6 +527,30 @@ isRetina = (isMobile)?false:retina();
 					"max-height": $(window).height() - 100
 				});
 			});*/
+			/*$('.currentTexture img').load(function(){
+				console.log("textures!!!!!!!!!!!!!");
+			});*/
+			var bar = new ProgressBar.Circle('#progressbar', {
+			  strokeWidth: 10,
+			  easing: 'easeInOut',
+			  duration: 1000,
+			  color: '#483435',
+			  trailColor: '#eee',
+			  svgStyle: null,
+			  step: function(state, circle) {
+
+			    var value = Math.round(circle.value() * 100);
+			    if (value === 0) {
+			      circle.setText('');
+			    } else {
+			      circle.setText(value+'%');
+			    }
+
+			  }
+			});
+			bar.text.style.fontSize = '20px';
+			bar.text.style.fontWeight = 700;
+			bar.animate(0.4);
 		});
 	</script>
 				<div class="windowConstructor">
@@ -602,7 +647,7 @@ isRetina = (isMobile)?false:retina();
 									<div class="arrowNext" title="Вперёд">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Выбор декора">
+									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -613,7 +658,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers" title="Выбор декора пола">
+								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
 								<div class="share" title="Поделиться">
@@ -638,6 +683,10 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
+		<div class="progressbarContain">
+			<div id="progressbar">
+			</div>
+		</div>
 		<div class="panelFloor">
 						<div class="floorIMG" data-src="i/FloorKitchen-1.jpg">
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
@@ -676,11 +725,11 @@ isRetina = (isMobile)?false:retina();
 							<img src="i/RoomChild.png">
 						</div>
 					</div>
-			<div class="fullSize" title="Во весь экран">
+			<div class="fullSize" title="Во всю ширину">
 				<span class="icon-full-size"></span>
-				<span class="icon-left-arrow"></span>
+				<span class="icon-small-size"></span>
 			</div>
-		<div class="rel" unselectable="on">
+		<div class="rel" style="display: none" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 		
 		<title>Гостиная</title>
@@ -1517,7 +1566,7 @@ isRetina = (isMobile)?false:retina();
 			<div class="b-popup" >
 				<a href="#" class="b-popup-close" title="Закрыть"></a>
 					<div class="b-three-color"></div>
-					<h2 class="b-title">Выберите декор</h2>
+					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
 							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
