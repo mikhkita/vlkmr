@@ -1126,8 +1126,9 @@ isRetina = (isMobile)?false:retina();
 			this.commands = {};
 			if( ~self.hash.indexOf('#') ) {
 				var data = self.hash;
+				data = data.replace('#','');
 				if(~data.indexOf('|')){
-					var checkFloor = data.replace('#','').split('|');
+					var checkFloor = data.split('|');
 					$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/FloorKitchen-"+checkFloor[0]+".jpg");
 					data = checkFloor[1];
 					this.floor = checkFloor[0];
@@ -1268,6 +1269,10 @@ isRetina = (isMobile)?false:retina();
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
 							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							var positionElStack = lastElemStack.path.slice(5) - 1;
+							var textureElStack = prevElemStack.texture.split(/(\d)/);
+							urlCommands.urlPush(positionElStack, textureElStack[1]);
+							urlCommands.urlUpdate();
 							stackCancel = true;
 							console.log($('#'+prevElemStack.path).attr("data-connect"));
 							if($('#'+prevElemStack.path).attr("data-connect") === "2" && checkConnectPrev === false){
@@ -1313,6 +1318,10 @@ isRetina = (isMobile)?false:retina();
 					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
 					$('#image'+lastElemStackRepeat.path).children().attr("xlink:href", lastElemStackRepeat.texture);
 					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
+					var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
+					var textureElStackR = lastElemStackRepeat.texture.split(/(\d)/);
+					urlCommands.urlPush(positionElStackR, textureElStackR[1]);
+					urlCommands.urlUpdate();
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
 					if($('#'+lastElemStackRepeat.path).attr("data-connect") === "2" && checkConnectNext === false){
