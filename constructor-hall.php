@@ -1109,19 +1109,40 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGFront" id="floorF" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 	</svg>
 
+	<div id="default-hash" data-hash="2|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2" data-countSVG="22" data-countTextures="3"></div>
+
 	<script type="text/javascript">
 		var urlCommands = (function () {
 		var self = this;
-		this.hash = false;
+		this.hash = "";
 		this.commands = {};
 		this.floor = "";
 		this.events = {};
+		this.default = {};
+		this.countSVG = $('#default-hash').attr("data-countSVG");
+		this.countTextures = $('#default-hash').attr("data-countTextures");
 
 		$(window).bind('hashchange', function() {
-			self.init();
+			self.parse();
+			urlCommands.urlUpdate();
 		});
 
 		this.init = function() {
+				if($('.panelFloor').length)
+				{
+					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
+					this.floor = parseFloor[1];
+				}
+				for(var i=0; i < 21; i++)
+				{
+					var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
+					this.commands[i] = parseTexture[1];
+					this.default[i] = parseTexture[1];
+				}
+			this.urlUpdate();
+		}
+
+		this.parse = function() {
 			this.hash = window.location.hash;
 			this.commands = {};
 			if( ~self.hash.indexOf('#') ) {
@@ -1135,16 +1156,30 @@ isRetina = (isMobile)?false:retina();
 					console.log(checkFloor);
 				}
 				var data = data.split(',');
+				if(this.countSVG - 1 === data.length)
+				{
 				this.commands = data;
-				for (var i in data) {
-					if(data[i] > 0 && data[i] < 4)//4 заменить на количество декоров
-					{
-						$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+					for (var i in data) {
+						if(+data[i] > 0 && +data[i] < +this.countTextures)
+						{
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+						}else{
+							console.log(this.default[i]);
+							//брать дефолтный
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
+							this.commands[i] = this.default[i];
+							console.log(this.commands[i]);
+						}
 					}
+				}else{
+					this.init();
 				}
 			}
 			return this;
-		},
+		}
+		/*this.valid = function(){
+
+		}*/
 
 		this.urlPush = function(position, texture) {
 			self.commands[position] = texture;
@@ -1168,7 +1203,7 @@ isRetina = (isMobile)?false:retina();
 			window.history.pushState(null, null, url);
 			}
 
-		this.init();
+		this.parse();
 		return this;
 	})();
 
@@ -1178,6 +1213,7 @@ isRetina = (isMobile)?false:retina();
     		var shiftSlider;//менять в зависимости от ширины окна
 			var currentTexture;
 			var prevTexture;
+			urlCommands.init();
 			$(window).resize(function(){
 				if(window.innerWidth >= 1240){
 					shiftSlider = 8;

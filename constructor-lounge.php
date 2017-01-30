@@ -582,11 +582,6 @@ isRetina = (isMobile)?false:retina();
 			</div><!--WindowCons-->
 		</div><!--b-block-->
 		<div class="relBackground">
-		<!--<div class="panelFloor">
-						<img src="i/Room2.png"  >
-						<img src="i/Room2.png"  >
-						<img src="i/Room2.png"  >
-					</div>-->
 			<div class="fullSize" title="Во весь экран">
 				<span class="icon-full-size"></span>
 			</div>
