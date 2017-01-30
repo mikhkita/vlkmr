@@ -292,29 +292,6 @@ isRetina = (isMobile)?false:retina();
 <!--Конструктор-->
 
 	<script type="text/javascript">
-	/*(function ($) {
-	$.event.special.load = {
-		add: function (hollaback) {
-			if ( this.nodeType === 1 && this.tagName.toLowerCase() === 'img' && this.src !== '' ) {
-				// Image is already complete, fire the hollaback (fixes browser issues were cached
-				// images isn't triggering the load event)
-				if ( this.complete || this.readyState === 4 ) {
-					hollaback.handler.apply(this);
-				}
-
-				// Check if data URI images is supported, fire 'error' event if not
-				else if ( this.readyState === 'uninitialized' && this.src.indexOf('data:') === 0 ) {
-					$(this).trigger('error');
-				}
-				
-				else {
-					$(this).bind('load', hollaback.handler);
-				}
-			}
-		}
-	};
-}(jQuery));*/
-
 
 		var checkSize = false;
 		$(document).ready(function(){
@@ -1124,7 +1101,7 @@ isRetina = (isMobile)?false:retina();
 
 		$(window).bind('hashchange', function() {
 			self.parse();
-			urlCommands.urlUpdate();
+			//this.urlUpdate();
 		});
 
 		this.init = function() {
@@ -1133,7 +1110,7 @@ isRetina = (isMobile)?false:retina();
 					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
 					this.floor = parseFloor[1];
 				}
-				for(var i=0; i < 21; i++)
+				for(var i=0; i < +this.countSVG - 1; i++)
 				{
 					var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
 					this.commands[i] = parseTexture[1];
@@ -1143,6 +1120,7 @@ isRetina = (isMobile)?false:retina();
 		}
 
 		this.parse = function() {
+			console.log("+++++++");
 			this.hash = window.location.hash;
 			this.commands = {};
 			if( ~self.hash.indexOf('#') ) {
@@ -1168,7 +1146,7 @@ isRetina = (isMobile)?false:retina();
 							//брать дефолтный
 							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
 							this.commands[i] = this.default[i];
-							console.log(this.commands[i]);
+							this.urlUpdate();
 						}
 					}
 				}else{
@@ -1201,6 +1179,7 @@ isRetina = (isMobile)?false:retina();
 			url = url.slice(0,-1);
 			this.hash = url;
 			window.history.pushState(null, null, url);
+			console.log(window.history.length, window.history.state);
 			}
 
 		this.parse();
