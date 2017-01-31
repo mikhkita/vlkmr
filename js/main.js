@@ -1,4 +1,58 @@
 $(document).ready(function(){	
+    $("h1.b-title").click(function(){
+
+        
+        var count = $("#roomSVGBack image").length,
+            current = 0;
+        $("#roomSVGBack image").each(function(){
+            var img = new Image(),
+                $this = $(this);
+            img.onload = function(){
+                var canvas = document.createElement('CANVAS');
+                var ctx = canvas.getContext('2d');
+                var dataURL;
+                canvas.height = img.height;
+                canvas.width = img.width;
+                ctx.drawImage(img, 0, 0);
+                dataURL = canvas.toDataURL('image/png');
+                $this.attr("xlink:href", dataURL);
+                current++;
+                console.log([current, count]);
+                if( current == count ){
+                    var svgString = new XMLSerializer().serializeToString(document.getElementById('roomSVGBack'));
+                    var canvas = document.getElementById("canvas");
+                    var ctx = canvas.getContext("2d");
+                    var DOMURL = self.URL || self.webkitURL || self;
+                    var tmp = new Image();
+                    var svg = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+                    var url = DOMURL.createObjectURL(svg);
+                    tmp.onload = function() {
+                        ctx.drawImage(tmp, 0, 0);
+                        var png = canvas.toDataURL("image/png");
+                        document.querySelector('#png-container').innerHTML = '<img src="'+png+'"/>';
+                        DOMURL.revokeObjectURL(png);
+
+                        var data = atob(png.substring('data:image/png;base64,'.length)),
+                                asArray = new Uint8Array(data.length);
+
+                        for (var i = 0, len = data.length; i < len; ++i) {
+                            asArray[i] = data.charCodeAt(i);
+                        }
+
+                        var blob = new Blob([asArray.buffer], {type: 'image/png'});
+                        saveAs(blob, 'export_' + Date.now() + '.png');
+                    };
+                    tmp.src = url;
+                }
+            }
+            img.src = $this.attr("xlink:href");
+        });
+
+
+    });
+
+
+
     var isDesktop = false,
         isTablet = false,
         isSmallTablet = false;
