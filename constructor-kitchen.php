@@ -41,6 +41,7 @@
 	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="js/progressbar.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/constructor.js"></script>
 
 	<script>
 var myWidth,
@@ -291,267 +292,6 @@ isRetina = (isMobile)?false:retina();
 				
 <!--Конструктор-->
 
-	<script type="text/javascript">
-		var checkSize = false;
-		$(document).ready(function(){
-			var height = 100;
-			$('#room').imagesLoaded( function() {
-				bar.animate(1);
-			});
-			$('.relBackground').css({"height": $(window).height() - height});
-			$('.progressbarContain').css({
-				"top": ($(window).height() - height)/2 - 40
-			});
-			if($(window).width() < $('.b-wide-block').width()){
-				$('.progressbarContain').css({
-					"left": ($(window).width())/2 - 40
-				});
-			}else{
-				$('.progressbarContain').css({
-					"left": ($('.relBackground').width())/2 - 40
-				});
-			}
-			$(window).resize(function(){
-				if(checkSize === false){
-					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
-						"height": $(window).height() - height,
-						"width": "auto"
-					});
-				}
-					console.log($('#room').width() > $('.b-wide-block').width());
-					if($('#room').width() > $('.b-wide-block').width())
-					{
-						$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
-							"height": "auto",
-							"width": $('.b-wide-block').width()
-						});
-					}
-					$('.rel').css("display", "block");
-					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-					$('.relBackground').css({"height": ""});
-					//checkSize = false;
-				
-			});
-			//После загрузки страницы вызываем ресайз
-			$(window).load(function(e){
-				$(window).resize();
-				$('.progressbarContain').fadeOut(300);
-			});
-			//$('#room').load();
-			$('.fullSize').click(function(){
-					if(checkSize === false){
-						var curWidth = $('#room').width();
-						$('#room').css({
-							"height": "auto",
-							"width": $('.b-wide-block').width()});
-						var autoHeight = $('#room').height();
-						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
-							{
-								height: autoHeight,
-								width: $('.b-wide-block').width()
-							});
-						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
-						$('.icon-small-size').css("display", "inline-block");
-						$('.icon-full-size').css("display", "none");
-						checkSize = true;
-					}else 
-						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
-							var curHeight = $('#room').height();
-							$('#room').css({
-								"height": $(window).height() - height,
-								"width": "auto"});
-							var autoWidth = $('#room').width();
-							$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
-								{
-									height: $(window).height() - height,
-									width: autoWidth
-								});
-							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
-							$('.icon-small-size').css("display", "none");
-							$('.icon-full-size').css("display", "inline-block");
-							checkSize = false;
-					}
-			});
-
-			  $('.repeatPrev[title], .repeatNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
-			  	position: {
-	                my: 'bottom center',
-	                at: 'top center',
-	                adjust: {
-			            y: -5
-			        }
-	            },
-	            style: {
-        			classes: 'qtipFont qtipCustom qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            }
-			  });
-			  $('.iconMore[title]').qtip({
-			  	position: {
-	                my: 'bottom center',
-	                at: 'top center',
-	                adjust: {
-			            y: -5
-			        }
-	            },
-	            style: {
-        			classes: 'qtipFont qtipCustom qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            },
-	            hide: {
-			        event: 'click mouseleave'
-			    }
-			  });
-			  $('.fullSize[title]').qtip({
-			  		position: {
-	                my: 'right center',
-	                at: 'left center',
-	                adjust: {
-			            x: -5
-			        }
-	            },
-	            style: {
-        			classes: 'qtipCustom qtipFont qtipCustomWhite qtip-light',
-	            	tip: {
-	            		width: 22, height: 11
-	            	}
-	            }
-			  });
-			  $('.currentTexture, .currentTexture2').each(function(){
-			  	$(this).children().qtip({
-			  		position: {
-	                my: 'bottom center',
-	                at: 'top center',
-	                adjust: {
-			            y: -8
-			        }
-	            },
-	            style: {
-        			classes: 'qtipFont qtipCustom qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            }
-			  	});
-			  });
-
-
-			//Доработать значения
-			//Зафиксировать панель
-			/*$(window).scroll(function(){
-				if ($('.panelFloor').hasClass("showContent"))
-				{
-					height = 400;
-				}else{
-					height = 100;
-				}
-				  if($(this).scrollTop() > 600)
-				  {
-				    //console.log($(this).scrollTop());	
-				  	$('.toolbar').addClass("panelFixed");
-				  	$('.emptyBlock').addClass("showContent");
-				  	$('.emptyBlock').removeClass("hideContent");
-				  	$('.emptyBlock').css("height", height);
-				  }
-				  //= высота - размер картинки
-				  if($(this).scrollTop() > 1400|| $(this).scrollTop() < 600)
-				  {
-				    //console.log($(this).scrollTop());	
-				  	$('.toolbar').removeClass("panelFixed");
-				  	$('.emptyBlock').removeClass("showContent");
-				  	$('.emptyBlock').addClass("hideContent");
-				  }
-				});*/
-			//Сочетание клавиш
-			var pressCtrl = false;
-			var pressCmd = false;
-			$(document).keyup(function(e){
-				if(e.which === 17 || e.which === 91){
-					pressCtrl = false;
-					pressCmd = false;
-				}
-			});
-			$(document).keydown(function(e){
-				if(e.which === 17 || e.which === 91){
-					pressCtrl = true;
-					pressCmd = true;
-				}
-				console.log(e, pressCtrl, pressCmd);
-				if((pressCtrl === true || pressCmd === true) && e.which == 90)
-				{
-					console.log("Press Cntr+Z");
-					$('.repeatPrevClick').click();
-					return false;
-				}else if((pressCtrl === true || pressCmd === true) && e.which == 89){
-					console.log("Press Cntr+Y");
-					$('.repeatNextClick').click();
-					return false;
-				}
-
-			});
-			//Панель с полами
-			var clickLayers = false;
-			$('.layers').click(function(){
-				if($('.panelFloor').hasClass("showContent")){
-					$('.panelFloor').fadeOut(350);
-				}else{
-					$('.panelFloor').fadeIn(350);
-				}
-				$('.panelFloor').toggleClass("showContent");
-				clickLayers = true;
-			});
-			//Закрыть панель с декорами по клику вне его
-		    $(document).click(function (e){
-		    	if($('.panelFloor').hasClass("showContent") === true && clickLayers === false)
-		    	{
-		    		
-			    		var div = $(".panelFloor"); 
-						if (!div.is(e.target) // если клик был не по нашему блоку
-						    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-								$('.panelFloor').fadeOut(350);
-								$('.panelFloor').toggleClass("showContent");
-						}
-				}
-				clickLayers = false;
-			});
-			//Раскрывающаяся панель с декорами
-			$('.iconMore').fancybox();
-			/*$('.iconMore').click(function(){
-				$('.allTextures').toggleClass("showContent");
-				$('.allTextures').css({
-					"max-height": $(window).height() - 100
-				});
-			});*/
-			/*$('.currentTexture img').load(function(){
-				console.log("textures!!!!!!!!!!!!!");
-			});*/
-			var bar = new ProgressBar.Circle('#progressbar', {
-			  strokeWidth: 10,
-			  easing: 'easeInOut',
-			  duration: 1000,
-			  color: '#483435',
-			  trailColor: '#eee',
-			  svgStyle: null,
-			  step: function(state, circle) {
-
-			    var value = Math.round(circle.value() * 100);
-			    if (value === 0) {
-			      circle.setText('');
-			    } else {
-			      circle.setText(value+'%');
-			    }
-
-			  }
-			});
-			bar.text.style.fontSize = '20px';
-			bar.text.style.fontWeight = 700;
-			bar.animate(0.4);
-		});
-	</script>
 				<div class="windowConstructor">
 				<div class="toolbar">
 					<div class="panelDecor">
@@ -598,48 +338,7 @@ isRetina = (isMobile)?false:retina();
 
 							</div>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.textures').slick({
-      	nextArrow: $('.arrowNext'),
-	    prevArrow: $('.arrowPrev'),
-	    dots: false,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 8,
-		slidesToScroll: 8,
-		responsive: [
-			    {
-			      breakpoint: 1241,
-			      settings: {
-			        slidesToShow: 6,
-			        slidesToScroll: 6
-			      }
-			    },
-			    {
-			      breakpoint: 1024,
-			      settings: {
-			        slidesToShow: 3,
-			        slidesToScroll: 3
-			      }
-			    },
-			    {
-			    	breakpoint: 768,
-			    	settings: {
-			    	arrows: false,
-			    	speed: 400,
-			        slidesToShow: 1,
-			        slidesToScroll: 1
-			      }
-			    }
-			    // You can unslick at a given breakpoint now by adding:
-			    // settings: "unslick"
-			    // instead of a settings object
-			  ]
-      });
-    });
-  </script>
-
+  
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
@@ -739,19 +438,19 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 <pattern id="imageblock1Back" width="100%" height="100%">
-			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock2Back" width="100%" height="100%">
-		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="0" width="500" height="800">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4Back" width="100%" height="100%">
-			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5Back" width="100%" height="100%">
@@ -808,19 +507,19 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 <pattern id="imageblock1" width="100%" height="100%">
-			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock2" width="100%" height="100%">
-		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="0" width="500" height="800">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-65" y="-50" width="500" height="800">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-1.jpg" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5" width="100%" height="100%">
@@ -958,25 +657,25 @@ isRetina = (isMobile)?false:retina();
 			</clipPath>
 
 		 </defs>
+		<polygon class="classSVG default" id="block1" data-clip="clipping1 circle" data-radius="520" fill="url(#imageblock1)" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+		<polygon class="classSVG default" id="block2" data-clip="clipping2 circle" data-radius="550" fill="url(#imageblock2)" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+		<polygon class="classSVG default" id="block3" data-clip="clipping3 circle" data-radius="520" fill="url(#imageblock3)" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+		<polygon class="classSVG default" id="block4" data-clip="clipping4 circle" data-radius="520" fill="url(#imageblock4)" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+		<polygon class="classSVG default" id="block5" data-clip="clipping5 circle" data-radius="450" fill="url(#imageblock5)" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+		<polygon class="classSVG default" id="block6" data-clip="clipping6 circle" data-radius="600" fill="url(#imageblock6)" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+		<polygon class="classSVG default" id="block7" data-clip="clipping7 circle" data-radius="600" fill="url(#imageblock7)" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+		<polygon class="classSVG default" id="block8" data-clip="clipping8 circle" data-radius="450" fill="url(#imageblock8)" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+		<polygon class="classSVG default" id="block9" data-clip="clipping9 circle" data-radius="395" fill="url(#imageblock9)"  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+		<polygon class="classSVG default" id="block10" data-clip="clipping10 circle" data-radius="450" fill="url(#imageblock10)" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+		<polygon class="classSVG default" data-connect="14" data-clip="clipping11 circle" data-radius="350" id="block11" fill="url(#imageblock11)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+		<polygon class="classSVG default" data-clip="clipping12 circle" data-radius="395" id="block12" fill="url(#imageblock12)" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+		<polygon class="classSVG default" data-clip="clipping13 circle" data-radius="320" data-connect="16" data-coordX="55" data-coordY="59" id="block13" fill="url(#imageblock13)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVG default" data-clip="clipping14 circle" data-radius="350" id="block14" data-connect="11" data-coordX="54" data-coordY="64" fill="url(#imageblock14)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
 
-		<polygon class="classSVG default" id="block1" fill="url(#imageblock1)" points="134,678 442,684 442,1059.4 134,1065.7 "/>
-		<polygon class="classSVG default" id="block2" fill="url(#imageblock2)" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
-		<polygon class="classSVG default" id="block3" fill="url(#imageblock3)" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
-		<polygon class="classSVG default" id="block4" fill="url(#imageblock4)" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
-		<polygon class="classSVG default" id="block5" fill="url(#imageblock5)" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
-		<polygon class="classSVG default" id="block6" fill="url(#imageblock6)" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
-		<polygon class="classSVG default" id="block7" fill="url(#imageblock7)" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
-		<polygon class="classSVG default" id="block8" fill="url(#imageblock8)" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
-		<polygon class="classSVG default" id="block9" fill="url(#imageblock9)"  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
-		<polygon class="classSVG default" id="block10" fill="url(#imageblock10)" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
-		<polygon class="classSVG default" data-connect="true" id="block11" fill="url(#imageblock11)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
-		<polygon class="classSVG default" id="block12" fill="url(#imageblock12)" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVG default" data-connect="true" id="block13" fill="url(#imageblock13)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVG default" data-connect="true" id="block14" fill="url(#imageblock14)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
 		<polygon class="classSVG" id="floor" data-id="floor" fill="url(#floorPattern)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
 	2633.2,1465.9 2636.2,1260.1 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-		<polygon class="classSVG default" id="block15" fill="url(#imageblock15)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
-		<polygon class="classSVG default" data-connect="true" id="block16" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+		<polygon class="classSVG default" data-clip="clipping15 circle" data-radius="540" id="block15" fill="url(#imageblock15)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+		<polygon class="classSVG default" data-connect="13" data-clip="clipping16 circle" data-radius="300" id="block16" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
 
 	</svg>
 
@@ -1007,334 +706,7 @@ isRetina = (isMobile)?false:retina();
 
 	</svg>
 
-	<script type="text/javascript">
-    	$(document).ready(function()
-    	{
-    		var shiftSlider;//менять в зависимости от ширины окна
-			var currentTexture;
-			var prevTexture;
-			$(window).resize(function(){
-				if(window.innerWidth >= 1240){
-					shiftSlider = 8;
-				}
-				if(window.innerWidth < 1240 && window.innerWidth > 1024){
-					shiftSlider = 6;
-				}
-				if(window.innerWidth <= 1024 && window.innerWidth > 768){
-					shiftSlider = 3;
-				}
-				if(window.innerWidth <= 768){
-					shiftSlider = 1;
-				}
-			});
-			//Выбор текстуры
-			$('.currentTexture').click(function(e){
-				if (prevTexture != undefined)
-					prevTexture.children().css("box-shadow", "");
-				currentTexture = $(this);
-				prevTexture = $(this);
-				$(this).children().css({
-					"box-shadow": "0 0 0 3px #483434",
-					"box-sizing": "border-box"
-				});
-				if(window.innerWidth <= 768){
-					$('.iconMore').click();
-				}
-			});
-			$('.currentTexture2').click(function(e){
-		        e.preventDefault();
-		        slideIndex = $(this).index();
-		        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
-		        console.log("currentTexture",$('.currentTexture').eq(slideIndex), "slideIndex", slideIndex, "this", $(this));
-		        $('.currentTexture').eq(slideIndex + shiftSlider).click();
-		        $('.allTextures').removeClass("showContent");
-		        $.fancybox.close();
-		    });
-		    //Выбор пола
-			$('.floorIMG').click(function(e){
-				$('#floorPattern, #floorPatternBack').children().attr("xlink:href", $(this).attr("data-src"));
-				$('.layers').click();
-			});
-		    //Закрыть панель с декорами по клику вне его
-		    /*$(document).click(function (e){ 
-		    	if($('.allTextures').hasClass("showContent") === true)
-		    	{
-					var div = $(".allTextures, .iconMore"); 
-					if (!div.is(e.target) // если клик был не по нашему блоку
-					    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-							$('.allTextures').removeClass("showContent"); // скрываем его
-					}
-				}
-			});*/
-			
-			//Отменить/Повторить
-			var stack = [];
-			//Заполняем стек начальными текстурами
-			$('.default').each(function(){
-				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
-				stack.push(stackAdd);
-			});
-			var stackRepeat = [];
-			var checkConnectPrev = false;
-			var checkConnectNext = false;
-			//Отменить
-			$('.repeatPrevClick').click(function(e){
-				if(stack.length != 0)
-				{
-					var lastElemStack = stack.pop();
-					var prevElemStack;
-					stack.forEach(function(item, i, stack){
-						if(item.path === lastElemStack.path)
-						{
-							prevElemStack = item;
-						}
-					});
-					if(prevElemStack != undefined)
-						{
-							console.log("stack", stack);
-							//теперь нужно поменять текстуры
-							/*$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
-							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
-							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
-							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
-							console.log($('#'+prevElemStack.path).attr("data-connect"));
-							if($('#'+prevElemStack.path).attr("data-connect") === "true" && checkConnectPrev === false){
-								checkConnectPrev = true;
-								$('.repeatPrevClick').click();
-							}
-							stackRepeat.push(lastElemStack);
-						}
-					else{
-						stack.push(lastElemStack);
-					}
-					if(stack.length > 16)
-					{
-						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
-						
-					}else{
-						$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
-						
-					}
-					if(stackRepeat.length > 0)
-					{
-						$('.repeatNext').removeClass('repeatNext').addClass('repeatNext2');
-					}
-					else{
-						$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
-					}
-					checkConnectPrev = false;
-				}
-			});
-
-			//Повторить
-			$('.repeatNextClick').click(function(e){
-				if(stackRepeat.length != 0){
-					console.log("stackRepeat", stackRepeat);
-					var lastElemStackRepeat= stackRepeat.pop();
-					/*$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
-					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
-					$('#image'+lastElemStackRepeat.path).children().attr("xlink:href", lastElemStackRepeat.texture);
-					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
-					stack.push(lastElemStackRepeat);
-					$(this).removeClass('repeatNext').addClass('repeatNext2');
-					if($('#'+lastElemStackRepeat.path).attr("data-connect") === "true" && checkConnectNext === false){
-							checkConnectNext = true;
-							$('.repeatNextClick').click();
-						}
-					checkConnectNext = false;
-				}
-				else{
-					$(this).removeClass('repeatNext2').addClass('repeatNext');
-				}
-			});
-
-			//Анимация
-			function areaSVG(path, circle, radius){
-
-			   this.path = path;
-			   this.circle = circle;
-			   this.radius = radius;
-			   this.animateSVG = function(x, y, clickEl, currentTextureLoc){
-			   	circle.attr({
-				  	'cx': x + '%',
-				  	'cy': y + '%'
-				});
-				var circleID = circle.parent().attr("id");
-				path.css({
-				  	"clip-path":"url(#"+circleID+")",
-				  	"opacity" : "1"
-				  });
-				circle.css({
-				  	'r': 0
-				 });
-				circle.animate(
-					  {
-					  	'r': radius
-					  },{
-					  		duration: 550,
-					   		step: function(now, fx) {
-					   			$(this).attr({"r": now});
-					   		},
-					   		complete: function(){
-					   			$('#image'+clickEl+'Back').children().attr({
-					   				"xlink:href": currentTextureLoc.children().attr("src"),
-									"x": $('#image'+clickEl).children().attr("x"),
-									"y": $('#image'+clickEl).children().attr("y")
-								});
-					   		}
-					  });
-
-			   };
-			};
-
-			//Объект SVG + текстура (для отменить/повторить)
-			function clickArea(path, texture)
-			{
-				this.path = path;
-				this.texture = texture;
-			}
-
-			/* --------------------------- */
-			var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 520);
-			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 550);
-			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 520);
-			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 520);
-			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 450);
-			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 600);
-			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 600);
-			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 450);
-			var block9 = new areaSVG($('#block9'), $('#clipping9 circle'), 395);
-			var block10 = new areaSVG($('#block10'), $('#clipping10 circle'), 450);
-			var block11 = new areaSVG($('#block11'), $('#clipping11 circle'), 350);
-			var block12 = new areaSVG($('#block12'), $('#clipping12 circle'), 395);
-			var block13 = new areaSVG($('#block13'), $('#clipping13 circle'), 320);
-			var block14 = new areaSVG($('#block14'), $('#clipping14 circle'), 350);
-			var block15 = new areaSVG($('#block15'), $('#clipping15 circle'), 540);
-			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 300);
-			//var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 1000);
-
-			var clickElem;
-			var dataLocation;
-	    	var offset;
-	    	var parent;
-
-			//Кликнули по любой области SVG
-			$('.classSVGFront').click(function(e){
-				clickElem = $(this).attr("data-id");//blockUp1
-				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
-				{
-					//Получаем элемент из центрального слоя
-					
-					//dataLocation = $(this).attr("data-location");//Up
-					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
-					//закинуть текущую текстуру в pattern
-					$('#image'+clickElem).children().attr("xlink:href", currentTexture.children().attr("src"));
-					console.log("#image", $('#image'+clickElem));
-					offset = $(this).position();
-				    parent = $('.rel').offset();
-
-				    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
-				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
-				    //Добавить текущий SVG и текстуру в стек
-				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") + dataLocation + ")");
-				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
-				    console.log(stack);
-				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
-
-				    //искать в стеке такое же сочетание path+texture
-				    var elemRepeat = false;
-				    /*stack.forEach(function(item, i, stack){
-				    	if(stackObj.path === item.path && stackObj.texture === item.texture)
-				    	{
-				    		elemRepeat = true;
-				    	}
-				    })
-				    if(elemRepeat === false)
-				    {
-				    	console.log("add!");
-				    	stack.push(stackObj);
-				    }*/
-				    stack.push(stackObj);
-				    if(stack.length > 16){
-						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
-					}else{
-						$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
-					}
-					stackRepeat = [];
-					$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
-
-					//Рандомная закраска
-					var randX = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-x") - $('#image'+clickElem).children().attr("rand-min-x") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-x");
-					var randY = Math.floor(Math.random() * ($('#image'+clickElem).children().attr("rand-max-y") - $('#image'+clickElem).children().attr("rand-min-y") + 1 )) + +$('#image'+clickElem).children().attr("rand-min-y");
-					$('#image'+clickElem).children().attr({
-						"x": randX,
-						"y": randY
-					});
-
-					switch(clickElem){
-						case "block1":
-							block1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block2":
-							block2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block3":
-							block3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block4":
-							block4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block5":
-							block5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block6":
-							block6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block7":
-							block7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block8":
-							block8.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block9":
-							block9.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block10":
-							block10.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block11":
-							block11.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block12":
-							block12.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block13":
-							block13.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock16').children().attr("xlink:href", currentTexture.children().attr("src"));
-							block16.animateSVG(55, 59, "block16", currentTexture);
-							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
-							break
-						case "block14":
-							block14.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock11').children().attr("xlink:href", currentTexture.children().attr("src"));
-							block11.animateSVG(54, 64, "block11", currentTexture);
-							stack.push(new clickArea("block11", $('#imageblock11').children().attr("xlink:href")));
-							break
-						case "block15":
-							block15.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block16":
-							block16.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block17":
-							block17.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-					}
-				}
-
-			});
-		});
-    	</script>
+	<div id="default-hash" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,3" data-countSVG="17" data-countTextures="3" data-stack="16"></div>
 			</div><!--rel-->
 			</div>
 		</div><!--b-wide-->
