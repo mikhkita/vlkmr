@@ -24,7 +24,7 @@
 			}
 			$(window).resize(function(){
 				if(checkSize === false){
-					$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+					$('#room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
@@ -32,7 +32,7 @@
 					console.log($('#room').width() > $('.b-wide-block').width());
 					if($('#room').width() > $('.b-wide-block').width())
 					{
-						$('#room, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+						$('#room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 							"height": "auto",
 							"width": $('.b-wide-block').width()
 						});
@@ -64,11 +64,11 @@
 			$('.fullSize').click(function(){
 					if(checkSize === false){
 						var curWidth = $('#room').width();
-						$('#room').css({
+						$('#room, #floorRoom').css({
 							"height": "auto",
 							"width": $('.b-wide-block').width()});
 						var autoHeight = $('#room').height();
-						$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
+						$('.rel, #room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
 							{
 								height: autoHeight,
 								width: $('.b-wide-block').width()
@@ -80,11 +80,11 @@
 					}else 
 						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
 							var curHeight = $('#room').height();
-							$('#room').css({
+							$('#room, #floorRoom').css({
 								"height": $(window).height() - height,
 								"width": "auto"});
 							var autoWidth = $('#room').width();
-							$('.rel, #room, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+							$('.rel, #room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
 								{
 									height: $(window).height() - height,
 									width: autoWidth
@@ -688,8 +688,8 @@
 					if($('#'+clickElem).attr("data-connect")){
 						var blocksConnect = $('#'+clickElem).attr("data-connect").split(',');
 						if($('#'+clickElem).attr("data-coordX")){
-							relativeX = $('#'+clickElem).attr("data-coordX");
-							relativeY = $('#'+clickElem).attr("data-coordY");
+							coordX = $('#'+clickElem).attr("data-coordX");
+							coordY = $('#'+clickElem).attr("data-coordY");
 						}
 						switch(blocksConnect.length){
 							case 2:
@@ -702,7 +702,7 @@
 							break
 							case 1:
 								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.children().attr("src"));
-								blocks[blocksConnect[0] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[0], currentTexture);
+								blocks[blocksConnect[0] - 1].animateSVG(coordX, coordY, "block"+blocksConnect[0], currentTexture);
 								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("xlink:href")));
 							break
 						}

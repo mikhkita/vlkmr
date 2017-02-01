@@ -386,11 +386,11 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-						<div class="floorIMG" data-src="i/FloorKitchen-1.jpg">
+						<div class="floorIMG" data-src="i/Floor-1.jpg">
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern1" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -398,11 +398,11 @@ isRetina = (isMobile)?false:retina();
 							</svg>
 							<img src="i/RoomChild.png">
 						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-2.jpg">
+						<div class="floorIMG" data-src="i/Floor-2.jpg">
 							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern2" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-20" y="-50" width="2500" height="580">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -410,11 +410,11 @@ isRetina = (isMobile)?false:retina();
 							</svg>
 							<img src="i/RoomChild.png">
 						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-3.jpg">
+						<div class="floorIMG" data-src="i/Floor-3.jpg">
 							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern3" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-20" y="-50" width="2500" height="580">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-3.jpg" x="-20" y="-50" width="2500" height="580">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -522,7 +522,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPatternBack" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-20" y="-50" width="2500" height="580">
 		     	</image>
 		    </pattern>
 
@@ -615,7 +615,7 @@ isRetina = (isMobile)?false:retina();
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPattern" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-20" y="-50" width="2500" height="580">
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-20" y="-50" width="2500" height="580">
 		     	</image>
 		    </pattern>
 		 </defs>
@@ -745,9 +745,9 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVG default" id="block16" data-clip="clipping16 circle" data-radius="800" fill="url(#imageblock16)" points="1399,323.3 1100.7,288.7 1095,290.7 1094.5,961.9 1101.9,961.9 1399.3,943 "/>
 		<polygon class="classSVG default" id="block17" data-clip="clipping17 circle" data-radius="350" fill="url(#imageblock17)" points="2251.1,911.6 1960.6,933.7 1959,1047 1973,1047 2266.7,1013.3 2266.7,913.7 "/>
 		<path class="classSVG default" id="block18" data-clip="clipping18 circle" data-radius="800" fill="url(#imageblock18)" d="M1534.2,922.2V883c0,0,109.8-127,320.8-125s411.7,155.7,411.7,155.7l-15.6-2l-290.4,22L1534.2,922.2z"/>
-		<polygon class="classSVG default" id="block19" data-clip="clipping19 circle" data-radius="800" data-connect="20" data-coordX="81" data-coordY="80" fill="url(#imageblock19)" points="1260.5,1034 1260.5,1165.7 1271.7,1167.8 1271.7,1172 1267.5,1172.4 1267.3,1271.4 1248.1,1271.4 
+		<polygon class="classSVG default" id="block19" data-clip="clipping19 circle" data-radius="800" data-connect="20,21" data-coordX="81" data-coordY="80" fill="url(#imageblock19)" points="1260.5,1034 1260.5,1165.7 1271.7,1167.8 1271.7,1172 1267.5,1172.4 1267.3,1271.4 1248.1,1271.4 
 			1248.1,1034 "/>
-		<polygon class="classSVG default" id="block20" data-clip="clipping20 circle" data-radius="800" data-connect="19" data-coordX="52" data-coordY="73" fill="url(#imageblock20)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
+		<polygon class="classSVG default" id="block20" data-clip="clipping20 circle" data-radius="800" data-connect="19,21" data-coordX="52" data-coordY="73" fill="url(#imageblock20)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
 		<polygon class="classSVG default" id="block21" data-clip="clipping21 circle" data-radius="800" data-connect="20,19"  fill="url(#imageblock21)" points="1260.5,1034 1942.8,1103.7 1942.8,1271 1271.7,1167.8 1260.5,1165.7 "/>
 		<polygon class="classSVG default" id="block22" data-clip="clipping22 circle" data-radius="800" data-connect="20,19" fill="url(#imageblock22)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
 		<polygon class="classSVG" id="floor" fill="url(#floorPattern)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 

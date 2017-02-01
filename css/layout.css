@@ -3780,7 +3780,7 @@ div.fancybox-inner{
 	opacity: 0;
 }
 
-#room, #roomSVG, #roomSVGFront, #roomSVGBack{
+#room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack{
 	/*width: 100%;*/
 	position: absolute;
 	top: 0;

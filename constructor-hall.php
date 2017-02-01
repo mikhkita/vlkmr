@@ -385,11 +385,11 @@ isRetina = (isMobile)?false:retina();
 		</div>
 		
 		<div class="panelFloor">
-						<div class="floorIMG" data-src="i/FloorKitchen-1.jpg">
+						<div class="floorIMG" data-src="i/Floor-1.jpg">
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 							<defs>
 								<pattern id="floorPattern1" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-10" y="-100" width="1000" height="250">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -397,11 +397,11 @@ isRetina = (isMobile)?false:retina();
 							</svg>
 							<img src="i/RoomHall.png">
 						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-2.jpg">
+						<div class="floorIMG" data-src="i/Floor-2.jpg">
 							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 							<defs>
 								<pattern id="floorPattern2" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="-100" width="1000" height="250">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -409,11 +409,11 @@ isRetina = (isMobile)?false:retina();
 							</svg>
 							<img src="i/RoomHall.png">
 						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-3.jpg">
+						<div class="floorIMG" data-src="i/Floor-3.jpg">
 							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 							<defs>
 								<pattern id="floorPattern3" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.jpg" x="-10" y="-100" width="1000" height="250">
+							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-3.jpg" x="-10" y="-100" width="1000" height="250">
 							     	</image>
 							    </pattern>
 							</defs>
@@ -520,7 +520,7 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 		    <pattern id="floorPatternBack" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="0" width="600" height="120">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 
@@ -612,7 +612,7 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 		    <pattern id="floorPattern" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.jpg" x="-10" y="0" width="600" height="120">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 		 </defs>
