@@ -386,43 +386,19 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-						<div class="floorIMG" data-src="i/FloorKitchen-1.png">
-							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
-							<defs>
-								<pattern id="floorPattern1" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" x="-10" y="-400" width="4500" height="1500">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern1)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593,1261.3 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-							</svg>
-							<img src="i/RoomKitchen.png">
-						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-2.png">
-							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
-							<defs>
-								<pattern id="floorPattern2" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-2.png" x="-10" y="-400" width="4500" height="1500">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern2)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593,1261.3 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-							</svg>
-							<img src="i/RoomKitchen.png">
-						</div>
-						<div class="floorIMG" data-src="i/FloorKitchen-3.png">
-							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
-							<defs>
-								<pattern id="floorPattern3" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-3.png" x="-10" y="-400" width="4500" height="1500">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern3)" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593,1261.3 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-							</svg>
-							<img src="i/RoomKitchen.png">
-						</div>
-					</div>
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-1.png">
+					<img class="floorIMGabs" src="i/FloorKitchen-1.png">
+					<img src="i/RoomKitchen.png">
+				</div>
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-2.png">
+					<img class="floorIMGabs" src="i/FloorKitchen-2.png">
+					<img src="i/RoomKitchen.png">
+				</div>
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-3.png">
+					<img class="floorIMGabs" src="i/FloorKitchen-3.png">
+					<img src="i/RoomKitchen.png">
+				</div>
+		</div>
 			<div class="fullSize" title="Во всю ширину">
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
@@ -477,24 +453,25 @@ isRetina = (isMobile)?false:retina();
 			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
 			    </image>
 			</pattern>
-			<pattern id="imageblock11Back" width="100%" height="100%">
-		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock12Back" width="100%" height="100%">
+			
+		    <pattern id="imageblock11Back" width="100%" height="100%">
 		        <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblock13Back" width="100%" height="100%">
+		    <pattern id="imageblock12Back" width="100%" height="100%">
 			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 			</pattern>
-			<pattern id="imageblock14Back" width="100%" height="100%">
+			<pattern id="imageblock13Back" width="100%" height="100%">
 		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblock15Back" width="100%" height="100%">
+		    <pattern id="imageblock14Back" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblock15Back" width="100%" height="100%">
+		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16Back" width="100%" height="100%">
@@ -594,24 +571,25 @@ isRetina = (isMobile)?false:retina();
 			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
 			    </image>
 			</pattern>
-			<pattern id="imageblock11" width="100%" height="100%">
-		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock12" width="100%" height="100%">
+			
+		    <pattern id="imageblock11" width="100%" height="100%">
 		        <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblock13" width="100%" height="100%">
+		    <pattern id="imageblock12" width="100%" height="100%">
 			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 			</pattern>
-			<pattern id="imageblock14" width="100%" height="100%">
+			<pattern id="imageblock13" width="100%" height="100%">
 		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
 		     	</image>
 		    </pattern>
-		    <pattern id="imageblock15" width="100%" height="100%">
+		    <pattern id="imageblock14" width="100%" height="100%">
 		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		     	</image>
+		    </pattern>
+		    <pattern id="imageblock15" width="100%" height="100%">
+		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-3.jpg" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16" width="100%" height="100%">
@@ -682,15 +660,17 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGback" id="block8Back" fill="url(#imageblock8Back)" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
 		<polygon class="classSVGback" id="block9Back" fill="url(#imageblock9Back)"  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
 		<polygon class="classSVGback" id="block10Back" fill="url(#imageblock10Back)" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
-		<polygon class="classSVGback" id="block11Back" fill="url(#imageblock11Back)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
-		<polygon class="classSVGback" id="block12Back" fill="url(#imageblock12Back)" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVGback" id="block13Back" fill="url(#imageblock13Back)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVGback" id="block14Back" fill="url(#imageblock14Back)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+		<polygon class="classSVGback" id="block11Back" fill="url(#imageblock11Back)" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+		<polygon class="classSVGback" id="block12Back" fill="url(#imageblock12Back)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVGback" id="block13Back" fill="url(#imageblock13Back)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
 		
-		<polygon class="classSVGback" id="block15Back" fill="url(#imageblock15Back)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
-		<polygon class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+		<polygon class="classSVGback" id="block14Back" fill="url(#imageblock14Back)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
 
 		<!--Отражение-->
+		<polygon class="classSVGback" id="block11Back" fill="url(#imageblock15Back)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+		<polygon class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+
+
 		<polygon class="classSVGBack" id="block17Back" fill="url(#imageblock17Back)" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
 		<polygon class="classSVGBack" id="block18Back" fill="url(#imageblock18Back)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
 		<polygon class="classSVGBack" id="block19Back" fill="url(#imageblock19Back)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
@@ -795,39 +775,42 @@ isRetina = (isMobile)?false:retina();
 			</clipPath>
 
 		 </defs>
-		<polygon class="classSVG default" id="block1" data-clip="clipping1 circle" data-radius="520" fill="url(#imageblock1)" points="134,678 442,684 442,1059.4 134,1065.7 "/>
-		<polygon class="classSVG default" id="block2" data-clip="clipping2 circle" data-radius="550" fill="url(#imageblock2)" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
-		<polygon class="classSVG default" id="block3" data-clip="clipping3 circle" data-radius="520" fill="url(#imageblock3)" data-connect="18" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
-		<polygon class="classSVG default" id="block4" data-clip="clipping4 circle" data-radius="520" fill="url(#imageblock4)" data-connect="17" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
-		<polygon class="classSVG default" id="block5" data-clip="clipping5 circle" data-radius="450" fill="url(#imageblock5)" data-connect="19" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
-		<polygon class="classSVG default" id="block6" data-clip="clipping6 circle" data-radius="600" fill="url(#imageblock6)" data-connect="21" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
-		<polygon class="classSVG default" id="block7" data-clip="clipping7 circle" data-radius="600" fill="url(#imageblock7)" data-connect="20" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
-		<polygon class="classSVG default" id="block8" data-clip="clipping8 circle" data-radius="450" fill="url(#imageblock8)" data-connect="22" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
-		<polygon class="classSVG default" id="block9" data-clip="clipping9 circle" data-radius="395" fill="url(#imageblock9)" data-connect="23" points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
-		<polygon class="classSVG default" id="block10" data-clip="clipping10 circle" data-radius="450" fill="url(#imageblock10)" data-connect="24" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
-		<polygon class="classSVG default" data-connect="14" data-clip="clipping11 circle" data-radius="350" id="block11" fill="url(#imageblock11)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
-		<polygon class="classSVG default" data-clip="clipping12 circle" data-radius="395" id="block12" fill="url(#imageblock12)" data-connect="25" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVG default" data-clip="clipping13 circle" data-radius="320" data-connect="16,27" data-coordX="55" data-coordY="59" id="block13" fill="url(#imageblock13)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVG default" data-clip="clipping14 circle" data-radius="350" id="block14" data-connect="11,26" data-coordX="54" data-coordY="64" fill="url(#imageblock14)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+		<polygon class="classSVG " id="block1" data-clip="clipping1 circle" data-radius="520" fill="url(#imageblock1)" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+		<polygon class="classSVG " id="block2" data-clip="clipping2 circle" data-radius="550" fill="url(#imageblock2)" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+		<polygon class="classSVG " id="block3" data-clip="clipping3 circle" data-radius="520" fill="url(#imageblock3)" data-connect="18" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+		<polygon class="classSVG " id="block4" data-clip="clipping4 circle" data-radius="520" fill="url(#imageblock4)" data-connect="17" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+		<polygon class="classSVG " id="block5" data-clip="clipping5 circle" data-radius="450" fill="url(#imageblock5)" data-connect="19" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+		<polygon class="classSVG " id="block6" data-clip="clipping6 circle" data-radius="600" fill="url(#imageblock6)" data-connect="21" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+		<polygon class="classSVG " id="block7" data-clip="clipping7 circle" data-radius="600" fill="url(#imageblock7)" data-connect="20" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+		<polygon class="classSVG " id="block8" data-clip="clipping8 circle" data-radius="450" fill="url(#imageblock8)" data-connect="22" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+		<polygon class="classSVG " id="block9" data-clip="clipping9 circle" data-radius="395" fill="url(#imageblock9)" data-connect="23" points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+		<polygon class="classSVG " id="block10" data-clip="clipping10 circle" data-radius="450" fill="url(#imageblock10)" data-connect="24" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+		<polygon class="classSVG" data-clip="clipping11 circle" data-radius="395" id="block11" fill="url(#imageblock11)" data-connect="25" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+		<polygon class="classSVG " data-clip="clipping12 circle" data-radius="320" data-connect="16,27" id="block12" fill="url(#imageblock12)" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVG " data-clip="clipping13 circle" data-radius="350" id="block13" data-connect="15,26" fill="url(#imageblock13)" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
 
-		<polygon class="classSVG default" data-clip="clipping15 circle" data-radius="540" id="block15" fill="url(#imageblock15)" data-connect="28" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
-		<polygon class="classSVG default" data-connect="13" data-clip="clipping16 circle" data-radius="300" id="block16" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+		<polygon class="classSVG" data-clip="clipping14 circle" data-radius="540" id="block14" fill="url(#imageblock14)" data-connect="28" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
 
 		<!--Отражение-->
-		<polygon class="classSVG default" id="block17" data-connect="4" data-clip="clipping17 circle" data-radius="520" fill="url(#imageblock17)" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
-		<polygon class="classSVG default" id="block18" data-connect="3" data-clip="clipping18 circle" data-radius="520" fill="url(#imageblock18)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
-		<polygon class="classSVG default" id="block19" data-connect="5" data-clip="clipping19 circle" data-radius="520" fill="url(#imageblock19)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
-		<polygon class="classSVG default" id="block20" data-connect="7" data-clip="clipping20 circle" data-radius="520" fill="url(#imageblock20)" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
-		<polygon class="classSVG default" id="block21" data-connect="6" data-clip="clipping21 circle" data-radius="520" fill="url(#imageblock21)" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
-		<polygon class="classSVG default" id="block22" data-connect="8" data-clip="clipping22 circle" data-radius="520" fill="url(#imageblock22)" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
-		<polygon class="classSVG default" id="block23" data-connect="9" data-clip="clipping23 circle" data-radius="520" fill="url(#imageblock23)" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
-		<polygon class="classSVG default" id="block24" data-connect="10" data-clip="clipping24 circle" data-radius="520" fill="url(#imageblock24)" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
-		<polygon class="classSVG default" id="block25" data-connect="12" data-clip="clipping25 circle" data-radius="520" fill="url(#imageblock25)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
-		<polygon class="classSVG default" id="block26" data-connect="14" data-clip="clipping26 circle" data-radius="520" fill="url(#imageblock26)" points="2379.7,1584.6 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1485.8 "/>
-		<polygon class="classSVG default" id="block27" data-connect="13" data-clip="clipping27 circle" data-radius="520" fill="url(#imageblock27)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+		<polygon class="classSVG" data-reflection="true" data-connect="14" data-clip="clipping15 circle" data-radius="350" id="block15" data-coordX="55" data-coordY="59" fill="url(#imageblock15)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+		<polygon class="classSVG" data-reflection="true" data-connect="13" data-clip="clipping16 circle" data-radius="300" id="block16" data-coordX="57" data-coordY="64" fill="url(#imageblock16)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+
+		
+		<polygon class="classSVG" id="block17" data-reflection="true" data-connect="4" data-clip="clipping17 circle" data-radius="450" data-coordX="9" data-coordY="86" fill="url(#imageblock17)" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+		<polygon class="classSVG" id="block18" data-reflection="true" data-connect="3" data-clip="clipping18 circle" data-radius="450" data-coordX="17" data-coordY="86" fill="url(#imageblock18)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+		<polygon class="classSVG" id="block19" data-reflection="true" data-connect="5" data-clip="clipping19 circle" data-radius="450" data-coordX="25" data-coordY="84" fill="url(#imageblock19)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+		<polygon class="classSVG" id="block20" data-reflection="true" data-connect="7" data-clip="clipping20 circle" data-radius="600" data-coordX="35" data-coordY="91" fill="url(#imageblock20)" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+		<polygon class="classSVG" id="block21" data-reflection="true" data-connect="6" data-clip="clipping21 circle" data-radius="600" data-coordX="35" data-coordY="82" fill="url(#imageblock21)" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+		<polygon class="classSVG" id="block22" data-reflection="true" data-connect="8" data-clip="clipping22 circle" data-radius="450" data-coordX="44" data-coordY="81" fill="url(#imageblock22)" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+		<polygon class="classSVG" id="block23" data-reflection="true" data-connect="9" data-clip="clipping23 circle" data-radius="395" data-coordX="51" data-coordY="97" fill="url(#imageblock23)" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+		<polygon class="classSVG" id="block24" data-reflection="true" data-connect="10" data-clip="clipping24 circle" data-radius="450" data-coordX="57" data-coordY="80" fill="url(#imageblock24)" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+		<polygon class="classSVG" id="block25" data-reflection="true" data-connect="12" data-clip="clipping25 circle" data-radius="395" data-coordX="61" data-coordY="80" fill="url(#imageblock25)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+		<polygon class="classSVG" id="block26" data-reflection="true" data-connect="14" data-clip="clipping26 circle" data-radius="350" data-coordX="55" data-coordY="59" fill="url(#imageblock26)" points="2379.7,1584.6 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1485.8 "/>
+		<polygon class="classSVG" id="block27" data-reflection="true" data-connect="13" data-clip="clipping27 circle" data-radius="320" data-coordX="55" data-coordY="59" fill="url(#imageblock27)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
 	</svg>
 
+	<img id="floorRoomBack" src="i/FloorKitchen-1.png" style="opacity: 0">
 	<img id="floorRoom" src="i/FloorKitchen-1.png">
 	<img id="room" src="i/RoomKitchen.png">
 
@@ -846,17 +829,29 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGFront" id="block9Front" data-id="block9" points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
 		<polygon class="classSVGFront" id="block10Front" data-id="block10" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
 		<!--<polygon class="classSVGFront" id="block11Front" data-id="block11" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>-->
-		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+		<polygon class="classSVGFront" id="block11Front" data-id="block11" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
 		<polygon class="classSVGFront" id="floorF" data-id="floor" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
 	2633.2,1465.9 2636.2,1260.1 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-		<polygon class="classSVGFront" id="block15Front" data-id="block15" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
 		<!--<polygon class="classSVGFront" id="block16Front" data-id="block16" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>-->
+
+		<polygon class="classSVGFront" id="block17Front"  data-id="block17" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+		<polygon class="classSVGFront" id="block18Front"  data-id="block18" fill="url(#imageblock18)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+		<polygon class="classSVGFront" id="block19Front"  data-id="block19" fill="url(#imageblock19)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+		<polygon class="classSVGFront" id="block20Front"  data-id="block20" fill="url(#imageblock20)" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+		<polygon class="classSVGFront" id="block21Front"  data-id="block21" fill="url(#imageblock21)" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+		<polygon class="classSVGFront" id="block22Front"  data-id="block22" fill="url(#imageblock22)" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+		<polygon class="classSVGFront" id="block23Front"  data-id="block23" fill="url(#imageblock23)" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+		<polygon class="classSVGFront" id="block24Front"  data-id="block24" fill="url(#imageblock24)" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+		<polygon class="classSVGFront" id="block25Front"  data-id="block25" fill="url(#imageblock25)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+		<polygon class="classSVGFront" id="block26Front"  data-id="block26" fill="url(#imageblock26)" points="2379.7,1584.6 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1485.8 "/>
+		<polygon class="classSVGFront" id="block27Front"  data-id="block27" fill="url(#imageblock27)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
 	</svg>
 
-	<div id="default-hash" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,3" data-countSVG="17" data-countTextures="3" data-stack="16"></div>
+	<div id="default-hash" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3" data-countSVG="15" data-countTextures="3" data-stack="14"></div>
 			</div><!--rel-->
 			</div>
 		</div><!--b-wide-->

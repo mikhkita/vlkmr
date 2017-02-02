@@ -24,7 +24,7 @@
 			}
 			$(window).resize(function(){
 				if(checkSize === false){
-					$('#room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+					$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
@@ -32,7 +32,7 @@
 					console.log($('#room').width() > $('.b-wide-block').width());
 					if($('#room').width() > $('.b-wide-block').width())
 					{
-						$('#room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').css({
+						$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 							"height": "auto",
 							"width": $('.b-wide-block').width()
 						});
@@ -64,11 +64,11 @@
 			$('.fullSize').click(function(){
 					if(checkSize === false){
 						var curWidth = $('#room').width();
-						$('#room, #floorRoom').css({
+						$('#room, #floorRoom, #floorRoomBack').css({
 							"height": "auto",
 							"width": $('.b-wide-block').width()});
 						var autoHeight = $('#room').height();
-						$('.rel, #room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
+						$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).animate(
 							{
 								height: autoHeight,
 								width: $('.b-wide-block').width()
@@ -80,11 +80,11 @@
 					}else 
 						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
 							var curHeight = $('#room').height();
-							$('#room, #floorRoom').css({
+							$('#room, #floorRoom, #floorRoomBack').css({
 								"height": $(window).height() - height,
 								"width": "auto"});
 							var autoWidth = $('#room').width();
-							$('.rel, #room, #floorRoom, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
+							$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
 								{
 									height: $(window).height() - height,
 									width: autoWidth
@@ -243,6 +243,7 @@
 			});
 			//Раскрывающаяся панель с декорами
 			$('.iconMore').fancybox();
+			$('.share').fancybox();
 			/*$('.iconMore').click(function(){
 				$('.allTextures').toggleClass("showContent");
 				$('.allTextures').css({
@@ -305,7 +306,6 @@
 		}
 
 		this.parse = function() {
-			console.log("+++++++");
 			this.hash = window.location.hash;
 			this.commands = {};
 			if( ~self.hash.indexOf('#') ) {
@@ -313,7 +313,10 @@
 				data = data.replace('#','');
 				if(~data.indexOf('|')){
 					var checkFloor = data.split('|');
-					$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/FloorKitchen-"+checkFloor[0]+".jpg");
+					if($('.floorIMG').hasClass("kitchenClass")){
+						$('#floorRoom, #floorRoomBack').attr("src", "i/FloorKitchen-"+checkFloor[0]+".png");
+					}
+					$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/Floor-"+checkFloor[0]+".jpg");
 					data = checkFloor[1];
 					this.floor = checkFloor[0];
 					console.log(checkFloor);
@@ -327,6 +330,17 @@
 						if(+data[i] > 0 && +data[i] <= +this.countTextures)
 						{
 							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+							if($('#block'+(+i+1)).attr("data-connect")){
+							var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
+							switch(blocksConnect.length){
+							case 2:
+								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+							break
+							case 1:
+								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+							break
+							}
+						}
 						}else{
 							console.log(this.default[i]);
 							//брать дефолтный
@@ -346,6 +360,9 @@
 		}*/
 
 		this.urlPush = function(position, texture) {
+			if($('#block'+(+position+1)).attr("data-reflection")){
+				return
+			}
 			self.commands[position] = texture;
 			//console.log(self.commands);
 		}
@@ -400,6 +417,21 @@
 			//Выбор пола
 			$('.floorIMG').click(function(e){
 				var currentFloor = $(this);
+				if(currentFloor.hasClass("kitchenClass")){
+				$('#floorRoomBack').attr("src", currentFloor.attr("data-src")).css("opacity", 1);
+				$('#floorRoom').animate({
+				    opacity: 0
+				  },
+				  {
+					duration: 600,
+					complete: function(){
+						$('#floorRoom').attr("src", currentFloor.attr("data-src"));
+						$('#floorRoom').css("opacity", 1);
+						$('#floorRoomBack').css("opacity", 0);
+					}
+					});
+				}else
+				{
 				$('#floorPatternBack').children().attr("xlink:href", currentFloor.attr("data-src"));
 				$('#floor').animate({
 				    opacity: 0
@@ -411,6 +443,7 @@
 						$('#floor').css("opacity", 1);
 					}
 					});
+				}
 				var pushFloor = currentFloor.attr("data-src").split(/(\d)/);
 				urlCommands.urlPushFloor(pushFloor[1]);
 				urlCommands.urlUpdate();
@@ -420,7 +453,7 @@
 			//Отменить/Повторить
 			var stack = [];
 			//Заполняем стек начальными текстурами
-			$('.default').each(function(){
+			$('.classSVG').each(function(){
 				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
 				stack.push(stackAdd);
 				var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
@@ -641,7 +674,7 @@
 
 				    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
-
+				    console.log(relativeX, relativeY);
 				    //Добавить текущий SVG и текстуру в стек
 				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") +  + ")");
 				    /*var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
@@ -687,22 +720,32 @@
 					//console.log(($('#'+clickElem).attr("data-connect").split(',').length));
 					if($('#'+clickElem).attr("data-connect")){
 						var blocksConnect = $('#'+clickElem).attr("data-connect").split(',');
-						if($('#'+clickElem).attr("data-coordX")){
-							coordX = $('#'+clickElem).attr("data-coordX");
-							coordY = $('#'+clickElem).attr("data-coordY");
-						}
 						switch(blocksConnect.length){
 							case 2:
-							console.log(blocksConnect[0], blocksConnect[1]);
+
 								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", currentTexture.children().attr("src"));
+								if($('#block'+blocksConnect[0]).attr("data-coordX")){
+									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
+									relativeY = $('#block'+blocksConnect[0]).attr("data-coordY");
+								}
 								blocks[blocksConnect[0] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[0], currentTexture);
 								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("xlink:href")));
+								if($('#block'+blocksConnect[1]).attr("data-coordX")){
+									relativeX = $('#block'+blocksConnect[1]).attr("data-coordX");
+									relativeY = $('#block'+blocksConnect[1]).attr("data-coordY");
+								}
 								blocks[blocksConnect[1] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[1], currentTexture);
 								stack.push(new clickArea("block"+blocksConnect[1], $('#imageblock'+blocksConnect[1]).children().attr("xlink:href")));
 							break
 							case 1:
 								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.children().attr("src"));
-								blocks[blocksConnect[0] - 1].animateSVG(coordX, coordY, "block"+blocksConnect[0], currentTexture);
+								
+								if($('#block'+blocksConnect[0]).attr("data-coordX")){
+									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
+									relativeY = $('#block'+blocksConnect[0]).attr("data-coordY");
+									console.log(relativeX, relativeY);
+								}
+								blocks[blocksConnect[0] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[0], currentTexture);
 								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("xlink:href")));
 							break
 						}
