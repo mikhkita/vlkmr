@@ -291,6 +291,7 @@
 		});
 
 		this.init = function() {
+				$('.ya-share2').attr("data-url", window.location);
 				if($('.panelFloor').length)
 				{
 					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
@@ -382,7 +383,8 @@
 			url = url.slice(0,-1);
 			this.hash = url;
 			window.history.pushState(null, null, url);
-			console.log(window.history.length, window.history.state);
+			$('.ya-share2').attr("data-url", window.location.href);
+			console.log($('.ya-share2'));
 		}
 
 		this.parse();
