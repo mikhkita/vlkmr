@@ -891,7 +891,7 @@ isRetina = (isMobile)?false:retina();
 				<a href="#" class="b-popup-close" title="Закрыть"></a>
 				<div class="b-three-color"></div>
 				<h2 class="b-title b-title-constructor">Поделиться</h2>
-				<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter" data-url=""></div>
+				<div class="ya-share2" id="my-share" data-services="vkontakte,facebook,odnoklassniki,twitter" data-url=""></div>
 			</div>
 		</div>
 		<div id="b-popup-decors">

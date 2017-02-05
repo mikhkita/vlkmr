@@ -275,123 +275,142 @@
 			bar.text.style.fontWeight = 700;
 			bar.animate(0.4);
 
+		var hrefUrl = "";
+		var myShare = document.getElementById('my-share');
+		var share = Ya.share2(myShare, {});
+
 		var urlCommands = (function () {
-		var self = this;
-		this.hash = "";
-		this.commands = {};
+		this.get = "";
+		this.params = {};
 		this.floor = "";
 		this.events = {};
 		this.default = {};
 		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
-		$(window).bind('hashchange', function() {
-			self.parse();
-			//this.urlUpdate();
-		});
+		History.Adapter.bind(window,'statechange',function(){
+	        this.checkHash();
+	    });
+
+		this.checkHash = function(){
+			console.log("checkHash!!");
+			this.get = window.location.search;
+			if( ~this.get.indexOf('?') ) {
+				this.parse();
+			}else{
+				this.init();
+			}
+		}
 
 		this.init = function() {
-				$('.ya-share2').attr("data-url", window.location);
+				console.log("init!!");
+				this.params = {};
 				if($('.panelFloor').length)
-				{
-					var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
-					this.floor = parseFloor[1];
-				}
+					{
+						var parseFloor = $('#floorPattern').children().attr("xlink:href").split(/(\d)/);
+						this.floor = parseFloor[1];
+					}
 				for(var i=0; i < +this.countSVG; i++)
-				{
-					var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
-					this.commands[i] = parseTexture[1];
-					this.default[i] = parseTexture[1];
-				}
+					{
+						var parseTexture = $('#imageblock'+(+i+1)).children().attr("xlink:href").split(/(\d)/);
+						this.params[i] = parseTexture[1];
+						this.default[i] = parseTexture[1];
+					}
 			this.urlUpdate();
 		}
 
 		this.parse = function() {
-			this.hash = window.location.hash;
-			this.commands = {};
-			if( ~self.hash.indexOf('#') ) {
-				var data = self.hash;
-				data = data.replace('#','');
-				if(~data.indexOf('|')){
-					var checkFloor = data.split('|');
-					if($('.floorIMG').hasClass("kitchenClass")){
-						$('#floorRoom, #floorRoomBack').attr("src", "i/FloorKitchen-"+checkFloor[0]+".png");
-					}
-					$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/Floor-"+checkFloor[0]+".jpg");
-					data = checkFloor[1];
-					this.floor = checkFloor[0];
-					console.log(checkFloor);
+				console.log("parse!!");
+				var data = this.get;
+				data = data.replace('?','');
+				if(~data.indexOf('floor')){
+					var splitFloor = data.split('&');
+					data = splitFloor[1];
+					var valueFloor = splitFloor[0].split('=')[1];
+					if (valueFloor > 0 && valueFloor <= 3) {//количество полов
+		                this.floor = valueFloor;
+		                if($('.floorIMG').hasClass("kitchenClass")){
+							$('#floorRoom, #floorRoomBack').attr("src", "i/FloorKitchen-"+this.floor+".png");
+						}
+						$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/Floor-"+this.floor+".jpg");
+		            }
 				}
-				var data = data.split(',');
-				console.log("countSVG", countSVG, data.length);
-				if(+this.countSVG === data.length)
+				var valueBlocks = data.split('=')[1];
+				valueBlocks = valueBlocks.split('-');
+				
+				if(+this.countSVG === valueBlocks.length)
 				{
-				this.commands = data;
-					for (var i in data) {
-						if(+data[i] > 0 && +data[i] <= +this.countTextures)
+					console.log("+this.countSVG === ");
+				this.params = valueBlocks;
+					for (var i in this.params) {
+						if(+this.params[i] > 0 && +this.params[i] <= +this.countTextures)
 						{
-							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
 							if($('#block'+(+i+1)).attr("data-connect")){
 							var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
 							switch(blocksConnect.length){
 							case 2:
-								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
 							break
 							case 1:
-								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", "i/decor-"+data[i]+".jpg");
+								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
 							break
 							}
 						}
 						}else{
-							console.log(this.default[i]);
+							//console.log(this.default[i]);
 							//брать дефолтный
 							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
-							this.commands[i] = this.default[i];
+							this.params[i] = this.default[i];
 							this.urlUpdate();
 						}
 					}
 				}else{
+					console.log("Init for parse");
 					this.init();
 				}
 			}
-			return this;
-		}
-		/*this.valid = function(){
-
-		}*/
 
 		this.urlPush = function(position, texture) {
 			if($('#block'+(+position+1)).attr("data-reflection")){
 				return
 			}
-			self.commands[position] = texture;
-			//console.log(self.commands);
+			this.params[position] = texture;
+			this.urlUpdate();
 		}
 		this.urlPushFloor = function(texture) {
 			this.floor = texture;
+			this.urlUpdate();
 		}
 		this.urlUpdate = function(){
-			var url = '#';
+			console.log("urlUpdate!!");
+			var url = '?';
 			if(this.floor != "")
 			{
-				url += this.floor+'|'
+				url += "floor="+this.floor+"&"
 			}
-			for (var i in self.commands)
+			url += "blocks="
+			for (var i in this.params)
 			{
-				url += self.commands[i]+',';
+				url += this.params[i]+'-';
 			}
 			url = url.slice(0,-1);
-			this.hash = url;
-			window.history.pushState(null, null, url);
-			$('.ya-share2').attr("data-url", window.location.href);
-			console.log($('.ya-share2'));
+			this.get = url;
+			hrefUrl = History.getState().url;
+			console.log("url", url); 
+			if(~hrefUrl.indexOf('\?')){
+				hrefUrl = window.location.href.slice(0,window.location.href.indexOf('\?'));
+			}
+			hrefUrl += url;
+			console.log("hrefUrl", hrefUrl);
+			window.history.pushState(null, null, hrefUrl);
+			share.updateContent({
+			    url: hrefUrl
+			});
 		}
-
-		this.parse();
 		return this;
 	})();
-
-			urlCommands.init();
+			urlCommands.checkHash();
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
@@ -448,7 +467,7 @@
 				}
 				var pushFloor = currentFloor.attr("data-src").split(/(\d)/);
 				urlCommands.urlPushFloor(pushFloor[1]);
-				urlCommands.urlUpdate();
+				//urlCommands.urlUpdate();
 				$('.layers').click();
 			});
 			
@@ -490,7 +509,7 @@
 							var positionElStack = lastElemStack.path.slice(5) - 1;
 							var textureElStack = prevElemStack.texture.split(/(\d)/);
 							urlCommands.urlPush(positionElStack, textureElStack[1]);
-							urlCommands.urlUpdate();
+							//urlCommands.urlUpdate();
 							stackCancel = true;
 							if($('#'+prevElemStack.path).attr("data-connect"))
 							{
@@ -542,7 +561,7 @@
 					var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
 					var textureElStackR = lastElemStackRepeat.texture.split(/(\d)/);
 					urlCommands.urlPush(positionElStackR, textureElStackR[1]);
-					urlCommands.urlUpdate();
+					//urlCommands.urlUpdate();
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
 					if($('#'+lastElemStackRepeat.path).attr("data-connect"))
@@ -589,7 +608,7 @@
 				var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
 					var textureEl = currentTextureLoc.children().attr("src").split(/(\d)/);
 					urlCommands.urlPush(positionEl, textureEl[1]);
-					urlCommands.urlUpdate();
+					//urlCommands.urlUpdate();
 				circle.animate(
 					  {
 					  	'r': radius
