@@ -43,6 +43,9 @@
 	<script type="text/javascript" src="js/progressbar.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/constructor.js"></script>
+	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+	<script src="//yastatic.net/share2/share.js"></script>
+	<script type="text/javascript" src="js/jquery.history.js"></script>
 
 	<script>
 var myWidth,
@@ -360,8 +363,8 @@ isRetina = (isMobile)?false:retina();
 								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share" title="Поделиться">
-									<span class="icon-share"></span>
+								<div class="share" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>
 							</div>
@@ -889,6 +892,20 @@ isRetina = (isMobile)?false:retina();
 				<h3>Ошибка отправки!</h3>
 				<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
 				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
+		</div>
+		<div id="b-popup-share">
+			<div class="b-popup">
+				<div class="b-popup-share-content">
+					<a href="#" class="b-popup-close" title="Закрыть"></a>
+					<div class="b-three-color"></div>
+					<h2 class="b-title b-title-constructor">Поделиться</h2>
+					<div>
+						<p>Поделитесь вашей композицией с друзьями через социальные сети:</p>
+					</div>
+					<div class="ya-share2" id="my-share" data-services="vkontakte,facebook,twitter,odnoklassniki" data-bare="true" data-direction="horizontal">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="b-popup-decors">

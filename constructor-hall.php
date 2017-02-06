@@ -888,10 +888,16 @@ isRetina = (isMobile)?false:retina();
 		</div>
 		<div id="b-popup-share">
 			<div class="b-popup">
-				<a href="#" class="b-popup-close" title="Закрыть"></a>
-				<div class="b-three-color"></div>
-				<h2 class="b-title b-title-constructor">Поделиться</h2>
-				<div class="ya-share2" id="my-share" data-services="vkontakte,facebook,odnoklassniki,twitter" data-url=""></div>
+				<div class="b-popup-share-content">
+					<a href="#" class="b-popup-close" title="Закрыть"></a>
+					<div class="b-three-color"></div>
+					<h2 class="b-title b-title-constructor">Поделиться</h2>
+					<div>
+						<p>Поделитесь вашей композицией с друзьями через социальные сети:</p>
+					</div>
+					<div class="ya-share2" id="my-share" data-services="vkontakte,facebook,twitter,odnoklassniki" data-bare="true" data-direction="horizontal">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="b-popup-decors">

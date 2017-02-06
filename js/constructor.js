@@ -278,6 +278,7 @@
 		var hrefUrl = "";
 		var myShare = document.getElementById('my-share');
 		var share = Ya.share2(myShare, {});
+		var dataConnect = false;
 
 		var urlCommands = (function () {
 		this.get = "";
@@ -403,7 +404,10 @@
 			}
 			hrefUrl += url;
 			console.log("hrefUrl", hrefUrl);
-			window.history.pushState(null, null, hrefUrl);
+			if(dataConnect === false){
+				console.log("++++");
+				window.history.pushState(null, null, hrefUrl);
+			}
 			share.updateContent({
 			    url: hrefUrl
 			});
@@ -683,6 +687,7 @@
 				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
+					dataConnect = false;
 					//Получаем элемент из центрального слоя
 					
 					// = $(this).attr("data-location");//Up
@@ -743,7 +748,7 @@
 						var blocksConnect = $('#'+clickElem).attr("data-connect").split(',');
 						switch(blocksConnect.length){
 							case 2:
-
+								dataConnect = true;
 								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", currentTexture.children().attr("src"));
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
@@ -759,6 +764,7 @@
 								stack.push(new clickArea("block"+blocksConnect[1], $('#imageblock'+blocksConnect[1]).children().attr("xlink:href")));
 							break
 							case 1:
+							dataConnect = true;
 								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.children().attr("src"));
 								
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
