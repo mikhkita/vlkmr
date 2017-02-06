@@ -887,11 +887,11 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div id="b-popup-share">
-			<div class="b-popup">
-				<div class="b-popup-share-content">
-					<a href="#" class="b-popup-close" title="Закрыть"></a>
-					<div class="b-three-color"></div>
-					<h2 class="b-title b-title-constructor">Поделиться</h2>
+			<div class="b-popup b-popup-with-logo">
+				<a href="#" class="b-popup-close" title="Закрыть"></a>
+				<div class="b-three-color"></div>
+					<div class="b-popup-share-content">
+					<h2 class="b-title">Поделиться</h2>
 					<div>
 						<p>Поделитесь вашей композицией с друзьями через социальные сети:</p>
 					</div>

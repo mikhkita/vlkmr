@@ -3829,7 +3829,7 @@ div.fancybox-inner{
 
 .ya-share2__item_service_vkontakte .ya-share2__icon:before{
 	color:#45668e;
-	font-size: 48px;
+	font-size: 58px;
 	content: '\e914';
 	display: inline-block;
 	padding: 0 12px 0 0;
@@ -3839,7 +3839,7 @@ div.fancybox-inner{
 
 .ya-share2__item_service_facebook .ya-share2__icon:before{
 	color:#3b5998;
-	font-size: 48px;
+	font-size: 58px;
 	content: "\e911";
 	padding: 0 12px;
 	box-sizing: border-box;
@@ -3847,7 +3847,7 @@ div.fancybox-inner{
 }
 .ya-share2__item_service_twitter .ya-share2__icon:before{
 	color:#00aced;
-	font-size: 48px;
+	font-size: 58px;
 	content: "\e913";
 	padding: 0 12px;
 	box-sizing: border-box;
@@ -3855,16 +3855,29 @@ div.fancybox-inner{
 }
 .ya-share2__item_service_odnoklassniki .ya-share2__icon:before{
 	color:#fb8f3d;
-	font-size: 48px;
+	font-size: 58px;
 	content: "\e912";
 	padding: 0 0 0 12px;
 	box-sizing: border-box;
 	cursor: pointer;
 }
 .b-popup-share-content{
-	width: 50%;
+	width: 400px;
 	margin: 0 auto;
-	padding: 0 6px;
+	padding: 0 200px 0 170px;
+}
+.b-popup-share-content h2{
+	margin: 70px 0 45px 0;
+	color: #242424;
+	font-size: 32px;
+}
+.b-popup-share-content p{
+	line-height: 1.5;
+	color: #242424;
+	font-size: 18px;
+}
+.ya-share2{
+	padding: 50px 0 80px 0;
 }
 .socialLogo{
 	/*padding-top: 10px;
@@ -4026,6 +4039,9 @@ div.fancybox-inner{
 		width: 30%;
 		margin: 5px;
 	}
+	.b-popup-share-content{
+		padding: 0 100px 0 170px;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -4097,7 +4113,18 @@ div.fancybox-inner{
 	.ya-share2__item_service_facebook .ya-share2__icon:before,
 	.ya-share2__item_service_twitter .ya-share2__icon:before,
 	.ya-share2__item_service_odnoklassniki .ya-share2__icon:before{
-		font-size: 72px;
+		font-size: 82px;
+	}
+	.b-popup-share-content{
+		width: 80%;
+		margin: 0 auto;
+		padding: 0 ;
+	}
+	.b-popup-share-content h2{
+		font-size: 48px;
+	}
+	.b-popup-share-content p{
+		font-size: 28px;
 	}
 }
 
