@@ -288,6 +288,12 @@
 		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
+		for(var i=0; i < +this.countSVG; i++)
+			{
+				var parseTexture = $('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href").split(/(\d)/);
+				this.default[i] = parseTexture[1];
+			}
+
 		History.Adapter.bind(window,'statechange',function(){
 	        this.checkHash();
 	    });
@@ -314,7 +320,6 @@
 					{
 						var parseTexture = $('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href").split(/(\d)/);
 						this.params[i] = parseTexture[1];
-						this.default[i] = parseTexture[1];
 					}
 			this.urlUpdate();
 		}
