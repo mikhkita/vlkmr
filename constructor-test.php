@@ -49,15 +49,15 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		var texturesList = [];
-		texturesList[0] = "decor-1.jpg";
-		texturesList[1] = "decor-2.jpg";
-		texturesList[2] = "decor-3.jpg";
+		texturesList[0] = "i/decor-1.jpg";
+		texturesList[1] = "i/decor-2.jpg";
+		texturesList[2] = "i/decor-3.jpg";
 		//console.log(texturesList);
 		function drawing(container, textures){
 			var countSVG = container.attr("data-countSVG");
 			for(var i=0; i<countSVG;i++){
 				container.find('#imageblock'+(i+1)).children().attr({
-				"xlink:href": "i/"+textures[+container.find('#imageblock'+(i+1)).attr("data-rel")]});
+				"xlink:href": textures[+container.find('#imageblock'+(i+1)).attr("data-rel")]});
 			}
 		}
 		drawing($('#svg-container'), texturesList);
