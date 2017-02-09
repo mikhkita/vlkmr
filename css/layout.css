@@ -3622,7 +3622,6 @@ div.fancybox-inner{
 	padding: 40px 40px 50px 60px;
 	z-index: 1;
 	background-color: #fff;
-	overflow: auto;
 	box-sizing: border-box;
 }
 .b-title-constructor{

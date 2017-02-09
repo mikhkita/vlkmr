@@ -144,8 +144,9 @@
 	            	}
 	            }
 			  });
-			  $('.currentTexture, .currentTexture2').each(function(){
-			  	$(this).children().qtip({
+
+			  $('.currentTexture img[title]').each(function(){
+			  	$(this).qtip({
 			  		position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -161,7 +162,32 @@
 	            }
 			  	});
 			  });
+			  $('.currentTexture2 img[title]').each(function(){
+			  	$(this).qtip({
+			  		position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -8
+			        }
+	            },
+	            style: {
+        			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            },
+	            hide: {
+			        effect: function(offset) {
+			            $(this).slideDown(100); // "this" refers to the tooltip
+			        }
+			    }
+			  	});
+			  });
 
+			$("body").on("scroll mousewheel", ".fancybox-inner",function(){
+				 $('.currentTexture2 img[title]').qtip('hide');
+			});
 
 			//Доработать значения
 			//Зафиксировать панель
