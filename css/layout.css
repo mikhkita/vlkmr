@@ -136,7 +136,7 @@ body {
 	text-align: center;
 	font-size: 16px;
 	font-family: 'Ekibastuz-Regular', Arial;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	-webkit-text-size-adjust: none;
 	color: #2A2A2D;
 }

@@ -637,13 +637,15 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGback" id="block13Back" fill="url(#imageblock13Back)" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
 		<polygon class="classSVGback" id="block14Back" fill="url(#imageblock14Back)" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
 
-		<polygon class="classSVGback" id="block15Back" fill="url(#imageblock15Back)" points="451.7,125.4 415.4,129.5 415.4,343.9 451.7,343.9 "/>
-		<rect x="374" y="170.4" class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" width="41.4" height="103.6"/>
-		<polygon class="classSVGback" id="block17Back" fill="url(#imageblock17Back)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.2 415.4,129.5 "/>
+		<polygon class="classSVGback" id="block15Back" fill="url(#imageblock15Back)" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
+		<!--<rect x="374" y="170.4" class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" width="41.4" height="103.6"/>-->
+		<polygon class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
+		<polygon class="classSVGback" id="block17Back" fill="url(#imageblock17Back)" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
 		<polygon class="classSVGback" id="block18Back" fill="url(#imageblock18Back)" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
-		<rect x="372.2" y="170.4" class="classSVGback" id="block19Back" fill="url(#imageblock19Back)" width="1.8" height="103.6"/>
+		<rect x="372.2" y="170.6" class="classSVGback" id="block19Back" fill="url(#imageblock19Back)" width="1.8" height="103.7"/>
 		<polygon class="classSVGback" id="block20Back" fill="url(#imageblock20Back)" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
-		<rect x="372.2" y="274" class="classSVGback" id="block21Back" fill="url(#imageblock21Back)" width="43.2" height="69.9"/>
+		<!--<rect x="372.2" y="274" class="classSVGback" id="block21Back" fill="url(#imageblock21Back)" width="43.2" height="69.9"/>-->
+		<polygon class="classSVGback" id="block21Back" fill="url(#imageblock21Back)" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 
 		<polygon class="classSVGback" id="floorBack" fill="url(#floorPatternBack)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 
