@@ -121,15 +121,15 @@
 		<div class="b-workshop-svg detskaya">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 	<pattern id="imageblock1Back" width="100%" height="100%">
-       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/upload/resize_cache/iblock/dbb/400_640_2/dbb6405a61db838967a0844518efa441.jpg" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
+       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
      	</image>
     </pattern>
     <pattern id="imageblock2Back" width="100%" height="100%">
-       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/upload/resize_cache/iblock/dbb/400_640_2/dbb6405a61db838967a0844518efa441.jpg" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
+       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
      	</image>
     </pattern>
     <pattern id="imageblock3Back" width="100%" height="100%">
-       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/upload/resize_cache/iblock/dbb/400_640_2/dbb6405a61db838967a0844518efa441.jpg" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
+       <image data-rel="0" rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
      	</image>
     </pattern>
     <pattern id="imageblock4Back" width="100%" height="100%">
@@ -239,7 +239,7 @@
 <polygon class="classSVGback" id="block22Back" fill="url(#imageblock22Back)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "></polygon>
 <polygon class="classSVGback" id="floorBack" fill="#FFF" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.5,1323 1106,1261.7 1973,1434 2260,1361 
 	2406,1402.1 2406,1574 -8,1574 "></polygon>
-<image xmlns:xlink="http://www.w3.org/1999/xlink" id="image-test" xlink:href="i/RoomKitchen.png" x="0" y="0" width="2401" height="1565"></image>
+<image xmlns:xlink="http://www.w3.org/1999/xlink" id="image-test" xlink:href="i/RoomChild.png" x="0" y="0" width="2401" height="1565"></image>
 </svg>		</div>
 		<div class="b-workshop-title"><h3>Детская</h3></div>
 		<div class="b-three-color"></div>
