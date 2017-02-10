@@ -325,22 +325,22 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture"><img src="i/decor-1.jpg" width="60px" height="60px" data-id="decor-1"></div>
-							<div class="currentTexture"><img src="i/decor-2.jpg" width="60px" height="60px" data-id="decor-2"></div>
-							<div class="currentTexture"><img src="i/decor-3.jpg" width="60px" height="60px" data-id="decor-3"></div>
-							<div class="currentTexture"><img src="i/decor-4.jpg" width="60px" height="60px" data-id="decor-4"></div>
-							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px" data-id="decor-5"></div>
-							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
-							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
-							<div class="currentTexture"><img src="i/decor-1.jpg" width="60px" height="60px" data-id="decor-1"></div>
-							<div class="currentTexture"><img src="i/decor-2.jpg" width="60px" height="60px" data-id="decor-2"></div>
-							<div class="currentTexture"><img src="i/decor-3.jpg" width="60px" height="60px" data-id="decor-3"></div>
-							<div class="currentTexture"><img src="i/decor-4.jpg" width="60px" height="60px" data-id="decor-4"></div>
-							<div class="currentTexture"><img src="i/decor-5.jpg" width="60px" height="60px" data-id="decor-5"></div>
-							<div class="currentTexture"><img src="i/decor-6.jpg" width="60px" height="60px" data-id="decor-6"></div>
-							<div class="currentTexture"><img src="i/decor-7.jpg" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.jpg" width="60px" height="60px" data-id="decor-8"></div>
+							<div class="currentTexture"><img src="i/decor-1.jpg" title="Декор" width="60px" height="60px" data-id="decor-1"></div>
+							<div class="currentTexture"><img src="i/decor-2.jpg" title="Декор" width="60px" height="60px" data-id="decor-2"></div>
+							<div class="currentTexture"><img src="i/decor-3.jpg" title="Декор" width="60px" height="60px" data-id="decor-3"></div>
+							<div class="currentTexture"><img src="i/decor-4.jpg" title="Декор" width="60px" height="60px" data-id="decor-4"></div>
+							<div class="currentTexture"><img src="i/decor-5.jpg" title="Декор" width="60px" height="60px" data-id="decor-5"></div>
+							<div class="currentTexture"><img src="i/decor-6.jpg" title="Декор" width="60px" height="60px" data-id="decor-6"></div>
+							<div class="currentTexture"><img src="i/decor-7.jpg" title="Декор" width="60px" height="60px" data-id="decor-7"></div>
+							<div class="currentTexture"><img src="i/decor-8.jpg" title="Декор" width="60px" height="60px" data-id="decor-8"></div>
+							<div class="currentTexture"><img src="i/decor-1.jpg" title="Декор" width="60px" height="60px" data-id="decor-1"></div>
+							<div class="currentTexture"><img src="i/decor-2.jpg" title="Декор" width="60px" height="60px" data-id="decor-2"></div>
+							<div class="currentTexture"><img src="i/decor-3.jpg" title="Декор" width="60px" height="60px" data-id="decor-3"></div>
+							<div class="currentTexture"><img src="i/decor-4.jpg" title="Декор" width="60px" height="60px" data-id="decor-4"></div>
+							<div class="currentTexture"><img src="i/decor-5.jpg" title="Декор" width="60px" height="60px" data-id="decor-5"></div>
+							<div class="currentTexture"><img src="i/decor-6.jpg" title="Декор" width="60px" height="60px" data-id="decor-6"></div>
+							<div class="currentTexture"><img src="i/decor-7.jpg" title="Декор" width="60px" height="60px" data-id="decor-7"></div>
+							<div class="currentTexture"><img src="i/decor-8.jpg" title="Декор" width="60px" height="60px" data-id="decor-8"></div>
 
 							</div>
 
@@ -771,86 +771,62 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
+							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
+							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
+							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
+							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
+							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
+							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
+							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
 						</div>
 			</div>
 		</div>
