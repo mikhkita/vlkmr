@@ -270,13 +270,31 @@
 			var clickLayers = false;
 			$('.layers').click(function(){
 				if($('.panelFloor').hasClass("showContent")){
-					$('.panelFloor').fadeOut(350);
+					closeFloor();
 				}else{
-					$('.panelFloor').fadeIn(350);
+					openFloor();
 				}
 				$('.panelFloor').toggleClass("showContent");
 				clickLayers = true;
 			});
+
+			function openFloor(){
+				if( isIE ){
+	                $(".panelFloor").fadeIn(250);
+	                TweenLite.to($(".panelFloor"), 0.25, { "top" : 0, ease : Quad.easeOut } );
+	            }else{
+	            	$(".panelFloor").addClass("opened");
+	            }
+			}
+
+			function closeFloor(){
+				if( isIE ){
+	                $(".panelFloor").fadeOut(250);
+	                TweenLite.to($(".panelFloor"), 0.25, { "top" : 10, ease : Quad.easeOut } );
+	            }else{
+	            	$(".panelFloor").removeClass("opened");
+	            }
+			}
 			//Закрыть панель с декорами по клику вне его
 		    $(document).click(function (e){
 		    	if($('.panelFloor').hasClass("showContent") === true && clickLayers === false)
@@ -285,15 +303,13 @@
 			    		var div = $(".panelFloor"); 
 						if (!div.is(e.target) // если клик был не по нашему блоку
 						    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-								$('.panelFloor').fadeOut(350);
+								closeFloor();
 								$('.panelFloor').toggleClass("showContent");
 						}
 				}
 				clickLayers = false;
 			});
 			//Раскрывающаяся панель с декорами
-			$('.iconMore').fancybox();
-			$('.share').fancybox();
 			/*$('.iconMore').click(function(){
 				$('.allTextures').toggleClass("showContent");
 				$('.allTextures').css({
