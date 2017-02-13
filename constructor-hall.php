@@ -390,40 +390,49 @@ isRetina = (isMobile)?false:retina();
 		
 		<div class="panelFloor">
 						<div class="floorIMG" data-src="i/Floor-1.jpg">
-							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
-							<defs>
-								<pattern id="floorPattern1" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-10" y="-100" width="1000" height="250">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern1)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
-							</svg>
-							<img src="i/RoomHall.png">
+							<h3>Светлый</h3>
+							<div class="b-floor-cont">
+								<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
+									<defs>
+										<pattern id="floorPattern1" width="100%" height="100%">
+									        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-1.jpg" x="-10" y="-100" width="1000" height="250">
+									     	</image>
+									    </pattern>
+									</defs>
+									<polygon fill="url(#floorPattern1)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								</svg>
+								<img src="i/RoomHall.png">
+							</div>
 						</div>
 						<div class="floorIMG" data-src="i/Floor-2.jpg">
-							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
-							<defs>
-								<pattern id="floorPattern2" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="-100" width="1000" height="250">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern2)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
-							</svg>
-							<img src="i/RoomHall.png">
+							<h3>Светлый</h3>
+							<div class="b-floor-cont">
+								<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
+									<defs>
+										<pattern id="floorPattern2" width="100%" height="100%">
+									        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="-100" width="1000" height="250">
+									     	</image>
+									    </pattern>
+									</defs>
+									<polygon fill="url(#floorPattern2)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								</svg>
+								<img src="i/RoomHall.png">
+							</div>
 						</div>
 						<div class="floorIMG" data-src="i/Floor-3.jpg">
-							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
-							<defs>
-								<pattern id="floorPattern3" width="100%" height="100%">
-							        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-3.jpg" x="-10" y="-100" width="1000" height="250">
-							     	</image>
-							    </pattern>
-							</defs>
-								<polygon fill="url(#floorPattern3)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
-							</svg>
-							<img src="i/RoomHall.png">
+							<h3>Светлый</h3>
+							<div class="b-floor-cont">
+								<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
+									<defs>
+										<pattern id="floorPattern3" width="100%" height="100%">
+									        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-3.jpg" x="-10" y="-100" width="1000" height="250">
+									     	</image>
+									    </pattern>
+									</defs>
+									<polygon fill="url(#floorPattern3)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+								</svg>
+								<img src="i/RoomHall.png">
+							</div>
 						</div>
 					</div>
 			<div class="fullSize" title="Во всю ширину">

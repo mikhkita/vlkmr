@@ -3805,7 +3805,17 @@ ul.b-workshop-list{
 	line-height: 0;
 }
 
-.floorIMG:hover{
+.floorIMG h3{
+	line-height: 30px;
+    margin-top: 20px;
+    font-size: 26px;
+    text-align: left;
+}
+.b-floor-cont{
+	position: relative;
+	margin-top: 20px;
+}
+.floorIMG:hover .b-floor-cont{
 	box-shadow: 0 0 0 10px #483435 inset;
 	box-sizing: border-box;
 }
