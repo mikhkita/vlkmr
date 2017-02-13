@@ -3,9 +3,26 @@
 		var shiftSlider;
 		var currentTexture;
 		var prevTexture;
+		var progressbarValue = 0.4;
 
 		$(document).ready(function(){
 			var height = 100;
+			$('.currentTexture, .currentTexture2').each(function(){
+				var src;
+				if(isRetina || isMobile){
+					src = $(this).attr("data-retina-image-mini");
+					$(this).attr("data-src", $(this).attr("data-retina-image"));
+				}else{
+					src = $(this).attr("data-image-mini");
+					$(this).attr("data-src", $(this).attr("data-image"));
+				}
+		        $(this).css("background-image", "url('"+src+"')");
+		        var img = new Image();
+            	img.src = src;
+           		img.onload = function(){
+                	bar.animate(progressbarValue += 0.01);
+            	}
+		    });
 			$('#room').imagesLoaded( function() {
 				bar.animate(1);
 			});
@@ -59,6 +76,13 @@
 			$(window).load(function(e){
 				$(window).resize();
 				$('.progressbarContain').fadeOut(300);
+				//начать загружать большие декоры
+				$('.currentTexture').each(function(){
+			        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+			        //$(this).css("background-image", "url('"+src+"')");
+			        var img = new Image();
+			        img.src = src;
+			    });
 			});
 			//$('#room').load();
 			$('.fullSize').click(function(){
@@ -145,7 +169,7 @@
 	            }
 			  });
 
-			  $('.currentTexture img[title]').each(function(){
+			  $('.currentTexture[title]').each(function(){
 			  	$(this).qtip({
 			  		position: {
 	                my: 'bottom center',
@@ -162,7 +186,7 @@
 	            }
 			  	});
 			  });
-			  $('.currentTexture2 img[title]').each(function(){
+			  $('.currentTexture2[title]').each(function(){
 			  	$(this).qtip({
 			  		position: {
 	                my: 'bottom center',
@@ -186,7 +210,7 @@
 			  });
 
 			$("body").on("scroll mousewheel", ".fancybox-inner",function(){
-				 $('.currentTexture2 img[title]').qtip('hide');
+				 $('.currentTexture2[title]').qtip('hide');
 			});
 
 			//Доработать значения
@@ -299,7 +323,7 @@
 			});
 			bar.text.style.fontSize = '20px';
 			bar.text.style.fontWeight = 700;
-			bar.animate(0.4);
+			bar.animate(progressbarValue);
 
 		var hrefUrl = "";
 		var myShare = document.getElementById('my-share');
@@ -447,10 +471,10 @@
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
 				if (prevTexture != undefined)
-					prevTexture.children().css("box-shadow", "");
+					prevTexture.css("box-shadow", "");
 				currentTexture = $(this);
 				prevTexture = $(this);
-				$(this).children().css({
+				$(this).css({
 					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
 				});
@@ -639,7 +663,7 @@
 				 });
 				//Изменение хэша
 				var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
-					var textureEl = currentTextureLoc.children().attr("src").split(/(\d)/);
+					var textureEl = currentTextureLoc.attr("data-src").split(/(\d)/);
 					urlCommands.urlPush(positionEl, textureEl[1]);
 					//urlCommands.urlUpdate();
 				circle.animate(
@@ -661,7 +685,7 @@
 					   			console.log(stackCancel);
 					   			if(stackCancel === false){
 						   			$('#image'+clickEl+'Back').children().attr({
-						   				"xlink:href": currentTextureLoc.children().attr("src"),
+						   				"xlink:href": currentTextureLoc.attr("data-src"),
 										"x": $('#image'+clickEl).children().attr("x"),
 										"y": $('#image'+clickEl).children().attr("y")
 									});
@@ -714,14 +738,14 @@
 			//Кликнули по любой области SVG
 			$('.classSVGFront').click(function(e){
 				clickElem = $(this).attr("data-id");//block1
-				if(currentTexture != undefined && currentTexture.children().attr("src") != $('#image'+clickElem).children().attr("xlink:href"))
+				if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
 					//Получаем элемент из центрального слоя
 					
 					// = $(this).attr("data-location");//Up
 					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
-					$('#image'+clickElem).children().attr("xlink:href", currentTexture.children().attr("src"));
+					$('#image'+clickElem).children().attr("xlink:href", currentTexture.attr("data-src"));
 					console.log("#image", $('#image'+clickElem));
 					offset = $(this).position();
 				    parent = $('.rel').offset();
@@ -730,7 +754,7 @@
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 				    console.log(relativeX, relativeY);
 				    //Добавить текущий SVG и текстуру в стек
-				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.children().attr("src") +  + ")");
+				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.attr("data-src") +  + ")");
 				    /*var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
 				    console.log(stack);*/
 				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
@@ -776,7 +800,7 @@
 						var blocksConnect = $('#'+clickElem).attr("data-connect").split(',');
 						switch(blocksConnect.length){
 							case 2:
-								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", currentTexture.children().attr("src"));
+								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", currentTexture.attr("data-src"));
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
 									relativeY = $('#block'+blocksConnect[0]).attr("data-coordY");
@@ -791,7 +815,7 @@
 								stack.push(new clickArea("block"+blocksConnect[1], $('#imageblock'+blocksConnect[1]).children().attr("xlink:href")));
 							break
 							case 1:
-								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.children().attr("src"));
+								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.attr("data-src"));
 								
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
@@ -811,7 +835,7 @@
 							break
 						case "block2":
 							block2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock7, #imageblock4').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock7, #imageblock4').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
 							stack.push(new clickArea("block7", $('#imageblock7').children().attr("xlink:href")));
 							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
@@ -822,7 +846,7 @@
 							break
 						case "block4":
 							block4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock2, #imageblock7').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock2, #imageblock7').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
 							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
 							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
@@ -836,7 +860,7 @@
 							break
 						case "block7":
 							block7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock2, #imageblock4').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock2, #imageblock4').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
 							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
 							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
@@ -856,13 +880,13 @@
 							break
 						case "block12":
 							block12.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock13').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock13').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block13.animateSVG(relativeX, relativeY, "block13", currentTexture);
 							stack.push(new clickArea("block13", $('#imageblock13').children().attr("xlink:href")));
 							break
 						case "block13":
 							block13.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock12').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock12').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block12.animateSVG(relativeX, relativeY, "block12", currentTexture);
 							stack.push(new clickArea("block12", $('#imageblock12').children().attr("xlink:href")));
 							break
@@ -874,7 +898,7 @@
 							break
 						case "block16":
 							block16.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock18, #imageblock19').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock18, #imageblock19').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);
 							stack.push(new clickArea("block18", $('#imageblock18').children().attr("xlink:href")));
 							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
@@ -885,7 +909,7 @@
 							break
 						case "block18":
 							block18.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock19, #imageblock16').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock19, #imageblock16').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
 							stack.push(new clickArea("block19", $('#imageblock19').children().attr("xlink:href")));
 							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
@@ -894,7 +918,7 @@
 							break
 						case "block19":
 							block19.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock16, #imageblock18').children().attr("xlink:href", currentTexture.children().attr("src"));
+							$('#imageblock16, #imageblock18').children().attr("xlink:href", currentTexture.attr("data-src"));
 							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
 							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
 							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);

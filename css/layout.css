@@ -3662,7 +3662,7 @@ ul.b-workshop-list{
 }
 
 .arrowPrev{
-	margin-right: 10px;
+	margin-right: 12px;
 	z-index: 100;
 }
 
@@ -3715,7 +3715,9 @@ ul.b-workshop-list{
 	display: inline-block;
 	width: 60px;
 	height: 60px;
-	margin: 0 10px;
+	margin: 0 8px;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 .currentTexture2{
@@ -3724,13 +3726,15 @@ ul.b-workshop-list{
 	width: 90px;
 	height: 90px;
 	margin: 10px;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 .currentTexture2:hover{
 	box-shadow: 0 0 0 4px #483434;
 	box-sizing: border-box;
 }
-.currentTexture img:hover{
+.currentTexture:hover{
 	box-shadow: 0 0 0 3px #c4c4c4;
 	box-sizing: border-box;
 }
@@ -4078,7 +4082,7 @@ ul.b-workshop-list{
 	    margin-left: 50px;
 	}
 	.arrowPrev {
-		margin-right: 7px;
+		margin-right: 8px;
 	}
 	.allTextures{
 		max-width: 895px;
@@ -4104,11 +4108,11 @@ ul.b-workshop-list{
 	    width: 230px;
 	}
 	.setTextures {
-	    width: 368px;
+	    width: 370px;
 	    margin-left: 30px;
 	}
 	.arrowPrev {
-		margin-right: 7px;
+		margin-right: 9px;
 	}
 	.allTextures{
 		max-width: 670px;
