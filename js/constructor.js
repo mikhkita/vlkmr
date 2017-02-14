@@ -393,10 +393,26 @@
 
 				for(var i=0; i < +this.countSVG; i++)
 				{
-					path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
-					$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
+					this.drawTexture(i);
 				}
 			this.urlUpdate();
+		}
+
+		this.drawTexture = function(i){
+			path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
+					$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
+					if($('#block'+(+i+1)).attr("data-connect")){
+					var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
+					switch(blocksConnect.length){
+					case 2:
+						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]+
+							', #imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr("xlink:href", path);
+					break
+					case 1:
+						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[0]+'Back').children().attr("xlink:href", path);
+					break
+					}
+				}
 		}
 
 		this.parse = function() {
@@ -427,20 +443,7 @@
 					for (var i in this.params) {
 						if(+this.params[i] > 0 && +this.params[i] <= +this.countTextures)
 						{
-							path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
-							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
-							if($('#block'+(+i+1)).attr("data-connect")){
-							var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
-							switch(blocksConnect.length){
-							case 2:
-								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1],
-									'#imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr("xlink:href", path);
-							break
-							case 1:
-								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", path);
-							break
-							}
-						}
+							this.drawTexture(i);
 						}else{
 							//console.log(this.default[i]);
 							//брать дефолтный

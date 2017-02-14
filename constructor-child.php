@@ -444,100 +444,100 @@ isRetina = (isMobile)?false:retina();
 			<defs>
 		<!--Текстуры-->
 <pattern id="imageblock1Back" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock2Back" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3Back" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-30" y="-100" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-30" y="-100" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock5Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-100" y="-50" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-120" y="-300" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-120" y="-300" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-150" y="-50" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-150" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock8Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-350" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-200" y="-350" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-140" y="-150" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-140" y="-150" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="-222" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-222" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock11Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-80" y="-120" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-80" y="-120" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		     <pattern id="imageblock12Back" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock13Back" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14Back" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-100" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-100" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock15Back" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-50" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16Back" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblock17Back" width="100%" height="100%">
-		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19Back" width="100%" height="100%">
-		       <image rand-min-x="-300" rand-max-x="-20" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="0" width="500" height="800" transform="rotate(84, 200, 200)">
+		       <image rand-min-x="-300" rand-max-x="-20" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="0" width="500" height="800" transform="rotate(84, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20Back" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="800" height="1280" transform="rotate(95, 400, 400)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="800" height="1280" transform="rotate(95, 400, 400)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock22Back" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock23Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock24Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPatternBack" width="100%" height="100%">
@@ -546,102 +546,102 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 <pattern id="imageblock1" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-200" y="-100" width="1000" height="1600" transform="scale(0.5, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock2" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="600" height="960" transform="rotate(82, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-30" y="-100" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-30" y="-100" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock5" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-100" y="-50" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-120" y="-300" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-120" y="-300" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-150" y="-50" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-150" y="-50" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock8" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-200" y="-350" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-200" y="-350" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-140" y="-150" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-140" y="-150" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="-222" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-222" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock11" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-80" y="-120" width="500" height="800" >
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-80" y="-120" width="500" height="800" >
 		     	</image>
 		    </pattern>
 
 
 		    <pattern id="imageblock12" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock13" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-100" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-100" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock15" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-50" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16" width="100%" height="100%">
-		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
+		       <image rand-min-x="-120" rand-max-x="0" rand-min-y="-200" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="300" height="480" transform="rotate(82, 100, 100)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblock17" width="100%" height="100%">
-		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-300" rand-max-x="0" rand-min-y="-400" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="600" height="960" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="600" height="960" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19" width="100%" height="100%">
-		       <image rand-min-x="-300" rand-max-x="-20" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-50" y="0" width="500" height="800" transform="rotate(84, 200, 200)">
+		       <image rand-min-x="-300" rand-max-x="-20" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="0" width="500" height="800" transform="rotate(84, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20" width="100%" height="100%">
-		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="0" y="0" width="800" height="1280" transform="rotate(95, 400, 400)">
+		       <image rand-min-x="-500" rand-max-x="0" rand-min-y="-200" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="800" height="1280" transform="rotate(95, 400, 400)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock22" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="0" width="500" height="800" >
+		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="500" height="800" >
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock23" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-150" width="500" height="800" transform="rotate(98, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock24" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/decor-2.jpg" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="-150" rand-max-y="-150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-150" width="500" height="800" transform="rotate(100, 300, 300)">
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPattern" width="100%" height="100%">
@@ -960,62 +960,54 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
-							<div class="currentTexture2"><img src="i/decor-1.jpg" title="Декор" width="90px" height="90px" data-id="decor-1"></div>
-							<div class="currentTexture2"><img src="i/decor-2.jpg" title="Декор" width="90px" height="90px" data-id="decor-2"></div>
-							<div class="currentTexture2"><img src="i/decor-3.jpg" title="Декор" width="90px" height="90px" data-id="decor-3"></div>
-							<div class="currentTexture2"><img src="i/decor-4.jpg" title="Декор" width="90px" height="90px" data-id="decor-4"></div>
-							<div class="currentTexture2"><img src="i/decor-5.jpg" title="Декор" width="90px" height="90px" data-id="decor-5"></div>
-							<div class="currentTexture2"><img src="i/decor-6.jpg" title="Декор" width="90px" height="90px" data-id="decor-6"></div>
-							<div class="currentTexture2"><img src="i/decor-7.jpg" title="Декор" width="90px" height="90px" data-id="decor-7"></div>
-							<div class="currentTexture2"><img src="i/decor-8.jpg" title="Декор" width="90px" height="90px" data-id="decor-8"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
 						</div>
 			</div>
 		</div>

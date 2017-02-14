@@ -976,8 +976,6 @@ isRetina = (isMobile)?false:retina();
 							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
 							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
 							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
-
-
 						</div>
 			</div>
 		</div>
