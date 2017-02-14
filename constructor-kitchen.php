@@ -676,7 +676,7 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVGback" id="block14Back" fill="url(#imageblock14Back)" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
 
 		<!--Отражение-->
-		<polygon class="classSVGback" id="block11Back" fill="url(#imageblock15Back)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+		<polygon class="classSVGback" id="block15Back" fill="url(#imageblock15Back)" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
 		<polygon class="classSVGback" id="block16Back" fill="url(#imageblock16Back)" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
 
 
