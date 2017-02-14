@@ -23,6 +23,12 @@
                 	bar.animate(progressbarValue += 0.01);
             	}
 		    });
+			 $('.floors').each(function(){
+		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+		        $(this).attr("data-src", src);
+		    });
+
+
 			$('#room').imagesLoaded( function() {
 				bar.animate(1);
 			});
@@ -334,15 +340,10 @@
 		this.params = {};
 		this.floor = "";
 		this.events = {};
-		this.default = {};
+		this.default = $('#default-hash').attr("data-hash").split(',');
 		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
-		for(var i=0; i < +this.countSVG; i++)
-			{
-				var parseTexture = $('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href").split(/(\d)/);
-				this.default[i] = parseTexture[1];
-			}
 
 		History.Adapter.bind(window,'statechange',function(){
 	        this.checkHash();
@@ -361,20 +362,29 @@
 		this.init = function() {
 				console.log("init!!");
 				this.params = {};
-				if($('.panelFloor').length)
-					{
-						var parseFloor = $('#floorPattern, #floorPatternBack').children().attr("xlink:href").split(/(\d)/);
-						this.floor = parseFloor[1];
-					}
+				var hash = $('#default-hash').attr("data-hash");
+				var hashArray = [];
+				if(~hash.indexOf('|')){
+					this.floor = hash.split('|')[0];
+					hash = hash.split('|')[1];
+				}
+				this.params = hash.split(',');
+				var path = $('.floors[data-id="'+this.floor+'"]').attr("data-src");
+				if($('.floorIMG').hasClass("kitchenClass")){
+					$('#floorRoom, #floorRoomBack').attr("src", path);
+				}
+				$('#floorPattern, #floorPatternBack').children().attr("xlink:href", path);
+
 				for(var i=0; i < +this.countSVG; i++)
-					{
-						var parseTexture = $('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href").split(/(\d)/);
-						this.params[i] = parseTexture[1];
-					}
+				{
+					path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
+					$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
+				}
 			this.urlUpdate();
 		}
 
 		this.parse = function() {
+				var path;
 				console.log("parse!!");
 				var data = this.get;
 				data = data.replace('?','');
@@ -384,10 +394,11 @@
 					var valueFloor = splitFloor[0].split('=')[1];
 					if (valueFloor > 0 && valueFloor <= 3) {//количество полов
 		                this.floor = valueFloor;
+		                path = $('.floors[data-id="'+this.floor+'"]').attr("data-src");
 		                if($('.floorIMG').hasClass("kitchenClass")){
-							$('#floorRoom, #floorRoomBack').attr("src", "i/FloorKitchen-"+this.floor+".png");
+							$('#floorRoom, #floorRoomBack').attr("src", path);
 						}
-						$('#floorPattern, #floorPatternBack').children().attr("xlink:href", "i/Floor-"+this.floor+".jpg");
+						$('#floorPattern, #floorPatternBack').children().attr("xlink:href", path);
 		            }
 				}
 				var valueBlocks = data.split('=')[1];
@@ -400,23 +411,25 @@
 					for (var i in this.params) {
 						if(+this.params[i] > 0 && +this.params[i] <= +this.countTextures)
 						{
-							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
+							path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
 							if($('#block'+(+i+1)).attr("data-connect")){
 							var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
 							switch(blocksConnect.length){
 							case 2:
 								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1],
-									'#imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
+									'#imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr("xlink:href", path);
 							break
 							case 1:
-								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", "i/decor-"+this.params[i]+".jpg");
+								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", path);
 							break
 							}
 						}
 						}else{
 							//console.log(this.default[i]);
 							//брать дефолтный
-							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", "i/decor-"+this.default[i]+".jpg");
+							path = $('.currentTexture[data-id="'+this.default[i]+'"]').attr("data-src");
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
 							this.params[i] = this.default[i];
 							this.urlUpdate();
 						}

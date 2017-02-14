@@ -4202,9 +4202,8 @@ ul.b-workshop-list{
 		font-size: 82px;
 	}
 	.b-popup-share-content{
-		width: 80%;
-		margin: 0 auto;
-		padding: 0 ;
+		width: inherit;
+		padding: 0 70px 0 170px;
 	}
 	.b-popup-share-content h2{
 		font-size: 48px;

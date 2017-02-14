@@ -323,23 +323,28 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture"><img src="i/decor-1.jpg" title="Декор" width="60px" height="60px" data-id="decor-1"></div>
-							<div class="currentTexture"><img src="i/decor-2.jpg" title="Декор" width="60px" height="60px" data-id="decor-2"></div>
-							<div class="currentTexture"><img src="i/decor-3.jpg" title="Декор" width="60px" height="60px" data-id="decor-3"></div>
-							<div class="currentTexture"><img src="i/decor-4.jpg" title="Декор" width="60px" height="60px" data-id="decor-4"></div>
-							<div class="currentTexture"><img src="i/decor-5.jpg" title="Декор" width="60px" height="60px" data-id="decor-5"></div>
-							<div class="currentTexture"><img src="i/decor-6.jpg" title="Декор" width="60px" height="60px" data-id="decor-6"></div>
-							<div class="currentTexture"><img src="i/decor-7.jpg" title="Декор" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.jpg" title="Декор" width="60px" height="60px" data-id="decor-8"></div>
-							<div class="currentTexture"><img src="i/decor-1.jpg" title="Декор" width="60px" height="60px" data-id="decor-1"></div>
-							<div class="currentTexture"><img src="i/decor-2.jpg" title="Декор" width="60px" height="60px" data-id="decor-2"></div>
-							<div class="currentTexture"><img src="i/decor-3.jpg" title="Декор" width="60px" height="60px" data-id="decor-3"></div>
-							<div class="currentTexture"><img src="i/decor-4.jpg" title="Декор" width="60px" height="60px" data-id="decor-4"></div>
-							<div class="currentTexture"><img src="i/decor-5.jpg" title="Декор" width="60px" height="60px" data-id="decor-5"></div>
-							<div class="currentTexture"><img src="i/decor-6.jpg" title="Декор" width="60px" height="60px" data-id="decor-6"></div>
-							<div class="currentTexture"><img src="i/decor-7.jpg" title="Декор" width="60px" height="60px" data-id="decor-7"></div>
-							<div class="currentTexture"><img src="i/decor-8.jpg" title="Декор" width="60px" height="60px" data-id="decor-8"></div>
-
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini-retina.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini-retina.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini-retina.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7-retina.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini-retina.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8-retina.jpg"></div>
+							</div>
+							<!--Полы-->
+							<div style="display: none">
+								<div class="floors" data-id="1" data-src="i/FloorKitchen-1.png" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></div>
+								<div class="floors" data-id="2" data-src="i/FloorKitchen-2.png" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></div>
+								<div class="floors" data-id="3" data-src="i/FloorKitchen-3.png" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></div>
 							</div>
 
   

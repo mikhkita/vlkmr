@@ -79,16 +79,17 @@
 		<li class="currentTexture" title="Декор" id="decor-3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
 
 		<!--Полы-->
-		<li class="currentTexture" title="Декор" id="Floor-1" data-image-mini="i/Floor-1-mini.jpg" data-retina-image-mini="i/Floor-1-mini-retina.jpg" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
-		<li class="currentTexture" title="Декор" id="Floor-2" data-image-mini="i/Floor-2-mini.jpg" data-retina-image-mini="i/Floor-2-mini-retina.jpg" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
-		<li class="currentTexture" title="Декор" id="Floor-3" data-image-mini="i/Floor-3-mini.jpg" data-retina-image-mini="i/Floor-3-mini-retina.jpg" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
+		<li class="currentTexture" title="Декор" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
+		<li class="currentTexture" title="Декор" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
+		<li class="currentTexture" title="Декор" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
 	</ul>
 	</div>
 	<ul class="b-workshop-list clearfix">
-		<li>
-			<div class="preload" id="preloader1"></div>
+		<li id="bx_3218110189_258" class="b-workshop hide" data-hash="1,1,1,3,3,3,3,3,3">
+			<ul>
+			<li class="preload" id="preloader1"></li>
 
-			<div id="bx_3218110189_258" class="b-workshop hide" data-hash="1,1,1,3,3,3,3,3,3">
+			<li>
 		<a href="/workshop/gostinaya/">
 			
 			<div class="b-workshop-svg gostinaya">
@@ -149,14 +150,15 @@
 			<div class="b-workshop-title"><h3>Гостиная</h3></div>
 			<div class="b-three-color"></div>
 		</a>
-		</div>
 		</li>
+	<ul>
+	</li>
 			
 		<li>
+		<ul>
+			<li class="preload" id="preloader2"></li>
 
-		<div class="preload" id="preloader2"></div>
-
-			<div id="bx_3218110189_260" class="b-workshop hide" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2">
+			<li id="bx_3218110189_260" class="b-workshop hide" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2">
 			<a href="/workshop/detskaya/">
 				
 				<div class="b-workshop-svg detskaya">
@@ -285,12 +287,15 @@
 				<div class="b-workshop-title"><h3>Детская</h3></div>
 				<div class="b-three-color"></div>
 			</a>
-	</div>
 	</li>
-	<li>
-		<div class="preload" id="preloader3"></div>
+	</ul>
+	</li>
 
-		<div id="bx_3218110189_259" class="b-workshop hide" data-hash="1,1,1,1,2,2,2,2">
+	<li>
+		<ul>
+		<li class="preload" id="preloader3"></li>
+
+		<li id="bx_3218110189_259" class="b-workshop hide" data-hash="1,1,1,1,2,2,2,2">
 	<a href="/workshop/stenka/">
 		
 		<div class="b-workshop-svg stenka">
@@ -343,7 +348,8 @@
 		<div class="b-workshop-title"><h3>Стенка</h3></div>
 		<div class="b-three-color"></div>
 	</a>
-	</div>
+	</li>
+	</ul>
 	</li>
 </ul>
 
@@ -386,7 +392,7 @@
 		var hashArray = [];
 		if(~hash.indexOf('|')){
 			floor = hash.split('|')[0];
-			hash = hash.split('|')[1]
+			hash = hash.split('|')[1];
 		}
 		hashArray = hash.split(',');
 		var i=0;
