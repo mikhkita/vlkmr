@@ -2,6 +2,7 @@
 		var blocks = [];
 		var shiftSlider;
 		var currentTexture;
+		var currentTextureID;
 		var prevTexture;
 		var progressbarValue = 0.4;
 
@@ -76,10 +77,12 @@
 					if(window.innerWidth <= 768){
 						shiftSlider = 1;
 					}
-				
+					console.log(currentTexture);
+					
 			});
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(e){
+				$('.slick-active[data-id="1"]').click();
 				$(window).resize();
 				$('.progressbarContain').fadeOut(300);
 				//начать загружать большие декоры
@@ -126,7 +129,7 @@
 					}
 			});
 
-			  $('.repeatPrev[title], .repeatNext[title], .iconMore[title], .layers[title], .share[title]').qtip({
+			  $('.repeatPrev[title], .repeatNext[title], .layers[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -141,7 +144,7 @@
 	            	}
 	            }
 			  });
-			  $('.iconMore[title]').qtip({
+			  $('.iconMore[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -315,6 +318,7 @@
 				}
 				clickLayers = false;
 			});
+
 			//Раскрывающаяся панель с декорами
 			/*$('.iconMore').click(function(){
 				$('.allTextures').toggleClass("showContent");
@@ -502,10 +506,20 @@
 			urlCommands.checkHash();
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
-				if (prevTexture != undefined)
+				console.log("23456786546789689790", $(this));
+				if (prevTexture != undefined){
 					prevTexture.css("box-shadow", "");
+					$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').css("box-shadow", "");
+				}
+
+					
+				currentTextureID = $(this).attr("data-slick-index");
 				currentTexture = $(this);
 				prevTexture = $(this);
+				$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').css({
+					"box-shadow": "0 0 0 4px #483434",
+					"box-sizing": "border-box"
+				});
 				$(this).css({
 					"box-shadow": "0 0 0 3px #483434",
 					"box-sizing": "border-box"
@@ -967,7 +981,7 @@
 
 			});
 		
-		$('.textures').slick({
+		var slider = $('.textures').slick({
       	nextArrow: $('.arrowNext'),
 	    prevArrow: $('.arrowPrev'),
 	    dots: false,
@@ -1004,4 +1018,16 @@
 			    // instead of a settings object
 			  ]
       });
+		$('.textures').on('breakpoint', function(event, slick, breakpoint){
+			if(breakpoint === 768)
+			{
+				//$('.currentTexture2[data-id="'+currentTextureID+'"]').first().click();
+			}else{
+				$('.textures').slick('slickGoTo', currentTextureID, false);
+		        $('.currentTexture[data-slick-index="'+currentTextureID+'"]').click();
+			}
+		        
+		        //console.log($('.allTextures').find('*[data-id="8"]').first());
+		        //$('.allTextures').find('*[data-id="8"]').first().click();
+		});
 		});

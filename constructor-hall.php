@@ -322,7 +322,7 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
+							<div class="currentTexture select" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></div>
 							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></div>
 							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></div>
 							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini-retina.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4-retina.jpg"></div>
