@@ -4,7 +4,8 @@
 		var currentTexture;
 		var currentTextureID;
 		var prevTexture;
-		var progressbarValue = 0.4;
+		var progressbarValue = 0.3;
+		var progressbarTextures = 0;
 
 		$(document).ready(function(){
 			var height = 100;
@@ -21,7 +22,9 @@
 		        var img = new Image();
             	img.src = src;
            		img.onload = function(){
-                	bar.animate(progressbarValue += 0.01);
+           			progressbarTextures += 0.01;
+           			progressbarTextures > 0.4 ? 0.4 : progressbarTextures;
+                	bar.animate(progressbarValue + progressbarTextures);
             	}
 		    });
 			 $('.floors').each(function(){
@@ -84,6 +87,9 @@
 			$(window).load(function(e){
 				$('.slick-active[data-id="1"]').click();
 				$(window).resize();
+				if(getCookie("size") === "full"){
+					$('.fullSize').click();
+				}
 				$('.progressbarContain').fadeOut(300);
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
@@ -109,6 +115,7 @@
 						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
 						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
+						setCookie("size","full");
 						checkSize = true;
 					}else 
 						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
@@ -125,6 +132,7 @@
 							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
 							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
+							setCookie("size","small");
 							checkSize = false;
 					}
 			});
@@ -1030,4 +1038,45 @@
 		        //console.log($('.allTextures').find('*[data-id="8"]').first());
 		        //$('.allTextures').find('*[data-id="8"]').first().click();
 		});
-		});
+		// возвращает cookie с именем name, если есть, если нет, то undefined
+		function getCookie(name) {
+		  var matches = document.cookie.match(new RegExp(
+		    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		  ));
+		  return matches ? decodeURIComponent(matches[1]) : undefined;
+		}
+		function setCookie(name, value, options) {
+		  options = options || {};
+
+		  var expires = options.expires;
+
+		  if (typeof expires == "number" && expires) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + expires * 1000);
+		    expires = options.expires = d;
+		  }
+		  if (expires && expires.toUTCString) {
+		    options.expires = expires.toUTCString();
+		  }
+
+		  value = encodeURIComponent(value);
+
+		  var updatedCookie = name + "=" + value;
+
+		  for (var propName in options) {
+		    updatedCookie += "; " + propName;
+		    var propValue = options[propName];
+		    if (propValue !== true) {
+		      updatedCookie += "=" + propValue;
+		    }
+		  }
+
+		  document.cookie = updatedCookie;
+		}
+
+		function deleteCookie(name) {
+		  setCookie(name, "", {
+		    expires: -1
+		  })
+		}
+});

@@ -3762,7 +3762,7 @@ ul.b-workshop-list{
 
 /*Стили для slick слайдера*/
 
-.slick-slider{
+.textures .slick-slider{
 	display: inline-block !important;
 }
 /*-------------------------*/
@@ -3859,7 +3859,7 @@ ul.b-workshop-list{
 	z-index: -2; 
 }
 
-.slick-track{
+.textures .slick-track{
 	height: 66px;
 	padding-top: 3px;
 }
@@ -3891,6 +3891,7 @@ ul.b-workshop-list{
 	position: relative;
 	width: 100%;
 	background-color: #f4f4f4;
+	overflow: visible;
 }
 
 .classSVG{

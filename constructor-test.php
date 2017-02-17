@@ -59,7 +59,7 @@
 	}
 
 	.heightPreload{
-		height: 310px;
+		height: 309px;
 	}
 
 	.b-workshop-list li{
@@ -74,10 +74,67 @@
 		width: 364px;
 	}
 
+	.contentImage.showContent{
+		opacity: 1;
+	}
+
+	.contentImage{
+	-webkit-transition: all 1000ms ease-out;
+	   -moz-transition: all 1000ms ease-out;
+	    -ms-transition: all 1000ms ease-out;
+	   	 -o-transition: all 1000ms ease-out;
+			transition: all 1000ms ease-out;
+			opacity: 0;
+	}
+
 	#testBlock{
 		width: 500px;
 		height: 200px;
 	}
+
+	.cssload-container {
+	width: 100%;
+	height: 49px;
+	text-align: center;
+}
+
+.cssload-zenith {
+	width: 49px;
+	height: 49px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	box-shadow: 3px 3px 1px rgb(0,0,0);
+	animation: cssload-spin 690ms infinite linear;
+		-o-animation: cssload-spin 690ms infinite linear;
+		-ms-animation: cssload-spin 690ms infinite linear;
+		-webkit-animation: cssload-spin 690ms infinite linear;
+		-moz-animation: cssload-spin 690ms infinite linear;
+}
+
+
+
+@keyframes cssload-spin {
+	100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+	100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+	100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+	100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
 </style>
 
 </head>
@@ -99,8 +156,14 @@
 	</div>
 	<ul class="b-workshop-list clearfix">
 		<li id="bx_3218110189_258" class="b-workshop heightPreload" data-hash="1,1,1,3,3,3,3,3,3">
-			<div class="preload" id="preloader1"></div>
-			<div class="hide contentImage">
+			<div class="preload" id="preloader1">
+				<div class="cssload-container">
+					<div class="cssload-zenith"></div>
+					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+				</div>
+			</div>
+			
+			<div class="contentImage">
 		<a href="/workshop/gostinaya/">
 			
 			<div class="b-workshop-svg gostinaya">
@@ -165,9 +228,15 @@
 		</li>
 			
 		<li id="bx_3218110189_260" class="b-workshop heightPreload" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2">
-			<div class="preload" id="preloader2"></div>
+			<div class="preload">
+				<div class="cssload-container">
+					<div class="cssload-zenith"></div>
+					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+				</div>
 
-			<div class="hide contentImage">
+			</div>
+
+			<div class="contentImage">
 			<a href="/workshop/detskaya/">
 				
 				<div class="b-workshop-svg detskaya">
@@ -300,9 +369,15 @@
 	</li>
 
 	<li id="bx_3218110189_259" class="b-workshop heightPreload" data-hash="1,1,1,1,2,2,2,2">
-		<div class="preload" id="preloader3"></div>
+		<div class="preload">
+				<div class="cssload-container">
+					<div class="cssload-zenith"></div>
+					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+				</div>
 
-		<div class="hide contentImage">
+			</div>
+
+		<div class="contentImage">
 	<a href="/workshop/stenka/">
 		
 		<div class="b-workshop-svg stenka">
@@ -359,11 +434,17 @@
 	</li>
 
 	<li id="bx_3218110189_261" class="b-workshop heightPreload" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,3,3,3,3,3,3,3,3">
-			<div class="preload" id="preloader4"></div>
-			<div class="hide contentImage">
+			<div class="preload">
+				<div class="cssload-container">
+					<div class="cssload-zenith"></div>
+					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+				</div>
+
+			</div>
+			<div class="contentImage">
 		<a href="">
 			
-			<div class="b-workshop-svg kitchen" style="height: 212px">
+			<div class="b-workshop-svg kitchen" style="height: 210px">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895" data-kitchen="true">
 		<defs>
 		<!--<pattern data-floor="true" id="floorPatternBack" width="100%" height="100%">
@@ -529,11 +610,17 @@
 		</li>
 
 		<li id="bx_3218110189_262" class="b-workshop heightPreload" data-hash="3|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2">
-			<div class="preload" id="preloader5"></div>
-			<div class="hide contentImage">
+			<div class="preload">
+				<div class="cssload-container">
+					<div class="cssload-zenith"></div>
+					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+				</div>
+
+			</div>
+			<div class="contentImage">
 		<a href="">
 			
-			<div class="b-workshop-svg hall" style="height: 273px">
+			<div class="b-workshop-svg hall" style="height: 260px">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 		<defs>
 			<pattern id="floorPatternBack4" width="100%" height="100%">
@@ -670,7 +757,17 @@
 
 	<script type="text/javascript">
 
-  	var cl1 = new CanvasLoader('preloader1');
+	var isIE = false;
+
+	if (!('querySelector' in document)  //скорее всего ie 9+
+	     || !('localStorage' in window)  //ie 8+
+	     || !('addEventListener' in window)  //ie 8 + (возможно)
+	    || !('matchMedia' in window)) {//ie 10+
+
+	    isIE = true;	
+	}
+
+  	/*var cl1 = new CanvasLoader('preloader1');
 	cl1.setColor('#362b2b'); // default is '#000000'
 	cl1.setDiameter(57); // default is 40
 	cl1.setDensity(67); // default is 40
@@ -709,10 +806,18 @@
 	cl5.setRange(1.1); // default is 1.3
 	cl5.setSpeed(3); // default is 2
 	cl5.setFPS(30); // default is 24
-	cl5.show(); // Hidden by default
+	cl5.show(); // Hidden by default*/
 
 	var isRetina = false;
 	var isMobile = false;
+
+	if( isIE ){
+    	$('.contentImage').addClass("hide showContent");
+    	$('.cssload-zenith').addClass("hide");
+    }else{
+    	$('.IEloader').addClass("hide");
+    }
+
 	function DrawDefault(svg, hash){
 		console.log(svg, svg.attr("data-kitchen") === "true");
 		var floor;
@@ -743,17 +848,26 @@
 	}
 
     $('.b-workshop').each(function(){
+
     	var th = $(this);
     	//th.fadeOut();
     	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
     	var img = new Image();
-        img.src = ($(this).find(".roomImage").attr("xlink:href"));
+        img.src = th.find(".roomImage").attr("xlink:href");
         img.onload = function(){
-        	th.find(".preload").fadeOut(0);
+        	th.find(".preload").hide();
         	th.removeClass("heightPreload");
-            th.find(".contentImage").fadeIn(1000);
+        	loadContent(th.find(".contentImage"));
         }
     });
+     function loadContent(content){
+				if( isIE ){
+	                content.fadeIn(1000);
+	            }else{
+	            	content.addClass("showContent");
+	            }
+	            
+			}
 </script>
 </body>
 </html>
