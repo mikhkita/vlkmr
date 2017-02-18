@@ -6,6 +6,8 @@
 		var prevTexture;
 		var progressbarValue = 0.3;
 		var progressbarTextures = 0;
+		var decorsID = [];
+		var floorsID = []
 
 		$(document).ready(function(){
 			var height = 100;
@@ -27,14 +29,19 @@
                 	bar.animate(progressbarValue + progressbarTextures);
             	}
 		    });
+
 			 $('.floors').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
+		        floorsID.push($(this).attr("data-id"));
 		    });
-
+			$('.currentTexture').each(function(){
+			 	decorsID.push($(this).attr("data-id"));
+			});
 
 			$('#room').imagesLoaded( function() {
-				bar.animate(1);
+				progressbarValue += 0.3;
+				bar.animate(progressbarValue);
 			});
 			$('.relBackground').css({"height": $(window).height() - height});
 			$('.progressbarContain').css({
@@ -56,7 +63,6 @@
 						"width": "auto"
 					});
 				}
-					console.log($('#room').width() > $('.b-wide-block').width());
 					if($('#room').width() > $('.b-wide-block').width())
 					{
 						$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -88,9 +94,23 @@
 				$('.slick-active[data-id="1"]').click();
 				$(window).resize();
 				if(getCookie("size") === "full"){
-					$('.fullSize').click();
+					var curWidth = $('#room').width();
+						$('#room, #floorRoom, #floorRoomBack').css({
+							"height": "auto",
+							"width": $('.b-wide-block').width()
+						});
+						var autoHeight = $('#room').height();
+						$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).css(
+							{
+								height: autoHeight,
+								width: $('.b-wide-block').width()
+							});
+						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+						$('.icon-small-size').css("display", "inline-block");
+						$('.icon-full-size').css("display", "none");
+						checkSize = true;
 				}
-				$('.progressbarContain').fadeOut(300);
+				$('.progressbarContain').fadeOut(250);
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
 			        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
@@ -101,6 +121,8 @@
 			});
 			//$('#room').load();
 			$('.fullSize').click(function(){
+				var date = new Date;
+				date.setDate(date.getFullYear() + 1);
 					if(checkSize === false){
 						var curWidth = $('#room').width();
 						$('#room, #floorRoom, #floorRoomBack').css({
@@ -115,7 +137,7 @@
 						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
 						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
-						setCookie("size","full");
+						setCookie("size","full", date);
 						checkSize = true;
 					}else 
 						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
@@ -132,7 +154,7 @@
 							$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
 							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
-							setCookie("size","small");
+							setCookie("size","small", date);
 							checkSize = false;
 					}
 			});
@@ -270,14 +292,11 @@
 					pressCtrl = true;
 					pressCmd = true;
 				}
-				console.log(e, pressCtrl, pressCmd);
 				if((pressCtrl === true || pressCmd === true) && e.which == 90)
 				{
-					console.log("Press Cntr+Z");
 					$('.repeatPrevClick').click();
 					return false;
 				}else if((pressCtrl === true || pressCmd === true) && e.which == 89){
-					console.log("Press Cntr+Y");
 					$('.repeatNextClick').click();
 					return false;
 				}
@@ -368,7 +387,8 @@
 		this.params = {};
 		this.floor = "";
 		this.events = {};
-		this.default = $('#default-hash').attr("data-hash").split(',');
+		this.default = {};
+		this.defaultFloor = "";
 		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
@@ -380,6 +400,13 @@
 		this.checkHash = function(){
 			console.log("checkHash!!");
 			this.get = window.location.search;
+			var hash = $('#default-hash').attr("data-hash");
+			if(~hash.indexOf('|')){
+				this.defaultFloor = hash.split('|')[0]
+				hash = hash.split('|')[1];
+			}
+			this.default = hash.split(',');
+			console.log(hash, this.default );
 			if( ~this.get.indexOf('?') ) {
 				this.parse();
 			}else{
@@ -399,9 +426,15 @@
 				this.params = hash.split(',');
 				var path = $('.floors[data-id="'+this.floor+'"]').attr("data-src");
 				if($('.floorIMG').hasClass("kitchenClass")){
-					$('#floorRoom, #floorRoomBack').attr("src", path);
+					$('#floorRoom, #floorRoomBack').attr({
+						"src": path,
+						"data-id": this.floor
+					});
 				}
-				$('#floorPattern, #floorPatternBack').children().attr("xlink:href", path);
+				$('#floorPattern, #floorPatternBack').children().attr({
+						"xlink:href": path,
+						"data-id": this.floor
+					});
 
 				for(var i=0; i < +this.countSVG; i++)
 				{
@@ -412,16 +445,26 @@
 
 		this.drawTexture = function(i){
 			path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
-					$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
+					$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr({
+						"xlink:href": path,
+						"data-id": this.params[i]
+					});
+
 					if($('#block'+(+i+1)).attr("data-connect")){
 					var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
 					switch(blocksConnect.length){
 					case 2:
 						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]+
-							', #imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr("xlink:href", path);
+							', #imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr({
+								"xlink:href": path,
+								"data-id": this.params[i]
+							});
 					break
 					case 1:
-						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[0]+'Back').children().attr("xlink:href", path);
+						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[0]+'Back').children().attr({
+						"xlink:href": path,
+						"data-id": this.params[i]
+					});
 					break
 					}
 				}
@@ -436,13 +479,32 @@
 					var splitFloor = data.split('&');
 					data = splitFloor[1];
 					var valueFloor = splitFloor[0].split('=')[1];
-					if (valueFloor > 0 && valueFloor <= 3) {//количество полов
+					if($.inArray(valueFloor, floorsID) !== -1){
 		                this.floor = valueFloor;
 		                path = $('.floors[data-id="'+this.floor+'"]').attr("data-src");
 		                if($('.floorIMG').hasClass("kitchenClass")){
-							$('#floorRoom, #floorRoomBack').attr("src", path);
+							$('#floorRoom, #floorRoomBack').attr({
+								"src": path,
+								"data-id": this.floor
+							});
 						}
-						$('#floorPattern, #floorPatternBack').children().attr("xlink:href", path);
+						$('#floorPattern, #floorPatternBack').children().attr({
+							"xlink:href": path,
+							"data-id": this.floor
+						});
+		            }else{
+		            	path = $('.floors[data-id="'+this.defaultFloor+'"]').attr("data-src");
+		            	if($('.floorIMG').hasClass("kitchenClass")){
+							$('#floorRoom, #floorRoomBack').attr({
+								"src": path,
+								"data-id": this.defaultFloor
+							});
+						}
+						$('#floorPattern, #floorPatternBack').children().attr({
+							"xlink:href": path,
+							"data-id": this.defaultFloor
+						});
+		            	this.floor = this.defaultFloor;
 		            }
 				}
 				var valueBlocks = data.split('=')[1];
@@ -453,14 +515,20 @@
 					console.log("+this.countSVG === ");
 				this.params = valueBlocks;
 					for (var i in this.params) {
-						if(+this.params[i] > 0 && +this.params[i] <= +this.countTextures)
+						//if($('.currentTexture').find($('*[data-id="'+this.params[i]+'"]')))
+						if($.inArray(this.params[i], decorsID) !== -1)
 						{
+							console.log("decorsID");
+							//console.log($('*[data-id="'+this.params[i]+'"]'));
 							this.drawTexture(i);
 						}else{
 							//console.log(this.default[i]);
 							//брать дефолтный
 							path = $('.currentTexture[data-id="'+this.default[i]+'"]').attr("data-src");
-							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr("xlink:href", path);
+							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr({
+								"xlink:href": path,
+								"data-id": this.params[i]
+							});
 							this.params[i] = this.default[i];
 							this.urlUpdate();
 						}
@@ -469,11 +537,11 @@
 					console.log("Init for parse");
 					this.init();
 				}
+				this.urlUpdate();
 			}
 
 		this.urlPush = function(position, texture) {
 			if($('#block'+(+position+1)).attr("data-reflection")){
-				console.log("+++-+--+-");
 				return
 			}
 			this.params[position] = texture;
@@ -484,6 +552,7 @@
 			this.urlUpdate();
 		}
 		this.urlUpdate = function(){
+			//console.log("params",this.params);
 			console.log("urlUpdate!!");
 			var url = '?';
 			if(this.floor != "")
@@ -498,12 +567,10 @@
 			url = url.slice(0,-1);
 			this.get = url;
 			hrefUrl = History.getState().url;
-			console.log("url", url); 
 			if(~hrefUrl.indexOf('\?')){
 				hrefUrl = window.location.href.slice(0,window.location.href.indexOf('\?'));
 			}
 			hrefUrl += url;
-			console.log("hrefUrl", hrefUrl);
 			window.history.pushState(null, null, hrefUrl);
 			share.updateContent({
 			    url: hrefUrl
@@ -514,13 +581,11 @@
 			urlCommands.checkHash();
 			//Выбор текстуры
 			$('.currentTexture').click(function(e){
-				console.log("23456786546789689790", $(this));
 				if (prevTexture != undefined){
 					prevTexture.css("box-shadow", "");
 					$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').css("box-shadow", "");
 				}
 
-					
 				currentTextureID = $(this).attr("data-slick-index");
 				currentTexture = $(this);
 				prevTexture = $(this);
@@ -540,7 +605,6 @@
 		        e.preventDefault();
 		        slideIndex = $(this).index();
 		        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
-		        console.log("currentTexture",$('.currentTexture').eq(slideIndex), "slideIndex", slideIndex, "this", $(this));
 		        $('.currentTexture').eq(slideIndex + shiftSlider).click();
 		        $('.allTextures').removeClass("showContent");
 		        $.fancybox.close();
@@ -564,20 +628,26 @@
 					});
 				}else
 				{
-				$('#floorPatternBack').children().attr("xlink:href", currentFloor.attr("data-src"));
+				$('#floorPatternBack').children().attr({
+					"xlink:href": currentFloor.attr("data-src"),
+					"data-id": currentFloor.attr("data-id")
+				});
 				$('#floor').animate({
 				    opacity: 0
 				  },
 				  {
 					duration: 600,
 					complete: function(){
-						$('#floorPattern').children().attr("xlink:href", currentFloor.attr("data-src"));
+						$('#floorPattern').children().attr({
+							"xlink:href": currentFloor.attr("data-src"),
+							"data-id": currentFloor.attr("data-id")
+						});
 						$('#floor').css("opacity", 1);
 					}
 					});
 				}
-				var pushFloor = currentFloor.attr("data-src").split(/(\d)/);
-				urlCommands.urlPushFloor(pushFloor[1]);
+				var pushFloor = currentFloor.attr("data-id");
+				urlCommands.urlPushFloor(pushFloor);
 				//urlCommands.urlUpdate();
 				$('.layers').click();
 			});
@@ -586,7 +656,11 @@
 			var stack = [];
 			//Заполняем стек начальными текстурами
 			$('.classSVG').each(function(){
-				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
+				/*var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
+				stack.push(stackAdd);
+				var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
+				blocks.push(blockAdd);*/
+				var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("data-id"));
 				stack.push(stackAdd);
 				var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
 				blocks.push(blockAdd);
@@ -611,15 +685,16 @@
 					});
 					if(prevElemStack != undefined)
 						{
-							console.log("stack", stack);
 							//теперь нужно поменять текстуры
 							/*$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
-							$('#image'+lastElemStack.path).children().attr("xlink:href", prevElemStack.texture);
-							$('#image'+lastElemStack.path+'Back').children().attr("xlink:href", prevElemStack.texture);
+							$('#image'+lastElemStack.path+', #image'+lastElemStack.path+'Back').children().attr({
+								"xlink:href": $('.currentTexture[data-id='+prevElemStack.texture+'"]').attr("data-src"),
+								"data-id": prevElemStack.texture
+							});
 							var positionElStack = lastElemStack.path.slice(5) - 1;
-							var textureElStack = prevElemStack.texture.split(/(\d)/);
-							urlCommands.urlPush(positionElStack, textureElStack[1]);
+							var textureElStack = prevElemStack.texture;
+							urlCommands.urlPush(positionElStack, textureElStack);
 							//urlCommands.urlUpdate();
 							stackCancel = true;
 							if($('#'+prevElemStack.path).attr("data-connect"))
@@ -628,7 +703,6 @@
 								if(blocksConnect.length === 2 && checkConnectPrevThree < 2)
 								{
 									checkConnectPrevThree++;
-									console.log(checkConnectPrevThree);
 									$('.repeatPrevClick').click();
 								}else if(blocksConnect.length === 1 && checkConnectPrev === false){
 									checkConnectPrev = true;
@@ -663,15 +737,16 @@
 			//Повторить
 			$('.repeatNextClick').click(function(e){
 				if(stackRepeat.length != 0){
-					console.log("stackRepeat", stackRepeat);
 					var lastElemStackRepeat= stackRepeat.pop();
 					/*$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
 					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
-					$('#image'+lastElemStackRepeat.path).children().attr("xlink:href", lastElemStackRepeat.texture);
-					$('#image'+lastElemStackRepeat.path+'Back').children().attr("xlink:href", lastElemStackRepeat.texture);
+					$('#image'+lastElemStackRepeat.path+', #image'+lastElemStackRepeat.path+'Back').children().attr({
+						"xlink:href": $('.currentTexture[data-id='+lastElemStackRepeat.texture+'"]').attr("data-src"),
+						"data-id": prevElemStack.texture
+					});
 					var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
-					var textureElStackR = lastElemStackRepeat.texture.split(/(\d)/);
-					urlCommands.urlPush(positionElStackR, textureElStackR[1]);
+					var textureElStackR = lastElemStackRepeat.texture;
+					urlCommands.urlPush(positionElStackR, textureElStackR);
 					//urlCommands.urlUpdate();
 					stack.push(lastElemStackRepeat);
 					$(this).removeClass('repeatNext').addClass('repeatNext2');
@@ -717,8 +792,8 @@
 				 });
 				//Изменение хэша
 				var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
-					var textureEl = currentTextureLoc.attr("data-src").split(/(\d)/);
-					urlCommands.urlPush(positionEl, textureEl[1]);
+					var textureEl = currentTextureLoc.attr("data-id");
+					urlCommands.urlPush(positionEl, textureEl);
 					//urlCommands.urlUpdate();
 				circle.animate(
 					  {
@@ -736,10 +811,10 @@
 					   			}
 					   		},
 					   		complete: function(){
-					   			console.log(stackCancel);
 					   			if(stackCancel === false){
 						   			$('#image'+clickEl+'Back').children().attr({
 						   				"xlink:href": currentTextureLoc.attr("data-src"),
+						   				"data-id": currentTextureLoc.attr("data-id"),
 										"x": $('#image'+clickEl).children().attr("x"),
 										"y": $('#image'+clickEl).children().attr("y")
 									});
@@ -750,38 +825,13 @@
 
 			   };
 			};
-			console.log(blocks);
+			
 			//Объект SVG + текстура (для отменить/повторить)
 			function clickArea(path, texture)
 			{
 				this.path = path;
 				this.texture = texture;
 			}
-
-			/* --------------------------- */
-			/*var block1 = new areaSVG($('#block1'), $('#clipping1 circle'), 80);
-			var block2 = new areaSVG($('#block2'), $('#clipping2 circle'), 260);
-			var block3 = new areaSVG($('#block3'), $('#clipping3 circle'), 260);
-			var block4 = new areaSVG($('#block4'), $('#clipping4 circle'), 260);
-			var block5 = new areaSVG($('#block5'), $('#clipping5 circle'), 80);
-			var block6 = new areaSVG($('#block6'), $('#clipping6 circle'), 100);
-			var block7 = new areaSVG($('#block7'), $('#clipping7 circle'), 260);
-
-			var block8 = new areaSVG($('#block8'), $('#clipping8 circle'), 220);
-			var block9 = new areaSVG($('#block9'), $('#clipping9 circle'), 150);
-			var block10 = new areaSVG($('#block10'), $('#clipping10 circle'), 70);
-			var block11 = new areaSVG($('#block11'), $('#clipping11 circle'), 70);
-			var block12 = new areaSVG($('#block12'), $('#clipping12 circle'), 220);
-			var block13 = new areaSVG($('#block13'), $('#clipping13 circle'), 220);
-			var block14 = new areaSVG($('#block14'), $('#clipping14 circle'), 220);
-
-			var block15 = new areaSVG($('#block15'), $('#clipping15 circle'), 250);
-			var block16 = new areaSVG($('#block16'), $('#clipping16 circle'), 250);
-			var block17 = new areaSVG($('#block17'), $('#clipping17 circle'), 80);
-			var block18 = new areaSVG($('#block18'), $('#clipping18 circle'), 250);
-			var block19 = new areaSVG($('#block19'), $('#clipping19 circle'), 250);
-			var block20 = new areaSVG($('#block20'), $('#clipping20 circle'), 90);
-			var block21 = new areaSVG($('#block21'), $('#clipping21 circle'), 90);*/
 
 			var clickElem;
 	    	var offset;
@@ -799,14 +849,16 @@
 					// = $(this).attr("data-location");//Up
 					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
-					$('#image'+clickElem).children().attr("xlink:href", currentTexture.attr("data-src"));
-					console.log("#image", $('#image'+clickElem));
+					$('#image'+clickElem).children().attr({
+						"xlink:href": currentTexture.attr("data-src"),
+						"data-id": currentTexture.attr("data-id")
+					});
 					offset = $(this).position();
 				    parent = $('.rel').offset();
 
 				    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
-				    console.log(relativeX, relativeY);
+
 				    //Добавить текущий SVG и текстуру в стек
 				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.attr("data-src") +  + ")");
 				    /*var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
@@ -826,7 +878,7 @@
 				    	console.log("add!");
 				    	stack.push(stackObj);
 				    }*/
-				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
+				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("data-id"));
 					stack.push(stackObj);
 					console.log(stack);
 				    if(stack.length > $('#default-hash').attr("data-stack")){//Если с анимацией пола то 22
@@ -854,137 +906,38 @@
 						var blocksConnect = $('#'+clickElem).attr("data-connect").split(',');
 						switch(blocksConnect.length){
 							case 2:
-								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr("xlink:href", currentTexture.attr("data-src"));
+								$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]).children().attr({
+									"xlink:href": currentTexture.attr("data-src"),
+									"data-id": currentTexture.attr("data-id")
+								});
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
 									relativeY = $('#block'+blocksConnect[0]).attr("data-coordY");
 								}
 								blocks[blocksConnect[0] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[0], currentTexture);
-								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("xlink:href")));
+								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("data-id")));
 								if($('#block'+blocksConnect[1]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[1]).attr("data-coordX");
 									relativeY = $('#block'+blocksConnect[1]).attr("data-coordY");
 								}
 								blocks[blocksConnect[1] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[1], currentTexture);
-								stack.push(new clickArea("block"+blocksConnect[1], $('#imageblock'+blocksConnect[1]).children().attr("xlink:href")));
+								stack.push(new clickArea("block"+blocksConnect[1], $('#imageblock'+blocksConnect[1]).children().attr("data-id")));
 							break
 							case 1:
-								$('#imageblock'+blocksConnect[0]).children().attr("xlink:href", currentTexture.attr("data-src"));
+								$('#imageblock'+blocksConnect[0]).children().attr({
+									"xlink:href": currentTexture.attr("data-src"),
+									"data-id": currentTexture.attr("data-id")
+								});
 								
 								if($('#block'+blocksConnect[0]).attr("data-coordX")){
 									relativeX = $('#block'+blocksConnect[0]).attr("data-coordX");
 									relativeY = $('#block'+blocksConnect[0]).attr("data-coordY");
-									console.log(relativeX, relativeY);
 								}
 								blocks[blocksConnect[0] - 1].animateSVG(relativeX, relativeY, "block"+blocksConnect[0], currentTexture);
-								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("xlink:href")));
+								stack.push(new clickArea("block"+blocksConnect[0], $('#imageblock'+blocksConnect[0]).children().attr("data-id")));
 							break
 						}
 					}
-
-
-					/*switch(clickElem){
-						case "block1":
-							block1.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block2":
-							block2.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock7, #imageblock4').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
-							stack.push(new clickArea("block7", $('#imageblock7').children().attr("xlink:href")));
-							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
-							stack.push(new clickArea("block4", $('#imageblock4').children().attr("xlink:href")));
-							break
-						case "block3":
-							block3.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block4":
-							block4.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock2, #imageblock7').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
-							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
-							block7.animateSVG(relativeX, relativeY, "block7", currentTexture);
-							stack.push(new clickArea("block7", $('#imageblock7').children().attr("xlink:href")));
-							break
-						case "block5":
-							block5.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block6":
-							block6.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block7":
-							block7.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock2, #imageblock4').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block2.animateSVG(relativeX, relativeY, "block2", currentTexture);
-							stack.push(new clickArea("block2", $('#imageblock2').children().attr("xlink:href")));
-							block4.animateSVG(relativeX, relativeY, "block4", currentTexture);
-							stack.push(new clickArea("block4", $('#imageblock4').children().attr("xlink:href")));
-							break
-						case "block8":
-							block8.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block9":
-							block9.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block10":
-							block10.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block11":
-							block11.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block12":
-							block12.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock13').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block13.animateSVG(relativeX, relativeY, "block13", currentTexture);
-							stack.push(new clickArea("block13", $('#imageblock13').children().attr("xlink:href")));
-							break
-						case "block13":
-							block13.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock12').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block12.animateSVG(relativeX, relativeY, "block12", currentTexture);
-							stack.push(new clickArea("block12", $('#imageblock12').children().attr("xlink:href")));
-							break
-						case "block14":
-							block14.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block15":
-							block15.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block16":
-							block16.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock18, #imageblock19').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);
-							stack.push(new clickArea("block18", $('#imageblock18').children().attr("xlink:href")));
-							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
-							stack.push(new clickArea("block19", $('#imageblock19').children().attr("xlink:href")));
-							break
-						case "block17":
-							block17.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block18":
-							block18.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock19, #imageblock16').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block19.animateSVG(relativeX, relativeY, "block19", currentTexture);
-							stack.push(new clickArea("block19", $('#imageblock19').children().attr("xlink:href")));
-							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
-							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
-
-							break
-						case "block19":
-							block19.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							$('#imageblock16, #imageblock18').children().attr("xlink:href", currentTexture.attr("data-src"));
-							block16.animateSVG(relativeX, relativeY, "block16", currentTexture);
-							stack.push(new clickArea("block16", $('#imageblock16').children().attr("xlink:href")));
-							block18.animateSVG(relativeX, relativeY, "block18", currentTexture);
-							stack.push(new clickArea("block18", $('#imageblock18').children().attr("xlink:href")));
-							break
-						case "block20":
-							block20.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-						case "block21":
-							block21.animateSVG(relativeX, relativeY, clickElem, currentTexture);
-							break
-					}*/
 				}
 
 			});
@@ -1045,32 +998,8 @@
 		  ));
 		  return matches ? decodeURIComponent(matches[1]) : undefined;
 		}
-		function setCookie(name, value, options) {
-		  options = options || {};
-
-		  var expires = options.expires;
-
-		  if (typeof expires == "number" && expires) {
-		    var d = new Date();
-		    d.setTime(d.getTime() + expires * 1000);
-		    expires = options.expires = d;
-		  }
-		  if (expires && expires.toUTCString) {
-		    options.expires = expires.toUTCString();
-		  }
-
-		  value = encodeURIComponent(value);
-
-		  var updatedCookie = name + "=" + value;
-
-		  for (var propName in options) {
-		    updatedCookie += "; " + propName;
-		    var propValue = options[propName];
-		    if (propValue !== true) {
-		      updatedCookie += "=" + propValue;
-		    }
-		  }
-
+		function setCookie(name, value, date) {
+		  var updatedCookie = name + "=" + value + "; expires="+ date;
 		  document.cookie = updatedCookie;
 		}
 

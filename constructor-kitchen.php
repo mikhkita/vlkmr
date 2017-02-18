@@ -178,7 +178,7 @@ isRetina = (isMobile)?false:retina();
 
 </script>
 </head>
-<body>
+<body class="not-ie">
 	<!-- <ul class="ps-lines">
 		<li class="v" style="margin-left:-581px"></li>
 		<li class="v" style="margin-left:580px"></li>
@@ -342,9 +342,9 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<!--Полы-->
 							<div style="display: none">
-								<div class="floors" data-id="1" data-src="i/FloorKitchen-1.png" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></div>
-								<div class="floors" data-id="2" data-src="i/FloorKitchen-2.png" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></div>
-								<div class="floors" data-id="3" data-src="i/FloorKitchen-3.png" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></div>
+								<div class="floors" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></div>
+								<div class="floors" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></div>
+								<div class="floors" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></div>
 							</div>
 
   
@@ -354,7 +354,7 @@ isRetina = (isMobile)?false:retina();
 									<div class="arrowNext" title="Вперёд">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
+									<div class="iconMore fancy" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -368,7 +368,7 @@ isRetina = (isMobile)?false:retina();
 								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share" href="#b-popup-share" title="Поделиться">
+								<div class="share fancy" href="#b-popup-share" title="Поделиться">
 									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>
@@ -395,17 +395,26 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-1.png">
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-1.png" data-id="1">
+				<h3>Светлый</h3>
+				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-1.png">
 					<img src="i/RoomKitchen.png">
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-2.png">
+				</div>
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-2.png" data-id="2">
+				<h3>Светлый</h3>
+				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-2.png">
 					<img src="i/RoomKitchen.png">
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-3.png">
+				</div>
+				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-3.png" data-id="3">
+				<h3>Светлый</h3>
+				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-3.png">
 					<img src="i/RoomKitchen.png">
+				</div>
 				</div>
 		</div>
 			<div class="fullSize" title="Во всю ширину">
@@ -824,8 +833,8 @@ isRetina = (isMobile)?false:retina();
 
 	</svg>
 
-	<img id="floorRoomBack" src="i/FloorKitchen-1.png" style="opacity: 0">
-	<img id="floorRoom" src="i/FloorKitchen-1.png">
+	<img id="floorRoomBack" data-id="" src="i/FloorKitchen-1.png" style="opacity: 0">
+	<img id="floorRoom" data-id="" src="i/FloorKitchen-1.png">
 	<img id="room" src="i/RoomKitchen.png">
 
 <!--Это передний слой - он отслеживает клики и меняет задний слой-->

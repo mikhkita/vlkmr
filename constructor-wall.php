@@ -178,7 +178,7 @@ isRetina = (isMobile)?false:retina();
 
 </script>
 </head>
-<body>
+<body class="not-ie">
 	<!-- <ul class="ps-lines">
 		<li class="v" style="margin-left:-581px"></li>
 		<li class="v" style="margin-left:580px"></li>
@@ -316,7 +316,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="setTextures">
 							<div class="floater">
 							<div class="content">
-								<div class="arrowPrev" title="Назад">
+								<div class="arrowPrev">
 									<span class="icon-left-arrow"></span>
 								</div>
 							</div>
@@ -346,10 +346,10 @@ isRetina = (isMobile)?false:retina();
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
-									<div class="arrowNext" title="Вперёд">
+									<div class="arrowNext">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
+									<div class="iconMore fancy" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -363,7 +363,7 @@ isRetina = (isMobile)?false:retina();
 								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share" href="#b-popup-share" title="Поделиться">
+								<div class="share fancy" href="#b-popup-share" title="Поделиться">
 									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>

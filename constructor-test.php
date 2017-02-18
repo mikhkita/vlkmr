@@ -50,9 +50,6 @@
 
 
 <style type="text/css">
-	#svg-container{
-		width: 1000px;
-	}
 
 	.hide{
 		display: none;
@@ -79,62 +76,184 @@
 	}
 
 	.contentImage{
-	-webkit-transition: all 1000ms ease-out;
-	   -moz-transition: all 1000ms ease-out;
-	    -ms-transition: all 1000ms ease-out;
-	   	 -o-transition: all 1000ms ease-out;
-			transition: all 1000ms ease-out;
+	-webkit-transition: all 500ms ease-out;
+	   -moz-transition: all 500ms ease-out;
+	    -ms-transition: all 500ms ease-out;
+	   	 -o-transition: all 500ms ease-out;
+			transition: all 500ms ease-out;
 			opacity: 0;
 	}
 
-	#testBlock{
-		width: 500px;
-		height: 200px;
+	#circularG{
+		position:relative;
+		width:48px;
+		height:48px;
+		margin: auto;
 	}
 
-	.cssload-container {
-	width: 100%;
-	height: 49px;
-	text-align: center;
-}
+	.circularG{
+		position:absolute;
+		background-color:rgb(77,49,49);
+		width:11px;
+		height:11px;
+		border-radius:7px;
+			-o-border-radius:7px;
+			-ms-border-radius:7px;
+			-webkit-border-radius:7px;
+			-moz-border-radius:7px;
+		animation-name:bounce_circularG;
+			-o-animation-name:bounce_circularG;
+			-ms-animation-name:bounce_circularG;
+			-webkit-animation-name:bounce_circularG;
+			-moz-animation-name:bounce_circularG;
+		animation-duration:0.818s;
+			-o-animation-duration:0.818s;
+			-ms-animation-duration:0.818s;
+			-webkit-animation-duration:0.818s;
+			-moz-animation-duration:0.818s;
+		animation-iteration-count:infinite;
+			-o-animation-iteration-count:infinite;
+			-ms-animation-iteration-count:infinite;
+			-webkit-animation-iteration-count:infinite;
+			-moz-animation-iteration-count:infinite;
+		animation-direction:normal;
+			-o-animation-direction:normal;
+			-ms-animation-direction:normal;
+			-webkit-animation-direction:normal;
+			-moz-animation-direction:normal;
+	}
 
-.cssload-zenith {
-	width: 49px;
-	height: 49px;
-	margin: 0 auto;
-	border-radius: 50%;
-	border-top-color: transparent;
-	border-left-color: transparent;
-	border-right-color: transparent;
-	box-shadow: 3px 3px 1px rgb(0,0,0);
-	animation: cssload-spin 690ms infinite linear;
-		-o-animation: cssload-spin 690ms infinite linear;
-		-ms-animation: cssload-spin 690ms infinite linear;
-		-webkit-animation: cssload-spin 690ms infinite linear;
-		-moz-animation: cssload-spin 690ms infinite linear;
-}
+	#circularG_1{
+		left:0;
+		top:19px;
+		animation-delay:0.308s;
+			-o-animation-delay:0.308s;
+			-ms-animation-delay:0.308s;
+			-webkit-animation-delay:0.308s;
+			-moz-animation-delay:0.308s;
+	}
+
+	#circularG_2{
+		left:5px;
+		top:5px;
+		animation-delay:0.404s;
+			-o-animation-delay:0.404s;
+			-ms-animation-delay:0.404s;
+			-webkit-animation-delay:0.404s;
+			-moz-animation-delay:0.404s;
+	}
+
+	#circularG_3{
+		top:0;
+		left:19px;
+		animation-delay:0.51s;
+			-o-animation-delay:0.51s;
+			-ms-animation-delay:0.51s;
+			-webkit-animation-delay:0.51s;
+			-moz-animation-delay:0.51s;
+	}
+
+	#circularG_4{
+		right:5px;
+		top:5px;
+		animation-delay:0.616s;
+			-o-animation-delay:0.616s;
+			-ms-animation-delay:0.616s;
+			-webkit-animation-delay:0.616s;
+			-moz-animation-delay:0.616s;
+	}
+
+	#circularG_5{
+		right:0;
+		top:19px;
+		animation-delay:0.712s;
+			-o-animation-delay:0.712s;
+			-ms-animation-delay:0.712s;
+			-webkit-animation-delay:0.712s;
+			-moz-animation-delay:0.712s;
+	}
+
+	#circularG_6{
+		right:5px;
+		bottom:5px;
+		animation-delay:0.818s;
+			-o-animation-delay:0.818s;
+			-ms-animation-delay:0.818s;
+			-webkit-animation-delay:0.818s;
+			-moz-animation-delay:0.818s;
+	}
+
+	#circularG_7{
+		left:19px;
+		bottom:0;
+		animation-delay:0.914s;
+			-o-animation-delay:0.914s;
+			-ms-animation-delay:0.914s;
+			-webkit-animation-delay:0.914s;
+			-moz-animation-delay:0.914s;
+	}
+
+	#circularG_8{
+		left:5px;
+		bottom:5px;
+		animation-delay:1.02s;
+			-o-animation-delay:1.02s;
+			-ms-animation-delay:1.02s;
+			-webkit-animation-delay:1.02s;
+			-moz-animation-delay:1.02s;
+	}
 
 
 
-@keyframes cssload-spin {
-	100%{ transform: rotate(360deg); transform: rotate(360deg); }
-}
+	@keyframes bounce_circularG{
+		0%{
+			transform:scale(1);
+		}
 
-@-o-keyframes cssload-spin {
-	100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
-}
+		100%{
+			transform:scale(.3);
+		}
+	}
 
-@-ms-keyframes cssload-spin {
-	100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
-}
+	@-o-keyframes bounce_circularG{
+		0%{
+			-o-transform:scale(1);
+		}
 
-@-webkit-keyframes cssload-spin {
-	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
-}
+		100%{
+			-o-transform:scale(.3);
+		}
+	}
 
-@-moz-keyframes cssload-spin {
-	100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
-}
+	@-ms-keyframes bounce_circularG{
+		0%{
+			-ms-transform:scale(1);
+		}
+
+		100%{
+			-ms-transform:scale(.3);
+		}
+	}
+
+	@-webkit-keyframes bounce_circularG{
+		0%{
+			-webkit-transform:scale(1);
+		}
+
+		100%{
+			-webkit-transform:scale(.3);
+		}
+	}
+
+	@-moz-keyframes bounce_circularG{
+		0%{
+			-moz-transform:scale(1);
+		}
+
+		100%{
+			-moz-transform:scale(.3);
+		}
+	}
 </style>
 
 </head>
@@ -158,7 +277,16 @@
 		<li id="bx_3218110189_258" class="b-workshop heightPreload" data-hash="1,1,1,3,3,3,3,3,3">
 			<div class="preload" id="preloader1">
 				<div class="cssload-container">
-					<div class="cssload-zenith"></div>
+					<div id="circularG">
+						<div id="circularG_1" class="circularG"></div>
+						<div id="circularG_2" class="circularG"></div>
+						<div id="circularG_3" class="circularG"></div>
+						<div id="circularG_4" class="circularG"></div>
+						<div id="circularG_5" class="circularG"></div>
+						<div id="circularG_6" class="circularG"></div>
+						<div id="circularG_7" class="circularG"></div>
+						<div id="circularG_8" class="circularG"></div>
+					</div>
 					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
 				</div>
 			</div>
@@ -230,7 +358,16 @@
 		<li id="bx_3218110189_260" class="b-workshop heightPreload" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2">
 			<div class="preload">
 				<div class="cssload-container">
-					<div class="cssload-zenith"></div>
+					<div id="circularG">
+						<div id="circularG_1" class="circularG"></div>
+						<div id="circularG_2" class="circularG"></div>
+						<div id="circularG_3" class="circularG"></div>
+						<div id="circularG_4" class="circularG"></div>
+						<div id="circularG_5" class="circularG"></div>
+						<div id="circularG_6" class="circularG"></div>
+						<div id="circularG_7" class="circularG"></div>
+						<div id="circularG_8" class="circularG"></div>
+					</div>
 					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
 				</div>
 
@@ -371,7 +508,16 @@
 	<li id="bx_3218110189_259" class="b-workshop heightPreload" data-hash="1,1,1,1,2,2,2,2">
 		<div class="preload">
 				<div class="cssload-container">
-					<div class="cssload-zenith"></div>
+					<div id="circularG">
+						<div id="circularG_1" class="circularG"></div>
+						<div id="circularG_2" class="circularG"></div>
+						<div id="circularG_3" class="circularG"></div>
+						<div id="circularG_4" class="circularG"></div>
+						<div id="circularG_5" class="circularG"></div>
+						<div id="circularG_6" class="circularG"></div>
+						<div id="circularG_7" class="circularG"></div>
+						<div id="circularG_8" class="circularG"></div>
+					</div>
 					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
 				</div>
 
@@ -436,7 +582,16 @@
 	<li id="bx_3218110189_261" class="b-workshop heightPreload" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,3,3,3,3,3,3,3,3">
 			<div class="preload">
 				<div class="cssload-container">
-					<div class="cssload-zenith"></div>
+					<div id="circularG">
+						<div id="circularG_1" class="circularG"></div>
+						<div id="circularG_2" class="circularG"></div>
+						<div id="circularG_3" class="circularG"></div>
+						<div id="circularG_4" class="circularG"></div>
+						<div id="circularG_5" class="circularG"></div>
+						<div id="circularG_6" class="circularG"></div>
+						<div id="circularG_7" class="circularG"></div>
+						<div id="circularG_8" class="circularG"></div>
+					</div>
 					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
 				</div>
 
@@ -612,7 +767,16 @@
 		<li id="bx_3218110189_262" class="b-workshop heightPreload" data-hash="3|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2">
 			<div class="preload">
 				<div class="cssload-container">
-					<div class="cssload-zenith"></div>
+					<div id="circularG">
+						<div id="circularG_1" class="circularG"></div>
+						<div id="circularG_2" class="circularG"></div>
+						<div id="circularG_3" class="circularG"></div>
+						<div id="circularG_4" class="circularG"></div>
+						<div id="circularG_5" class="circularG"></div>
+						<div id="circularG_6" class="circularG"></div>
+						<div id="circularG_7" class="circularG"></div>
+						<div id="circularG_8" class="circularG"></div>
+					</div>
 					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
 				</div>
 
@@ -767,47 +931,6 @@
 	    isIE = true;	
 	}
 
-  	/*var cl1 = new CanvasLoader('preloader1');
-	cl1.setColor('#362b2b'); // default is '#000000'
-	cl1.setDiameter(57); // default is 40
-	cl1.setDensity(67); // default is 40
-	cl1.setRange(1.1); // default is 1.3
-	cl1.setSpeed(3); // default is 2
-	cl1.setFPS(30); // default is 24
-	cl1.show(); // Hidden by default
-	var cl2 = new CanvasLoader('preloader2');
-	cl2.setColor('#362b2b'); // default is '#000000'
-	cl2.setDiameter(57); // default is 40
-	cl2.setDensity(67); // default is 40
-	cl2.setRange(1.1); // default is 1.3
-	cl2.setSpeed(3); // default is 2
-	cl2.setFPS(30); // default is 24
-	cl2.show(); // Hidden by default
-	var cl3 = new CanvasLoader('preloader3');
-	cl3.setColor('#362b2b'); // default is '#000000'
-	cl3.setDiameter(57); // default is 40
-	cl3.setDensity(67); // default is 40
-	cl3.setRange(1.1); // default is 1.3
-	cl3.setSpeed(3); // default is 2
-	cl3.setFPS(30); // default is 24
-	cl3.show(); // Hidden by default
-	var cl4 = new CanvasLoader('preloader4');
-	cl4.setColor('#362b2b'); // default is '#000000'
-	cl4.setDiameter(57); // default is 40
-	cl4.setDensity(67); // default is 40
-	cl4.setRange(1.1); // default is 1.3
-	cl4.setSpeed(3); // default is 2
-	cl4.setFPS(30); // default is 24
-	cl4.show(); // Hidden by default
-	var cl5 = new CanvasLoader('preloader5');
-	cl5.setColor('#362b2b'); // default is '#000000'
-	cl5.setDiameter(57); // default is 40
-	cl5.setDensity(67); // default is 40
-	cl5.setRange(1.1); // default is 1.3
-	cl5.setSpeed(3); // default is 2
-	cl5.setFPS(30); // default is 24
-	cl5.show(); // Hidden by default*/
-
 	var isRetina = false;
 	var isMobile = false;
 
@@ -862,7 +985,7 @@
     });
      function loadContent(content){
 				if( isIE ){
-	                content.fadeIn(1000);
+	                content.fadeIn(500);
 	            }else{
 	            	content.addClass("showContent");
 	            }
