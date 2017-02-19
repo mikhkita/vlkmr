@@ -36,7 +36,6 @@
 		        floorsID.push($(this).attr("data-id"));
 		    });
 			 $('.floorIMG').each(function(){
-			 	alert();
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
 		    });
