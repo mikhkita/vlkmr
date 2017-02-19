@@ -44,7 +44,7 @@ $(document).ready(function(){
     	imgRoom.src = th.find(".roomImage").attr("xlink:href");
     	th.find("pattern").each(function(){
     		var img = new Image();
-    		img.src = th.find("pattern image").attr("xlink:href");
+    		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
 	    		if(count == +th.attr("data-loadImages")){
