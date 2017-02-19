@@ -179,7 +179,7 @@ isRetina = (isMobile)?false:retina();
 
 </script>
 </head>
-<body>
+<body class="not-ie">
 	<!-- <ul class="ps-lines">
 		<li class="v" style="margin-left:-581px"></li>
 		<li class="v" style="margin-left:580px"></li>
@@ -317,7 +317,7 @@ isRetina = (isMobile)?false:retina();
 						<div class="setTextures">
 							<div class="floater">
 							<div class="content">
-								<div class="arrowPrev" title="Назад">
+								<div class="arrowPrev">
 									<span class="icon-left-arrow"></span>
 								</div>
 							</div>
@@ -352,10 +352,10 @@ isRetina = (isMobile)?false:retina();
 							<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
-									<div class="arrowNext" title="Вперёд">
+									<div class="arrowNext">
 										<span class="icon-right-arrow"></span>
 									</div>
-									<div class="iconMore" href="#b-popup-decors" title="Все декоры">
+									<div class="iconMore fancy" href="#b-popup-decors" title="Все декоры">
 										<span class="icon-more" href="#b-popup-decors"></span>
 									</div>
 								</div>
@@ -369,7 +369,7 @@ isRetina = (isMobile)?false:retina();
 								<div class="layers" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share" href="#b-popup-share" title="Поделиться">
+								<div class="share fancy" href="#b-popup-share" title="Поделиться">
 									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>
@@ -396,7 +396,10 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-						<div class="floorIMG" data-src="i/Floor-1.jpg">
+		
+						<div class="floorIMG" data-src="i/Floor-1.jpg" data-id="1">
+						<h3>Светлый</h3>
+				<div class="b-floor-cont">
 							<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern1" width="100%" height="100%">
@@ -407,8 +410,11 @@ isRetina = (isMobile)?false:retina();
 								<polygon fill="url(#floorPattern1)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
+							</div>
 						</div>
-						<div class="floorIMG" data-src="i/Floor-2.jpg">
+						<div class="floorIMG" data-src="i/Floor-2.jpg" data-id="2">
+						<h3>Светлый</h3>
+				<div class="b-floor-cont">
 							<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern2" width="100%" height="100%">
@@ -419,8 +425,11 @@ isRetina = (isMobile)?false:retina();
 								<polygon fill="url(#floorPattern2)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
+							</div>
 						</div>
-						<div class="floorIMG" data-src="i/Floor-3.jpg">
+						<div class="floorIMG" data-src="i/Floor-3.jpg" data-id="3">
+						<h3>Светлый</h3>
+				<div class="b-floor-cont">
 							<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
 							<defs>
 								<pattern id="floorPattern3" width="100%" height="100%">
@@ -431,6 +440,7 @@ isRetina = (isMobile)?false:retina();
 								<polygon fill="url(#floorPattern3)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 							</svg>
 							<img src="i/RoomChild.png">
+							</div>
 						</div>
 					</div>
 			<div class="fullSize" title="Во всю ширину">
