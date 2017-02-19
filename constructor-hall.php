@@ -394,7 +394,7 @@ isRetina = (isMobile)?false:retina();
 		</div>
 		
 		<div class="panelFloor">
-						<div class="floorIMG" data-src="i/Floor-1.jpg" data-id="1">
+						<div class="floorIMG" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg">
 							<h3>Светлый</h3>
 							<div class="b-floor-cont">
 								<svg id="floor1" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
@@ -409,7 +409,7 @@ isRetina = (isMobile)?false:retina();
 								<img src="i/RoomHall.png">
 							</div>
 						</div>
-						<div class="floorIMG" data-src="i/Floor-2.jpg" data-id="2">
+						<div class="floorIMG" data-id="2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2.jpg">
 							<h3>Светлый</h3>
 							<div class="b-floor-cont">
 								<svg id="floor2" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
@@ -424,7 +424,7 @@ isRetina = (isMobile)?false:retina();
 								<img src="i/RoomHall.png">
 							</div>
 						</div>
-						<div class="floorIMG" data-src="i/Floor-3.jpg" data-id="3">
+						<div class="floorIMG" data-id="3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3.jpg">
 							<h3>Светлый</h3>
 							<div class="b-floor-cont">
 								<svg id="floor3" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
