@@ -341,9 +341,9 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<!--Полы-->
 							<div style="display: none">
-								<div class="floors" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></div>
-								<div class="floors" data-id="2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></div>
-								<div class="floors" data-id="3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></div>
+								<div class="floors" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg"></div>
+								<div class="floors" data-id="2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2.jpg"></div>
+								<div class="floors" data-id="3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3.jpg"></div>
 							</div>
 
 							<div class="setTexturesRight">
