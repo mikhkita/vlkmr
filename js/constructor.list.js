@@ -1,4 +1,5 @@
-if( isIE ){
+$(document).ready(function(){
+	if( isIE ){
     	$('.contentImage').addClass("hide showContent");
     	$('.cssload-zenith').addClass("hide");
     }else{
@@ -46,26 +47,24 @@ if( isIE ){
     		img.src = th.find("pattern image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		if(count === +th.attr("data-loadImages")){
+	    		if(count == +th.attr("data-loadImages")){
 	    			console.log("COUNT");
-	    			imgRoom.onload = function(){
-		    			th.find(".preload").hide();
-		        		th.removeClass("heightPreload");
-		        		loadContent(th.find(".contentImage"));
-		        	}
+	    			th.find(".preload").hide();
+	        		th.removeClass("heightPreload");
+	        		loadContent(th.find(".contentImage"));
 	    		}
-	    		console.log("this", th, "----", count);
+	    		console.log("this", th, "----", count, th.attr("data-loadImages"));
 	    	}
     		//console.log("this", th, "----", count);
     	});
     	imgRoom.onload = function(){
-    		if(count === +th.attr("data-loadImages")){
+			if(count == +th.attr("data-loadImages")){
     			console.log("IMAGE");
 		    	th.find(".preload").hide();
 		        th.removeClass("heightPreload");
 		        loadContent(th.find(".contentImage"));
-		       }
-		     }
+	       	}
+	    }
 
         /*img.src = th.find(".roomImage").attr("xlink:href");
         img.onload = function(){
@@ -82,3 +81,4 @@ if( isIE ){
 	            }
 	            
 			}
+});
