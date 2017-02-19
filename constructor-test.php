@@ -996,7 +996,9 @@
     	//th.fadeOut();
     	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
     	var img = new Image();
-    	th.find(".roomImage").attr("xlink:href");
+    	th.find(".roomImage").each(function(){
+
+    	});
         /*img.src = th.find(".roomImage").attr("xlink:href");
         img.onload = function(){
         	th.find(".preload").hide();
