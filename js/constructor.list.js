@@ -1,3 +1,16 @@
+var isIE = false;
+
+		if (!('querySelector' in document)  //скорее всего ie 9+
+		     || !('localStorage' in window)  //ie 8+
+		     || !('addEventListener' in window)  //ie 8 + (возможно)
+		    || !('matchMedia' in window)) {//ie 10+
+
+		    isIE = true;	
+		}
+
+		var isRetina = false;
+		var isMobile = false;
+
 if( isIE ){
     	$('.contentImage').addClass("hide showContent");
     	$('.cssload-zenith').addClass("hide");
@@ -32,6 +45,8 @@ if( isIE ){
 		        i++;
 		    }
 	    });
+	    var src = svg.find(".roomImage").attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+		svg.find(".roomImage").attr("xlink:href", src);
 	}
 
     $('.b-workshop').each(function(){
@@ -41,12 +56,13 @@ if( isIE ){
     	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
     	var imgRoom = new Image();
     	imgRoom.src = th.find(".roomImage").attr("xlink:href");
+    	var loadImages = th.find("pattern").length;
     	th.find("pattern").each(function(){
     		var img = new Image();
     		img.src = th.find("pattern image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		if(count === +th.attr("data-loadImages")){
+	    		if(count === loadImages){
 	    			console.log("COUNT");
 	    			imgRoom.onload = function(){
 		    			th.find(".preload").hide();
@@ -54,12 +70,12 @@ if( isIE ){
 		        		loadContent(th.find(".contentImage"));
 		        	}
 	    		}
-	    		console.log("this", th, "----", count);
+	    		//console.log("this", th, "----", count);
 	    	}
     		//console.log("this", th, "----", count);
     	});
     	imgRoom.onload = function(){
-    		if(count === +th.attr("data-loadImages")){
+    		if(count === loadImages){
     			console.log("IMAGE");
 		    	th.find(".preload").hide();
 		        th.removeClass("heightPreload");
