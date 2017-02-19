@@ -299,62 +299,61 @@
 			</div>
 
 			<div class="contentImage">
-
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
-		<defs>
-			<pattern id="imageblock1Back1" width="100%" height="100%">
-			    <image xlink:href="" rand-min-x="-100" rand-max-x="0" data-rel="1" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)">
-			    </image>
-			</pattern>
-			<pattern id="imageblock2Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-17" y="35" width="200" height="320" transform="scale(-1,1) rotate(100, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock3Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock4Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-130" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock5Back1" width="100%" height="100%">
-		       <image xlink:href="" rand-min-x="-150" rand-max-x="-20" data-rel="0" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock6Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-140" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock7Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-90" rand-max-x="0" data-rel="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock8Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-100" rand-max-x="-30" data-rel="0" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock9Back1" width="100%" height="100%">
-		        <image xlink:href="" rand-min-x="-65" rand-max-x="0" data-rel="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
-		     	</image>
-		    </pattern>
-		 </defs>
+					<defs>
+						<pattern id="imageblock1Back1" width="100%" height="100%">
+						    <image xlink:href="" rand-min-x="-100" rand-max-x="0" data-rel="1" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)">
+						    </image>
+						</pattern>
+						<pattern id="imageblock2Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-17" y="35" width="200" height="320" transform="scale(-1,1) rotate(100, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock3Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock4Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-130" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock5Back1" width="100%" height="100%">
+					       <image xlink:href="" rand-min-x="-150" rand-max-x="-20" data-rel="0" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock6Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-140" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock7Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-90" rand-max-x="0" data-rel="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock8Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-100" rand-max-x="-30" data-rel="0" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)">
+					     	</image>
+					    </pattern>
+					    <pattern id="imageblock9Back1" width="100%" height="100%">
+					        <image xlink:href="" rand-min-x="-65" rand-max-x="0" data-rel="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
+					     	</image>
+					    </pattern>
+					 </defs>
 
-		<polygon id="block1Back" fill="url(#imageblock1Back1)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"></polygon>
-		<polygon id="block2Back" fill="url(#imageblock2Back1)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"></polygon>
-		<polygon id="block3Back" fill="url(#imageblock3Back1)" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"></polygon>
+					<polygon id="block1Back" fill="url(#imageblock1Back1)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"></polygon>
+					<polygon id="block2Back" fill="url(#imageblock2Back1)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"></polygon>
+					<polygon id="block3Back" fill="url(#imageblock3Back1)" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"></polygon>
 
-		<polygon id="block4Back" fill="url(#imageblock4Back1)" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "></polygon>
-		<polygon id="block5Back" fill="url(#imageblock5Back1)" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "></polygon>
-		<polygon id="block6Back" fill="url(#imageblock6Back1)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "></polygon>
+					<polygon id="block4Back" fill="url(#imageblock4Back1)" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "></polygon>
+					<polygon id="block5Back" fill="url(#imageblock5Back1)" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "></polygon>
+					<polygon id="block6Back" fill="url(#imageblock6Back1)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "></polygon>
 
-		<polygon id="block7Back" fill="url(#imageblock7Back1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "></polygon>
-		<path id="block8Back" fill="url(#imageblock8Back1)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"></path>
-		<polygon id="block9Back" fill="url(#imageblock9Back1)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "></polygon>
+					<polygon id="block7Back" fill="url(#imageblock7Back1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "></polygon>
+					<path id="block8Back" fill="url(#imageblock8Back1)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"></path>
+					<polygon id="block9Back" fill="url(#imageblock9Back1)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "></polygon>
 
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="i/Room2.png" x="0" y="0" width="720" height="540"></image>
-		</svg>
-		</div>
+					<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="i/Room2.png" x="0" y="0" width="720" height="540"></image>
+				</svg>
+			</div>
 		</div>
 		</a>	
 			<div class="b-workshop-title"><h3>Гостиная</h3></div>
