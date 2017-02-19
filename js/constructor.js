@@ -7,7 +7,7 @@
 		var progressbarValue = 0.3;
 		var progressbarTextures = 0;
 		var decorsID = [];
-		var floorsID = []
+		var floorsID = [];
 
 		$(document).ready(function(){
 			var height = 100;
@@ -1012,4 +1012,7 @@
 		    expires: -1
 		  })
 		}
+
+
+
 });

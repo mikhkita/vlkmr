@@ -46,220 +46,25 @@
 	<script src="//yastatic.net/share2/share.js"></script>
 	<script type="text/javascript" src="js/jquery.history.js"></script>
 	<script type="text/javascript" src="js/heartcode-canvasloader-min.js"></script>
+	<script type="text/javascript" src="js/constructor.list.js"></script>
 
+	<script type="text/javascript">
 
+		var isIE = false;
 
-<style type="text/css">
+		if (!('querySelector' in document)  //скорее всего ie 9+
+		     || !('localStorage' in window)  //ie 8+
+		     || !('addEventListener' in window)  //ie 8 + (возможно)
+		    || !('matchMedia' in window)) {//ie 10+
 
-	.hide{
-		display: none;
-	}
-
-	.heightPreload{
-		height: 230px;
-	}
-
-	.b-workshop-list li{
-		position: relative;
-	}
-
-	.preload{
-		position: absolute;
-		top: 90px;
-		left: 0;
-		height: 230px;
-		width: 364px;
-	}
-
-	.b-workshop-svg{
-		background-color: #f4f4f5;
-	}
-
-	.contentImage.showContent{
-		opacity: 1;
-	}
-
-	.contentImage{
-	-webkit-transition: all 500ms ease-out;
-	   -moz-transition: all 500ms ease-out;
-	    -ms-transition: all 500ms ease-out;
-	   	 -o-transition: all 500ms ease-out;
-			transition: all 500ms ease-out;
-			opacity: 0;
-	}
-
-	#circularG{
-		position:relative;
-		width:48px;
-		height:48px;
-		margin: auto;
-	}
-
-	.circularG{
-		position:absolute;
-		background-color:rgb(77,49,49);
-		width:11px;
-		height:11px;
-		border-radius:7px;
-			-o-border-radius:7px;
-			-ms-border-radius:7px;
-			-webkit-border-radius:7px;
-			-moz-border-radius:7px;
-		animation-name:bounce_circularG;
-			-o-animation-name:bounce_circularG;
-			-ms-animation-name:bounce_circularG;
-			-webkit-animation-name:bounce_circularG;
-			-moz-animation-name:bounce_circularG;
-		animation-duration:0.818s;
-			-o-animation-duration:0.818s;
-			-ms-animation-duration:0.818s;
-			-webkit-animation-duration:0.818s;
-			-moz-animation-duration:0.818s;
-		animation-iteration-count:infinite;
-			-o-animation-iteration-count:infinite;
-			-ms-animation-iteration-count:infinite;
-			-webkit-animation-iteration-count:infinite;
-			-moz-animation-iteration-count:infinite;
-		animation-direction:normal;
-			-o-animation-direction:normal;
-			-ms-animation-direction:normal;
-			-webkit-animation-direction:normal;
-			-moz-animation-direction:normal;
-	}
-
-	#circularG_1{
-		left:0;
-		top:19px;
-		animation-delay:0.308s;
-			-o-animation-delay:0.308s;
-			-ms-animation-delay:0.308s;
-			-webkit-animation-delay:0.308s;
-			-moz-animation-delay:0.308s;
-	}
-
-	#circularG_2{
-		left:5px;
-		top:5px;
-		animation-delay:0.404s;
-			-o-animation-delay:0.404s;
-			-ms-animation-delay:0.404s;
-			-webkit-animation-delay:0.404s;
-			-moz-animation-delay:0.404s;
-	}
-
-	#circularG_3{
-		top:0;
-		left:19px;
-		animation-delay:0.51s;
-			-o-animation-delay:0.51s;
-			-ms-animation-delay:0.51s;
-			-webkit-animation-delay:0.51s;
-			-moz-animation-delay:0.51s;
-	}
-
-	#circularG_4{
-		right:5px;
-		top:5px;
-		animation-delay:0.616s;
-			-o-animation-delay:0.616s;
-			-ms-animation-delay:0.616s;
-			-webkit-animation-delay:0.616s;
-			-moz-animation-delay:0.616s;
-	}
-
-	#circularG_5{
-		right:0;
-		top:19px;
-		animation-delay:0.712s;
-			-o-animation-delay:0.712s;
-			-ms-animation-delay:0.712s;
-			-webkit-animation-delay:0.712s;
-			-moz-animation-delay:0.712s;
-	}
-
-	#circularG_6{
-		right:5px;
-		bottom:5px;
-		animation-delay:0.818s;
-			-o-animation-delay:0.818s;
-			-ms-animation-delay:0.818s;
-			-webkit-animation-delay:0.818s;
-			-moz-animation-delay:0.818s;
-	}
-
-	#circularG_7{
-		left:19px;
-		bottom:0;
-		animation-delay:0.914s;
-			-o-animation-delay:0.914s;
-			-ms-animation-delay:0.914s;
-			-webkit-animation-delay:0.914s;
-			-moz-animation-delay:0.914s;
-	}
-
-	#circularG_8{
-		left:5px;
-		bottom:5px;
-		animation-delay:1.02s;
-			-o-animation-delay:1.02s;
-			-ms-animation-delay:1.02s;
-			-webkit-animation-delay:1.02s;
-			-moz-animation-delay:1.02s;
-	}
-
-
-
-	@keyframes bounce_circularG{
-		0%{
-			transform:scale(1);
+		    isIE = true;	
 		}
 
-		100%{
-			transform:scale(.3);
-		}
-	}
+		var isRetina = false;
+		var isMobile = false;
 
-	@-o-keyframes bounce_circularG{
-		0%{
-			-o-transform:scale(1);
-		}
-
-		100%{
-			-o-transform:scale(.3);
-		}
-	}
-
-	@-ms-keyframes bounce_circularG{
-		0%{
-			-ms-transform:scale(1);
-		}
-
-		100%{
-			-ms-transform:scale(.3);
-		}
-	}
-
-	@-webkit-keyframes bounce_circularG{
-		0%{
-			-webkit-transform:scale(1);
-		}
-
-		100%{
-			-webkit-transform:scale(.3);
-		}
-	}
-
-	@-moz-keyframes bounce_circularG{
-		0%{
-			-moz-transform:scale(1);
-		}
-
-		100%{
-			-moz-transform:scale(.3);
-		}
-	}
-</style>
-
+		
+	</script>
 </head>
 <body>
 	<div class="listTextures" style="display: none">
@@ -278,86 +83,72 @@
 	</ul>
 	</div>
 	<ul class="b-workshop-list clearfix">
-		<li id="bx_3218110189_258" class="b-workshop" data-hash="1,1,1,3,3,3,3,3,3" data-loadImages="9" data-loadCurrent="">
-			
+		<li id="bx_3218110189_258" class="b-workshop" data-hash="1,1,1,3,3,3,3,3,3" data-loadImages="9" data-loadCurrent="">	
 			<a href="/workshop/gostinaya/">
-			<div class="b-workshop-svg gostinaya">
-			<div class="preload">
-				<div class="cssload-container">
-					<div id="circularG">
-						<div id="circularG_1" class="circularG"></div>
-						<div id="circularG_2" class="circularG"></div>
-						<div id="circularG_3" class="circularG"></div>
-						<div id="circularG_4" class="circularG"></div>
-						<div id="circularG_5" class="circularG"></div>
-						<div id="circularG_6" class="circularG"></div>
-						<div id="circularG_7" class="circularG"></div>
-						<div id="circularG_8" class="circularG"></div>
+				<div class="b-workshop-svg gostinaya">
+					<div class="preload">
+						<div class="cssload-container">
+							<div id="circularG">
+								<div id="circularG_1" class="circularG"></div>
+								<div id="circularG_2" class="circularG"></div>
+								<div id="circularG_3" class="circularG"></div>
+								<div id="circularG_4" class="circularG"></div>
+								<div id="circularG_5" class="circularG"></div>
+								<div id="circularG_6" class="circularG"></div>
+								<div id="circularG_7" class="circularG"></div>
+								<div id="circularG_8" class="circularG"></div>
+							</div>
+							<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+						</div>
 					</div>
-					<img class="IEloader" src="i/preloader.gif" width="50px" height="50px">
+
+					<div class="contentImage">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+							<defs>
+								<pattern id="imageblock1Back1" width="100%" height="100%">
+								    <image xlink:href="" rand-min-x="-100" rand-max-x="0" data-rel="1" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)"></image>
+								</pattern>
+								<pattern id="imageblock2Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-17" y="35" width="200" height="320" transform="scale(-1,1) rotate(100, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock3Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock4Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-130" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock5Back1" width="100%" height="100%">
+							       <image xlink:href="" rand-min-x="-150" rand-max-x="-20" data-rel="0" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock6Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-140" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock7Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-90" rand-max-x="0" data-rel="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock8Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-100" rand-max-x="-30" data-rel="0" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)"></image>
+							    </pattern>
+							    <pattern id="imageblock9Back1" width="100%" height="100%">
+							        <image xlink:href="" rand-min-x="-65" rand-max-x="0" data-rel="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)"></image>
+							    </pattern>
+							</defs>
+							<polygon id="block1Back" fill="url(#imageblock1Back1)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"></polygon>
+							<polygon id="block2Back" fill="url(#imageblock2Back1)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"></polygon>
+							<polygon id="block3Back" fill="url(#imageblock3Back1)" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"></polygon>
+							<polygon id="block4Back" fill="url(#imageblock4Back1)" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "></polygon>
+							<polygon id="block5Back" fill="url(#imageblock5Back1)" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "></polygon>
+							<polygon id="block6Back" fill="url(#imageblock6Back1)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "></polygon>
+							<polygon id="block7Back" fill="url(#imageblock7Back1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "></polygon>
+							<path id="block8Back" fill="url(#imageblock8Back1)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"></path>
+							<polygon id="block9Back" fill="url(#imageblock9Back1)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "></polygon>
+							<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="i/Room2.png" x="0" y="0" width="720" height="540"></image>
+						</svg>
+					</div>
 				</div>
-			</div>
-
-			<div class="contentImage">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
-					<defs>
-						<pattern id="imageblock1Back1" width="100%" height="100%">
-						    <image xlink:href="" rand-min-x="-100" rand-max-x="0" data-rel="1" rand-min-y="-150" rand-max-y="30" xmlns:xlink="http://www.w3.org/1999/xlink" x="-32" y="-50" width="200" height="320" transform="rotate(80, 75, 75)">
-						    </image>
-						</pattern>
-						<pattern id="imageblock2Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-30" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-17" y="35" width="200" height="320" transform="scale(-1,1) rotate(100, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock3Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-70" rand-max-x="0" data-rel="1" rand-min-y="-120" rand-max-y="-25" xmlns:xlink="http://www.w3.org/1999/xlink" x="-5" y="-30" width="200" height="320" transform="rotate(80, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock4Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-130" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-7" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock5Back1" width="100%" height="100%">
-					       <image xlink:href="" rand-min-x="-150" rand-max-x="-20" data-rel="0" rand-min-y="-40" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" x="-15" y="0" width="200" height="320" transform="scale(-1,1) rotate(86, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock6Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-140" rand-max-x="0" data-rel="0" rand-min-y="-130" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" x="-3" y="-100" width="200" height="320" transform="rotate(94, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock7Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-90" rand-max-x="0" data-rel="0" rand-min-y="-100" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" x="-10" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock8Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-100" rand-max-x="-30" data-rel="0" rand-min-y="-40" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" x="-26.5" y="0" width="200" height="320" transform="scale(-1,1) rotate(82, 75, 75)">
-					     	</image>
-					    </pattern>
-					    <pattern id="imageblock9Back1" width="100%" height="100%">
-					        <image xlink:href="" rand-min-x="-65" rand-max-x="0" data-rel="0" rand-min-y="-140" rand-max-y="-20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="-100" width="200" height="320" transform="rotate(98, 75, 75)">
-					     	</image>
-					    </pattern>
-					 </defs>
-
-					<polygon id="block1Back" fill="url(#imageblock1Back1)" points="267,182.6 352.7,172.9 352,92.4 267,113.9"></polygon>
-					<polygon id="block2Back" fill="url(#imageblock2Back1)" points="352.5,170.9 464,156.9 463,65.4 352.5,93.5"></polygon>
-					<polygon id="block3Back" fill="url(#imageblock3Back1)" points="615.4,30.6 612.8,30.6 612.8,30.6 463.4,66.4 463.4,155.6 613.4,135.6 613.4,135.6 615.4,135.6"></polygon>
-
-					<polygon id="block4Back" fill="url(#imageblock4Back1)" points="348,300.9 347.8,300.9 347.7,300.9 347.7,301.1 263.7,297.5 263.7,329.2 347.7,337 347.7,337.3   348.7,337.3 348.7,301.4 "></polygon>
-					<polygon id="block5Back" fill="url(#imageblock5Back1)" points="458.2,305.8 348.7,300.8 348.5,301 348.5,337.2 458.2,347.7 459.9,347.5 459.9,305.8 "></polygon>
-					<polygon id="block6Back" fill="url(#imageblock6Back1)" points="611.3,312.7 609.1,312.7 459.9,306.1 459.9,346.7 460.4,347.2 609.1,361.1 610.8,361.1 611.5,360.6   611.5,313 "></polygon>
-
-					<polygon id="block7Back" fill="url(#imageblock7Back1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "></polygon>
-					<path id="block8Back" fill="url(#imageblock8Back1)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"></path>
-					<polygon id="block9Back" fill="url(#imageblock9Back1)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "></polygon>
-
-					<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="i/Room2.png" x="0" y="0" width="720" height="540"></image>
-				</svg>
-			</div>
-		</div>
-		</a>	
-			<div class="b-workshop-title"><h3>Гостиная</h3></div>
-			<div class="b-three-color"></div>
+				<div class="b-workshop-title"><h3>Гостиная</h3></div>
+				<div class="b-three-color"></div>
+			</a>
 		</li>
 			
 		<li id="bx_3218110189_260" class="b-workshop" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2" data-loadImages="24" data-loadCurrent="">
@@ -944,105 +735,5 @@
 
 </ul>
 
-	<script type="text/javascript">
-
-	var isIE = false;
-
-	if (!('querySelector' in document)  //скорее всего ie 9+
-	     || !('localStorage' in window)  //ie 8+
-	     || !('addEventListener' in window)  //ie 8 + (возможно)
-	    || !('matchMedia' in window)) {//ie 10+
-
-	    isIE = true;	
-	}
-
-	var isRetina = false;
-	var isMobile = false;
-
-	if( isIE ){
-    	$('.contentImage').addClass("hide showContent");
-    	$('.cssload-zenith').addClass("hide");
-    }else{
-    	$('.IEloader').addClass("hide");
-    }
-
-	function DrawDefault(svg, hash){
-		console.log(svg, svg.attr("data-kitchen") === "true");
-		var floor;
-		var hashArray = [];
-		if(~hash.indexOf('|')){
-			floor = hash.split('|')[0];
-			hash = hash.split('|')[1];
-		}
-		hashArray = hash.split(',');
-		var i=0;
-		var src;
-		if(svg.attr("data-kitchen") === "true"){
-			console.log("++++");
-			src = $('#FloorKitchen-'+floor).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-			$('#FloorKitchenImage').attr("xlink:href", src);
-		}
-		svg.find("pattern image").each(function(){
-			if($(this).attr("data-floor") === "true"){
-				src = $('#Floor-'+floor).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-				$(this).attr("xlink:href", src);
-			}else{
-				//взять нужный декор из hashArray и положить его в image
-		        var src = $('#decor-'+hashArray[i]).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-		        $(this).attr("xlink:href", src);
-		        i++;
-		    }
-	    });
-	}
-
-    $('.b-workshop').each(function(){
-    	var count = 0;
-    	var th = $(this);
-    	//th.fadeOut();
-    	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
-    	var imgRoom = new Image();
-    	imgRoom.src = th.find(".roomImage").attr("xlink:href");
-    	th.find("pattern").each(function(){
-    		var img = new Image();
-    		img.src = th.find("pattern image").attr("xlink:href");
-    		img.onload = function(){
-	    		count++;
-	    		if(count === +th.attr("data-loadImages")){
-	    			console.log("COUNT");
-	    			imgRoom.onload = function(){
-		    			th.find(".preload").hide();
-		        		th.removeClass("heightPreload");
-		        		loadContent(th.find(".contentImage"));
-		        	}
-	    		}
-	    		console.log("this", th, "----", count);
-	    	}
-    		//console.log("this", th, "----", count);
-    	});
-    	imgRoom.onload = function(){
-    		if(count === +th.attr("data-loadImages")){
-    			console.log("IMAGE");
-		    	th.find(".preload").hide();
-		        th.removeClass("heightPreload");
-		        loadContent(th.find(".contentImage"));
-		       }
-		     }
-
-        /*img.src = th.find(".roomImage").attr("xlink:href");
-        img.onload = function(){
-        	th.find(".preload").hide();
-        	th.removeClass("heightPreload");
-        	loadContent(th.find(".contentImage"));
-        }*/
-    });
-     function loadContent(content){
-				if( isIE ){
-	                content.fadeIn(500);
-	            }else{
-	            	content.addClass("showContent");
-	            }
-	            
-			}
-</script>
 </body>
 </html>
