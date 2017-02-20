@@ -3410,6 +3410,7 @@ ul.b-workshop-list{
 			.b-workshop-svg.gostinaya svg{
 				margin-top: -4%;
 			}
+			
 			ul.b-workshop-list li.b-workshop a:hover .b-workshop-svg svg{
 				-webkit-transform: scale(1.1,1.1);
 				   -moz-transform: scale(1.1,1.1);
@@ -4120,10 +4121,11 @@ ul.b-workshop-list{
 
 .preload{
 	position: absolute;
-	top: 90px;
+	top: 50%;
 	left: 0;
-	height: 230px;
-	width: 364px;
+	height: auto;
+	margin-top: -24px;;
+	width: 100%;
 }
 
 .b-workshop-svg{
