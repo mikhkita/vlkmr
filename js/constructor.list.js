@@ -1,22 +1,19 @@
-var isIE = false;
-
-		if (!('querySelector' in document)  //скорее всего ie 9+
-		     || !('localStorage' in window)  //ie 8+
-		     || !('addEventListener' in window)  //ie 8 + (возможно)
-		    || !('matchMedia' in window)) {//ie 10+
-
-		    isIE = true;	
-		}
-
-		var isRetina = false;
-		var isMobile = false;
-
-if( isIE ){
+$(document).ready(function(){
+	if( isIE ){
     	$('.contentImage').addClass("hide showContent");
     	$('.cssload-zenith').addClass("hide");
     }else{
     	$('.IEloader').addClass("hide");
     }
+
+    $('.currentTexture').each(function(){
+		    var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+		    $(this).attr("data-src", src);
+		});
+    $('.roomImage').each(function(){
+		    var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+		    $(this).attr("xlink:href", src);
+		});
 
 	function DrawDefault(svg, hash){
 		console.log(svg, svg.attr("data-kitchen") === "true");
@@ -29,23 +26,16 @@ if( isIE ){
 		hashArray = hash.split(',');
 		var i=0;
 		var src;
-		if(svg.attr("data-kitchen") === "true"){
-			console.log("++++");
-			src = $('#FloorKitchen-'+floor).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-			$('#FloorKitchenImage').attr("xlink:href", src);
-		}
+		svg.find('*[data-itsFloor]').attr("xlink:href", $('.'+svg.attr("data-floor")+'[data-id="'+floor+'"]').attr("data-src"));
 		svg.find("pattern image").each(function(){
-			if($(this).attr("data-floor") === "true"){
-				src = $('#Floor-'+floor).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-				$(this).attr("xlink:href", src);
-			}else{
-				//взять нужный декор из hashArray и положить его в image
-		        var src = $('#decor-'+hashArray[i]).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+			//console.log($(this));
+			if(!$(this).attr("data-itsFloor")){
+				var src = $('#decor-'+hashArray[i]).attr("data-src");
 		        $(this).attr("xlink:href", src);
 		        i++;
-		    }
+			}
 	    });
-	    var src = svg.find(".roomImage").attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+	    var src = svg.find(".roomImage").attr("data-src");
 		svg.find(".roomImage").attr("xlink:href", src);
 	}
 
@@ -59,42 +49,35 @@ if( isIE ){
     	var loadImages = th.find("pattern").length;
     	th.find("pattern").each(function(){
     		var img = new Image();
-    		img.src = th.find("pattern image").attr("xlink:href");
+    		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
+	    		console.log(th, count);
 	    		if(count === loadImages){
-	    			console.log("COUNT");
 	    			imgRoom.onload = function(){
-		    			th.find(".preload").hide();
-		        		th.removeClass("heightPreload");
-		        		loadContent(th.find(".contentImage"));
+		    			afterLoad(th);
 		        	}
 	    		}
-	    		//console.log("this", th, "----", count);
 	    	}
-    		//console.log("this", th, "----", count);
+    		
     	});
     	imgRoom.onload = function(){
     		if(count === loadImages){
-    			console.log("IMAGE");
-		    	th.find(".preload").hide();
-		        th.removeClass("heightPreload");
-		        loadContent(th.find(".contentImage"));
-		       }
-		     }
-
-        /*img.src = th.find(".roomImage").attr("xlink:href");
-        img.onload = function(){
-        	th.find(".preload").hide();
-        	th.removeClass("heightPreload");
-        	loadContent(th.find(".contentImage"));
-        }*/
+		    	afterLoad(th);
+	       	}
+	    }
     });
-     function loadContent(content){
-				if( isIE ){
-	                content.fadeIn(500);
-	            }else{
-	            	content.addClass("showContent");
-	            }
-	            
-			}
+
+    function afterLoad(th){
+    	th.find(".preload").hide();
+		th.removeClass("heightPreload");
+		loadContent(th.find(".contentImage"));
+    }
+    function loadContent(content){
+		if( isIE ){
+	         content.fadeIn(500);
+	    }else{
+	       content.addClass("showContent");
+	    }
+	 }
+});

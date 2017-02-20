@@ -69,17 +69,17 @@
 <body>
 	<div class="listTextures" style="display: none">
 	<ul>
-		<li class="currentTexture" id="decor-1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></li>
-		<li class="currentTexture" id="decor-2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></li>
-		<li class="currentTexture" id="decor-3" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
+		<li class="currentTexture" id="decor-1" data-id="1" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></li>
+		<li class="currentTexture" id="decor-2" data-id="2" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></li>
+		<li class="currentTexture" id="decor-3" data-id="3" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
 
 		<!--Полы-->
-		<li class="currentTexture" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
-		<li class="currentTexture" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
-		<li class="currentTexture" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
-		<li class="currentTexture" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></li>
-		<li class="currentTexture" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></li>
-		<li class="currentTexture" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></li>
+		<li class="currentTexture floorHall" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
+		<li class="currentTexture floorHall" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
+		<li class="currentTexture floorHall" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></li>
 	</ul>
 	</div>
 	<ul class="b-workshop-list clearfix">
@@ -172,9 +172,9 @@
 			</div>
 		</div>
 		<div class="contentImage">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565" data-floor="floorHall">
 			<pattern id="floorPatternBack"  width="100%" height="100%">
-		      <image data-floor="true" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="2500" height="580">
+		      <image data-itsFloor="itsFloor" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="2500" height="580">
 		     </image>
 		    </pattern>
 			<pattern id="imageblock1Back" width="100%" height="100%">
@@ -410,7 +410,7 @@
 			</div>
 			<div class="contentImage">
 			
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895" data-kitchen="true">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895" data-floor="floorKitchen">
 		<defs>
 		<!--<pattern data-floor="true" id="floorPatternBack" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" x="0" y="0" width="3269" height="618">
@@ -570,7 +570,7 @@
 		<polygon class="classSVGBack" id="block28Back" fill="url(#imageblock28Back3)" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
 		<polygon class="classSVGBack" id="block29Back" fill="url(#imageblock29Back3)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" id="FloorKitchenImage" xlink:href="" x="0" y="0" width="3269" height="1895"></image>
+		<image xmlns:xlink="http://www.w3.org/1999/xlink" data-itsFloor="itsFloor" id="floorPatternBack3" xlink:href="" x="0" y="0" width="3269" height="1895"></image>
 		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test4" xlink:href="" data-image="i/RoomKitchen.png" data-retina-image="i/RoomKitchen.png" x="0" y="0" width="3269" height="1895"></image>
 		</svg>
 		</div>
@@ -602,10 +602,10 @@
 			</div>
 			<div class="contentImage">
 			
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432" data-floor="floorHall">
 		<defs>
 			<pattern id="floorPatternBack4" width="100%" height="100%">
-		        <image data-floor="true" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
+		        <image data-itsFloor="itsFloor" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 			<pattern id="imageblock1Back4" width="100%" height="100%">
