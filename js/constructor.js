@@ -669,6 +669,7 @@
 				var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
 				blocks.push(blockAdd);
 			});
+			console.log(stack);
 			var stackRepeat = [];
 			var stackCancel = false;
 			var checkConnectPrev = false;
@@ -693,7 +694,7 @@
 							/*$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
 							$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 							$('#image'+lastElemStack.path+', #image'+lastElemStack.path+'Back').children().attr({
-								"xlink:href": $('.currentTexture[data-id='+prevElemStack.texture+'"]').attr("data-src"),
+								"xlink:href": $('.currentTexture[data-id="'+prevElemStack.texture+'"]').attr("data-src"),
 								"data-id": prevElemStack.texture
 							});
 							var positionElStack = lastElemStack.path.slice(5) - 1;
@@ -745,8 +746,8 @@
 					/*$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
 					$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
 					$('#image'+lastElemStackRepeat.path+', #image'+lastElemStackRepeat.path+'Back').children().attr({
-						"xlink:href": $('.currentTexture[data-id='+lastElemStackRepeat.texture+'"]').attr("data-src"),
-						"data-id": prevElemStack.texture
+						"xlink:href": $('.currentTexture[data-id="'+lastElemStackRepeat.texture+'"]').attr("data-src"),
+						"data-id": lastElemStackRepeat.texture
 					});
 					var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
 					var textureElStackR = lastElemStackRepeat.texture;
@@ -848,6 +849,7 @@
 				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
+					console.log(stack);
 					//Получаем элемент из центрального слоя
 					
 					// = $(this).attr("data-location");//Up
