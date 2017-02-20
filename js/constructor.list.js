@@ -16,7 +16,7 @@ $(document).ready(function(){
 		});
 
 	function DrawDefault(svg, hash){
-		console.log(svg, svg.attr("data-kitchen") === "true");
+		//console.log(svg, svg.attr("data-kitchen") === "true");
 		var floor;
 		var hashArray = [];
 		if(~hash.indexOf('|')){
@@ -52,7 +52,7 @@ $(document).ready(function(){
     		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		console.log(th, count);
+	    		//console.log(th, count);
 	    		if(count === loadImages){
 	    			imgRoom.onload = function(){
 		    			afterLoad(th);
