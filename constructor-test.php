@@ -69,21 +69,21 @@
 <body>
 	<div class="listTextures" style="display: none">
 	<ul>
-		<li class="currentTexture" id="decor-1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini-retina.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></li>
-		<li class="currentTexture" id="decor-2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini-retina.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></li>
-		<li class="currentTexture" id="decor-3" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini-retina.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
+		<li class="currentTexture" id="decor-1" data-id="1" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></li>
+		<li class="currentTexture" id="decor-2" data-id="2" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></li>
+		<li class="currentTexture" id="decor-3" data-id="3" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
 
 		<!--Полы-->
-		<li class="currentTexture" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
-		<li class="currentTexture" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
-		<li class="currentTexture" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
-		<li class="currentTexture" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></li>
-		<li class="currentTexture" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></li>
-		<li class="currentTexture" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></li>
+		<li class="currentTexture floorHall" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
+		<li class="currentTexture floorHall" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
+		<li class="currentTexture floorHall" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></li>
 	</ul>
 	</div>
 	<ul class="b-workshop-list clearfix">
-		<li id="bx_3218110189_258" class="b-workshop" data-hash="1,1,1,3,3,3,3,3,3" data-loadImages="9" data-loadCurrent="">	
+		<li id="bx_3218110189_258" class="b-workshop" data-hash="1,1,1,3,3,3,3,3,3">	
 			<a href="/workshop/gostinaya/">
 				<div class="b-workshop-svg gostinaya">
 					<div class="preload">
@@ -142,7 +142,7 @@
 							<polygon id="block7Back" fill="url(#imageblock7Back1)" points="347.6,337.5 347.6,337.5 265.2,329.8 263.6,329.9 263.4,330.3 263.2,373.6 263.8,376.6 302,410.8   346.8,420.2 347.5,420.2 347.6,420.2 348.8,420.2 348.8,338.2 "></polygon>
 							<path id="block8Back" fill="url(#imageblock8Back1)" d="M459.2,348c-1-0.2-1-0.2-1-0.2l-107.5-9.9c-0.6-0.1-1.3-0.1-1.9,0v82.6l0.2,0.2l108.7,22.7h0.5l0,0h0.5l1-0.2  v-94.6L459.2,348z"></path>
 							<polygon id="block9Back" fill="url(#imageblock9Back1)" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "></polygon>
-							<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="i/Room2.png" x="0" y="0" width="720" height="540"></image>
+							<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test1" xlink:href="" data-image="i/Room2.png" data-retina-image="i/Room2.png" x="0" y="0" width="720" height="540"></image>
 						</svg>
 					</div>
 				</div>
@@ -151,7 +151,7 @@
 			</a>
 		</li>
 			
-		<li id="bx_3218110189_260" class="b-workshop" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2" data-loadImages="24" data-loadCurrent="">
+		<li id="bx_3218110189_260" class="b-workshop" data-hash="2|2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,2,2,2,2,2,2,2,2">
 		
 		<a href="/workshop/detskaya/">
 		<div class="b-workshop-svg detskaya">
@@ -172,9 +172,9 @@
 			</div>
 		</div>
 		<div class="contentImage">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2401 1565" data-floor="floorHall">
 			<pattern id="floorPatternBack"  width="100%" height="100%">
-		      <image data-floor="true" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="2500" height="580">
+		      <image data-itsFloor="itsFloor" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="-50" width="2500" height="580">
 		     </image>
 		    </pattern>
 			<pattern id="imageblock1Back" width="100%" height="100%">
@@ -305,7 +305,7 @@
 		<polygon class="classSVGback" id="block24Back" fill="url(#imageblock24Back)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
 		<polygon class="classSVGback" id="floorBack" fill="url(#floorPatternBack)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test2" xlink:href="i/RoomChild.png" x="0" y="0" width="2401" height="1565"></image>
+		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test2" xlink:href="" data-image="i/RoomChild.png" data-retina-image="i/RoomChild.png" x="0" y="0" width="2401" height="1565"></image>
 		</svg>
 		</div>
 		</div>
@@ -314,7 +314,7 @@
 			<div class="b-three-color"></div>
 	</li>
 
-	<li id="bx_3218110189_259" class="b-workshop" data-hash="1,1,1,1,2,2,2,2" data-loadImages="8" data-loadCurrent="">
+	<li id="bx_3218110189_259" class="b-workshop" data-hash="1,1,1,1,2,2,2,2">
 		
 		<a href="/workshop/stenka/">
 		<div class="b-workshop-svg stenka">
@@ -379,7 +379,7 @@
 	<polygon class="classSVGback" id="block7Back" fill="url(#imageblock7Back2)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "></polygon>
 	<polygon class="classSVGback" id="block8Back" fill="url(#imageblock8Back2)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "></polygon>
 
-	<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test3" xlink:href="i/RoomWall.png" x="0" y="0" width="720" height="410"></image>
+	<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test3" xlink:href="" data-image="i/RoomWall.png" data-retina-image="i/RoomWall.png" x="0" y="0" width="720" height="410"></image>
 	</svg>
 	</div>
 	</div>
@@ -388,7 +388,7 @@
 		<div class="b-three-color"></div>
 	</li>
 
-	<li id="bx_3218110189_261" class="b-workshop" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,3,3,3,3,3,3,3,3" data-loadImages="29" data-loadCurrent="">
+	<li id="bx_3218110189_261" class="b-workshop" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,3,3,3,3,3,3,3,3">
 
 			<a href="">
 			<div class="b-workshop-svg kitchen" style="height: 210px">
@@ -410,7 +410,7 @@
 			</div>
 			<div class="contentImage">
 			
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895" data-kitchen="true">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895" data-floor="floorKitchen">
 		<defs>
 		<!--<pattern data-floor="true" id="floorPatternBack" width="100%" height="100%">
 		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" x="0" y="0" width="3269" height="618">
@@ -570,8 +570,8 @@
 		<polygon class="classSVGBack" id="block28Back" fill="url(#imageblock28Back3)" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
 		<polygon class="classSVGBack" id="block29Back" fill="url(#imageblock29Back3)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" id="FloorKitchenImage" xlink:href="" x="0" y="0" width="3269" height="1895"></image>
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test4" xlink:href="i/RoomKitchen.png" x="0" y="0" width="3269" height="1895"></image>
+		<image xmlns:xlink="http://www.w3.org/1999/xlink" data-itsFloor="itsFloor" id="floorPatternBack3" xlink:href="" x="0" y="0" width="3269" height="1895"></image>
+		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test4" xlink:href="" data-image="i/RoomKitchen.png" data-retina-image="i/RoomKitchen.png" x="0" y="0" width="3269" height="1895"></image>
 		</svg>
 		</div>
 		</div>
@@ -580,7 +580,7 @@
 			<div class="b-three-color"></div>
 		</li>
 
-		<li id="bx_3218110189_262" class="b-workshop" data-hash="3|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2" data-loadImages="21" data-loadCurrent="">
+		<li id="bx_3218110189_262" class="b-workshop" data-hash="3|1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2">
 			
 			<a href="">
 			<div class="b-workshop-svg hall" style="height: 260px">
@@ -602,10 +602,10 @@
 			</div>
 			<div class="contentImage">
 			
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432" data-floor="floorHall">
 		<defs>
 			<pattern id="floorPatternBack4" width="100%" height="100%">
-		        <image data-floor="true" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
+		        <image data-itsFloor="itsFloor" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/Floor-2.jpg" x="-10" y="0" width="600" height="120">
 		     	</image>
 		    </pattern>
 			<pattern id="imageblock1Back4" width="100%" height="100%">
@@ -724,7 +724,7 @@
 
 		<polygon class="classSVGback" id="floorBack" fill="url(#floorPatternBack4)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 		
-		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test5" xlink:href="i/RoomHall.png" x="0" y="0" width="576" height="432"></image>
+		<image xmlns:xlink="http://www.w3.org/1999/xlink" class="roomImage" id="image-test5" xlink:href="" data-image="i/RoomHall.png" data-retina-image="i/RoomHall.png" x="0" y="0" width="576" height="432"></image>
 		</svg>
 		</div>
 		</div>
