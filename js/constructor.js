@@ -10,9 +10,19 @@
 		var progressbarTextures = 0;
 		var decorsID = [];
 		var floorsID = [];
+		var barCircle;
 
 		$(document).ready(function(){
 			var height = 100;
+			if( isIE ){
+		    	$('.rel').addClass("hide");
+		    	$('.rel').css("opacity", 1);
+		    }
+			function ProgressBarInc(value) {
+			  	progressbarValue += value;
+			  	progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
+                bar.animate(progressbarValue);
+			}
 			$('.currentTexture, .currentTexture2').each(function(){
 				var src;
 				if(isRetina || isMobile){
@@ -26,9 +36,7 @@
 		        var img = new Image();
             	img.src = src;
            		img.onload = function(){
-           			progressbarTextures += 0.01;
-           			progressbarTextures > 0.4 ? 0.4 : progressbarTextures;
-                	bar.animate(progressbarValue + progressbarTextures);
+           			ProgressBarInc(0.01);
             	}
 		    });
 
@@ -46,8 +54,7 @@
 			});
 
 			$('#room').imagesLoaded( function() {
-				progressbarValue += 0.3;
-				bar.animate(progressbarValue);
+				ProgressBarInc(0.3);
 			});
 			$('.relBackground').css({"height": $(window).height() - height});
 			$('.progressbarContain').css({
@@ -76,7 +83,8 @@
 							"width": $('.b-wide-block').width()
 						});
 					}
-					$('.rel').css("display", "block");
+					//$('.rel').css("display", "block");
+					
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					$('.relBackground').css({"height": ""});
 					//checkSize = false;
@@ -98,7 +106,7 @@
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(e){
 				$('.slick-active[data-id="1"]').click();
-				$(window).resize();
+				//$(window).resize();
 				if(getCookie("size") === "full"){
 					var curWidth = $('#room').width();
 						$('#room, #floorRoom, #floorRoomBack').css({
@@ -116,7 +124,6 @@
 						$('.icon-full-size').css("display", "none");
 						checkSize = true;
 				}
-				$('.progressbarContain').fadeOut(250);
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
 			        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
@@ -164,22 +171,22 @@
 							checkSize = false;
 					}
 			});
+			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
+				  	position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -5
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  });
 
-			  $('.repeatPrev[title], .repeatNext[title], .layers[title]').qtip({
-			  	position: {
-	                my: 'bottom center',
-	                at: 'top center',
-	                adjust: {
-			            y: -5
-			        }
-	            },
-	            style: {
-        			classes: 'qtipFont qtipCustom qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            }
-			  });
 			  $('.iconMore[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
@@ -241,7 +248,7 @@
 			        }
 	            },
 	            style: {
-        			classes: 'qtipFont qtipCustom qtip-light',
+        			classes: 'qtipFont qtipCustomBrown qtip-light',
 	            	tip: {
 	            		width: 22, height: 11, border: 0
 	            	}
@@ -256,6 +263,78 @@
 
 			$("body").on("scroll mousewheel", ".fancybox-inner",function(){
 				 $('.currentTexture2[title]').qtip('hide');
+			});
+
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 580){
+				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
+				  	position: {
+		                at: 'bottom center',
+		                my: 'top center',
+		                adjust: {
+				            y: 5
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustomBrown qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  });
+				$('.iconMore[title], .share[title]').qtip({
+				  	position: {
+		                at: 'bottom center',
+		                my: 'top center',
+		                adjust: {
+				            y: 5
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustomBrown qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            },
+		            hide: {
+				        event: 'click mouseleave'
+				    }
+				  });
+				}else{
+				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
+				  	position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -5
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  });
+				$('.iconMore[title], .share[title]').qtip({
+				  	position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -5
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            },
+		            hide: {
+				        event: 'click mouseleave'
+				    }
+				  });
+			}
 			});
 
 			//Доработать значения
@@ -370,12 +449,21 @@
 			  trailColor: '#eee',
 			  svgStyle: null,
 			  step: function(state, circle) {
-
+			  	barCircle = circle;
 			    var value = Math.round(circle.value() * 100);
 			    if (value === 0) {
 			      circle.setText('');
-			    } else {
+			    }else {
 			      circle.setText(value+'%');
+			    }
+			    if (value >= 100) {
+			    	if( isIE ){
+		                 $('.rel').fadeIn(500);
+		            }else{
+		            	$('.rel').addClass("showContent");
+		            }
+		            $('.progressbarContain').fadeOut(250);
+                	$(window).resize();
 			    }
 
 			  }
