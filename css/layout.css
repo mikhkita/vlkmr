@@ -3830,6 +3830,8 @@ ul.b-workshop-list{
 	box-sizing: border-box;
 	margin: 5px 20px 10px 20px;
 	line-height: 0;
+	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .floorIMG h3{
@@ -3843,7 +3845,8 @@ ul.b-workshop-list{
 	margin-top: 20px;
 }
 .floorIMG:hover .b-floor-cont{
-	box-shadow: 0 0 0 10px #483435 inset;
+	/*box-shadow: 0 0 0 10px #483435 inset;*/
+	box-shadow: 0 0 0 10px #c4c4c4 inset;
 	box-sizing: border-box;
 	cursor: pointer;
 }
@@ -3873,6 +3876,11 @@ ul.b-workshop-list{
 
 /*Для SVG*/
 
+.rel.showContent{
+	opacity: 1;
+}
+
+
 .rel{
 	/*max-width: 100%;*/
 	/*display: inline;*/
@@ -3885,6 +3893,12 @@ ul.b-workshop-list{
 	position: relative;
 	margin: 0 auto;
 	transform-origin: center top 0px;
+	-webkit-transition: opacity 500ms ease-out;
+  	-moz-transition: opacity 500ms ease-out;
+   	-ms-transition: opacity 500ms ease-out;
+   	-o-transition: opacity 500ms ease-out;
+	transition: opacity 500ms ease-out;
+	opacity: 0;
 	/*height: 1000px;*/
 }
 
@@ -3924,6 +3938,15 @@ ul.b-workshop-list{
 
 .qtipCustomWhite .qtip-content{
 	background-color: #fff;
+}
+.qtipCustomBrown{
+	border-color: #483434 !important;
+}
+.qtipCustomBrown .qtip-content{
+	background-color: #483434;
+	color: #fff;
+	font-size: 15px;
+	padding: 14px 20px; 
 }
 
 .fancybox-title{

@@ -46,22 +46,23 @@ $(document).ready(function(){
     	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
     	var imgRoom = new Image();
     	imgRoom.src = th.find(".roomImage").attr("xlink:href");
-    	var loadImages = th.find("pattern").length;
+    	//console.log("imgRoom.src",imgRoom.src);
+    	var loadImages = th.find("pattern").length + 1;
     	th.find("pattern").each(function(){
     		var img = new Image();
     		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		//console.log(th, count);
+	    		//console.log(img.src, loadImages, count);
 	    		if(count === loadImages){
-	    			imgRoom.onload = function(){
 		    			afterLoad(th);
 		        	}
-	    		}
+	    		
 	    	}
     		
     	});
     	imgRoom.onload = function(){
+    		count++;
     		if(count === loadImages){
 		    	afterLoad(th);
 	       	}

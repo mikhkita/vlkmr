@@ -444,7 +444,7 @@ isRetina = (isMobile)?false:retina();
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>
-		<div class="rel" style="display: none" unselectable="on">
+		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 432">
 		
 		<title>Гостиная</title>
@@ -767,7 +767,7 @@ isRetina = (isMobile)?false:retina();
 		<!--<rect x="372.2" y="274" class="classSVG default" id="block21" data-clip="clipping21 circle" data-radius="90" fill="url(#imageblock21)" width="43.2" height="69.9"/>-->
 		<polygon class="classSVG default" id="block21" data-clip="clipping21 circle" data-radius="90" fill="url(#imageblock21)" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 
-		<polygon class="classSVG" id="floor" fill="url(#floorPattern)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
+		<polygon id="floor" fill="url(#floorPattern)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 
 	</svg>
 
