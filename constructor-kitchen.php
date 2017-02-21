@@ -395,21 +395,21 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-1.png" data-id="1">
+				<div class="floorIMG kitchenClass" data-src="" data-id="1" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-1.png">
 					<img src="i/RoomKitchen.png">
 				</div>
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-2.png" data-id="2">
+				<div class="floorIMG kitchenClass" data-src="" data-id="2" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-2.png">
 					<img src="i/RoomKitchen.png">
 				</div>
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-3.png" data-id="3">
+				<div class="floorIMG kitchenClass" data-src="" data-id="3" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-3.png">
@@ -421,7 +421,7 @@ isRetina = (isMobile)?false:retina();
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>
-		<div class="rel" style="display: none" unselectable="on">
+		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
 		
 		<title>Гостиная</title>
