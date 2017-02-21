@@ -394,7 +394,7 @@ isRetina = (isMobile)?false:retina();
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>
-		<div class="rel" id="hammerElement" style="display: none" unselectable="on">
+		<div class="rel" unselectable="on">
 		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
 		
 		<title>Гостиная</title>
