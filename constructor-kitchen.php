@@ -395,21 +395,21 @@ isRetina = (isMobile)?false:retina();
 			</div>
 		</div>
 		<div class="panelFloor">
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-1.png" data-id="1">
+				<div class="floorIMG kitchenClass" data-src="" data-id="1" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-1.png">
 					<img src="i/RoomKitchen.png">
 				</div>
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-2.png" data-id="2">
+				<div class="floorIMG kitchenClass" data-src="" data-id="2" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-2.png">
 					<img src="i/RoomKitchen.png">
 				</div>
 				</div>
-				<div class="floorIMG kitchenClass" data-src="i/FloorKitchen-3.png" data-id="3">
+				<div class="floorIMG kitchenClass" data-src="" data-id="3" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
 					<img class="floorIMGabs" src="i/FloorKitchen-3.png">
