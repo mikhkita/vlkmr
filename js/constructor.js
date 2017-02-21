@@ -4,6 +4,8 @@
 		var currentTexture;
 		var currentTextureID;
 		var prevTexture;
+		var currentFloor;
+		var prevFloor;
 		var progressbarValue = 0.3;
 		var progressbarTextures = 0;
 		var decorsID = [];
@@ -616,7 +618,14 @@
 
 			//Выбор пола
 			$('.floorIMG').click(function(e){
-				var currentFloor = $(this);
+				if (prevFloor != undefined){
+					prevFloor.find(".b-floor-cont").css("box-shadow", "");
+				}
+				currentFloor = $(this);
+				prevFloor = $(this);
+				$(this).find(".b-floor-cont").css({
+					"box-shadow": "0 0 0 10px #483435 inset"
+				});
 				if(currentFloor.hasClass("kitchenClass")){
 				$('#floorRoomBack').attr("src", currentFloor.attr("data-src")).css("opacity", 1);
 				$('#floorRoom').animate({

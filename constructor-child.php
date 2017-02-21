@@ -804,7 +804,7 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVG default" id="block22" data-clip="clipping22 circle" data-radius="800" data-connect="21,23"  fill="url(#imageblock22)" points="1942.8,1103.7 1942.8,1271 1943.5,1400.9 1963.1,1402.1 1960.2,1103.7 "/>
 		<polygon class="classSVG default" id="block23" data-clip="clipping23 circle" data-radius="800" data-connect="22,21"  fill="url(#imageblock23)" points="1260.5,1034 1942.8,1103.7 1942.8,1271 1271.7,1167.8 1260.5,1165.7 "/>
 		<polygon class="classSVG default" id="block24" data-clip="clipping24 circle" data-radius="800" fill="url(#imageblock24)" points="1271.7,1172 1942.8,1272.3 1942.8,1418.3 1265.8,1285.5 1267.5,1172.4 "/>
-		<polygon class="classSVG" id="floor" fill="url(#floorPattern)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
+		<polygon id="floor" fill="url(#floorPattern)" points="-6.3,1428.2 130.7,1408.6 241.9,1460.2 718.7,1380.3 722.1,1329.1 891.7,1301.9 891.6,1296 945,1287.4   986.5,1210.4 957,1139.4 1079.5,1140 1055.5,1205.4 1086,1264.9 1106,1261.7 1973,1434 2260,1361 2406,1402.1 2406,1574 -8,1574 "/>
 
 	</svg>
 
