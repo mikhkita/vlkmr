@@ -7,20 +7,21 @@
 		var currentFloor;
 		var prevFloor;
 		var progressbarValue = 0.3;
-		var progressbarTextures = 0;
 		var decorsID = [];
 		var floorsID = [];
-		var barCircle;
 
 		$(document).ready(function(){
+			var valueInc = 0.4 / ($('.currentTexture2').length * 2 + $('.floors').length);
 			var height = 100;
 			if( isIE ){
 		    	$('.rel').addClass("hide");
 		    	$('.rel').css("opacity", 1);
 		    }
+		    /*------Прогрессбар----------*/
 			function ProgressBarInc(value) {
 			  	progressbarValue += value;
-			  	progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
+			  	console.log(valueInc, progressbarValue, $('.currentTexture2').length * 2 + $('.floors').length);
+			  	//progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
                 bar.animate(progressbarValue);
 			}
 			$('.currentTexture, .currentTexture2').each(function(){
@@ -36,26 +37,41 @@
 		        var img = new Image();
             	img.src = src;
            		img.onload = function(){
-           			ProgressBarInc(0.01);
+           			ProgressBarInc(valueInc);
             	}
 		    });
 
 			 $('.floors').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
+		        var img = new Image();
+            	img.src = src;
+           		img.onload = function(){
+           			ProgressBarInc(valueInc);
+            	}
 		        floorsID.push($(this).attr("data-id"));
 		    });
-			 $('.floorIMG').each(function(){
+
+			//Загрузка полов в выпадающей панели
+			$('.floorIMG').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
 		    });
+		    
 			$('.currentTexture').each(function(){
 			 	decorsID.push($(this).attr("data-id"));
 			});
 
-			$('#room').imagesLoaded( function() {
-				ProgressBarInc(0.3);
-			});
+			//Загрузка комнаты
+		    $('#room').attr("src", $('#room').attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
+			var imgRoom = new Image();
+            imgRoom.src = $('#room').attr("src");
+           	imgRoom.onload = function(){
+           		console.log("+++++++++");
+           		ProgressBarInc(0.3);
+            }
+            /*-----------------------------------*/
+
 			$('.relBackground').css({"height": $(window).height() - height});
 			$('.progressbarContain').css({
 				"top": ($(window).height() - height)/2 - 40
@@ -103,9 +119,9 @@
 					console.log(currentTexture);
 					
 			});
-			//После загрузки страницы вызываем ресайз
+
 			$(window).load(function(e){
-				$('.slick-active[data-id="1"]').click();
+				$('.slick-active[data-slick-index="0"]').click();
 				//$(window).resize();
 				if(getCookie("size") === "full"){
 					var curWidth = $('#room').width();
@@ -449,7 +465,6 @@
 			  trailColor: '#eee',
 			  svgStyle: null,
 			  step: function(state, circle) {
-			  	barCircle = circle;
 			    var value = Math.round(circle.value() * 100);
 			    if (value === 0) {
 			      circle.setText('');

@@ -432,246 +432,246 @@ isRetina = (isMobile)?false:retina();
 		<!--Текстуры-->
 
 <pattern id="imageblock1Back" width="100%" height="100%">
-			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock2Back" width="100%" height="100%">
-		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="0" width="500" height="800">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4Back" width="100%" height="100%">
-			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-65" y="-50" width="500" height="800">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5Back" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6Back" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7Back" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="80" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-220" y="300" width="500" height="800" transform="scale(-1, 1) rotate(93, 200, 200)">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="80" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-220" y="300" width="500" height="800" transform="scale(-1, 1) rotate(93, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock8Back" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9Back" width="100%" height="100%">
-		       <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
+		       <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10Back" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			
 		    <pattern id="imageblock11Back" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-100" width="500" height="800">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-100" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock12Back" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock13Back" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock15Back" width="100%" height="100%">
-		        <image rand-min-x="-300" rand-max-x="-250" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="1000" height="1600" transform="rotate(91, 500, 500)">
+		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="675" height="1080" transform="rotate(91, 500, 500)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16Back" width="100%" height="100%">
-		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
+		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock17Back" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="0" width="500" height="800" transform="rotate(103, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="0" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19Back" width="100%" height="100%">
-		       <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		       <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20Back" width="100%" height="100%">
-		         <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		         <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21Back" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock22Back" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock23Back" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock24Back" width="100%" height="100%">
-		        <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
+		        <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock25Back" width="100%" height="100%">
-		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
 			    </image>
 		    </pattern>
 		    <pattern id="imageblock26Back" width="100%" height="100%">
-		       <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
+		       <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock27Back" width="100%" height="100%">
-		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 		    </pattern>
 		     <pattern id="imageblock28Back" width="100%" height="100%">
-		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 		    </pattern>
 		    <pattern id="imageblock29Back" width="100%" height="100%">
-		    	 <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		    	 <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPatternBack" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" x="0" y="0" width="3269" height="618">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" data-id="" x="0" y="0" width="3269" height="618">
 		     	</image>
 		    </pattern>
 
 <pattern id="imageblock1" width="100%" height="100%">
-			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
+			    <image rand-min-x="-100" rand-max-x="0" rand-min-y="-300" rand-max-y="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-50" y="-50" width="500" height="800" transform="rotate(89, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock2" width="100%" height="100%">
-		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="0" width="500" height="800">
+		       	<image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-65" y="-50" width="500" height="800">
+			    <image rand-min-x="-150" rand-max-x="0" rand-min-y="-350" rand-max-y="0"   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-65" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="80" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-220" y="300" width="500" height="800" transform="scale(-1, 1) rotate(93, 200, 200)">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="80" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-220" y="300" width="500" height="800" transform="scale(-1, 1) rotate(93, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock8" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9" width="100%" height="100%">
-		       <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
+		       <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800">
 			    </image>
 			</pattern>
 			
 		    <pattern id="imageblock11" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-100" width="500" height="800">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-250" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-100" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock12" width="100%" height="100%">
-			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+			    <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock13" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="35" width="500" height="800" transform="rotate(105, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock15" width="100%" height="100%">
-		        <image rand-min-x="-300" rand-max-x="-250" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="1000" height="1600" transform="rotate(91, 500, 500)">
+		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="675" height="1080" transform="rotate(91, 500, 500)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16" width="100%" height="100%">
-		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
+		        <image rand-min-x="-180" rand-max-x="40" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="35" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock17" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="0" width="500" height="800" transform="rotate(103, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="0" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		        <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19" width="100%" height="100%">
-		       <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
+		       <image rand-min-x="-60" rand-max-x="0" rand-min-y="-70" rand-max-y="350"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-55" y="200" width="500" height="800" transform="scale(-1, 1) rotate(92.5, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20" width="100%" height="100%">
-		         <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		         <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21" width="100%" height="100%">
-		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		       <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock22" width="100%" height="100%">
-		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
+		        <image rand-min-x="-200" rand-max-x="0" rand-min-y="70" rand-max-y="250"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-35" y="300" width="500" height="800" transform="scale(-1, 1) rotate(92, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock23" width="100%" height="100%">
-		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="0" width="500" height="800">
+		        <image rand-min-x="-250" rand-max-x="0" rand-min-y="-300" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="500" height="800">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock24" width="100%" height="100%">
-		        <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
+		        <image rand-min-x="-400" rand-max-x="0" rand-min-y="-50" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-30" width="500" height="800" transform="rotate(88, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock25" width="100%" height="100%">
-		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
+		       <image rand-min-x="-100" rand-max-x="0" rand-min-y="0" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(87.5, 200, 200)">
 			    </image>
 		    </pattern>
 		    <pattern id="imageblock26" width="100%" height="100%">
-		       <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
+		       <image rand-min-x="-80" rand-max-x="30" rand-min-y="-200" rand-max-y="200"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-100" width="500" height="800" transform="rotate(103, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock27" width="100%" height="100%">
-		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 		    </pattern>
 		     <pattern id="imageblock28" width="100%" height="100%">
-		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
+		         <image rand-min-x="-200" rand-max-x="0" rand-min-y="-200" rand-max-y="150"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-100" y="-50" width="500" height="800" transform="rotate(105, 200, 200)">
 			    </image>
 		    </pattern>
 		    <pattern id="imageblock29" width="100%" height="100%">
-		    	 <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
+		    	 <image rand-min-x="-60" rand-max-x="0" rand-min-y="-200" rand-max-y="100"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-30" width="500" height="800" transform="rotate(85, 200, 200)">
 		     	</image>
 		    </pattern>
 		    <pattern id="floorPattern" width="100%" height="100%">
-		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" x="0" y="0" width="3269" height="618">
+		        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/FloorKitchen-1.png" data-id="" x="0" y="0" width="3269" height="618">
 		     	</image>
 		    </pattern>
 		 </defs>
@@ -849,7 +849,7 @@ isRetina = (isMobile)?false:retina();
 
 	<img id="floorRoomBack" data-id="" src="i/FloorKitchen-1.png" style="opacity: 0">
 	<img id="floorRoom" data-id="" src="i/FloorKitchen-1.png">
-	<img id="room" src="i/RoomKitchen.png">
+	<img id="room" src="i/RoomKitchen.png" data-image="i/RoomKitchen.png" data-retina-image="i/RoomKitchen.png">
 
 <!--Это передний слой - он отслеживает клики и меняет задний слой-->
 	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
@@ -1009,38 +1009,6 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
 							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
 							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
 							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>

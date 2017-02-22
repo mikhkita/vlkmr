@@ -60,7 +60,7 @@
 		    isIE = true;	
 		}
 
-		var isRetina = false;
+		var isRetina = true;
 		var isMobile = false;
 
 		
@@ -69,17 +69,17 @@
 <body>
 	<div class="listTextures" style="display: none">
 	<ul>
-		<li class="currentTexture" id="decor-1" data-id="1" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1-retina.jpg"></li>
-		<li class="currentTexture" id="decor-2" data-id="2" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2-retina.jpg"></li>
-		<li class="currentTexture" id="decor-3" data-id="3" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3-retina.jpg"></li>
+		<li class="currentTexture" id="decor-1" data-id="1" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></li>
+		<li class="currentTexture" id="decor-2" data-id="2" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></li>
+		<li class="currentTexture" id="decor-3" data-id="3" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></li>
 
 		<!--Полы-->
-		<li class="currentTexture floorHall" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1-retina.jpg"></li>
-		<li class="currentTexture floorHall" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2-retina.jpg"></li>
-		<li class="currentTexture floorHall" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3-retina.jpg"></li>
-		<li class="currentTexture floorKitchen" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1-retina.png"></li>
-		<li class="currentTexture floorKitchen" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2-retina.png"></li>
-		<li class="currentTexture floorKitchen" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3-retina.png"></li>
+		<li class="currentTexture floorHall" data-id="1" id="Floor-1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg"></li>
+		<li class="currentTexture floorHall" data-id="2" id="Floor-2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2.jpg"></li>
+		<li class="currentTexture floorHall" data-id="3" id="Floor-3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3.jpg"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-1" data-id="1" data-src="" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-2" data-id="2" data-src="" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2.png"></li>
+		<li class="currentTexture floorKitchen" id="FloorKitchen-3" data-id="3" data-src="" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3.png"></li>
 	</ul>
 	</div>
 	<ul class="b-workshop-list clearfix">
