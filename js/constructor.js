@@ -515,11 +515,12 @@
 			    }
 			    if (value >= 100) {
 			    	if( isIE ){
-		                 $('.rel').fadeIn(500);
+			    		$('.progressbarContain').fadeOut(250);
+		                $('.rel').fadeIn(500);
 		            }else{
+		            	$('.progressbarContain').addClass("hideContent");
 		            	$('.rel').addClass("showContent");
 		            }
-		            $('.progressbarContain').fadeOut(250);
                 	$(window).resize();
 			    }
 
