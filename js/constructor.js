@@ -1,4 +1,4 @@
-		var checkSize = false;
+		var fullSizeCheck = false;
 		var blocks = [];
 		var shiftSlider;
 		var currentTexture;
@@ -57,7 +57,7 @@
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
 		    });
-		    
+
 			$('.currentTexture').each(function(){
 			 	decorsID.push($(this).attr("data-id"));
 			});
@@ -86,11 +86,13 @@
 				});
 			}
 			$(window).resize(function(){
-				if(checkSize === false){
+				if(fullSizeCheck === false){
 					$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
+				}else{
+					FullWidth();
 				}
 					if($('#room').width() > $('.b-wide-block').width())
 					{
@@ -103,7 +105,7 @@
 					
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					$('.relBackground').css({"height": ""});
-					//checkSize = false;
+					//fullSizeCheck = false;
 					if(window.innerWidth >= 1240){
 						shiftSlider = 8;
 					}
@@ -124,21 +126,11 @@
 				$('.slick-active[data-slick-index="0"]').click();
 				//$(window).resize();
 				if(getCookie("size") === "full"){
-					var curWidth = $('#room').width();
-						$('#room, #floorRoom, #floorRoomBack').css({
-							"height": "auto",
-							"width": $('.b-wide-block').width()
-						});
-						var autoHeight = $('#room').height();
-						$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).css(
-							{
-								height: autoHeight,
-								width: $('.b-wide-block').width()
-							});
-						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
-						$('.icon-small-size').css("display", "inline-block");
-						$('.icon-full-size').css("display", "none");
-						checkSize = true;
+					FullWidth();
+					$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+					$('.icon-small-size').css("display", "inline-block");
+					$('.icon-full-size').css("display", "none");
+					fullSizeCheck = true;
 				}
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
@@ -148,11 +140,27 @@
 			        img.src = src;
 			    });
 			});
-			//$('#room').load();
+
+
+			function FullWidth(){
+				var curWidth = $('#room').width();
+				$('#room, #floorRoom, #floorRoomBack').css({
+					"height": "auto",
+					"width": $('.b-wide-block').width()
+				});
+				var autoHeight = $('#room').height();
+				$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).css(
+				{
+					height: autoHeight,
+					width: $('.b-wide-block').width()
+				});
+			}
+
+
 			$('.fullSize').click(function(){
 				var date = new Date;
 				date.setDate(date.getFullYear() + 1);
-					if(checkSize === false){
+					if(fullSizeCheck === false){
 						var curWidth = $('#room').width();
 						$('#room, #floorRoom, #floorRoomBack').css({
 							"height": "auto",
@@ -167,9 +175,9 @@
 						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
 						setCookie("size","full", date);
-						checkSize = true;
+						fullSizeCheck = true;
 					}else 
-						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
+						if(fullSizeCheck === true && $('.rel').height() > $(window).height() - 100){
 							var curHeight = $('#room').height();
 							$('#room, #floorRoom, #floorRoomBack').css({
 								"height": $(window).height() - height,
@@ -184,7 +192,7 @@
 							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
 							setCookie("size","small", date);
-							checkSize = false;
+							fullSizeCheck = false;
 					}
 			});
 			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
@@ -316,6 +324,23 @@
 				        event: 'click mouseleave'
 				    }
 				  });
+				$('.currentTexture[title]').each(function(){
+				  	$(this).qtip({
+				  		position: {
+		                at: 'bottom center',
+		                my: 'top center',
+		                adjust: {
+				            y: 8
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustomBrown qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  	});
+				  });
 				}else{
 				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 				  	position: {
@@ -349,6 +374,23 @@
 		            hide: {
 				        event: 'click mouseleave'
 				    }
+				  });
+				$('.currentTexture[title]').each(function(){
+				  	$(this).qtip({
+				  		position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -8
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  	});
 				  });
 			}
 			});
