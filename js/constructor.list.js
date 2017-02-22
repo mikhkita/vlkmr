@@ -53,7 +53,7 @@ $(document).ready(function(){
     		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		//console.log(img.src, loadImages, count);
+	    		// console.log(img.src, loadImages, count);
 	    		if(count === loadImages){
 		    			afterLoad(th);
 		        	}
@@ -63,6 +63,7 @@ $(document).ready(function(){
     	});
     	imgRoom.onload = function(){
     		count++;
+    		// console.log(imgRoom.src, loadImages, count);
     		if(count === loadImages){
 		    	afterLoad(th);
 	       	}
