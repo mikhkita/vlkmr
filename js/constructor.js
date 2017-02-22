@@ -290,7 +290,7 @@
 			});
 
 			$(window).scroll(function(){
-				if($(this).scrollTop() > 580){
+				if($(this).scrollTop() > 575){
 				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 				  	position: {
 		                at: 'bottom center',

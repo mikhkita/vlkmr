@@ -843,7 +843,7 @@ isRetina = (isMobile)?false:retina();
 		<polygon class="classSVG" id="block26" data-reflection="true" data-connect="11" data-clip="clipping26 circle" data-radius="395" data-coordX="61" data-coordY="80" fill="url(#imageblock26)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
 		<polygon class="classSVG" id="block27" data-reflection="true" data-connect="13,15" data-clip="clipping27 circle" data-radius="280" data-coordX="68.5" data-coordY="84" fill="url(#imageblock27)" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
 		<polygon class="classSVG" id="block28" data-reflection="true" data-connect="12,16" data-clip="clipping28 circle" data-radius="280" data-coordX="67" data-coordY="92" fill="url(#imageblock28)" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
-		<polygon id="block29" data-reflection="true" data-connect="14" data-clip="clipping29 circle" data-radius="320" data-coordX="78" data-coordY="85" fill="url(#imageblock29)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+		<polygon class="classSVG" id="block29" data-reflection="true" data-connect="14" data-clip="clipping29 circle" data-radius="320" data-coordX="78" data-coordY="85" fill="url(#imageblock29)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
 	</svg>
 
