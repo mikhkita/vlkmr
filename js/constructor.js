@@ -105,7 +105,7 @@
 			});
 			//После загрузки страницы вызываем ресайз
 			$(window).load(function(e){
-				$('.slick-active[data-id="1"]').click();
+				$('.slick-active').eq(0).click();
 				//$(window).resize();
 				if(getCookie("size") === "full"){
 					var curWidth = $('#room').width();
