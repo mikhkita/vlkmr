@@ -3826,7 +3826,7 @@ ul.b-workshop-list{
 .floorIMG{
 	position: relative;
 	display: inline-block;
-	width: 28%;
+	width: 28.1%;
 	box-sizing: border-box;
 	margin: 5px 20px 10px 20px;
 	line-height: 0;
@@ -3958,6 +3958,15 @@ ul.b-workshop-list{
 	height: 80px;
 	position: absolute;
 	z-index: 10;
+	-webkit-transition: opacity 300ms ease-out;
+  	-moz-transition: opacity 300ms ease-out;
+   	-ms-transition: opacity 300ms ease-out;
+   	-o-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+	opacity: 1;
+}
+.progressbarContain.hideContent{
+	opacity: 0;
 }
 
 .ya-share2{

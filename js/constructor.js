@@ -1,4 +1,4 @@
-		var checkSize = false;
+		var fullSizeCheck = false;
 		var blocks = [];
 		var shiftSlider;
 		var currentTexture;
@@ -7,20 +7,21 @@
 		var currentFloor;
 		var prevFloor;
 		var progressbarValue = 0.3;
-		var progressbarTextures = 0;
 		var decorsID = [];
 		var floorsID = [];
-		var barCircle;
 
 		$(document).ready(function(){
+			var valueInc = 0.4 / ($('.currentTexture2').length * 2 + $('.floors').length);
 			var height = 100;
 			if( isIE ){
 		    	$('.rel').addClass("hide");
 		    	$('.rel').css("opacity", 1);
 		    }
+		    /*------Прогрессбар----------*/
 			function ProgressBarInc(value) {
 			  	progressbarValue += value;
-			  	progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
+			  	console.log(valueInc, progressbarValue, $('.currentTexture2').length * 2 + $('.floors').length);
+			  	//progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
                 bar.animate(progressbarValue);
 			}
 			$('.currentTexture, .currentTexture2').each(function(){
@@ -36,26 +37,41 @@
 		        var img = new Image();
             	img.src = src;
            		img.onload = function(){
-           			ProgressBarInc(0.01);
+           			ProgressBarInc(valueInc);
             	}
 		    });
 
 			 $('.floors').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
+		        var img = new Image();
+            	img.src = src;
+           		img.onload = function(){
+           			ProgressBarInc(valueInc);
+            	}
 		        floorsID.push($(this).attr("data-id"));
 		    });
-			 $('.floorIMG').each(function(){
+
+			//Загрузка полов в выпадающей панели
+			$('.floorIMG').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
 		    });
+
 			$('.currentTexture').each(function(){
 			 	decorsID.push($(this).attr("data-id"));
 			});
 
-			$('#room').imagesLoaded( function() {
-				ProgressBarInc(0.3);
-			});
+			//Загрузка комнаты
+		    $('#room').attr("src", $('#room').attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
+			var imgRoom = new Image();
+            imgRoom.src = $('#room').attr("src");
+           	imgRoom.onload = function(){
+           		console.log("+++++++++");
+           		ProgressBarInc(0.3);
+            }
+            /*-----------------------------------*/
+
 			$('.relBackground').css({"height": $(window).height() - height});
 			$('.progressbarContain').css({
 				"top": ($(window).height() - height)/2 - 40
@@ -70,11 +86,13 @@
 				});
 			}
 			$(window).resize(function(){
-				if(checkSize === false){
+				if(fullSizeCheck === false){
 					$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 						"height": $(window).height() - height,
 						"width": "auto"
 					});
+				}else{
+					FullWidth();
 				}
 					if($('#room').width() > $('.b-wide-block').width())
 					{
@@ -87,7 +105,7 @@
 					
 					$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 					$('.relBackground').css({"height": ""});
-					//checkSize = false;
+					//fullSizeCheck = false;
 					if(window.innerWidth >= 1240){
 						shiftSlider = 8;
 					}
@@ -103,26 +121,16 @@
 					console.log(currentTexture);
 					
 			});
-			//После загрузки страницы вызываем ресайз
+
 			$(window).load(function(e){
 				$('.slick-active').eq(0).click();
 				//$(window).resize();
 				if(getCookie("size") === "full"){
-					var curWidth = $('#room').width();
-						$('#room, #floorRoom, #floorRoomBack').css({
-							"height": "auto",
-							"width": $('.b-wide-block').width()
-						});
-						var autoHeight = $('#room').height();
-						$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).css(
-							{
-								height: autoHeight,
-								width: $('.b-wide-block').width()
-							});
-						$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
-						$('.icon-small-size').css("display", "inline-block");
-						$('.icon-full-size').css("display", "none");
-						checkSize = true;
+					FullWidth();
+					$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+					$('.icon-small-size').css("display", "inline-block");
+					$('.icon-full-size').css("display", "none");
+					fullSizeCheck = true;
 				}
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
@@ -132,11 +140,27 @@
 			        img.src = src;
 			    });
 			});
-			//$('#room').load();
+
+
+			function FullWidth(){
+				var curWidth = $('#room').width();
+				$('#room, #floorRoom, #floorRoomBack').css({
+					"height": "auto",
+					"width": $('.b-wide-block').width()
+				});
+				var autoHeight = $('#room').height();
+				$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').width(curWidth).css(
+				{
+					height: autoHeight,
+					width: $('.b-wide-block').width()
+				});
+			}
+
+
 			$('.fullSize').click(function(){
 				var date = new Date;
 				date.setDate(date.getFullYear() + 1);
-					if(checkSize === false){
+					if(fullSizeCheck === false){
 						var curWidth = $('#room').width();
 						$('#room, #floorRoom, #floorRoomBack').css({
 							"height": "auto",
@@ -151,9 +175,9 @@
 						$('.icon-small-size').css("display", "inline-block");
 						$('.icon-full-size').css("display", "none");
 						setCookie("size","full", date);
-						checkSize = true;
+						fullSizeCheck = true;
 					}else 
-						if(checkSize === true && $('.rel').height() > $(window).height() - 100){
+						if(fullSizeCheck === true && $('.rel').height() > $(window).height() - 100){
 							var curHeight = $('#room').height();
 							$('#room, #floorRoom, #floorRoomBack').css({
 								"height": $(window).height() - height,
@@ -168,7 +192,7 @@
 							$('.icon-small-size').css("display", "none");
 							$('.icon-full-size').css("display", "inline-block");
 							setCookie("size","small", date);
-							checkSize = false;
+							fullSizeCheck = false;
 					}
 			});
 			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
@@ -266,7 +290,7 @@
 			});
 
 			$(window).scroll(function(){
-				if($(this).scrollTop() > 580){
+				if($(this).scrollTop() > 575){
 				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 				  	position: {
 		                at: 'bottom center',
@@ -299,6 +323,23 @@
 		            hide: {
 				        event: 'click mouseleave'
 				    }
+				  });
+				$('.currentTexture[title]').each(function(){
+				  	$(this).qtip({
+				  		position: {
+		                at: 'bottom center',
+		                my: 'top center',
+		                adjust: {
+				            y: 8
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustomBrown qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  	});
 				  });
 				}else{
 				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
@@ -333,6 +374,23 @@
 		            hide: {
 				        event: 'click mouseleave'
 				    }
+				  });
+				$('.currentTexture[title]').each(function(){
+				  	$(this).qtip({
+				  		position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -8
+				        }
+		            },
+		            style: {
+	        			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            }
+				  	});
 				  });
 			}
 			});
@@ -449,7 +507,6 @@
 			  trailColor: '#eee',
 			  svgStyle: null,
 			  step: function(state, circle) {
-			  	barCircle = circle;
 			    var value = Math.round(circle.value() * 100);
 			    if (value === 0) {
 			      circle.setText('');
@@ -458,11 +515,12 @@
 			    }
 			    if (value >= 100) {
 			    	if( isIE ){
-		                 $('.rel').fadeIn(500);
+			    		$('.progressbarContain').fadeOut(250);
+		                $('.rel').fadeIn(500);
 		            }else{
+		            	$('.progressbarContain').addClass("hideContent");
 		            	$('.rel').addClass("showContent");
 		            }
-		            $('.progressbarContain').fadeOut(250);
                 	$(window).resize();
 			    }
 
