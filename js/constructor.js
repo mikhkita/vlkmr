@@ -20,7 +20,7 @@
 		    /*------Прогрессбар----------*/
 			function ProgressBarInc(value) {
 			  	progressbarValue += value;
-			  	console.log(valueInc, progressbarValue, $('.currentTexture2').length * 2 + $('.floors').length);
+			  	//console.log(valueInc, progressbarValue, $('.currentTexture2').length * 2 + $('.floors').length);
 			  	//progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
                 bar.animate(progressbarValue);
 			}
@@ -592,7 +592,7 @@
 				{
 					this.drawTexture(i);
 				}
-			this.urlUpdate();
+			this.urlUpdate(true);
 		}
 
 		this.drawTexture = function(i){
@@ -682,14 +682,14 @@
 								"data-id": this.params[i]
 							});
 							this.params[i] = this.default[i];
-							this.urlUpdate();
+							this.urlUpdate(true);
 						}
 					}
 				}else{
 					console.log("Init for parse");
 					this.init();
 				}
-				this.urlUpdate();
+				this.urlUpdate(true);
 			}
 
 		this.urlPush = function(position, texture) {
@@ -697,13 +697,13 @@
 				return
 			}
 			this.params[position] = texture;
-			this.urlUpdate();
+			this.urlUpdate(false);
 		}
 		this.urlPushFloor = function(texture) {
 			this.floor = texture;
-			this.urlUpdate();
+			this.urlUpdate(false);
 		}
-		this.urlUpdate = function(){
+		this.urlUpdate = function(replace){
 			//console.log("params",this.params);
 			console.log("urlUpdate!!");
 			var url = '?';
@@ -723,7 +723,11 @@
 				hrefUrl = window.location.href.slice(0,window.location.href.indexOf('\?'));
 			}
 			hrefUrl += url;
-			window.history.pushState(null, null, hrefUrl);
+			if(replace === true){
+				window.history.replaceState(null, null, hrefUrl);
+			}else{
+				window.history.pushState(null, null, hrefUrl);
+			}
 			share.updateContent({
 			    url: hrefUrl
 			});
