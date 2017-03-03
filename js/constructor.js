@@ -123,7 +123,7 @@
 			});
 
 			$(window).load(function(e){
-				$('.slick-active[data-slick-index="0"]').click();
+				$('.slick-active').eq(0).click();
 				//$(window).resize();
 				if(getCookie("size") === "full"){
 					FullWidth();

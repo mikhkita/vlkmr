@@ -6,15 +6,6 @@ $(document).ready(function(){
     	$('.IEloader').addClass("hide");
     }
 
-    $('.currentTexture').each(function(){
-		    var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-		    $(this).attr("data-src", src);
-		});
-    $('.roomImage').each(function(){
-		    var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
-		    $(this).attr("xlink:href", src);
-		});
-
 	function DrawDefault(svg, hash){
 		//console.log(svg, svg.attr("data-kitchen") === "true");
 		var floor;
