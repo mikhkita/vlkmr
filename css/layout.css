@@ -3967,6 +3967,7 @@ ul.b-workshop-list{
 }
 .progressbarContain.hideContent{
 	opacity: 0;
+	visibility: hidden;
 }
 
 .ya-share2{

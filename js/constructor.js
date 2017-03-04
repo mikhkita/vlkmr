@@ -122,16 +122,17 @@
 					
 			});
 
+		if(getCookie("size") === "full"){
+			FullWidth();
+			$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+			$('.icon-small-size').css("display", "inline-block");
+			$('.icon-full-size').css("display", "none");
+			fullSizeCheck = true;
+		}
+
 			$(window).load(function(e){
 				$('.slick-active').eq(0).click();
 				//$(window).resize();
-				if(getCookie("size") === "full"){
-					FullWidth();
-					$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
-					$('.icon-small-size').css("display", "inline-block");
-					$('.icon-full-size').css("display", "none");
-					fullSizeCheck = true;
-				}
 				//начать загружать большие декоры
 				$('.currentTexture').each(function(){
 			        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
@@ -1008,6 +1009,7 @@
 				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
+					// $('#'+$(this).attr("data-id")+"Back, #"+$(this).attr("data-id")).css("opacity", "1");
 					console.log(stack);
 					//Получаем элемент из центрального слоя
 					
