@@ -20,8 +20,6 @@
 		    /*------Прогрессбар----------*/
 			function ProgressBarInc(value) {
 			  	progressbarValue += value;
-			  	//console.log(valueInc, progressbarValue, $('.currentTexture2').length * 2 + $('.floors').length);
-			  	//progressbarValue = progressbarValue > 1.0 ? 1.0 : progressbarValue;
                 bar.animate(progressbarValue);
 			}
 			$('.currentTexture, .currentTexture2').each(function(){
@@ -67,7 +65,6 @@
 			var imgRoom = new Image();
             imgRoom.src = $('#room').attr("src");
            	imgRoom.onload = function(){
-           		console.log("+++++++++");
            		ProgressBarInc(0.3);
             }
             /*-----------------------------------*/
@@ -118,7 +115,6 @@
 					if(window.innerWidth <= 768){
 						shiftSlider = 1;
 					}
-					console.log(currentTexture);
 					
 			});
 
@@ -396,32 +392,6 @@
 			}
 			});
 
-			//Доработать значения
-			//Зафиксировать панель
-			/*$(window).scroll(function(){
-				if ($('.panelFloor').hasClass("showContent"))
-				{
-					height = 400;
-				}else{
-					height = 100;
-				}
-				  if($(this).scrollTop() > 600)
-				  {
-				    //console.log($(this).scrollTop());	
-				  	$('.toolbar').addClass("panelFixed");
-				  	$('.emptyBlock').addClass("showContent");
-				  	$('.emptyBlock').removeClass("hideContent");
-				  	$('.emptyBlock').css("height", height);
-				  }
-				  //= высота - размер картинки
-				  if($(this).scrollTop() > 1400|| $(this).scrollTop() < 600)
-				  {
-				    //console.log($(this).scrollTop());	
-				  	$('.toolbar').removeClass("panelFixed");
-				  	$('.emptyBlock').removeClass("showContent");
-				  	$('.emptyBlock').addClass("hideContent");
-				  }
-				});*/
 			//Сочетание клавиш
 			var pressCtrl = false;
 			var pressCmd = false;
@@ -490,16 +460,6 @@
 				clickLayers = false;
 			});
 
-			//Раскрывающаяся панель с декорами
-			/*$('.iconMore').click(function(){
-				$('.allTextures').toggleClass("showContent");
-				$('.allTextures').css({
-					"max-height": $(window).height() - 100
-				});
-			});*/
-			/*$('.currentTexture img').load(function(){
-				console.log("textures!!!!!!!!!!!!!");
-			});*/
 			var bar = new ProgressBar.Circle('#progressbar', {
 			  strokeWidth: 10,
 			  easing: 'easeInOut',
@@ -551,7 +511,6 @@
 	    });
 
 		this.checkHash = function(){
-			console.log("checkHash!!");
 			this.get = window.location.search;
 			var hash = $('#default-hash').attr("data-hash");
 			if(~hash.indexOf('|')){
@@ -559,7 +518,6 @@
 				hash = hash.split('|')[1];
 			}
 			this.default = hash.split(',');
-			console.log(hash, this.default );
 			if( ~this.get.indexOf('?') ) {
 				this.parse();
 			}else{
@@ -568,7 +526,6 @@
 		}
 
 		this.init = function() {
-				console.log("init!!");
 				this.params = {};
 				var hash = $('#default-hash').attr("data-hash");
 				var hashArray = [];
@@ -625,7 +582,6 @@
 
 		this.parse = function() {
 				var path;
-				console.log("parse!!");
 				var data = this.get;
 				data = data.replace('?','');
 				if(~data.indexOf('floor')){
@@ -665,17 +621,13 @@
 				
 				if(+this.countSVG === valueBlocks.length)
 				{
-					console.log("+this.countSVG === ");
-				this.params = valueBlocks;
+					this.params = valueBlocks;
 					for (var i in this.params) {
 						//if($('.currentTexture').find($('*[data-id="'+this.params[i]+'"]')))
 						if($.inArray(this.params[i], decorsID) !== -1)
 						{
-							console.log("decorsID");
-							//console.log($('*[data-id="'+this.params[i]+'"]'));
 							this.drawTexture(i);
 						}else{
-							//console.log(this.default[i]);
 							//брать дефолтный
 							path = $('.currentTexture[data-id="'+this.default[i]+'"]').attr("data-src");
 							$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr({
@@ -687,7 +639,6 @@
 						}
 					}
 				}else{
-					console.log("Init for parse");
 					this.init();
 				}
 				this.urlUpdate(true);
@@ -705,8 +656,6 @@
 			this.urlUpdate(false);
 		}
 		this.urlUpdate = function(replace){
-			//console.log("params",this.params);
-			console.log("urlUpdate!!");
 			var url = '?';
 			if(this.floor != "")
 			{
@@ -829,7 +778,6 @@
 				var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
 				blocks.push(blockAdd);
 			});
-			console.log(stack);
 			var stackRepeat = [];
 			var stackCancel = false;
 			var checkConnectPrev = false;
@@ -942,7 +890,6 @@
 			   this.circle = circle;
 			   this.radius = radius;
 			   this.animateSVG = function(x, y, clickEl, currentTextureLoc){
-			   	console.log(circle);
 			   	circle.attr({
 				  	'cx': x + '%',
 				  	'cy': y + '%'
@@ -1009,12 +956,8 @@
 				clickElem = $(this).attr("data-id");//block1
 				if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 				{
-					// $('#'+$(this).attr("data-id")+"Back, #"+$(this).attr("data-id")).css("opacity", "1");
-					console.log(stack);
 					//Получаем элемент из центрального слоя
 					
-					// = $(this).attr("data-location");//Up
-					//$('#'+clickElem).css({"fill": "url(#image"+clickElem+")"});
 					//закинуть текущую текстуру в pattern
 					$('#image'+clickElem).children().attr({
 						"xlink:href": currentTexture.attr("data-src"),
@@ -1026,28 +969,10 @@
 				    var relativeX = (offset.left - parent.left) / $('#room').width() * 100+ ((e.pageX / $('#room').width() * 100) - (offset.left / $('#room').width() * 100));
 				    var relativeY = ((offset.top - parent.top) / $('#room').height()) * 100+ ((e.pageY / $('#room').height() * 100) - (offset.top / $('#room').height() * 100));
 
-				    //Добавить текущий SVG и текстуру в стек
-				    //var stackObj = new clickArea(clickElem, "url(#" + currentTexture.attr("data-src") +  + ")");
-				    /*var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("xlink:href"));
-				    console.log(stack);*/
-				    //if(stackObj.path != stack[stack.length - 1].path || stackObj.texture != stack[stack.length - 1].texture)
-
 				    //искать в стеке такое же сочетание path+texture
 				    var elemRepeat = false;
-				    /*stack.forEach(function(item, i, stack){
-				    	if(stackObj.path === item.path && stackObj.texture === item.texture)
-				    	{
-				    		elemRepeat = true;
-				    	}
-				    })
-				    if(elemRepeat === false)
-				    {
-				    	console.log("add!");
-				    	stack.push(stackObj);
-				    }*/
 				    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("data-id"));
 					stack.push(stackObj);
-					console.log(stack);
 				    if(stack.length > $('#default-hash').attr("data-stack")){//Если с анимацией пола то 22
 						$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 					}else{
