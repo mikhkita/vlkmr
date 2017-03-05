@@ -39,7 +39,7 @@
             	}
 		    });
 
-			 $('.floors').each(function(){
+			$('.floors').each(function(){
 		        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
 		        $(this).attr("data-src", src);
 		        var img = new Image();
@@ -280,7 +280,11 @@
 			        }
 			    }
 			  	});
-			  });
+			});
+
+			$(".currentTexture2").click(function(){
+				$('.currentTexture2[title]').qtip("hide");
+			});
 
 			$("body").on("scroll mousewheel", ".fancybox-inner",function(){
 				 $('.currentTexture2[title]').qtip('hide');
