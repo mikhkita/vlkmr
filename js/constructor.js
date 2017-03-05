@@ -31,6 +31,7 @@
 					src = $(this).attr("data-image-mini");
 					$(this).attr("data-src", $(this).attr("data-image"));
 				}
+				$(this).removeAttr("data-retina-image").removeAttr("data-retina-image-mini").removeAttr("data-image").removeAttr("data-image-mini");
 		        $(this).css("background-image", "url('"+src+"')");
 		        var img = new Image();
             	img.src = src;
@@ -708,7 +709,7 @@
 					"box-sizing": "border-box"
 				});
 				if(window.innerWidth <= 768){
-					$('.iconMore').click();
+					// $('.iconMore').click();
 				}
 			});
 			$('.currentTexture2').click(function(e){
