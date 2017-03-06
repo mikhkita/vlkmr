@@ -1057,10 +1057,8 @@ $(document).ready(function(){
 	    }]
 	});
 	$('.textures').on('breakpoint', function(event, slick, breakpoint){
-		if(breakpoint === 768)
+		if(breakpoint !== 768)
 		{
-			//$('.currentTexture2[data-id="'+currentTextureID+'"]').first().click();
-		}else{
 			$('.textures').slick('slickGoTo', currentTextureID, false);
 	        $('.currentTexture[data-slick-index="'+currentTextureID+'"]').click();
 		}
