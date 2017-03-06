@@ -323,22 +323,22 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#444"></div>
+							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#57a416"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
 							</div>
 							<!--Полы-->
 							<div style="display: none">
@@ -398,6 +398,42 @@ isRetina = (isMobile)?false:retina();
 				<div class="floorIMG kitchenClass" data-src="" data-id="1" data-image="i/FloorKitchen-1.png" data-retina-image="i/FloorKitchen-1.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
+					<svg data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
+						<polygon class="classSVGback block1BackSmall" fill="" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+						<polygon class="classSVGback block2BackSmall" fill="" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+						<polygon class="classSVGback block3BackSmall" fill="" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+						<polygon class="classSVGback block4BackSmall" fill="" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+						<polygon class="classSVGback block5BackSmall" fill="" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+						<polygon class="classSVGback block6BackSmall" fill="" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+						<polygon class="classSVGback block7BackSmall" fill="" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+						<polygon class="classSVGback block8BackSmall" fill="" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+						<polygon class="classSVGback block9BackSmall" fill=""  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+						<polygon class="classSVGback block10BackSmall" fill="" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+						<polygon class="classSVGback block11BackSmall" fill="" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+						<polygon class="classSVGback block12BackSmall" fill="" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+						<polygon class="classSVGback block13BackSmall" ifill="" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+						
+						<polygon class="classSVGback block14BackSmall" fill="" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+						<polygon class="classSVGback block15BackSmall" fill="" points="1293.7,344 2212,388 2212,995 1288,984 "/>
+
+						<!--Отражение-->
+						<polygon class="classSVGback block16BackSmall" fill="" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+						<polygon class="classSVGback block17BackSmall" fill="" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+
+
+						<polygon class="classSVGBack block18BackSmall" fill="" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+						<polygon class="classSVGBack block19BackSmall" fill="" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+						<polygon class="classSVGBack block20BackSmall" fill="" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+						<polygon class="classSVGBack block21BackSmall" fill="" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+						<polygon class="classSVGBack block22BackSmall" fill="" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+						<polygon class="classSVGBack block23BackSmall" fill="" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+						<polygon class="classSVGBack block24BackSmall" fill="" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+						<polygon class="classSVGBack block25BackSmall" fill="" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+						<polygon class="classSVGBack block26BackSmall" fill="" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+						<polygon class="classSVGBack block27BackSmall" fill="" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
+						<polygon class="classSVGBack block28BackSmall" fill="" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
+						<polygon class="classSVGBack block29BackSmall" fill="" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+					</svg>
 					<img class="floorIMGabs" src="i/FloorKitchen-1.png">
 					<img src="i/RoomKitchen.png">
 				</div>
@@ -405,6 +441,42 @@ isRetina = (isMobile)?false:retina();
 				<div class="floorIMG kitchenClass" data-src="" data-id="2" data-image="i/FloorKitchen-2.png" data-retina-image="i/FloorKitchen-2.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
+					<svg data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
+						<polygon class="classSVGback block1BackSmall" fill="" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+						<polygon class="classSVGback block2BackSmall" fill="" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+						<polygon class="classSVGback block3BackSmall" fill="" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+						<polygon class="classSVGback block4BackSmall" fill="" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+						<polygon class="classSVGback block5BackSmall" fill="" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+						<polygon class="classSVGback block6BackSmall" fill="" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+						<polygon class="classSVGback block7BackSmall" fill="" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+						<polygon class="classSVGback block8BackSmall" fill="" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+						<polygon class="classSVGback block9BackSmall" fill=""  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+						<polygon class="classSVGback block10BackSmall" fill="" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+						<polygon class="classSVGback block11BackSmall" fill="" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+						<polygon class="classSVGback block12BackSmall" fill="" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+						<polygon class="classSVGback block13BackSmall" ifill="" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+						
+						<polygon class="classSVGback block14BackSmall" fill="" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+						<polygon class="classSVGback block15BackSmall" fill="" points="1293.7,344 2212,388 2212,995 1288,984 "/>
+
+						<!--Отражение-->
+						<polygon class="classSVGback block16BackSmall" fill="" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+						<polygon class="classSVGback block17BackSmall" fill="" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+
+
+						<polygon class="classSVGBack block18BackSmall" fill="" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+						<polygon class="classSVGBack block19BackSmall" fill="" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+						<polygon class="classSVGBack block20BackSmall" fill="" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+						<polygon class="classSVGBack block21BackSmall" fill="" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+						<polygon class="classSVGBack block22BackSmall" fill="" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+						<polygon class="classSVGBack block23BackSmall" fill="" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+						<polygon class="classSVGBack block24BackSmall" fill="" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+						<polygon class="classSVGBack block25BackSmall" fill="" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+						<polygon class="classSVGBack block26BackSmall" fill="" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+						<polygon class="classSVGBack block27BackSmall" fill="" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
+						<polygon class="classSVGBack block28BackSmall" fill="" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
+						<polygon class="classSVGBack block29BackSmall" fill="" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+					</svg>
 					<img class="floorIMGabs" src="i/FloorKitchen-2.png">
 					<img src="i/RoomKitchen.png">
 				</div>
@@ -412,6 +484,42 @@ isRetina = (isMobile)?false:retina();
 				<div class="floorIMG kitchenClass" data-src="" data-id="3" data-image="i/FloorKitchen-3.png" data-retina-image="i/FloorKitchen-3.png">
 				<h3>Светлый</h3>
 				<div class="b-floor-cont">
+					<svg data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
+						<polygon class="classSVGback block1BackSmall" fill="" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+						<polygon class="classSVGback block2BackSmall" fill="" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+						<polygon class="classSVGback block3BackSmall" fill="" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+						<polygon class="classSVGback block4BackSmall" fill="" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+						<polygon class="classSVGback block5BackSmall" fill="" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+						<polygon class="classSVGback block6BackSmall" fill="" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+						<polygon class="classSVGback block7BackSmall" fill="" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+						<polygon class="classSVGback block8BackSmall" fill="" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+						<polygon class="classSVGback block9BackSmall" fill=""  points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+						<polygon class="classSVGback block10BackSmall" fill="" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+						<polygon class="classSVGback block11BackSmall" fill="" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+						<polygon class="classSVGback block12BackSmall" fill="" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+						<polygon class="classSVGback block13BackSmall" ifill="" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+						
+						<polygon class="classSVGback block14BackSmall" fill="" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+						<polygon class="classSVGback block15BackSmall" fill="" points="1293.7,344 2212,388 2212,995 1288,984 "/>
+
+						<!--Отражение-->
+						<polygon class="classSVGback block16BackSmall" fill="" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>
+						<polygon class="classSVGback block17BackSmall" fill="" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>
+
+
+						<polygon class="classSVGBack block18BackSmall" fill="" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+						<polygon class="classSVGBack block19BackSmall" fill="" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+						<polygon class="classSVGBack block20BackSmall" fill="" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+						<polygon class="classSVGBack block21BackSmall" fill="" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+						<polygon class="classSVGBack block22BackSmall" fill="" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+						<polygon class="classSVGBack block23BackSmall" fill="" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+						<polygon class="classSVGBack block24BackSmall" fill="" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+						<polygon class="classSVGBack block25BackSmall" fill="" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+						<polygon class="classSVGBack block26BackSmall" fill="" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+						<polygon class="classSVGBack block27BackSmall" fill="" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
+						<polygon class="classSVGBack block28BackSmall" fill="" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
+						<polygon class="classSVGBack block29BackSmall" fill="" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+					</svg>
 					<img class="floorIMGabs" src="i/FloorKitchen-3.png">
 					<img src="i/RoomKitchen.png">
 				</div>
@@ -855,38 +963,38 @@ isRetina = (isMobile)?false:retina();
 	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3269 1895">
 		<title>Гостиная</title>
 
-		<polygon class="classSVGFront" id="block1Front" data-id="block1" points="134,678 442,684 442,1059.4 134,1065.7 "/>
-		<polygon class="classSVGFront" id="block2Front" data-id="block2" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
-		<polygon class="classSVGFront" id="block3Front" data-id="block3" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
-		<polygon class="classSVGFront" id="block4Front" data-id="block4" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
-		<polygon class="classSVGFront" id="block5Front" data-id="block5" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
-		<polygon class="classSVGFront" id="block6Front" data-id="block6" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
-		<polygon class="classSVGFront" id="block7Front" data-id="block7" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
-		<polygon class="classSVGFront" id="block8Front" data-id="block8" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
-		<polygon class="classSVGFront" id="block9Front" data-id="block9" points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
-		<polygon class="classSVGFront" id="block10Front" data-id="block10" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
+		<polygon class="classSVGFront" id="block1Front" data-id="block1" data-smallTexture=".block1BackSmall" points="134,678 442,684 442,1059.4 134,1065.7 "/>
+		<polygon class="classSVGFront" id="block2Front" data-id="block2" data-smallTexture=".block2BackSmall" points="442,684 730.7,688 730.3,1052.3 442,1058.6 "/>
+		<polygon class="classSVGFront" id="block3Front" data-id="block3" data-smallTexture=".block3BackSmall, .block19BackSmall" points="730.3,1052.3 731.7,1451.7 444,1470 442,1058.6 "/>
+		<polygon class="classSVGFront" id="block4Front" data-id="block4" data-smallTexture=".block4BackSmall, .block18BackSmall" points="134,1065.7 442,1059.4 444,1470 137.7,1489.3 "/>
+		<polygon class="classSVGFront" id="block5Front" data-id="block5" data-smallTexture=".block5BackSmall, .block20BackSmall" points="761.3,1048 925,1044.7 925,1437.3 761.3,1448.7 "/>
+		<polygon class="classSVGFront" id="block6Front" data-id="block6" data-smallTexture=".block6BackSmall, .block22BackSmall" points="925,1044.7 1386.3,1034.3 1384.5,1221.4 925,1241.4 "/>
+		<polygon class="classSVGFront" id="block7Front" data-id="block7" data-smallTexture=".block7BackSmall, .block21BackSmall" points="1384.5,1221.4 1383.5,1409 925,1437.3 925,1241.4 "/>
+		<polygon class="classSVGFront" id="block8Front" data-id="block8" data-smallTexture=".block8BackSmall, .block23BackSmall" points="1386.3,1034.3 1530.5,1030.7 1528,1398 1383.5,1407.1 "/>
+		<polygon class="classSVGFront" id="block9Front" data-id="block9" data-smallTexture=".block9BackSmall, .block24BackSmall" points="1530.5,1030.7 1804.5,1022.5 1803.4,1058.8 1530.3,1065.2 "/>
+		<polygon class="classSVGFront" id="block10Front" data-id="block10" data-smallTexture=".block10BackSmall, .block25BackSmall" points="1804.5,1022.5 1965.4,1017.4 1960.5,1367.2 1797.3,1378.7 "/>
 		<!--<polygon class="classSVGFront" id="block11Front" data-id="block11" points="1675.2,1104.9 1670.8,1267 1798.6,1313.5 1801.7,1147.6 "/>-->
-		<polygon class="classSVGFront" id="block11Front" data-id="block11" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
-		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
-		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
-		<polygon class="classSVGFront" id="floorF" data-id="floor" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
+		<polygon class="classSVGFront" id="block11Front" data-id="block11" data-smallTexture=".block11BackSmall, .block26BackSmall" points="1965.4,1017.4 2090.5,1036.5 2084.5,1405 1960.5,1367.2 "/>
+		<polygon class="classSVGFront" id="block12Front" data-id="block12" data-smallTexture=".block12BackSmall" points="2090.5,1036.5 2357.5,1077 2357.5,1285.1 2087.5,1220.3 "/>
+		<polygon class="classSVGFront" id="block13Front" data-id="block13" data-smallTexture=".block13BackSmall" points="2087.5,1220.3 2357.5,1285.1 2357.5,1491 2084.5,1405 "/>
+		<polygon class="classSVGFront" id="floorF" data-id="floor" data-smallTexture=".block14BackSmall, .block29BackSmall" points="-9,1489.3 96,1479 111,1542 127,1542 127,1528 1971.7,1396.7 2384.3,1536 2593,1514 2593.6,1469.9 
 	2633.2,1465.9 2636.2,1260.1 3274.3,1406.7 3274.3,1901.3 -9,1901.3 "/>
-		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
-		<polygon class="classSVGFront" id="block15Front" data-id="block15" points="1293.7,344 2212,388 2212,995 1288,984 "/>
+		<polygon class="classSVGFront" id="block14Front" data-id="block14" data-smallTexture=".block15BackSmall" points="2357.5,1075.7 2640.5,1059 2635,1468.5 2357.5,1497.2 "/>
+		<polygon class="classSVGFront" id="block15Front" data-id="block15" data-smallTexture=".block16BackSmall, block13BackSmall, block14BackSmall" points="1293.7,344 2212,388 2212,995 1288,984 "/>
 		<!--<polygon class="classSVGFront" id="block16Front" data-id="block16" points="1675.2,1104.9 1675.2,1061.8 1801.7,1058.8 1801.7,1147.6 "/>-->
 
-		<polygon class="classSVGFront" id="block17Front"  data-id="block17" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
-		<polygon class="classSVGFront" id="block18Front"  data-id="block18" fill="url(#imageblock18)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
-		<polygon class="classSVGFront" id="block19Front"  data-id="block19" fill="url(#imageblock19)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
-		<polygon class="classSVGFront" id="block20Front"  data-id="block20" fill="url(#imageblock20)" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
-		<polygon class="classSVGFront" id="block21Front"  data-id="block21" fill="url(#imageblock21)" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
-		<polygon class="classSVGFront" id="block22Front"  data-id="block22" fill="url(#imageblock22)" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
-		<polygon class="classSVGFront" id="block23Front"  data-id="block23" fill="url(#imageblock23)" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
-		<polygon class="classSVGFront" id="block24Front"  data-id="block24" fill="url(#imageblock24)" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
-		<polygon class="classSVGFront" id="block25Front"  data-id="block25" fill="url(#imageblock25)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
-		<polygon class="classSVGFront" id="block26Front"  data-id="block26" fill="url(#imageblock26)" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
-		<polygon class="classSVGFront" id="block27Front"  data-id="block27" fill="url(#imageblock27)" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
-		<polygon class="classSVGFront" id="block28Front"  data-id="block28" fill="url(#imageblock28)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
+		<polygon class="classSVGFront" id="block17Front"  data-id="block17" data-smallTexture=".block17BackSmall, .block13BackSmall, .block28BackSmall" points="448.8,1895 134,1895 134,1590.9 444,1570.9 "/>
+		<polygon class="classSVGFront" id="block18Front"  data-id="block18" data-smallTexture=".block18BackSmall, .block4BackSmall" fill="url(#imageblock18)" points="740.3,1550.6 740.3,1895 448.8,1895 444,1570.9 "/>
+		<polygon class="classSVGFront" id="block19Front"  data-id="block19" data-smallTexture=".block19BackSmall, .block3BackSmall" fill="url(#imageblock19)" points="925,1541.9 925,1895 755,1895 755,1554.6 "/>
+		<polygon class="classSVGFront" id="block20Front"  data-id="block20" data-smallTexture=".block20BackSmall, .block5BackSmall" fill="url(#imageblock20)" points="925,1541.9 925,1747.9 1383.5,1697.9 1383.5,1497.9 "/>
+		<polygon class="classSVGFront" id="block21Front"  data-id="block21" data-smallTexture=".block21BackSmall, .block7BackSmall" fill="url(#imageblock21)" points="1383.5,1697.9 1383.5,1890.2 1333.3,1895 925,1895 925,1747.9 "/>
+		<polygon class="classSVGFront" id="block22Front"  data-id="block22" data-smallTexture=".block22BackSmall, .block6BackSmall" fill="url(#imageblock22)" points="1383.5,1497.9 1529.6,1491 1526,1876.9 1383.5,1890.2 "/>
+		<polygon class="classSVGFront" id="block23Front"  data-id="block23" data-smallTexture=".block23BackSmall, .block8BackSmall" fill="url(#imageblock23)" points="1526,1876.9 1526,1790.9 1796.2,1755.9 1796.2,1842.9 "/>
+		<polygon class="classSVGFront" id="block24Front"  data-id="block24" data-smallTexture=".block24BackSmall, .block9BackSmall" fill="url(#imageblock24)" points="1796.2,1835.9 1796.2,1469.4 1969.5,1447.4 1956,1813.9 "/>
+		<polygon class="classSVGFront" id="block25Front"  data-id="block25" data-smallTexture=".block25BackSmall, .block10BackSmall" fill="url(#imageblock25)" points="2084.5,1485.8 2084.5,1882.5 1956,1813.9 1969.5,1447.4 "/>
+		<polygon class="classSVGFront" id="block26Front"  data-id="block26" data-smallTexture=".block26BackSmall, .block11BackSmall" fill="url(#imageblock26)" points="2379.7,1584.6 2379.7,1803.2 2084.5,1676.3 2084.5,1485.8"/>
+		<polygon class="classSVGFront" id="block27Front"  data-id="block27" data-smallTexture=".block27BackSmall, .block13BackSmall, .block15BackSmall" fill="url(#imageblock27)" points="2379.7,1803.2 2379.7,1895 2108,1895 2084.5,1882.5 2084.5,1676.3 "/>
+		<polygon class="classSVGFront" id="block28Front"  data-id="block28" data-smallTexture=".block28BackSmall, .block12BackSmall, .block14BackSmall" fill="url(#imageblock28)" points="2639,1566.9 2623.3,1895 2379.7,1895 2379.7,1584.6 "/>
 
 	</svg>
 

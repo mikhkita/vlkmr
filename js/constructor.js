@@ -582,16 +582,20 @@ $(document).ready(function(){
 				switch(blocksConnect.length){
 					case 2:
 						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[1]+
-							', #imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr({
-								"xlink:href": path,
-								"data-id": this.params[i]
-							});
+						', #imageblock'+blocksConnect[0]+'Back, #imageblock'+blocksConnect[1]+'Back').children().attr({
+							"xlink:href": path,
+							"data-id": this.params[i]
+						});
+						var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+						$('.block'+blocksConnect[0]+'BackSmall, .block'+blocksConnect[1]+'BackSmall').attr("fill", dataColor);
 					break
 					case 1:
 						$('#imageblock'+blocksConnect[0]+', #imageblock'+blocksConnect[0]+'Back').children().attr({
 							"xlink:href": path,
 							"data-id": this.params[i]
 						});
+						var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+						$('.block'+blocksConnect[0]+'BackSmall').attr("fill", dataColor);
 					break
 				}
 			}
@@ -963,12 +967,9 @@ $(document).ready(function(){
 		if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 		{
 			//Заливка цветом панелей во floorIMG
-			/*$('.floorIMG').each(function(){
-		        $(this).find("classSVGback");
-		    });*/
 		    var dataColor = currentTexture.attr("data-color");
+		    console.log($($(this).attr("data-smallTexture")));
 			$($(this).attr("data-smallTexture")).attr("fill", dataColor);
-
 
 			//закинуть текущую текстуру в pattern
 			$('#image'+clickElem).children().attr({
