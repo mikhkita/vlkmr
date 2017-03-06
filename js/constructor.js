@@ -131,7 +131,7 @@ $(document).ready(function(){
 		//$(window).resize();
 		//начать загружать большие декоры
 		$('.currentTexture').each(function(){
-	        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+	        var src = $(this).attr("data-src");
 	        //$(this).css("background-image", "url('"+src+"')");
 	        var img = new Image();
 	        img.src = src;
