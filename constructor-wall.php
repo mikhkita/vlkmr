@@ -303,10 +303,10 @@ isRetina = (isMobile)?false:retina();
 						<div class="repeatBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="repeatPrev repeatPrevClick" title="Отменить">
+								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
 									<span class="icon-back-arrow"></span>
 								</div>
-								<div class="repeatNext repeatNextClick" title="Повторить">
+								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
 									<span class="icon-back-arrow-right"></span>
 								</div>
 							</div>
@@ -360,10 +360,10 @@ isRetina = (isMobile)?false:retina();
 						<div class="shareBlock">
 							<div class="floater">
 							<div class="content">
-								<div class="layers" title="Оттенок пола">
+								<div class="layers backgroundButton" title="Оттенок пола">
 									<span class="icon-layers"></span>
 								</div>
-								<div class="share fancy" href="#b-popup-share" title="Поделиться">
+								<div class="share fancy backgroundButton" href="#b-popup-share" title="Поделиться">
 									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>

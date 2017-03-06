@@ -7,7 +7,6 @@ $(document).ready(function(){
     }
 
 	function DrawDefault(svg, hash){
-		//console.log(svg, svg.attr("data-kitchen") === "true");
 		var floor;
 		var hashArray = [];
 		if(~hash.indexOf('|')){
@@ -19,7 +18,6 @@ $(document).ready(function(){
 		var src;
 		svg.find('*[data-itsFloor]').attr("xlink:href", $('.'+svg.attr("data-floor")+'[data-id="'+floor+'"]').attr("data-src"));
 		svg.find("pattern image").each(function(){
-			//console.log($(this));
 			if(!$(this).attr("data-itsFloor")){
 				var src = $('#decor-'+hashArray[i]).attr("data-src");
 		        $(this).attr("xlink:href", src);
@@ -33,28 +31,22 @@ $(document).ready(function(){
     $('.b-workshop').each(function(){
     	var count = 0;
     	var th = $(this);
-    	//th.fadeOut();
     	DrawDefault($(this).find("svg"), $(this).attr("data-hash"));
     	var imgRoom = new Image();
     	imgRoom.src = th.find(".roomImage").attr("xlink:href");
-    	//console.log("imgRoom.src",imgRoom.src);
     	var loadImages = th.find("pattern").length + 1;
     	th.find("pattern").each(function(){
     		var img = new Image();
     		img.src = $(this).find("image").attr("xlink:href");
     		img.onload = function(){
 	    		count++;
-	    		// console.log(img.src, loadImages, count);
 	    		if(count === loadImages){
-		    			afterLoad(th);
-		        	}
-	    		
+		    		afterLoad(th);
+		        }
 	    	}
-    		
     	});
     	imgRoom.onload = function(){
     		count++;
-    		// console.log(imgRoom.src, loadImages, count);
     		if(count === loadImages){
 		    	afterLoad(th);
 	       	}
@@ -68,9 +60,9 @@ $(document).ready(function(){
     }
     function loadContent(content){
 		if( isIE ){
-	         content.fadeIn(500);
+			content.fadeIn(500);
 	    }else{
-	       content.addClass("showContent");
+			content.addClass("showContent");
 	    }
-	 }
+	}
 });

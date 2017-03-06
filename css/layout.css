@@ -3581,7 +3581,7 @@ ul.b-workshop-list{
 	position: absolute;
 }
 
-.repeatPrev, .repeatPrev2, .repeatNext, .repeatNext2, .layers, .share{
+.backgroundButton{
 	display: inline-block;
 	width: 45px;
 	height: 45px;
@@ -3738,6 +3738,20 @@ ul.b-workshop-list{
 .currentTexture:hover{
 	box-shadow: 0 0 0 3px #c4c4c4;
 	box-sizing: border-box;
+}
+
+.activeTextureSlider{
+	box-shadow: 0 0 0 3px #483434 !important;
+	box-sizing: border-box;
+}
+
+.activeTextureFancy{
+	box-shadow: 0 0 0 4px #483434 !important;
+	box-sizing: border-box;
+}
+
+.activeFloor{
+	box-shadow: 0 0 0 10px #483435 inset !important;
 }
 
 .setTexturesRight, .shareBlock{
