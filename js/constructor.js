@@ -560,6 +560,8 @@ $(document).ready(function(){
 				"xlink:href": path,
 				"data-id": this.params[i]
 			});
+		    var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+			$('.block'+(+i+1)+'BackSmall').attr("fill", dataColor);
 
 			if($('#block'+(+i+1)).attr("data-connect")){
 				var blocksConnect = $('#block'+(+i+1)).attr("data-connect").split(',');
@@ -946,8 +948,14 @@ $(document).ready(function(){
 		clickElem = $(this).attr("data-id");//block1
 		if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 		{
-			//Получаем элемент из центрального слоя
-			
+			//Заливка цветом панелей во floorIMG
+			/*$('.floorIMG').each(function(){
+		        $(this).find("classSVGback");
+		    });*/
+		    var dataColor = currentTexture.attr("data-color");
+			$($(this).attr("data-smallTexture")).attr("fill", dataColor);
+
+
 			//закинуть текущую текстуру в pattern
 			$('#image'+clickElem).children().attr({
 				"xlink:href": currentTexture.attr("data-src"),
