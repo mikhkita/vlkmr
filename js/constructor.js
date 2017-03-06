@@ -17,6 +17,20 @@ $(document).ready(function(){
     	$('.rel').addClass("hide");
     	$('.rel').css("opacity", 1);
     }
+    $('#roomSVGBack pattern image.defaultRand').each(function(){
+		var randX = Math.floor(Math.random() * ($(this).attr("rand-max-x") - $(this).attr("rand-min-x") + 1 )) + +$(this).attr("rand-min-x");
+		var randY = Math.floor(Math.random() * ($(this).attr("rand-max-y") - $(this).attr("rand-min-y") + 1 )) + +$(this).attr("rand-min-y");
+		$(this).attr({
+			"x": randX,
+			"y": randY
+		});
+		console.log($('#imageblock'+$(this).attr("data-number")+'Back'));
+		$('#imageblock'+$(this).attr("data-number")+'Back').children().attr({
+			"x": randX,
+			"y": randY
+		});
+    });
+    
     /*------Прогрессбар----------*/
 	function ProgressBarInc(value){
 	  	progressbarValue += value;
