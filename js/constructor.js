@@ -699,9 +699,6 @@ $(document).ready(function(){
 		prevTexture = $(this);
 		$(this).addClass("activeTextureSlider");
 		$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').addClass("activeTextureFancy");
-		if(window.innerWidth <= 768){
-			$('.iconMore').click();
-		}
 	});
 	$('.currentTexture2').click(function(e){
         e.preventDefault();
