@@ -118,28 +118,28 @@ $(document).ready(function(){
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
 			//добавить функцию по обновлению ытека с текстурами
-			stackTexturesUpdate(7);
-			//stackTexturesCount = 10;
+			stackTexturesUpdate(10);
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
-			stackTexturesUpdate(4);
-			//stackTexturesCount = 7;
+			stackTexturesUpdate(7);
 		}
 		if(window.innerWidth <= 1024 && window.innerWidth > 768){
-			stackTexturesUpdate(5);
-			//stackTexturesCount = 5;
+			stackTexturesUpdate(3);
 		}
 		if(window.innerWidth <= 768){
 			stackTexturesUpdate(1);
-			//stackTexturesCount = 1;
 		}
 			
 	});
 
 	function stackTexturesUpdate(elements){
+		if(stackTexturesCount > elements){//значит мы сужаем окно
+
+		}else{//значит мы расширяем окно
+
+		}
 		stackTexturesCount = elements;
 		$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
-
 	}
 
 	if(getCookie("size") === "full"){
