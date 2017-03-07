@@ -298,15 +298,51 @@ isRetina = (isMobile)?false:retina();
 				<div class="windowConstructor">
 				<div class="toolbar">
 					<div class="panelDecor">
-
 						<div class="repeatBlock">
 							<div class="floater">
-							<div class="content">
-								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
-									<span class="icon-back-arrow"></span>
+								<div class="content">
+									<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
+										<span class="icon-back-arrow"></span>
+									</div>
+									<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
+										<span class="icon-back-arrow-right"></span>
+									</div>
+									<div class="layers backgroundButton" title="Оттенок пола">
+										<span class="icon-layers"></span>
+									</div>
+									<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
+										<span class="icon-share" href="#b-popup-share"></span>
+									</div>
+									<div class="floaterSmall">
+										<div class="contentSmall">
+										<div class="iconMore backgroundButton fancy" href="#b-popup-decors" title="Все декоры">
+											<span class="icon-more" href="#b-popup-decors"></span>
+										</div>
+										</div>
+									</div>
 								</div>
-								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
-									<span class="icon-back-arrow-right"></span>
+							</div>
+						</div>
+
+						<div class="setTextures">
+							<div class="floater">
+								<div class="content">
+									<div class="textures">
+										<!--<div class="currentTexture activeTextureSlider" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--
+						<div class="shareBlock">
+							<div class="floater">
+							<div class="content">
+								<div class="layers backgroundButton" title="Оттенок пола">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>
 							</div>
@@ -322,31 +358,31 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							</div>
-							<!--Полы-->
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#444"></div>
+							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#57a416"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
+							</div>-->
+
 							<div style="display: none">
 								<div class="floors" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg"></div>
 								<div class="floors" data-id="2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2.jpg"></div>
 								<div class="floors" data-id="3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3.jpg"></div>
 							</div>
 
-							<div class="setTexturesRight">
+							<!--<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
 									<div class="arrowNext">
@@ -357,43 +393,20 @@ isRetina = (isMobile)?false:retina();
 									</div>
 								</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="shareBlock">
-							<div class="floater">
-							<div class="content">
-								<div class="layers backgroundButton" title="Оттенок пола">
-									<span class="icon-layers"></span>
-								</div>
-								<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
-									<span class="icon-share" href="#b-popup-share"></span>
-								</div>
-							</div>
-							</div>
-						</div>
-
+							</div>-->
 					</div>
-					
-						
 				</div>
 
-				<div class="emptyBlock hideContent">
-				
+				<div class="emptyBlock hideContent"></div>
+				</div><!--WindowCons-->
+			</div><!--b-block-->
+			<div class="relBackground">
+				<div class="progressbarContain">
+					<div id="progressbar">
+					</div>
 				</div>
-
-				<!--<div class="imageRoom">
-					<img id="room" src="i/Room.png"  >
-				</div>-->
-			</div><!--WindowCons-->
-		</div><!--b-block-->
-		<div class="relBackground">
-		<div class="progressbarContain">
-			<div id="progressbar">
-			</div>
-		</div>
-		
-		<div class="panelFloor">
+			
+				<div class="panelFloor">
 						<div class="floorIMG" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg">
 							<h3>Светлый</h3>
 							<div class="b-floor-cont">
@@ -404,6 +417,29 @@ isRetina = (isMobile)?false:retina();
 									     	</image>
 									    </pattern>
 									</defs>
+									<polygon class="classSVGback block1BackSmall" fill="" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+									<polygon class="classSVGback block2BackSmall" fill="" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+									<polygon class="classSVGback block3BackSmall" fill="" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+									<rect x="93" y="130.6" class="classSVGback block4BackSmall" fill="" width="50.5" height="143.4"/>
+									<rect x="93" y="89.3" class="classSVGback block5BackSmall" fill="" width="52" height="41.3"/>
+									<rect x="93" y="274" class="classSVGback block6BackSmall" fill="" width="52" height="70.8"/>
+									<rect x="143.5" y="130.6" class="classSVGback block7BackSmall" fill="" width="1.5" height="143.4"/>
+
+									<rect x="162.7" y="148" class="classSVGback block8BackSmall" fill=""  width="190.3" height="33.7"/>
+									<rect x="193.8" y="320.6" class="classSVGback block9BackSmall" fill=""  width="125.5" height="23.3"/>
+									<path class="classSVGback block10BackSmall" fill=""  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+									<path class="classSVGback block11BackSmall" fill="" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+									<polygon class="classSVGback block12BackSmall" fill="" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+									<polygon class="classSVGback block13BackSmall" fill="" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+									<polygon class="classSVGback block14BackSmall" fill="" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+
+									<polygon class="classSVGback block15BackSmall" fill="" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
+									<polygon class="classSVGback block16BackSmall" fill="" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
+									<polygon class="classSVGback block17BackSmall" fill="" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
+									<polygon class="classSVGback block18BackSmall" fill="" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+									<rect x="372.2" y="170.6" class="classSVGback block19BackSmall" fill="" width="1.8" height="103.7"/>
+									<polygon class="classSVGback block20BackSmall" fill="" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+									<polygon class="classSVGback block21BackSmall" fill="" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 									<polygon fill="url(#floorPattern1)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 								</svg>
 								<img src="i/RoomHall.png">
@@ -419,6 +455,29 @@ isRetina = (isMobile)?false:retina();
 									     	</image>
 									    </pattern>
 									</defs>
+									<polygon class="classSVGback block1BackSmall" fill="" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+									<polygon class="classSVGback block2BackSmall" fill="" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+									<polygon class="classSVGback block3BackSmall" fill="" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+									<rect x="93" y="130.6" class="classSVGback block4BackSmall" fill="" width="50.5" height="143.4"/>
+									<rect x="93" y="89.3" class="classSVGback block5BackSmall" fill="" width="52" height="41.3"/>
+									<rect x="93" y="274" class="classSVGback block6BackSmall" fill="" width="52" height="70.8"/>
+									<rect x="143.5" y="130.6" class="classSVGback block7BackSmall" fill="" width="1.5" height="143.4"/>
+
+									<rect x="162.7" y="148" class="classSVGback block8BackSmall" fill=""  width="190.3" height="33.7"/>
+									<rect x="193.8" y="320.6" class="classSVGback block9BackSmall" fill=""  width="125.5" height="23.3"/>
+									<path class="classSVGback block10BackSmall" fill=""  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+									<path class="classSVGback block11BackSmall" fill="" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+									<polygon class="classSVGback block12BackSmall" fill="" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+									<polygon class="classSVGback block13BackSmall" fill="" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+									<polygon class="classSVGback block14BackSmall" fill="" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+
+									<polygon class="classSVGback block15BackSmall" fill="" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
+									<polygon class="classSVGback block16BackSmall" fill="" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
+									<polygon class="classSVGback block17BackSmall" fill="" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
+									<polygon class="classSVGback block18BackSmall" fill="" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+									<rect x="372.2" y="170.6" class="classSVGback block19BackSmall" fill="" width="1.8" height="103.7"/>
+									<polygon class="classSVGback block20BackSmall" fill="" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+									<polygon class="classSVGback block21BackSmall" fill="" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 									<polygon fill="url(#floorPattern2)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 								</svg>
 								<img src="i/RoomHall.png">
@@ -434,6 +493,29 @@ isRetina = (isMobile)?false:retina();
 									     	</image>
 									    </pattern>
 									</defs>
+									<polygon class="classSVGback block1BackSmall" fill="" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+									<polygon class="classSVGback block2BackSmall" fill="" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+									<polygon class="classSVGback block3BackSmall" fill="" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+									<rect x="93" y="130.6" class="classSVGback block4BackSmall" fill="" width="50.5" height="143.4"/>
+									<rect x="93" y="89.3" class="classSVGback block5BackSmall" fill="" width="52" height="41.3"/>
+									<rect x="93" y="274" class="classSVGback block6BackSmall" fill="" width="52" height="70.8"/>
+									<rect x="143.5" y="130.6" class="classSVGback block7BackSmall" fill="" width="1.5" height="143.4"/>
+
+									<rect x="162.7" y="148" class="classSVGback block8BackSmall" fill=""  width="190.3" height="33.7"/>
+									<rect x="193.8" y="320.6" class="classSVGback block9BackSmall" fill=""  width="125.5" height="23.3"/>
+									<path class="classSVGback block10BackSmall" fill=""  d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+									<path class="classSVGback block11BackSmall" fill="" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+									<polygon class="classSVGback block12BackSmall" fill="" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+									<polygon class="classSVGback block13BackSmall" fill="" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+									<polygon class="classSVGback block14BackSmall" fill="" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+
+									<polygon class="classSVGback block15BackSmall" fill="" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
+									<polygon class="classSVGback block16BackSmall" fill="" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
+									<polygon class="classSVGback block17BackSmall" fill="" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
+									<polygon class="classSVGback block18BackSmall" fill="" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+									<rect x="372.2" y="170.6" class="classSVGback block19BackSmall" fill="" width="1.8" height="103.7"/>
+									<polygon class="classSVGback block20BackSmall" fill="" points="415.4,129.5 372.2,129.2 372.2,170.4 415.4,170.4 "/>
+									<polygon class="classSVGback block21BackSmall" fill="" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 									<polygon fill="url(#floorPattern3)" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 								</svg>
 								<img src="i/RoomHall.png">
@@ -543,89 +625,89 @@ isRetina = (isMobile)?false:retina();
 		    </pattern>
 
 <pattern id="imageblock1" width="100%" height="100%">
-			    <image rand-min-x="0" rand-max-x="-50" rand-min-y="-70" rand-max-y="-40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-40" width="100" height="160" transform="rotate(90, 25, 25)">
+			    <image class="defaultRand" data-number="1" rand-min-x="0" rand-max-x="-50" rand-min-y="-70" rand-max-y="-40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="-40" width="100" height="160" transform="rotate(90, 25, 25)">
 			    </image>
 			</pattern>
 			<pattern id="imageblock2" width="100%" height="100%">
-		       <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-20" y="0" width="200" height="320" transform="scale(0.2, 1)">
+		       <image class="defaultRand" data-number="2" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-20" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock3" width="100%" height="100%">
-		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="0" width="200" height="320">
+		        <image class="defaultRand" data-number="3" rand-min-x="-150" rand-max-x="0" rand-min-y="0" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock4" width="100%" height="100%">
-			    <image rand-min-x="-40" rand-max-x="0" rand-min-y="-40" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="120" height="192">
+			    <image class="defaultRand" data-number="4" rand-min-x="-40" rand-max-x="0" rand-min-y="-40" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="120" height="192">
 			    </image>
 			</pattern>
 			<pattern id="imageblock5" width="100%" height="100%">
-		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="100" height="160">
+		        <image class="defaultRand" data-number="5" rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="0" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock6" width="100%" height="100%">
-		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-30" width="100" height="160">
+		        <image class="defaultRand" data-number="6" rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-30" width="100" height="160">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock7" width="100%" height="100%">
-		        <image rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-30" width="200" height="320">
+		        <image class="defaultRand" data-number="7" rand-min-x="-40" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-5" y="-30" width="200" height="320">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblock8" width="100%" height="100%">
-		        <image rand-min-x="-150" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-7" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
+		        <image class="defaultRand" data-number="8" rand-min-x="-150" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-7" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock9" width="100%" height="100%">
-		        <image rand-min-x="-70" rand-max-x="0" rand-min-y="0" rand-max-y="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-15" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
+		        <image class="defaultRand" data-number="9" rand-min-x="-70" rand-max-x="0" rand-min-y="0" rand-max-y="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-15" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock10" width="100%" height="100%">
-		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
+		        <image class="defaultRand" data-number="10" rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock11" width="100%" height="100%">
-		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-7" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
+		        <image class="defaultRand" data-number="11" rand-min-x="-50" rand-max-x="0" rand-min-y="0" rand-max-y="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-7" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock12" width="100%" height="100%">
-		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-15" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
+		        <image class="defaultRand" data-number="12" rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-15" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock13" width="100%" height="100%">
-		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
+		        <image class="defaultRand" data-number="13" rand-min-x="-100" rand-max-x="0" rand-min-y="-50" rand-max-y="40" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock14" width="100%" height="100%">
-		        <image rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
+		        <image class="defaultRand" data-number="14" rand-min-x="-120" rand-max-x="0" rand-min-y="-50" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-3" y="0" width="200" height="320" transform="rotate(90, 125, 125)">
 		     	</image>
 		    </pattern>
 
 		    <pattern id="imageblock15" width="100%" height="100%">
-		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="200" height="320">
+		        <image class="defaultRand" data-number="15" rand-min-x="-100" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="200" height="320">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock16" width="100%" height="100%">
-		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-50" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-26.5" y="0" width="100" height="160">
+		        <image class="defaultRand" data-number="16" rand-min-x="-50" rand-max-x="0" rand-min-y="-50" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock17" width="100%" height="100%">
-		        <image rand-min-x="-80" rand-max-x="0" rand-min-y="0" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
+		        <image class="defaultRand" data-number="17" rand-min-x="-80" rand-max-x="0" rand-min-y="0" rand-max-y="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="100" height="160" transform="rotate(90, 75, 75)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock18" width="100%" height="100%">
-		        <image rand-min-x="-100" rand-max-x="0" rand-min-y="-70" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="200" height="320" transform="scale(0.2, 1)">
+		        <image class="defaultRand" data-number="18" rand-min-x="-100" rand-max-x="0" rand-min-y="-70" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="200" height="320" transform="scale(0.2, 1)">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock19" width="100%" height="100%">
-		        <image rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-26.5" y="0" width="100" height="160">
+		        <image class="defaultRand" data-number="19" rand-min-x="0" rand-max-x="0" rand-min-y="0" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-26.5" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock20" width="100%" height="100%">
-		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="-100" width="100" height="160">
+		        <image class="defaultRand" data-number="20" rand-min-x="-50" rand-max-x="0" rand-min-y="-100" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="-100" width="100" height="160">
 		     	</image>
 		    </pattern>
 		    <pattern id="imageblock21" width="100%" height="100%">
-		        <image rand-min-x="-50" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="100" height="160">
+		        <image class="defaultRand" data-number="21" rand-min-x="-50" rand-max-x="0" rand-min-y="-80" rand-max-y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" data-id="" x="-10" y="0" width="100" height="160">
 		     	</image>
 		    </pattern>
 
@@ -778,31 +860,31 @@ isRetina = (isMobile)?false:retina();
 		
 		<title>Гостиная</title>
 
-		<polygon class="classSVGFront" id="block1Front" data-id="block1" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
-		<polygon class="classSVGFront" id="block2Front" data-id="block2" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
-		<polygon class="classSVGFront" id="block3Front" data-id="block3" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
-		<rect x="93" y="130.6" class="classSVGFront" id="block4Front" data-id="block4" width="50.5" height="143.4"/>
-		<rect x="93" y="89.3" class="classSVGFront" id="block5Front" data-id="block5" width="52" height="41.3"/>
-		<rect x="93" y="274" class="classSVGFront" id="block6Front" data-id="block6" width="52" height="70.8"/>
-		<rect x="143.5" y="130.6" class="classSVGFront" id="block7Front" data-id="block7" width="1.5" height="143.4"/>
+		<polygon class="classSVGFront" id="block1Front" data-smallTexture=".block1BackSmall" data-id="block1" points="65.3,85.2 93,89.3 145,89.3 145,74.4 65.3,74.4 "/>
+		<polygon class="classSVGFront" id="block2Front" data-smallTexture=".block2BackSmall, .block4BackSmall, .block7BackSmall" data-id="block2" points="145,344.8 154,335.7 154,296.1 155,296 155.1,295.3 155.2,85.6 145,75.2 "/>
+		<polygon class="classSVGFront" id="block3Front" data-smallTexture=".block3BackSmall" data-id="block3" points="65.5,85.2 93,89.3 93,89.3 93,344.8 65.5,344.8 "/>
+		<rect x="93" y="130.6" class="classSVGFront" data-smallTexture=".block4BackSmall, .block2BackSmall, .block7BackSmall" id="block4Front" data-id="block4" width="50.5" height="143.4"/>
+		<rect x="93" y="89.3" class="classSVGFront" data-smallTexture=".block5BackSmall" id="block5Front" data-id="block5" width="52" height="41.3"/>
+		<rect x="93" y="274" class="classSVGFront" data-smallTexture=".block6BackSmall" id="block6Front" data-id="block6" width="52" height="70.8"/>
+		<rect x="143.5" y="130.6" class="classSVGFront" data-smallTexture=".block7BackSmall, .block2BackSmall, .block4BackSmall" id="block7Front" data-id="block7" width="1.5" height="143.4"/>
 
-		<rect x="162.7" y="148" class="classSVGFront" id="block8Front" data-id="block8" width="190.3" height="33.7"/>
-		<rect x="193.8" y="320.6" class="classSVGFront" id="block9Front" data-id="block9" width="125.5" height="23.3"/>
+		<rect x="162.7" y="148" class="classSVGFront" data-smallTexture=".block8BackSmall" id="block8Front" data-id="block8" width="190.3" height="33.7"/>
+		<rect x="193.8" y="320.6" class="classSVGFront" data-smallTexture=".block9BackSmall" id="block9Front" data-id="block9" width="125.5" height="23.3"/>
 
-		<path class="classSVGFront" id="block10Front" data-id="block10" d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
-		<path class="classSVGFront" id="block11Front" data-id="block11" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
-		<polygon class="classSVGFront" id="block12Front" data-id="block12" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
-		<polygon class="classSVGFront" id="block13Front" data-id="block13" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
-		<polygon class="classSVGFront" id="block14Front" data-id="block14" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
+		<path class="classSVGFront" id="block10Front" data-smallTexture=".block10BackSmall" data-id="block10" d="M319.3,308.7c0.2,0,40-5.8,40-5.8v41h-40V308.7z"/>
+		<path class="classSVGFront" id="block11Front" data-smallTexture=".block11BackSmall" data-id="block11" d="M193.8,308.7c-0.2,0-40-5.8-40-5.8v41h40V308.7z"/>
+		<polygon class="classSVGFront" id="block12Front" data-smallTexture=".block12BackSmall, .block13BackSmall" data-id="block12" points="359.3,296.2 154,296.1 155,296 155.1,295.3 163.5,290.2 354.2,290.2 "/>
+		<polygon class="classSVGFront" id="block13Front" data-smallTexture=".block13BackSmall, .block12BackSmall" data-id="block13" points="359.3,296.2 359.3,302.9 319.3,308.7 193.8,308.7 154,302.9 154,296.1 "/>
+		<polygon class="classSVGFront" id="block14Front" data-smallTexture=".block14BackSmall" data-id="block14" points="352.1,233.8 161.3,233.8 155.6,235.3 155.6,240.2 356.6,240.2 356.6,235.3 "/>
 
-		<polygon class="classSVGFront" id="block15Front" data-id="block15" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
-		<polygon class="classSVGFront" id="block16Front" data-id="block16" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
+		<polygon class="classSVGFront" id="block15Front" data-smallTexture=".block15BackSmall" data-id="block15" points="451.7,125.4 415.6,129.5 415.4,343.9 451.7,343.9 "/>
+		<polygon class="classSVGFront" id="block16Front" data-smallTexture=".block16BackSmall, .block18BackSmall, .block19BackSmall" data-id="block16" points="374.2,170.8 415.7,170.8 415.5,274.2 374,274.3 "/>
 
-		<polygon class="classSVGFront" id="block17Front" data-id="block17" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
-		<polygon class="classSVGFront" id="block18Front" data-id="block18" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
-		<rect x="372.2" y="170.6" class="classSVGFront" id="block19Front" data-id="block19" width="1.8" height="103.7"/>
-		<polygon class="classSVGFront" id="block20Front" data-id="block20" points="415.6,129.5 372.2,129.5 372.2,170.6 415.5,170.6 "/>
-		<polygon class="classSVGFront" id="block21Front" data-id="block21" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
+		<polygon class="classSVGFront" id="block17Front" data-smallTexture=".block17BackSmall" data-id="block17" points="451.7,125.4 451.7,115.6 372.2,115.6 372.2,129.5 415.6,129.5 "/>
+		<polygon class="classSVGFront" id="block18Front" data-smallTexture=".block18BackSmall, .block16BackSmall, .block19BackSmall" data-id="block18" points="372.2,115.6 365.8,123.4 365.8,334.5 372.2,344.8 "/>
+		<rect x="372.2" y="170.6" class="classSVGFront" data-smallTexture=".block19BackSmall, .block16BackSmall, .block18BackSmall" id="block19Front" data-id="block19" width="1.8" height="103.7"/>
+		<polygon class="classSVGFront" id="block20Front" data-smallTexture=".block20BackSmall" data-id="block20" points="415.6,129.5 372.2,129.5 372.2,170.6 415.5,170.6 "/>
+		<polygon class="classSVGFront" id="block21Front" data-smallTexture=".block21BackSmall" data-id="block21" points="372.2,274.3 415.5,274.2 415.4,343.9 372.2,343.9 "/>
 
 		<polygon class="classSVGFront" id="floorF" points="25.7,344.8 540,344.8 579.7,364.7 579.7,434.7 -2.3,434.7 -2.3,405 26,389.8 "/>
 	</svg>
@@ -928,22 +1010,22 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="popUpTexture defaultClick" title="Декор1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
+							<div class="popUpTexture" title="Декор2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
+							<div class="popUpTexture" title="Декор3" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
+							<div class="popUpTexture" title="Декор4" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
+							<div class="popUpTexture" title="Декор5" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
+							<div class="popUpTexture" title="Декор6" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
+							<div class="popUpTexture" title="Декор7" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
+							<div class="popUpTexture" title="Декор8" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="popUpTexture" title="Декор1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
+							<div class="popUpTexture" title="Декор2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
+							<div class="popUpTexture" title="Декор3" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
+							<div class="popUpTexture" title="Декор4" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
+							<div class="popUpTexture" title="Декор5" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
+							<div class="popUpTexture" title="Декор6" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
+							<div class="popUpTexture" title="Декор7" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
+							<div class="popUpTexture" title="Декор8" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
 						</div>
 			</div>
 		</div>

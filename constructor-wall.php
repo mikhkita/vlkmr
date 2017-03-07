@@ -299,15 +299,51 @@ isRetina = (isMobile)?false:retina();
 				<div class="windowConstructor">
 				<div class="toolbar">
 					<div class="panelDecor">
-
 						<div class="repeatBlock">
 							<div class="floater">
-							<div class="content">
-								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
-									<span class="icon-back-arrow"></span>
+								<div class="content">
+									<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
+										<span class="icon-back-arrow"></span>
+									</div>
+									<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
+										<span class="icon-back-arrow-right"></span>
+									</div>
+									<div class="layers backgroundButton" title="Оттенок пола">
+										<span class="icon-layers"></span>
+									</div>
+									<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
+										<span class="icon-share" href="#b-popup-share"></span>
+									</div>
+									<div class="floaterSmall">
+										<div class="contentSmall">
+										<div class="iconMore backgroundButton fancy" href="#b-popup-decors" title="Все декоры">
+											<span class="icon-more" href="#b-popup-decors"></span>
+										</div>
+										</div>
+									</div>
 								</div>
-								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
-									<span class="icon-back-arrow-right"></span>
+							</div>
+						</div>
+
+						<div class="setTextures">
+							<div class="floater">
+								<div class="content">
+									<div class="textures">
+										<!--<div class="currentTexture activeTextureSlider" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--
+						<div class="shareBlock">
+							<div class="floater">
+							<div class="content">
+								<div class="layers backgroundButton" title="Оттенок пола">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
 								</div>
 							</div>
 							</div>
@@ -323,27 +359,31 @@ isRetina = (isMobile)?false:retina();
 							</div>
 							<div class="textures">
 								
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#444"></div>
+							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#57a416"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="currentTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
+							</div>-->
 
+							<div style="display: none">
+								<div class="floors" data-id="1" data-src="" data-image="i/Floor-1.jpg" data-retina-image="i/Floor-1.jpg"></div>
+								<div class="floors" data-id="2" data-src="" data-image="i/Floor-2.jpg" data-retina-image="i/Floor-2.jpg"></div>
+								<div class="floors" data-id="3" data-src="" data-image="i/Floor-3.jpg" data-retina-image="i/Floor-3.jpg"></div>
 							</div>
 
-  
-							<div class="setTexturesRight">
+							<!--<div class="setTexturesRight">
 								<div class="floater">
 								<div class="content">
 									<div class="arrowNext">
@@ -354,197 +394,175 @@ isRetina = (isMobile)?false:retina();
 									</div>
 								</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="shareBlock">
-							<div class="floater">
-							<div class="content">
-								<div class="layers backgroundButton" title="Оттенок пола">
-									<span class="icon-layers"></span>
-								</div>
-								<div class="share fancy backgroundButton" href="#b-popup-share" title="Поделиться">
-									<span class="icon-share" href="#b-popup-share"></span>
-								</div>
-							</div>
-							</div>
-						</div>
-
-					</div>	
-						
+							</div>-->
+					</div>
 				</div>
 
-				<div class="emptyBlock hideContent">
+				<div class="emptyBlock hideContent"></div>
+				</div><!--WindowCons-->
+			</div><!--b-block-->
+			<div class="relBackground">
+				<div class="progressbarContain">
+					<div id="progressbar">
+					</div>
+				</div>
+				<div class="fullSize" title="Во всю ширину">
+					<span class="icon-full-size"></span>
+					<span class="icon-small-size"></span>
+				</div>
+				<div class="rel" unselectable="on">
+
+				<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
 				
-				</div>
+				<title>Гостиная</title>
 
-				<!--<div class="imageRoom">
-					<img id="room" src="i/Room.png"  >
-				</div>-->
-			</div><!--WindowCons-->
-		</div><!--b-block-->
-		<div class="relBackground">
-		<div class="progressbarContain">
-			<div id="progressbar">
-			</div>
+				 <defs>
+				 	
+				 	
+				<!--Текстуры-->
+
+					<pattern id="imageblock1Back" width="100%" height="100%">
+					    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
+					    </image>
+					</pattern>
+					<pattern id="imageblock2Back" width="100%" height="100%">
+				        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock3Back" width="100%" height="100%">
+				        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock4Back" width="100%" height="100%">
+				        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock5Back" width="100%" height="100%">
+				       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock6Back" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock7Back" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock8Back" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
+				     	</image>
+				    </pattern>
+
+
+
+				    <pattern id="imageblock1" width="100%" height="100%">
+					    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
+					    </image>
+					</pattern>
+					<pattern id="imageblock2" width="100%" height="100%">
+				        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock3" width="100%" height="100%">
+				        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock4" width="100%" height="100%">
+				        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock5" width="100%" height="100%">
+				       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock6" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock7" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
+				     	</image>
+				    </pattern>
+				    <pattern id="imageblock8" width="100%" height="100%">
+				        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
+				     	</image>
+				    </pattern>
+
+				 </defs>
+				 <polygon class="classSVGback" id="block1Back" fill="url(#imageblock1Back)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+				<polygon class="classSVGback" id="block2Back" fill="url(#imageblock2Back)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+				<polygon class="classSVGback" id="block3Back" fill="url(#imageblock3Back)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+				<polygon class="classSVGback" id="block4Back" fill="url(#imageblock4Back)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+				<polygon class="classSVGback" id="block5Back" fill="url(#imageblock5Back)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+				<polygon class="classSVGback" id="block6Back" fill="url(#imageblock6Back)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+				<polygon class="classSVGback" id="block7Back" fill="url(#imageblock7Back)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+				<polygon class="classSVGback" id="block8Back" fill="url(#imageblock8Back)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+			</svg>
+
+		<!--Это задний слой - он и будет изменяться-->
+			<svg id="roomSVG" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
+				
+				<title>Гостиная</title>
+
+				 <defs>
+				 	<clipPath id="clipping1">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping2">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping3">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping4">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping5">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping6">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping7">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+					<clipPath id="clipping8">
+					     <circle cx="300" cy="150" r="50"/>
+					</clipPath>
+
+				 </defs>
+				<polygon class="classSVG default" id="block1" data-clip="clipping1 circle" data-radius="100" fill="url(#imageblock1)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+				<polygon class="classSVG default" id="block2" data-clip="clipping2 circle" data-radius="135" fill="url(#imageblock2)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+				<polygon class="classSVG default" id="block3" data-clip="clipping3 circle" data-radius="165" fill="url(#imageblock3)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+				<polygon class="classSVG default" id="block4" data-clip="clipping4 circle" data-radius="135" fill="url(#imageblock4)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+				<polygon class="classSVG default" id="block5" data-clip="clipping5 circle" data-radius="185" fill="url(#imageblock5)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+				<polygon class="classSVG default" id="block6" data-clip="clipping6 circle" data-radius="210" fill="url(#imageblock6)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+				<polygon class="classSVG default" id="block7" data-clip="clipping7 circle" data-radius="200" fill="url(#imageblock7)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+				<polygon class="classSVG default" id="block8" data-clip="clipping8 circle" data-radius="210" fill="url(#imageblock8)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+			</svg>
+
+			<img id="room" src="i/RoomWall.png" data-image="i/RoomWall.png" data-retina-image="i/RoomWall.png">
+
+		<!--Это передний слой - он отслеживает клики и меняет задний слой-->
+			<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
+				
+				<title>Гостиная</title>
+				<polygon class="classSVGFront" id="block1Front" data-id="block1" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
+				<polygon class="classSVGFront" id="block2Front" data-id="block2" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
+				<polygon class="classSVGFront" id="block3Front" data-id="block3" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
+				<polygon class="classSVGFront" id="block4Front" data-id="block4" 
+				points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
+				<polygon class="classSVGFront" id="block5Front" data-id="block5"  points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
+				<polygon class="classSVGFront" id="block6Front" data-id="block6"  points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
+				<polygon class="classSVGFront" id="block7Front" data-id="block7"  points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
+				<polygon class="classSVGFront" id="block8Front" data-id="block8" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
+			</svg>
+
+			<div id="default-hash" data-hash="3,3,3,3,3,3,3,3" data-countSVG="8" data-countTextures="3" data-stack="8"></div>
+
+			</div><!--rel-->
 		</div>
-			<div class="fullSize" title="Во всю ширину">
-				<span class="icon-full-size"></span>
-				<span class="icon-small-size"></span>
-			</div>
-		<div class="rel" unselectable="on">
-
-		<svg id="roomSVGBack" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
-		
-		<title>Гостиная</title>
-
-		 <defs>
-		 	
-		 	
-		<!--Текстуры-->
-
-			<pattern id="imageblock1Back" width="100%" height="100%">
-			    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
-			    </image>
-			</pattern>
-			<pattern id="imageblock2Back" width="100%" height="100%">
-		        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock3Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock4Back" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock5Back" width="100%" height="100%">
-		       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock6Back" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock7Back" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock8Back" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
-		     	</image>
-		    </pattern>
-
-
-
-		    <pattern id="imageblock1" width="100%" height="100%">
-			    <image rand-min-x="-80" rand-max-x="-10" rand-min-y="-20" rand-max-y="90" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-32" y="0" width="180" height="288" transform="rotate(86.5, 75, 75)">
-			    </image>
-			</pattern>
-			<pattern id="imageblock2" width="100%" height="100%">
-		        <image rand-min-x="-70" rand-max-x="-10" rand-min-y="-20" rand-max-y="40"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-26" y="0"  width="180" height="288" transform="rotate(86.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock3" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="20"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-20" y="0" width="180" height="288" transform="rotate(86, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock4" width="100%" height="100%">
-		        <image rand-min-x="-60" rand-max-x="-10" rand-min-y="-20" rand-max-y="60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-21.5" y="-50" width="180" height="288" transform="rotate(86, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock5" width="100%" height="100%">
-		       <image rand-min-x="-110" rand-max-x="0" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-50" y="-30" width="180" height="288" transform="rotate(92.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock6" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="0" rand-min-y="-120" rand-max-y="-50"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-45" y="-70" width="180" height="288" transform="rotate(92.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock7" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-100" rand-max-y="0"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-10" y="-50" width="180" height="288" transform="rotate(94.5, 75, 75)">
-		     	</image>
-		    </pattern>
-		    <pattern id="imageblock8" width="100%" height="100%">
-		        <image rand-min-x="-110" rand-max-x="-10" rand-min-y="-120" rand-max-y="-60"  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" x="-5" y="-70" width="180" height="288" transform="rotate(94, 75, 75)">
-		     	</image>
-		    </pattern>
-
-		 </defs>
-		 <polygon class="classSVGback" id="block1Back" fill="url(#imageblock1Back)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVGback" id="block2Back" fill="url(#imageblock2Back)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGback" id="block3Back" fill="url(#imageblock3Back)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGback" id="block4Back" fill="url(#imageblock4Back)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGback" id="block5Back" fill="url(#imageblock5Back)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGback" id="block6Back" fill="url(#imageblock6Back)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGback" id="block7Back" fill="url(#imageblock7Back)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGback" id="block8Back" fill="url(#imageblock8Back)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
-	</svg>
-
-<!--Это задний слой - он и будет изменяться-->
-	<svg id="roomSVG" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
-		
-		<title>Гостиная</title>
-
-		 <defs>
-		 	<clipPath id="clipping1">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping2">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping3">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping4">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping5">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping6">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping7">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-			<clipPath id="clipping8">
-			     <circle cx="300" cy="150" r="50"/>
-			</clipPath>
-
-		 </defs>
-		<polygon class="classSVG default" id="block1" data-clip="clipping1 circle" data-radius="100" fill="url(#imageblock1)" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVG default" id="block2" data-clip="clipping2 circle" data-radius="135" fill="url(#imageblock2)" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVG default" id="block3" data-clip="clipping3 circle" data-radius="165" fill="url(#imageblock3)" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVG default" id="block4" data-clip="clipping4 circle" data-radius="135" fill="url(#imageblock4)" points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVG default" id="block5" data-clip="clipping5 circle" data-radius="185" fill="url(#imageblock5)" points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVG default" id="block6" data-clip="clipping6 circle" data-radius="210" fill="url(#imageblock6)" points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVG default" id="block7" data-clip="clipping7 circle" data-radius="200" fill="url(#imageblock7)" points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVG default" id="block8" data-clip="clipping8 circle" data-radius="210" fill="url(#imageblock8)" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
-	</svg>
-
-	<img id="room" src="i/RoomWall.png" data-image="i/RoomWall.png" data-retina-image="i/RoomWall.png">
-
-<!--Это передний слой - он отслеживает клики и меняет задний слой-->
-	<svg id="roomSVGFront" data-name="Слой 3 + Группа 1 Изображение" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 409.7">
-		
-		<title>Гостиная</title>
-		<polygon class="classSVGFront" id="block1Front" data-id="block1" points="209.6,155.5 163.4,157.1 163.4,74.8 209.6,70.4 "/>
-		<polygon class="classSVGFront" id="block2Front" data-id="block2" points="306.1,152.1 209.6,155.3 209.6,70.5 306.1,61.4 "/>
-		<polygon class="classSVGFront" id="block3Front" data-id="block3" points="493.6,44.2 493.6,145.4 373,149.5 372.7,55.2 "/>
-		<polygon class="classSVGFront" id="block4Front" data-id="block4" 
-		points="493.6,44.2 493.6,145.4 563.8,143 563.8,37.2 "/>
-		<polygon class="classSVGFront" id="block5Front" data-id="block5"  points="145.4,243.7 290.8,247.4 290.8,293.9 145.3,285.5 "/>
-		<polygon class="classSVGFront" id="block6Front" data-id="block6"  points="361.1,249.2 558.3,254.6 558.3,309.2 361.1,297.9 "/>
-		<polygon class="classSVGFront" id="block7Front" data-id="block7"  points="290.8,293.9 145.3,285.5 145.3,328.1 290.8,340.9 "/>
-		<polygon class="classSVGFront" id="block8Front" data-id="block8" points="361.1,297.9 558.3,309.2 558.4,365 361,347.2 "/>
-	</svg>
-
-	<div id="default-hash" data-hash="3,3,3,3,3,3,3,3" data-countSVG="8" data-countTextures="3" data-stack="8"></div>
-
-	</div><!--rel-->
-	</div>
 	</div><!--b-wide-->
 	</div><!--b-content-->
 	<div class="b b-main-footer">
@@ -661,22 +679,22 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="currentTexture2" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="popUpTexture defaultClick" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
+							<div class="popUpTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
 						</div>
 			</div>
 		</div>
