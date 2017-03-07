@@ -3568,11 +3568,24 @@ ul.b-workshop-list{
 	float		: left;
 	height		: 50%;
 	margin-bottom	: -30px;
+	margin-right: 20px;
+}
+
+.floaterSmall{
+	float		: right;
+	height		: 50%;
+	margin-bottom	: -20px;
 }
 
 .content{
 	clear		: both;
 	height		: 60px;
+	position	: relative;
+}
+
+.contentSmall{
+	clear		: both;
+	height		: 45px;
 	position	: relative;
 }
 
@@ -3620,10 +3633,10 @@ ul.b-workshop-list{
 }
 
 .setTextures{
-	width: 745px;
+	/*width: 745px;*/
 	height: 66px;
 	display: inline-block;
-	margin-left: 73px;
+	/*margin-left: 73px;*/
 }
 
 .arrowPrev, .arrowNext, .iconMore, .fullSize{
@@ -3694,7 +3707,7 @@ ul.b-workshop-list{
 
 .textures{
 	display: inline-block;
-	width: 600px;
+	width: 100%;
 	height: 66px;
 }
 
@@ -3721,7 +3734,7 @@ ul.b-workshop-list{
 	background-size: cover;
 }
 
-.currentTexture2{
+.popUpTexture{
 	box-sizing: border-box;
 	display: inline-block;
 	width: 90px;
@@ -3731,7 +3744,7 @@ ul.b-workshop-list{
 	background-size: cover;
 }
 
-.currentTexture2:hover{
+.popUpTexture:hover{
 	box-shadow: 0 0 0 4px #483434;
 	box-sizing: border-box;
 }
@@ -3756,10 +3769,6 @@ ul.b-workshop-list{
 
 .setTexturesRight, .shareBlock{
 	float: right;
-}
-
-.layers, .share{
-	margin: 8px 0 8px 20px;
 }
 
 .icon-layers:before{
@@ -4371,10 +4380,10 @@ ul.b-workshop-list{
 	.textures {
 	    width: 450px;
 	}
-	.setTextures {
+	/*.setTextures {
 	    width: 590px;
 	    margin-left: 50px;
-	}
+	}*/
 	.arrowPrev {
 		margin-right: 8px;
 	}
@@ -4401,10 +4410,10 @@ ul.b-workshop-list{
 	.textures {
 	    width: 230px;
 	}
-	.setTextures {
+	/*.setTextures {
 	    width: 370px;
 	    margin-left: 30px;
-	}
+	}*/
 	.arrowPrev {
 		margin-right: 9px;
 	}
@@ -4428,16 +4437,16 @@ ul.b-workshop-list{
 	.textures {
 	    width: 170px;
 	}
-	.setTextures {
+	/*.setTextures {
 	    width: 220px;
 	    margin-left: 55px;
-	}
+	}*/
 
 	.currentTexture img{
 		width: 130px;
 	}
 
-	.repeatPrev, .repeatPrev2, .repeatNext, .repeatNext2, .layers, .share{
+	.backgroundButton{
 		width: 66px;
 		height: 66px;;
 		padding-top: 15px;

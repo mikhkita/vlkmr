@@ -8,10 +8,12 @@ var currentFloor;
 var prevFloor;
 var progressbarValue = 0.3;
 var decorsID = [];
-var floorsID = [];	
+var floorsID = [];
+var stackTextures = [];
+var stackTexturesCount;
 
 $(document).ready(function(){
-	var valueInc = 0.4 / ($('.currentTexture2').length * 2 + $('.floors').length);
+	var valueInc = 0.4 / ($('.popUpTexture').length + $('.floors').length);
 	var height = 100;
 	if( isIE ){
     	$('.rel').addClass("hide");
@@ -24,7 +26,7 @@ $(document).ready(function(){
 			"x": randX,
 			"y": randY
 		});
-		console.log($('#imageblock'+$(this).attr("data-number")+'Back'));
+		//console.log($('#imageblock'+$(this).attr("data-number")+'Back'));
 		$('#imageblock'+$(this).attr("data-number")+'Back').children().attr({
 			"x": randX,
 			"y": randY
@@ -37,7 +39,7 @@ $(document).ready(function(){
         bar.animate(progressbarValue);
 	}
 
-	$('.currentTexture, .currentTexture2').each(function(){
+	$('.popUpTexture').each(function(){
 		var src;
 		if(isRetina || isMobile){
 			src = $(this).attr("data-retina-image-mini");
@@ -47,6 +49,7 @@ $(document).ready(function(){
 			$(this).attr("data-src", $(this).attr("data-image"));
 		}
         $(this).css("background-image", "url('"+src+"')");
+        decorsID.push($(this).attr("data-id"));
         var img = new Image();
     	img.src = src;
    		img.onload = function(){
@@ -70,10 +73,6 @@ $(document).ready(function(){
         var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
         $(this).attr("data-src", src);
     });
-
-	$('.currentTexture').each(function(){
-	 	decorsID.push($(this).attr("data-id"));
-	});
 
 	//Загрузка комнаты
     $('#room').attr("src", $('#room').attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
@@ -118,19 +117,30 @@ $(document).ready(function(){
 		$('.relBackground').css({"height": ""});
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
-			shiftSlider = 8;
+			//добавить функцию по обновлению ытека с текстурами
+			stackTexturesUpdate(7);
+			//stackTexturesCount = 10;
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
-			shiftSlider = 6;
+			stackTexturesUpdate(4);
+			//stackTexturesCount = 7;
 		}
 		if(window.innerWidth <= 1024 && window.innerWidth > 768){
-			shiftSlider = 3;
+			stackTexturesUpdate(5);
+			//stackTexturesCount = 5;
 		}
 		if(window.innerWidth <= 768){
-			shiftSlider = 1;
+			stackTexturesUpdate(1);
+			//stackTexturesCount = 1;
 		}
 			
 	});
+
+	function stackTexturesUpdate(elements){
+		stackTexturesCount = elements;
+		$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
+
+	}
 
 	if(getCookie("size") === "full"){
 		FullWidth();
@@ -144,7 +154,7 @@ $(document).ready(function(){
 		$('.slick-active').eq(0).click();
 		//$(window).resize();
 		//начать загружать большие декоры
-		$('.currentTexture').each(function(){
+		$('.popUpTexture').each(function(){
 	        var src = $(this).attr("data-src");
 	        //$(this).css("background-image", "url('"+src+"')");
 	        var img = new Image();
@@ -227,7 +237,7 @@ $(document).ready(function(){
             my: 'bottom center',
             at: 'top center',
             adjust: {
-	            y: -5
+	            y: -7
 	        }
         },
         style: {
@@ -256,24 +266,7 @@ $(document).ready(function(){
         }
 	});
 
-	$('.currentTexture[title]').each(function(){
-	  	$(this).qtip({
-	  		position: {
-            my: 'bottom center',
-            at: 'top center',
-            adjust: {
-	            y: -8
-	        }
-        },
-        style: {
-			classes: 'qtipFont qtipCustom qtip-light',
-        	tip: {
-        		width: 22, height: 11, border: 0
-        	}
-        }
-	  	});
-	});
-	$('.currentTexture2[title]').each(function(){
+	$('.popUpTexture[title]').each(function(){
 	  	$(this).qtip({
 	  		position: {
 	            my: 'bottom center',
@@ -297,7 +290,7 @@ $(document).ready(function(){
 	});
 
 	$("body").on("scroll mousewheel", ".fancybox-inner",function(){
-		 $('.currentTexture2[title]').qtip('hide');
+		 $('.popUpTexture[title]').qtip('hide');
 	});
 
 	$(window).scroll(function(){
@@ -322,7 +315,7 @@ $(document).ready(function(){
 	                at: 'bottom center',
 	                my: 'top center',
 	                adjust: {
-			            y: 5
+			            y: 7
 			        }
 	            },
 	            style: {
@@ -373,7 +366,7 @@ $(document).ready(function(){
 	                my: 'bottom center',
 	                at: 'top center',
 	                adjust: {
-			            y: -5
+			            y: -7
 			        }
 	            },
 	            style: {
@@ -569,12 +562,12 @@ $(document).ready(function(){
 		}
 
 		this.drawTexture = function(i){
-			path = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-src");
+			path = $('.popUpTexture[data-id="'+this.params[i]+'"]').attr("data-src");
 			$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr({
 				"xlink:href": path,
 				"data-id": this.params[i]
 			});
-		    var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+		    var dataColor = $('.popUpTexture[data-id="'+this.params[i]+'"]').attr("data-color");
 			$('.block'+(+i+1)+'BackSmall').attr("fill", dataColor);
 
 			if($('#block'+(+i+1)).attr("data-connect")){
@@ -586,7 +579,7 @@ $(document).ready(function(){
 							"xlink:href": path,
 							"data-id": this.params[i]
 						});
-						var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+						var dataColor = $('.popUpTexture[data-id="'+this.params[i]+'"]').attr("data-color");
 						$('.block'+blocksConnect[0]+'BackSmall, .block'+blocksConnect[1]+'BackSmall').attr("fill", dataColor);
 					break
 					case 1:
@@ -594,7 +587,7 @@ $(document).ready(function(){
 							"xlink:href": path,
 							"data-id": this.params[i]
 						});
-						var dataColor = $('.currentTexture[data-id="'+this.params[i]+'"]').attr("data-color");
+						var dataColor = $('.popUpTexture[data-id="'+this.params[i]+'"]').attr("data-color");
 						$('.block'+blocksConnect[0]+'BackSmall').attr("fill", dataColor);
 					break
 				}
@@ -650,7 +643,7 @@ $(document).ready(function(){
 						this.drawTexture(i);
 					}else{
 						//брать дефолтный
-						path = $('.currentTexture[data-id="'+this.default[i]+'"]').attr("data-src");
+						path = $('.popUpTexture[data-id="'+this.default[i]+'"]').attr("data-src");
 						$('#imageblock'+(+i+1)+', #imageblock'+(+i+1)+'Back').children().attr({
 							"xlink:href": path,
 							"data-id": this.params[i]
@@ -709,7 +702,7 @@ $(document).ready(function(){
 	urlCommands.checkHash();//запустится при загрузке страницы
 
 	//Выбор текстуры
-	$('.currentTexture').click(function(e){
+	$(document).on("click", ".currentTexture", function(e){
 		if (prevTexture != undefined){
 			prevTexture.removeClass("activeTextureSlider");
 			$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').removeClass("activeTextureFancy");
@@ -723,12 +716,37 @@ $(document).ready(function(){
 			$('.iconMore').click();
 		}
 	});
-	$('.currentTexture2').click(function(e){
-        e.preventDefault();
-        slideIndex = $(this).index();
-        $('.textures').slick('slickGoTo', parseInt(slideIndex), false);
-        $('.currentTexture').eq(slideIndex + shiftSlider).click();
-        $('.allTextures').removeClass("showContent");
+	$('.popUpTexture').click(function(e){
+		var thisTexture = $(this).clone();
+		var dataID = thisTexture.attr("data-id");
+		//если такого элемента нет
+		if($.inArray(dataID, stackTextures) !== -1){
+			$('.currentTexture[data-id="'+dataID+'"]').remove();
+			stackTextures.splice($.inArray(dataID, stackTextures), 1);
+		}
+		if(stackTextures.length >= stackTexturesCount){
+			$('.textures .currentTexture:last').remove();
+			stackTextures.pop();
+		}
+		stackTextures.unshift(thisTexture.attr("data-id"));
+		console.log(stackTextures);
+		thisTexture.addClass("currentTexture").removeClass("popUpTexture").qtip({
+	  		position: {
+                my: 'bottom center',
+                at: 'top center',
+                adjust: {
+		            y: -8
+		        }
+            },
+            style: {
+    			classes: 'qtipFont qtipCustom qtip-light',
+            	tip: {
+            		width: 22, height: 11, border: 0
+            	}
+            }
+	  	});
+		$('.textures').prepend(thisTexture);
+		thisTexture.click();
         $.fancybox.close();
     });
 
@@ -814,7 +832,7 @@ $(document).ready(function(){
 				/*$('#'+lastElemStack.path).css({"fill":prevElemStack.texture});
 				$('#'+lastElemStack.path+'Back').css({"fill":prevElemStack.texture});*/
 				$('#image'+lastElemStack.path+', #image'+lastElemStack.path+'Back').children().attr({
-					"xlink:href": $('.currentTexture[data-id="'+prevElemStack.texture+'"]').attr("data-src"),
+					"xlink:href": $('.popUpTexture[data-id="'+prevElemStack.texture+'"]').attr("data-src"),
 					"data-id": prevElemStack.texture
 				});
 				var positionElStack = lastElemStack.path.slice(5) - 1;
@@ -865,7 +883,7 @@ $(document).ready(function(){
 			/*$('#'+lastElemStackRepeat.path).css({"fill":lastElemStackRepeat.texture});
 			$('#'+lastElemStackRepeat.path+'Back').css({"fill":lastElemStackRepeat.texture});*/
 			$('#image'+lastElemStackRepeat.path+', #image'+lastElemStackRepeat.path+'Back').children().attr({
-				"xlink:href": $('.currentTexture[data-id="'+lastElemStackRepeat.texture+'"]').attr("data-src"),
+				"xlink:href": $('.popUpTexture[data-id="'+lastElemStackRepeat.texture+'"]').attr("data-src"),
 				"data-id": lastElemStackRepeat.texture
 			});
 			var positionElStackR = lastElemStackRepeat.path.slice(5) - 1;
@@ -1046,7 +1064,7 @@ $(document).ready(function(){
 		}
 	});
 
-	var slider = $('.textures').slick({
+	/*var slider = $('.textures').slick({
 		nextArrow: $('.arrowNext'),
 		prevArrow: $('.arrowPrev'),
 		dots: false,
@@ -1087,7 +1105,7 @@ $(document).ready(function(){
 		}
 	    //console.log($('.allTextures').find('*[data-id="8"]').first());
 	    //$('.allTextures').find('*[data-id="8"]').first().click();
-	});
+	});*/
 
 	// возвращает cookie с именем name, если есть, если нет, то undefined
 	function getCookie(name) {
@@ -1104,4 +1122,5 @@ $(document).ready(function(){
 		setCookie(name, "", {expires: -1});
 	}
 
+	$('.defaultClick').click();
 });
