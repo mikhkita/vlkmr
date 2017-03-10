@@ -122,7 +122,7 @@ $(document).ready(function(){
 		$('.relBackground').css({"height": ""});
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
-			stackTexturesUpdate(10);
+			stackTexturesUpdate(8);
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
 			stackTexturesUpdate(7);
@@ -138,18 +138,18 @@ $(document).ready(function(){
 	function stackTexturesUpdate(elements){
 		if(stackTexturesCount !== elements){
 			//var stackTexturesCopy = [].concat(stackTextures);
-			console.log("++++++",stackTexturesCount,elements);
+			//console.log("++++++",stackTexturesCount,elements);
 			if(stackTexturesCount > elements){//значит мы сужаем окно
 				$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
 				stackTextures.splice(elements, stackTexturesCount-elements);
-				console.log("------",stackTexturesCopy,stackTextures);
+				//console.log("------",stackTexturesCopy,stackTextures);
 			}else{//значит мы расширяем окно
 				$(".currentTexture:lt("+(elements)+")").removeClass("hide");
 				stackTextures = [].concat(stackTexturesCopy);
-				console.log("*******",stackTexturesCopy,stackTextures);
+				//console.log("*******",stackTexturesCopy,stackTextures);
 			}
 			stackTexturesCount = elements;
-			console.log("AFTER",stackTexturesCount,elements, "length - ",stackTextures.length);
+			//console.log("AFTER",stackTexturesCount,elements, "length - ",stackTextures.length);
 		}
 		
 	}
@@ -771,7 +771,7 @@ $(document).ready(function(){
 		prevTexturePopup = $('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').addClass("activeTextureFancy");
 		stackTextures.splice($.inArray(currentTexture.attr("data-id"), stackTextures), 1);
 		stackTextures.unshift(currentTexture.attr("data-id"));
-		console.log(stackTextures);
+		//console.log(stackTextures);
 	});
 	$('.popUpTexture').click(function(e){
 		if(!$(this).hasClass("activeTextureFancy")){
@@ -779,7 +779,7 @@ $(document).ready(function(){
 			if (prevTexturePopup != undefined){
 				prevTexturePopup.removeClass("activeTextureFancy");
 			}
-			console.log("POPUP",prevTexturePopup);
+			//console.log("POPUP",prevTexturePopup);
 			prevTexturePopup = $(this);
 			var dataID = thisTexture.attr("data-id");
 			$(this).addClass("activeTextureFancy");
@@ -794,7 +794,7 @@ $(document).ready(function(){
 				stackTextures.pop();
 			}
 			stackTextures.unshift(thisTexture.attr("data-id"));
-			console.log(stackTextures);
+			//console.log(stackTextures);
 			thisTexture.addClass("mainTexture").removeClass("popUpTexture").qtip({
 		  		position: {
 	                my: 'bottom center',
@@ -813,7 +813,7 @@ $(document).ready(function(){
 			        event: 'click mouseleave'
 			    }
 		  	});
-		  	console.log($('.textures div').first());
+		  	//console.log($('.textures div').first());
 		  	/*$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
 			$('.textures').prepend(thisTexture);
 			currentTexture = $('.textures div').first().addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture").attr("href","#b-popup-decors");
@@ -828,7 +828,7 @@ $(document).ready(function(){
 			currentTexture = thisTexture.addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture");
 			stackTexturesCopy = [].concat(stackTextures);
 			thisTexture.click();
-			console.log("!!!AFTER",stackTexturesCount, "length - ",stackTextures.length);
+			//console.log("!!!AFTER",stackTexturesCount, "length - ",stackTextures.length);
 	        $.fancybox.close();
 		}
     });
@@ -988,6 +988,7 @@ $(document).ready(function(){
 					$('.repeatNextClick').click();
 				}
 			}
+			$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 			console.log(stack, stackRepeat);
 			checkConnectNext = false;
 			checkConnectNextThree = 0;
@@ -1071,7 +1072,7 @@ $(document).ready(function(){
 		{
 			//Заливка цветом панелей во floorIMG
 		    var dataColor = currentTexture.attr("data-color");
-		    console.log($($(this).attr("data-smallTexture")));
+		    //console.log($($(this).attr("data-smallTexture")));
 			$($(this).attr("data-smallTexture")).attr("fill", dataColor);
 
 			//закинуть текущую текстуру в pattern
@@ -1095,6 +1096,7 @@ $(document).ready(function(){
 				$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
 			}
 			stackRepeat = [];
+			console.log(stack, stackRepeat);
 			$('.repeatNext2').removeClass('repeatNext2').addClass('repeatNext');
 			//сохраняем старые координаты перед закраской
 			tempX = $('#image'+clickElem).children().attr("x");
