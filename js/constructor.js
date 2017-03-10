@@ -16,7 +16,7 @@ var stackTexturesCount;
 
 $(document).ready(function(){
 	var valueInc = 0.4 / ($('.popUpTexture').length + $('.floors').length);
-	var height = 100;
+	var height = 140;
 	if( isIE ){
     	$('.rel').addClass("hide");
     	$('.rel').css("opacity", 1);
@@ -102,13 +102,13 @@ $(document).ready(function(){
 		});
 	}
 	$(window).resize(function(){
-		if(fullSizeCheck === false){
+		if(fullSizeCheck === true || isMobile === true || isSmallTablet === true){
+			FullWidth();
+		}else{
 			$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
 				"height": $(window).height() - height,
 				"width": "auto"
 			});
-		}else{
-			FullWidth();
 		}
 		if($('#room').width() > $('.b-wide-block').width()){
 			$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
@@ -122,10 +122,10 @@ $(document).ready(function(){
 		$('.relBackground').css({"height": ""});
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
-			stackTexturesUpdate(6);
+			stackTexturesUpdate(10);
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
-			stackTexturesUpdate(4);
+			stackTexturesUpdate(7);
 		}
 		if(window.innerWidth <= 1024 && window.innerWidth > 768){
 			stackTexturesUpdate(3);
@@ -176,7 +176,7 @@ $(document).ready(function(){
 	            my: 'left center',
 	            at: 'right center',
 	            adjust: {
-		            x: 3
+		            x: 8
 		        }
 	        },
 	        style: {
@@ -229,7 +229,7 @@ $(document).ready(function(){
 					height: autoHeight,
 					width: $('.b-wide-block').width()
 				});
-			$('.fullSize[title]').qtip('option', 'content.text', 'Уместить по высоте');
+			$('.fullSize').qtip('option', 'content.text', $(this).attr("data-title-small"));
 			$('.icon-small-size').css("display", "inline-block");
 			$('.icon-full-size').css("display", "none");
 			setCookie("size","full", date);
@@ -247,7 +247,7 @@ $(document).ready(function(){
 					height: $(window).height() - height,
 					width: autoWidth
 				});
-				$('.fullSize[title]').qtip('option', 'content.text', 'Во всю ширину');
+				$('.fullSize').qtip('option', 'content.text', $(this).attr("data-title-full"));
 				$('.icon-small-size').css("display", "none");
 				$('.icon-full-size').css("display", "inline-block");
 				setCookie("size","small", date);
@@ -334,7 +334,7 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function(){
-		if($(this).scrollTop() > 575){
+		if($(this).scrollTop() > 565){
 			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 			  	position: {
 	                at: 'bottom center',
@@ -373,16 +373,19 @@ $(document).ready(function(){
 			  		position: {
 	                at: 'bottom center',
 	                my: 'top center',
-	                adjust: {
-			            y: 8
-			        }
-	            },
-	            style: {
-	    			classes: 'qtipFont qtipCustomBrown qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            }
+		                adjust: {
+				            y: 8
+				        }
+	            	},
+		            style: {
+		    			classes: 'qtipFont qtipCustomBrown qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            },
+		            hide: {
+				        event: 'click mouseleave'
+				    }
 			  	});
 			});
 		}else{
@@ -433,7 +436,10 @@ $(document).ready(function(){
 		            	tip: {
 		            		width: 22, height: 11, border: 0
 		            	}
-		            }
+		            },
+		            hide: {
+				        event: 'click mouseleave'
+				    }
 			  	});
 			});
 		}
@@ -802,7 +808,10 @@ $(document).ready(function(){
 	            	tip: {
 	            		width: 22, height: 11, border: 0
 	            	}
-	            }
+	            },
+	            hide:{
+			        event: 'click mouseleave'
+			    }
 		  	});
 		  	console.log($('.textures div').first());
 		  	/*$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");

@@ -51,6 +51,7 @@
 var myWidth,
 	isMobile = false,
 	isRetina = false,
+	isSmallTablet = false,
 	slideout = false;
 
 if( typeof( window.innerWidth ) == 'number' ) {
@@ -863,9 +864,9 @@ isRetina = (isMobile)?false:retina();
 
 
 		 </defs>
-		<polygon class="classSVG default" id="block1" data-clip="clipping1 circle" data-radius="1350" fill="url(#imageblock1)" points="116.3,174.7 239,128.3 241.9,1460.2 127,1406.8 "/>
-		<polygon class="classSVG default" id="block2" data-clip="clipping2 circle" data-radius="600" fill="url(#imageblock2)" points="239,128.3 722.7,191 722.7,212 239,153.7 "/>
-		<polygon class="classSVG default" id="block3" data-clip="clipping3 circle" data-radius="600" fill="url(#imageblock3)" points="241.9,1460.2 718.7,1380.3 720.8,1351.1 248,1425.8 241.9,1422.5 "/>
+		<polygon class="classSVG default" data-connect="2,3" id="block1" data-clip="clipping1 circle" data-radius="1350" fill="url(#imageblock1)" points="116.3,174.7 239,128.3 241.9,1460.2 127,1406.8 "/>
+		<polygon class="classSVG default" data-connect="1,3" id="block2" data-clip="clipping2 circle" data-radius="1350" fill="url(#imageblock2)" points="239,128.3 722.7,191 722.7,212 239,153.7 "/>
+		<polygon class="classSVG default" data-connect="1,2" id="block3" data-clip="clipping3 circle" data-radius="1350" fill="url(#imageblock3)" points="241.9,1460.2 718.7,1380.3 720.8,1351.1 248,1425.8 241.9,1422.5 "/>
 		<polygon class="classSVG default" id="block4" data-clip="clipping4 circle" data-radius="400" fill="url(#imageblock4)" points="239,153.7 490.3,184 491.5,485.5 239.8,472.2 "/>
 		<polygon class="classSVG default" id="block5" data-clip="clipping5 circle" data-radius="400" fill="url(#imageblock5)" points="490.3,184 715.5,212 716.2,496.5 491.5,485.5 "/>
 		<polygon class="classSVG default" id="block6" data-clip="clipping6 circle" data-radius="400" fill="url(#imageblock6)" points="239.8,472.2 491.5,485.5 493.8,787 241.9,791.8 "/>
@@ -902,9 +903,9 @@ isRetina = (isMobile)?false:retina();
 		
 		<title>Гостиная</title>
 
-		<polygon class="classSVGFront" id="block1Front" data-id="block1" data-smallTexture=".block1BackSmall" points="116.3,174.7 239,128.3 241.9,1460.2 127,1406.8 "/>
-		<polygon class="classSVGFront" id="block2Front" data-id="block2" data-smallTexture=".block2BackSmall" points="239,128.3 722.7,191 722.7,212 239,153.7 "/>
-		<polygon class="classSVGFront" id="block3Front" data-id="block3" data-smallTexture=".block3BackSmall" points="241.9,1460.2 718.7,1380.3 720.8,1351.1 248,1425.8 241.9,1422.5 "/>
+		<polygon class="classSVGFront" id="block1Front" data-id="block1" data-smallTexture=".block1BackSmall, .block2BackSmall, .block3BackSmall" points="116.3,174.7 239,128.3 241.9,1460.2 127,1406.8 "/>
+		<polygon class="classSVGFront" id="block2Front" data-id="block2" data-smallTexture=".block1BackSmall, .block2BackSmall, .block3BackSmall" points="239,128.3 722.7,191 722.7,212 239,153.7 "/>
+		<polygon class="classSVGFront" id="block3Front" data-id="block3" data-smallTexture=".block1BackSmall, .block2BackSmall, .block3BackSmall" points="241.9,1460.2 718.7,1380.3 720.8,1351.1 248,1425.8 241.9,1422.5 "/>
 		<polygon class="classSVGFront" id="block4Front" data-id="block4" data-smallTexture=".block4BackSmall" points="239,153.7 490.3,184 491.5,485.5 239.8,472.2 "/>
 		<polygon class="classSVGFront" id="block5Front" data-id="block5" data-smallTexture=".block5BackSmall" points="490.3,184 715.5,212 716.2,496.5 491.5,485.5 "/>
 		<polygon class="classSVGFront" id="block6Front" data-id="block6" data-smallTexture=".block6BackSmall" points="239.8,472.2 491.5,485.5 493.8,787 241.9,791.8 "/>
@@ -1057,22 +1058,14 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="popUpTexture defaultClick" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="3" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg"></div>
-							<div class="popUpTexture" title="Декор" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg"></div>
+							<div class="popUpTexture defaultClick" title="Декор1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" data-color="#7FBE7F"></div>
+							<div class="popUpTexture" title="Декор2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" data-color="#57a416"></div>
+							<div class="popUpTexture" title="Декор3" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" data-color="#444"></div>
+							<div class="popUpTexture" title="Декор4" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" data-color="#7FBE7F"></div>
+							<div class="popUpTexture" title="Декор5" data-id="5" data-image-mini="i/decor-5-mini.jpg" data-retina-image-mini="i/decor-5-mini.jpg" data-src="" data-image="i/decor-5.jpg" data-retina-image="i/decor-5.jpg" data-color="#7FBE7F"></div>
+							<div class="popUpTexture" title="Декор6" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" data-color="#7FBE7F"></div>
+							<div class="popUpTexture" title="Декор7" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" data-color="#7FBE7F"></div>
+							<div class="popUpTexture" title="Декор8" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" data-color="#7FBE7F"></div>
 							
 						</div>
 			</div>
