@@ -171,6 +171,33 @@ $(document).ready(function(){
 	        img.src = src;
 	    });
 	    $('.defaultClick').click();
+	    $('.mainTextureContainer[title]').qtip({
+			position: {
+	            my: 'left center',
+	            at: 'right center',
+	            adjust: {
+		            x: 3
+		        }
+	        },
+	        style: {
+				classes: 'qtipFont qtipCustom qtip-light',
+	        	tip: {
+	        		width: 22, height: 11, border: 0
+	        	}
+	        },
+	        show: {
+	            ready: true // Show the tooltip when ready
+	        },
+		    hide: {
+		        event: 'click'
+		    },
+		    events: {
+		        hide: function (event, api) {
+		            var $qtip = api;
+		            $qtip.destroy();
+		        }
+		    }
+		});
 	});
 
 	function FullWidth(){
@@ -300,6 +327,8 @@ $(document).ready(function(){
 	  	});
 	});
 
+	
+
 	$("body").on("scroll mousewheel", ".fancybox-inner",function(){
 		 $('.popUpTexture[title]').qtip('hide');
 	});
@@ -406,28 +435,6 @@ $(document).ready(function(){
 		            	}
 		            }
 			  	});
-			});
-			$('.mainTextureContainer[title]').qtip({
-				position: {
-	                my: 'left center',
-	                at: 'right center',
-	                adjust: {
-			            x: 3
-			        }
-	            },
-	            style: {
-	    			classes: 'qtipFont qtipCustom qtip-light',
-	            	tip: {
-	            		width: 22, height: 11, border: 0
-	            	}
-	            },
-	            show: {
-		            when: false, // Don't specify a show event
-		            ready: true // Show the tooltip when ready
-		        },
-			    hide: {
-			        event: 'click'
-			    }
 			});
 		}
 	});
@@ -759,9 +766,6 @@ $(document).ready(function(){
 		stackTextures.splice($.inArray(currentTexture.attr("data-id"), stackTextures), 1);
 		stackTextures.unshift(currentTexture.attr("data-id"));
 		console.log(stackTextures);
-		if(window.innerWidth <= 768){
-			$('.iconMore').click();
-		}
 	});
 	$('.popUpTexture').click(function(e){
 		if(!$(this).hasClass("activeTextureFancy")){
@@ -819,10 +823,6 @@ $(document).ready(function(){
 	        $.fancybox.close();
 		}
     });
-
-    function ChangeTexture(){
-    	
-    }
 
 	//Выбор пола
 	$('.floorIMG').click(function(e){
