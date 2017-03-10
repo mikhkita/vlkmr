@@ -3554,7 +3554,7 @@ ul.b-workshop-list{
 }
 
 .panelDecor{
-	height: 66px;
+	height: 100px;
 	padding: 20px 0;
 	background-color: #fff;
 	width: 100%;
@@ -3564,6 +3564,76 @@ ul.b-workshop-list{
 
 }
 
+.blockButtons{
+	width: 280px;
+	display: inline-block;
+}
+
+.displayTable{
+	display: inline-table;
+	height: 100px;
+}
+
+.tableCell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mainTexture{
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	box-sizing: border-box;
+	background-position: 50% 50%;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.mainTextureContainer{
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	margin: 0 15px;
+}
+
+.currentTexture{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin: 20px 8px;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.popUpTexture{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	margin: 10px;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.popUpTexture:hover{
+	box-shadow: 0 0 0 4px #483434;
+	box-sizing: border-box;
+}
+.currentTexture:hover{
+	box-shadow: 0 0 0 3px #c4c4c4;
+	box-sizing: border-box;
+}
+
+.activeTextureSlider{
+	box-shadow: 0 0 0 3px #483434 !important;
+	box-sizing: border-box;
+}
+
+.activeTextureFancy{
+	box-shadow: 0 0 0 4px #483434 !important;
+	box-sizing: border-box;
+}
 .floater{
 	float		: left;
 	height		: 50%;
@@ -3578,9 +3648,7 @@ ul.b-workshop-list{
 }
 
 .content{
-	clear		: both;
-	height		: 60px;
-	position	: relative;
+	margin: 27px 0;
 }
 
 .contentSmall{
@@ -3603,7 +3671,7 @@ ul.b-workshop-list{
 	background-color: #f4f4f4;
 	text-align: center;
 	padding-top: 10px;
-	margin: 8px 20px 8px 0;
+	margin: 0 20px 0 0;
 	box-sizing: border-box;
 	cursor: pointer;
 }
@@ -3707,8 +3775,8 @@ ul.b-workshop-list{
 
 .textures{
 	display: inline-block;
-	width: 100%;
-	height: 66px;
+	width: 750px;
+	height: 100px;
 }
 
 .allTextures{
@@ -3722,45 +3790,6 @@ ul.b-workshop-list{
 }
 .b-title-constructor{
 	margin: 60px 70px -10px 68px !important;
-}
-
-.currentTexture{
-	box-sizing: border-box;
-	display: inline-block;
-	width: 60px;
-	height: 60px;
-	margin: 0 8px;
-	background-position: 50% 50%;
-	background-size: cover;
-}
-
-.popUpTexture{
-	box-sizing: border-box;
-	display: inline-block;
-	width: 90px;
-	height: 90px;
-	margin: 10px;
-	background-position: 50% 50%;
-	background-size: cover;
-}
-
-.popUpTexture:hover{
-	box-shadow: 0 0 0 4px #483434;
-	box-sizing: border-box;
-}
-.currentTexture:hover{
-	box-shadow: 0 0 0 3px #c4c4c4;
-	box-sizing: border-box;
-}
-
-.activeTextureSlider{
-	box-shadow: 0 0 0 3px #483434 !important;
-	box-sizing: border-box;
-}
-
-.activeTextureFancy{
-	box-shadow: 0 0 0 4px #483434 !important;
-	box-sizing: border-box;
 }
 
 .activeFloor{
@@ -4378,7 +4407,7 @@ ul.b-workshop-list{
 		margin: 0;
 	}
 	.textures {
-	    width: 450px;
+	    width: 550px;
 	}
 	/*.setTextures {
 	    width: 590px;
@@ -4408,7 +4437,7 @@ ul.b-workshop-list{
 		width: 700px;
 	}
 	.textures {
-	    width: 230px;
+	    width: 290px;
 	}
 	/*.setTextures {
 	    width: 370px;
@@ -4442,8 +4471,8 @@ ul.b-workshop-list{
 	    margin-left: 55px;
 	}*/
 
-	.currentTexture img{
-		width: 130px;
+	.currentTexture{
+		width: 160px;
 	}
 
 	.backgroundButton{
@@ -4513,6 +4542,22 @@ ul.b-workshop-list{
 	}
 	.b-popup-share-content p{
 		font-size: 28px;
+	}
+	.iconMore{
+		margin-left: 25px;
+	}
+	.blockButtons{
+		width: 400px;
+	}
+	.panelDecor{
+		height: 120px;
+	}
+	.mainTexture, .mainTextureContainer{
+		width: 240px;
+		height: 120px;
+	}
+	.textures{
+	    display: none;
 	}
 }
 

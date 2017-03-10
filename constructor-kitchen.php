@@ -299,8 +299,8 @@ isRetina = (isMobile)?false:retina();
 				<div class="windowConstructor">
 				<div class="toolbar">
 					<div class="panelDecor">
-						<div class="repeatBlock">
-							<div class="floater">
+						<div class="displayTable">
+						<div class="blockButtons tableCell">
 								<div class="content">
 									<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
 										<span class="icon-back-arrow"></span>
@@ -314,26 +314,19 @@ isRetina = (isMobile)?false:retina();
 									<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
 										<span class="icon-share" href="#b-popup-share"></span>
 									</div>
-									<div class="floaterSmall">
-										<div class="contentSmall">
-										<div class="iconMore backgroundButton fancy" href="#b-popup-decors" title="Все декоры">
-											<span class="icon-more" href="#b-popup-decors"></span>
-										</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 
-						<div class="setTextures">
-							<div class="floater">
-								<div class="content">
-									<div class="textures">
-										<!--<div class="currentTexture activeTextureSlider" title="Декор" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg"></div>-->
-									</div>
-								</div>
+						
+						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора нажмите сюда">
+							
+						</div>
+
+						<div class="tableCell">
+							<div class="textures">
 							</div>
 						</div>
+					</div>
 
 						<!--
 						<div class="shareBlock">

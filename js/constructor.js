@@ -4,12 +4,14 @@ var shiftSlider;
 var currentTexture;
 var currentTextureID;
 var prevTexture;
+var prevTexturePopup;
 var currentFloor;
 var prevFloor;
 var progressbarValue = 0.3;
 var decorsID = [];
 var floorsID = [];
 var stackTextures = [];
+var stackTexturesCopy = [];
 var stackTexturesCount;
 
 $(document).ready(function(){
@@ -68,6 +70,9 @@ $(document).ready(function(){
         floorsID.push($(this).attr("data-id"));
     });
 
+    var srcMain = $('.mainTexture').attr("data-src", $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
+    $('.mainTexture').css("background-image", "url('i/decor-1-mini.jpg')");
+
 	//Загрузка полов в выпадающей панели
 	$('.floorIMG').each(function(){
         var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
@@ -117,29 +122,36 @@ $(document).ready(function(){
 		$('.relBackground').css({"height": ""});
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
-			//добавить функцию по обновлению ытека с текстурами
-			stackTexturesUpdate(10);
+			stackTexturesUpdate(6);
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
-			stackTexturesUpdate(7);
+			stackTexturesUpdate(4);
 		}
 		if(window.innerWidth <= 1024 && window.innerWidth > 768){
 			stackTexturesUpdate(3);
 		}
 		if(window.innerWidth <= 768){
-			stackTexturesUpdate(1);
+			stackTexturesUpdate(0);
 		}
-			
 	});
 
 	function stackTexturesUpdate(elements){
-		if(stackTexturesCount > elements){//значит мы сужаем окно
-
-		}else{//значит мы расширяем окно
-
+		if(stackTexturesCount !== elements){
+			//var stackTexturesCopy = [].concat(stackTextures);
+			console.log("++++++",stackTexturesCount,elements);
+			if(stackTexturesCount > elements){//значит мы сужаем окно
+				$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
+				stackTextures.splice(elements, stackTexturesCount-elements);
+				console.log("------",stackTexturesCopy,stackTextures);
+			}else{//значит мы расширяем окно
+				$(".currentTexture:lt("+(elements)+")").removeClass("hide");
+				stackTextures = [].concat(stackTexturesCopy);
+				console.log("*******",stackTexturesCopy,stackTextures);
+			}
+			stackTexturesCount = elements;
+			console.log("AFTER",stackTexturesCount,elements, "length - ",stackTextures.length);
 		}
-		stackTexturesCount = elements;
-		$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
+		
 	}
 
 	if(getCookie("size") === "full"){
@@ -151,8 +163,6 @@ $(document).ready(function(){
 	}
 
 	$(window).load(function(e){
-		$('.slick-active').eq(0).click();
-		//$(window).resize();
 		//начать загружать большие декоры
 		$('.popUpTexture').each(function(){
 	        var src = $(this).attr("data-src");
@@ -160,6 +170,7 @@ $(document).ready(function(){
 	        var img = new Image();
 	        img.src = src;
 	    });
+	    $('.defaultClick').click();
 	});
 
 	function FullWidth(){
@@ -328,7 +339,7 @@ $(document).ready(function(){
 			        event: 'click mouseleave'
 			    }
 			});
-			$('.currentTexture[title]').each(function(){
+			$('.currentTexture[title], .mainTexture[title]').each(function(){
 			  	$(this).qtip({
 			  		position: {
 	                at: 'bottom center',
@@ -379,7 +390,7 @@ $(document).ready(function(){
 			        event: 'click mouseleave'
 			    }
 			});
-			$('.currentTexture[title]').each(function(){
+			$('.currentTexture[title], .mainTexture[title]').each(function(){
 			  	$(this).qtip({
 			  		position: {
 		                my: 'bottom center',
@@ -395,6 +406,28 @@ $(document).ready(function(){
 		            	}
 		            }
 			  	});
+			});
+			$('.mainTextureContainer[title]').qtip({
+				position: {
+	                my: 'left center',
+	                at: 'right center',
+	                adjust: {
+			            x: 3
+			        }
+	            },
+	            style: {
+	    			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            },
+	            show: {
+		            when: false, // Don't specify a show event
+		            ready: true // Show the tooltip when ready
+		        },
+			    hide: {
+			        event: 'click'
+			    }
 			});
 		}
 	});
@@ -711,44 +744,85 @@ $(document).ready(function(){
 		currentTexture = $(this);
 		prevTexture = $(this);
 		$(this).addClass("activeTextureSlider");
-		$('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').addClass("activeTextureFancy");
+		//currentTexture.remove();
+		//убрать с прежнего места
+		//$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
+
+		//$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
+		//и поставить на новое
+		$('.textures').prepend($('.mainTextureContainer .mainTexture').removeClass("mainTexture activeTextureSlider").addClass("currentTexture"));
+		$('.mainTextureContainer').prepend(currentTexture.addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture"));
+		//$('.textures').prepend($(this));
+		//$('.textures div').first().addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture");
+		prevTexturePopup.removeClass("activeTextureFancy");
+		prevTexturePopup = $('.allTextures').find('*[data-id="'+currentTexture.attr("data-id")+'"]').addClass("activeTextureFancy");
+		stackTextures.splice($.inArray(currentTexture.attr("data-id"), stackTextures), 1);
+		stackTextures.unshift(currentTexture.attr("data-id"));
+		console.log(stackTextures);
 		if(window.innerWidth <= 768){
 			$('.iconMore').click();
 		}
 	});
 	$('.popUpTexture').click(function(e){
-		var thisTexture = $(this).clone();
-		var dataID = thisTexture.attr("data-id");
-		//если такого элемента нет
-		if($.inArray(dataID, stackTextures) !== -1){
-			$('.currentTexture[data-id="'+dataID+'"]').remove();
-			stackTextures.splice($.inArray(dataID, stackTextures), 1);
+		if(!$(this).hasClass("activeTextureFancy")){
+			var thisTexture = $(this).clone();
+			if (prevTexturePopup != undefined){
+				prevTexturePopup.removeClass("activeTextureFancy");
+			}
+			console.log("POPUP",prevTexturePopup);
+			prevTexturePopup = $(this);
+			var dataID = thisTexture.attr("data-id");
+			$(this).addClass("activeTextureFancy");
+			//если такой элемент уже есть
+			if($.inArray(dataID, stackTextures) !== -1){
+				$('.currentTexture[data-id="'+dataID+'"]').remove();
+				stackTextures.splice($.inArray(dataID, stackTextures), 1);
+			}
+			//если стек заполнен
+			if(stackTextures.length >= stackTexturesCount){
+				$('.currentTexture:last, .currentTexture.hide').remove();
+				stackTextures.pop();
+			}
+			stackTextures.unshift(thisTexture.attr("data-id"));
+			console.log(stackTextures);
+			thisTexture.addClass("mainTexture").removeClass("popUpTexture").qtip({
+		  		position: {
+	                my: 'bottom center',
+	                at: 'top center',
+	                adjust: {
+			            y: -8
+			        }
+	            },
+	            style: {
+	    			classes: 'qtipFont qtipCustom qtip-light',
+	            	tip: {
+	            		width: 22, height: 11, border: 0
+	            	}
+	            }
+		  	});
+		  	console.log($('.textures div').first());
+		  	/*$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
+			$('.textures').prepend(thisTexture);
+			currentTexture = $('.textures div').first().addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture").attr("href","#b-popup-decors");
+			stackTexturesCopy = [].concat(stackTextures);
+			thisTexture.click();*/
+			//$('.mainTextureContainer').addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
+			
+			//перенести преыдущую текстуру
+			$('.textures').prepend($('.mainTextureContainer .mainTexture').removeClass("mainTexture activeTextureSlider").addClass("currentTexture"));
+			//поставить новую
+			$('.mainTextureContainer').prepend(thisTexture);
+			currentTexture = thisTexture.addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture");
+			stackTexturesCopy = [].concat(stackTextures);
+			thisTexture.click();
+			console.log("!!!AFTER",stackTexturesCount, "length - ",stackTextures.length);
+	        $.fancybox.close();
 		}
-		if(stackTextures.length >= stackTexturesCount){
-			$('.textures .currentTexture:last').remove();
-			stackTextures.pop();
-		}
-		stackTextures.unshift(thisTexture.attr("data-id"));
-		console.log(stackTextures);
-		thisTexture.addClass("currentTexture").removeClass("popUpTexture").qtip({
-	  		position: {
-                my: 'bottom center',
-                at: 'top center',
-                adjust: {
-		            y: -8
-		        }
-            },
-            style: {
-    			classes: 'qtipFont qtipCustom qtip-light',
-            	tip: {
-            		width: 22, height: 11, border: 0
-            	}
-            }
-	  	});
-		$('.textures').prepend(thisTexture);
-		thisTexture.click();
-        $.fancybox.close();
     });
+
+    function ChangeTexture(){
+    	
+    }
 
 	//Выбор пола
 	$('.floorIMG').click(function(e){
@@ -853,6 +927,7 @@ $(document).ready(function(){
 					}
 				}
 				stackRepeat.push(lastElemStack);
+				console.log(stack, stackRepeat);
 			}
 			else{
 				stack.push(lastElemStack);
@@ -904,10 +979,11 @@ $(document).ready(function(){
 					$('.repeatNextClick').click();
 				}
 			}
+			console.log(stack, stackRepeat);
 			checkConnectNext = false;
 			checkConnectNextThree = 0;
 		}
-		else{
+		if(stackRepeat.length === 0){
 			$(this).removeClass('repeatNext2').addClass('repeatNext');
 		}
 	});
@@ -1121,6 +1197,4 @@ $(document).ready(function(){
 	function deleteCookie(name) {
 		setCookie(name, "", {expires: -1});
 	}
-
-	$('.defaultClick').click();
 });
