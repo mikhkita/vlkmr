@@ -300,24 +300,24 @@ isRetina = (isMobile)?false:retina();
 					<div class="panelDecor">
 					<div class="displayTable">
 						<div class="blockButtons tableCell">
-								<div class="content">
-									<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
-										<span class="icon-back-arrow"></span>
-									</div>
-									<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
-										<span class="icon-back-arrow-right"></span>
-									</div>
-									<div class="layers backgroundButton" title="Оттенок пола">
-										<span class="icon-layers"></span>
-									</div>
-									<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
-										<span class="icon-share" href="#b-popup-share"></span>
-									</div>
+							<div class="content">
+								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
+									<span class="icon-back-arrow"></span>
+								</div>
+								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
+									<span class="icon-back-arrow-right"></span>
+								</div>
+								<div class="layers backgroundButton" title="Оттенок пола">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
+								</div>
 							</div>
 						</div>
 
 						
-						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора нажмите сюда">
+						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора<br>нажмите на это">
 							
 						</div>
 
@@ -1004,7 +1004,7 @@ isRetina = (isMobile)?false:retina();
 					<h2 class="b-title b-title-constructor">Выберите декор</h2>
 
 						<div class="allTextures">
-							<div class="popUpTexture defaultClick" title="Декор1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" href=""></div>
+							<div class="popUpTexture" title="Декор1" data-id="1" data-image-mini="i/decor-1-mini.jpg" data-retina-image-mini="i/decor-1-mini.jpg" data-src="" data-image="i/decor-1.jpg" data-retina-image="i/decor-1.jpg" href=""></div>
 							<div class="popUpTexture" title="Декор2" data-id="2" data-image-mini="i/decor-2-mini.jpg" data-retina-image-mini="i/decor-2-mini.jpg" data-src="" data-image="i/decor-2.jpg" data-retina-image="i/decor-2.jpg" href=""></div>
 							<div class="popUpTexture" title="Декор3" data-id="123" data-image-mini="i/decor-3-mini.jpg" data-retina-image-mini="i/decor-3-mini.jpg" data-src="" data-image="i/decor-3.jpg" data-retina-image="i/decor-3.jpg" href=""></div>
 							<div class="popUpTexture" title="Декор4" data-id="4" data-image-mini="i/decor-4-mini.jpg" data-retina-image-mini="i/decor-4-mini.jpg" data-src="" data-image="i/decor-4.jpg" data-retina-image="i/decor-4.jpg" href=""></div>

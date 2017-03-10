@@ -170,7 +170,7 @@ $(document).ready(function(){
 	        var img = new Image();
 	        img.src = src;
 	    });
-	    $('.defaultClick').click();
+	    $('.popUpTexture').eq(0).click();
 	    $('.mainTextureContainer[title]').qtip({
 			position: {
 	            my: 'left center',
