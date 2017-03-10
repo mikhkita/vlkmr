@@ -51,6 +51,7 @@
 var myWidth,
 	isMobile = false,
 	isRetina = false,
+	isSmallTablet = false,
 	slideout = false;
 
 if( typeof( window.innerWidth ) == 'number' ) {
@@ -516,7 +517,7 @@ isRetina = (isMobile)?false:retina();
 							</div>
 						</div>
 					</div>
-			<div class="fullSize" title="Во всю ширину">
+			<div class="fullSize" title="Во всю ширину" data-title-small="Уместить по высоте" data-title-full="Во всю ширину">
 				<span class="icon-full-size"></span>
 				<span class="icon-small-size"></span>
 			</div>

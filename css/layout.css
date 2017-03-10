@@ -4567,15 +4567,15 @@ ul.b-workshop-list{
 		width: 240px;
 		height: 120px;
 	}
-	.textures{
+	.textures, .fullSize{
 	    display: none;
 	}
 }
 
-@media screen and (max-width: 750px){
+/*@media screen and (max-width: 750px){
 	.iconMore, .fullSize{
 		padding-top: 5px;
 	}
-}
+}*/
 
 /*----------------------------------------------*/
