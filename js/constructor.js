@@ -122,7 +122,7 @@ $(document).ready(function(){
 		$('.relBackground').css({"height": ""});
 		//fullSizeCheck = false;
 		if(window.innerWidth >= 1240){
-			stackTexturesUpdate(8);
+			stackTexturesUpdate(9);
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
 			stackTexturesUpdate(7);
@@ -170,34 +170,6 @@ $(document).ready(function(){
 	        var img = new Image();
 	        img.src = src;
 	    });
-	    $('.popUpTexture').eq(0).click();
-	    $('.mainTextureContainer[title]').qtip({
-			position: {
-	            my: 'left center',
-	            at: 'right center',
-	            adjust: {
-		            x: 8
-		        }
-	        },
-	        style: {
-				classes: 'qtipFont qtipCustom qtip-light',
-	        	tip: {
-	        		width: 22, height: 11, border: 0
-	        	}
-	        },
-	        show: {
-	            ready: true // Show the tooltip when ready
-	        },
-		    hide: {
-		        event: 'click'
-		    },
-		    events: {
-		        hide: function (event, api) {
-		            var $qtip = api;
-		            $qtip.destroy();
-		        }
-		    }
-		});
 	});
 
 	function FullWidth(){
@@ -333,8 +305,9 @@ $(document).ready(function(){
 		 $('.popUpTexture[title]').qtip('hide');
 	});
 
-	$(window).scroll(function(){
-		if($(this).scrollTop() > 565){
+	function qtipScroll(){
+		console.log($(this).scrollTop(),  $(".panelDecor").offset().top);
+		if($(this).scrollTop() + 55 > $(".panelDecor").offset().top){
 			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 			  	position: {
 	                at: 'bottom center',
@@ -374,7 +347,7 @@ $(document).ready(function(){
 	                at: 'bottom center',
 	                my: 'top center',
 		                adjust: {
-				            y: 8
+				            y: 9
 				        }
 	            	},
 		            style: {
@@ -443,6 +416,10 @@ $(document).ready(function(){
 			  	});
 			});
 		}
+	}
+
+	$(window).scroll(function(){
+		qtipScroll();
 	});
 
 	//Сочетание клавиш
@@ -459,11 +436,11 @@ $(document).ready(function(){
 			pressCtrl = true;
 			pressCmd = true;
 		}
-		if((pressCtrl === true || pressCmd === true) && e.which == 90)
+		if((pressCtrl === true || pressCmd === true) && e.which === 90)
 		{
 			$('.repeatPrevClick').click();
 			return false;
-		}else if((pressCtrl === true || pressCmd === true) && e.which == 89){
+		}else if((pressCtrl === true || pressCmd === true) && e.which === 89){
 			$('.repeatNextClick').click();
 			return false;
 		}
@@ -514,8 +491,8 @@ $(document).ready(function(){
 
 	var bar = new ProgressBar.Circle('#progressbar', {
 		strokeWidth: 10,
-		easing: 'easeInOut',
-		duration: 1000,
+		easing: 'easeOut',
+		duration: 4000,
 		color: '#483435',
 		trailColor: '#eee',
 		svgStyle: null,
@@ -526,6 +503,12 @@ $(document).ready(function(){
 		    }else{
 		      	circle.setText(value+'%');
 		    }
+		    //console.log(progressbarValue);
+		    /*if(progressbarValue >= 0.7) {
+		    	console.log(progressbarValue);
+		    	value = 100;
+		    	bar.animate(0.95);
+		    }*/
 		    if(value >= 100) {
 		    	if( isIE ){
 		    		$('.progressbarContain').fadeOut(250);
@@ -534,6 +517,35 @@ $(document).ready(function(){
 	            	$('.progressbarContain').addClass("hideContent");
 	            	$('.rel').addClass("showContent");
 	            }
+	            $('.popUpTexture').eq(0).click();
+			    $('.mainTextureContainer[title]').qtip({
+					position: {
+			            my: 'left center',
+			            at: 'right center',
+			            adjust: {
+				            x: 8
+				        }
+			        },
+			        style: {
+						classes: 'qtipFont qtipCustom qtip-light',
+			        	tip: {
+			        		width: 22, height: 11, border: 0
+			        	}
+			        },
+			        show: {
+			            ready: true // Show the tooltip when ready
+			        },
+				    hide: {
+				        event: 'click'
+				    },
+				    events: {
+				        hide: function (event, api) {
+				            var $qtip = api;
+				            $qtip.destroy();
+				        }
+				    }
+				});
+				qtipScroll();
 	        	$(window).resize();
 		    }
 		}
