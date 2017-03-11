@@ -57,6 +57,7 @@ $(document).ready(function(){
    		img.onload = function(){
    			ProgressBarInc(valueInc);
     	}
+    	$(this).click();
     });
 
 	$('.floors').each(function(){
@@ -70,8 +71,8 @@ $(document).ready(function(){
         floorsID.push($(this).attr("data-id"));
     });
 
-    var srcMain = $('.mainTexture').attr("data-src", $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
-    $('.mainTexture').css("background-image", "url('i/decor-1-mini.jpg')");
+    //var srcMain = $('.mainTexture').attr("data-src", $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
+    //$('.mainTexture').css("background-image", "url('i/decor-1-mini.jpg')");
 
 	//Загрузка полов в выпадающей панели
 	$('.floorIMG').each(function(){
@@ -120,12 +121,12 @@ $(document).ready(function(){
 		
 		$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
 		$('.relBackground').css({"height": ""});
-		//fullSizeCheck = false;
+		
 		if(window.innerWidth >= 1240){
-			stackTexturesUpdate(9);
+			stackTexturesUpdate(9);//считается вместе с главной текстурой
 		}
 		if(window.innerWidth < 1240 && window.innerWidth > 1024){
-			stackTexturesUpdate(7);
+			stackTexturesUpdate(6);
 		}
 		if(window.innerWidth <= 1024 && window.innerWidth > 768){
 			stackTexturesUpdate(3);
@@ -140,11 +141,11 @@ $(document).ready(function(){
 			//var stackTexturesCopy = [].concat(stackTextures);
 			//console.log("++++++",stackTexturesCount,elements);
 			if(stackTexturesCount > elements){//значит мы сужаем окно
-				$(".currentTexture:gt("+(elements-1)+")").addClass("hide");
+				$(".currentTexture:gt("+(elements-2)+")").addClass("hide");
 				stackTextures.splice(elements, stackTexturesCount-elements);
 				//console.log("------",stackTexturesCopy,stackTextures);
 			}else{//значит мы расширяем окно
-				$(".currentTexture:lt("+(elements)+")").removeClass("hide");
+				$(".currentTexture:lt("+(elements-1)+")").removeClass("hide");
 				stackTextures = [].concat(stackTexturesCopy);
 				//console.log("*******",stackTexturesCopy,stackTextures);
 			}
@@ -242,7 +243,7 @@ $(document).ready(function(){
         }
 	});
 
-	$('.iconMore[title], .share[title]').qtip({
+	$('.iconDecors[title], .share[title]').qtip({
 	  	position: {
             my: 'bottom center',
             at: 'top center',
@@ -299,14 +300,16 @@ $(document).ready(function(){
 	  	});
 	});
 
-	
+	$('.share, .iconDecors, .mainTextureContainer').click(function(){
+		$('.iconDecorsQtip').qtip('hide');
+	});
 
 	$("body").on("scroll mousewheel", ".fancybox-inner",function(){
 		 $('.popUpTexture[title]').qtip('hide');
 	});
 
 	function qtipScroll(){
-		console.log($(this).scrollTop(),  $(".panelDecor").offset().top);
+		//console.log($(this).scrollTop(),  $(".panelDecor").offset().top);
 		if($(this).scrollTop() + 55 > $(".panelDecor").offset().top){
 			$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 			  	position: {
@@ -323,7 +326,7 @@ $(document).ready(function(){
 	            	}
 	            }
 			});
-			$('.iconMore[title], .share[title]').qtip({
+			$('.iconDecors[title], .share[title]').qtip({
 			  	position: {
 	                at: 'bottom center',
 	                my: 'top center',
@@ -377,7 +380,7 @@ $(document).ready(function(){
 	            	}
 	            }
 			});
-			$('.iconMore[title], .share[title]').qtip({
+			$('.iconDecors[title], .share[title]').qtip({
 			  	position: {
 	                my: 'bottom center',
 	                at: 'top center',
@@ -488,11 +491,11 @@ $(document).ready(function(){
 		}
 		clickLayers = false;
 	});
-
+    var checkLoad = true;
 	var bar = new ProgressBar.Circle('#progressbar', {
 		strokeWidth: 10,
-		easing: 'easeOut',
-		duration: 4000,
+		easing: 'easeInOut',
+		duration: 800,
 		color: '#483435',
 		trailColor: '#eee',
 		svgStyle: null,
@@ -504,12 +507,15 @@ $(document).ready(function(){
 		      	circle.setText(value+'%');
 		    }
 		    //console.log(progressbarValue);
-		    /*if(progressbarValue >= 0.7) {
-		    	console.log(progressbarValue);
-		    	value = 100;
-		    	bar.animate(0.95);
+		    /*if(value >= 70 && checkLoad === true) {
+		    	checkLoad = false;
+		    	bar.animate(0.99, {
+				    duration: 5000,
+				    easing: 'easeOut'
+				});
 		    }*/
 		    if(value >= 100) {
+		    	//bar.animate(1);
 		    	if( isIE ){
 		    		$('.progressbarContain').fadeOut(250);
 	                $('.rel').fadeIn(500);
@@ -517,13 +523,23 @@ $(document).ready(function(){
 	            	$('.progressbarContain').addClass("hideContent");
 	            	$('.rel').addClass("showContent");
 	            }
+	            if(window.innerWidth >= 1240){
+					$('.popUpTexture').slice(0,9).click();
+				}
+				if(window.innerWidth < 1240 && window.innerWidth > 1024){
+					$('.popUpTexture').slice(0,6).click();
+				}
+				if(window.innerWidth <= 1024 && window.innerWidth > 768){
+					$('.popUpTexture').slice(0,3).click();
+				}
 	            $('.popUpTexture').eq(0).click();
-			    $('.mainTextureContainer[title]').qtip({
+			    $('.iconDecorsQtip[title]').qtip({
 					position: {
-			            my: 'left center',
+			            my: 'right center',
 			            at: 'right center',
 			            adjust: {
-				            x: 8
+				            x: -50,
+				            y: 12
 				        }
 			        },
 			        style: {

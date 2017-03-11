@@ -300,23 +300,20 @@ isRetina = (isMobile)?false:retina();
 				<div class="toolbar">
 					<div class="panelDecor">
 					<div class="displayTable">
-						<div class="blockButtons tableCell">
-							<div class="content">
-								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
+						<div class="blockLeft tableCell">
+							<div class="contentLeft">
+								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить" unselectable="on">
 									<span class="icon-back-arrow"></span>
 								</div>
-								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
+								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить" unselectable="on">
 									<span class="icon-back-arrow-right"></span>
 								</div>
-								<div class="layers backgroundButton" title="Оттенок пола">
-									<span class="icon-layers"></span>
-								</div>
-								<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
-									<span class="icon-share" href="#b-popup-share"></span>
+								<div class="iconDecors backgroundButton contentRight fancy" href="#b-popup-decors" title="Все декоры">
+									<div class="iconDecorsQtip" title="Для выбора декора<br>нажмите на это"></div>
+									<span class="icon-interface"></span>
 								</div>
 							</div>
 						</div>
-
 						
 						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора<br>нажмите на это">
 							
@@ -324,6 +321,17 @@ isRetina = (isMobile)?false:retina();
 
 						<div class="tableCell">
 							<div class="textures">
+							</div>
+						</div>
+
+						<div class="blockRight tableCell">
+							<div class="contentRight">
+								<div class="layers backgroundButton" title="Оттенок пола">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="backgroundButton share fancy" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1013,6 +1021,8 @@ isRetina = (isMobile)?false:retina();
 							<div class="popUpTexture" title="Декор6" data-id="6" data-image-mini="i/decor-6-mini.jpg" data-retina-image-mini="i/decor-6-mini.jpg" data-src="" data-image="i/decor-6.jpg" data-retina-image="i/decor-6.jpg" href=""></div>
 							<div class="popUpTexture" title="Декор7" data-id="7" data-image-mini="i/decor-7-mini.jpg" data-retina-image-mini="i/decor-7-mini.jpg" data-src="" data-image="i/decor-7.jpg" data-retina-image="i/decor-7.jpg" href=""></div>
 							<div class="popUpTexture" title="Декор8" data-id="8" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" href=""></div>
+							<div class="popUpTexture" title="Декор9" data-id="9" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" href=""></div>
+							<div class="popUpTexture" title="Декор10" data-id="10" data-image-mini="i/decor-8-mini.jpg" data-retina-image-mini="i/decor-8-mini.jpg" data-src="" data-image="i/decor-8.jpg" data-retina-image="i/decor-8.jpg" href=""></div>
 						</div>
 			</div>
 		</div>

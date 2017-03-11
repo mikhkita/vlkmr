@@ -302,30 +302,38 @@ isRetina = (isMobile)?false:retina();
 				<div class="toolbar">
 					<div class="panelDecor">
 						<div class="displayTable">
-						<div class="blockButtons tableCell">
-								<div class="content">
-									<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить">
-										<span class="icon-back-arrow"></span>
-									</div>
-									<div class="repeatNext backgroundButton repeatNextClick" title="Повторить">
-										<span class="icon-back-arrow-right"></span>
-									</div>
-									<div class="layers backgroundButton" title="Оттенок пола">
-										<span class="icon-layers"></span>
-									</div>
-									<div class="share backgroundButton fancy" href="#b-popup-share" title="Поделиться">
-										<span class="icon-share" href="#b-popup-share"></span>
-									</div>
+						<div class="blockLeft tableCell">
+							<div class="contentLeft">
+								<div class="repeatPrev backgroundButton repeatPrevClick" title="Отменить" unselectable="on">
+									<span class="icon-back-arrow"></span>
+								</div>
+								<div class="repeatNext backgroundButton repeatNextClick" title="Повторить" unselectable="on">
+									<span class="icon-back-arrow-right"></span>
+								</div>
+								<div class="iconDecors backgroundButton contentRight fancy" href="#b-popup-decors" title="Все декоры">
+									<div class="iconDecorsQtip" title="Для выбора декора<br>нажмите на это"></div>
+									<span class="icon-interface"></span>
+								</div>
 							</div>
 						</div>
-
 						
-						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора нажмите сюда">
+						<div class="tableCell mainTextureContainer fancy" href="#b-popup-decors" title="Для выбора декора<br>нажмите на это">
 							
 						</div>
 
 						<div class="tableCell">
 							<div class="textures">
+							</div>
+						</div>
+
+						<div class="blockRight tableCell">
+							<div class="contentRight">
+								<div class="layers backgroundButton" title="Оттенок пола">
+									<span class="icon-layers"></span>
+								</div>
+								<div class="backgroundButton share fancy" href="#b-popup-share" title="Поделиться">
+									<span class="icon-share" href="#b-popup-share"></span>
+								</div>
 							</div>
 						</div>
 					</div>

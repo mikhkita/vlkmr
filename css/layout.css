@@ -3564,8 +3564,13 @@ ul.b-workshop-list{
 
 }
 
-.blockButtons{
-	width: 280px;
+.blockLeft{
+	width: 235px;
+	display: inline-block;
+}
+
+.blockRight{
+	width: 180px;
 	display: inline-block;
 }
 
@@ -3593,7 +3598,7 @@ ul.b-workshop-list{
 	height: 100px;
 	width: 100px;
 	display: inline-block;
-	margin: 0 15px;
+	margin: 0 15px 0 20px;
 }
 
 .currentTexture{
@@ -3647,8 +3652,12 @@ ul.b-workshop-list{
 	margin-bottom	: -20px;
 }
 
-.content{
-	margin: 27px 0;
+.contentRight{
+	float: right;
+}
+
+.contentLeft{
+	width: 230px;
 }
 
 .contentSmall{
@@ -3700,6 +3709,16 @@ ul.b-workshop-list{
 	content: "\e90e";
 }
 
+.repeatNextClick, .repeatPrevClick{
+	-moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	
+}
+
+
 .setTextures{
 	/*width: 745px;*/
 	height: 66px;
@@ -3723,6 +3742,14 @@ ul.b-workshop-list{
 
 .arrowPrev:hover, .arrowNext:hover, .iconMore:hover, .fullSize:hover{
 	background-color: #e9e9e9;
+}
+
+.iconDecors, .share{
+	margin: 0;
+}
+
+.iconDecors{
+	padding-top: 13px;
 }
 
 .fullSize{
@@ -3771,15 +3798,15 @@ ul.b-workshop-list{
 	font-weight: 700;
 }
 
-.icon-more:before{
+.icon-interface:before{
 	color:#555;
-	font-size: 15px;
-	content: "\e90a";
+	font-size: 19px;
+	content: "\e906";
 }
 
 .textures{
 	display: inline-block;
-	width: 750px;
+	width: 625px;
 	height: 100px;
 }
 
@@ -4358,7 +4385,7 @@ ul.b-workshop-list{
 		-moz-animation-delay:1.02s;
 }
 
-.repeatPrev:hover, .repeatPrev2:hover, .repeatNext:hover, .repeatNext2:hover, .layers:hover, .share:hover{
+.repeatPrev:hover, .repeatPrev2:hover, .repeatNext:hover, .repeatNext2:hover, .layers:hover, .share:hover, .iconDecors:hover{
 	background-color: #e9e9e9;
 }
 
@@ -4418,7 +4445,7 @@ ul.b-workshop-list{
 		margin: 0;
 	}
 	.textures {
-	    width: 550px;
+	    width: 450px;
 	}
 	/*.setTextures {
 	    width: 590px;
@@ -4448,7 +4475,7 @@ ul.b-workshop-list{
 		width: 700px;
 	}
 	.textures {
-	    width: 290px;
+	    width: 200px;
 	}
 	/*.setTextures {
 	    width: 370px;
@@ -4493,11 +4520,7 @@ ul.b-workshop-list{
 		margin: 0 20px 0 0;
 	}
 
-	.share{
-		margin: 0;
-	}
-
-	.icon-back-arrow:before, .icon-back-arrow-right:before, .icon-layers:before, .icon-share:before
+	.icon-back-arrow:before, .icon-back-arrow-right:before, .icon-layers:before, .icon-share:before, .icon-interface:before
 	{
 		font-size: 36px !important;
 	}
@@ -4513,7 +4536,7 @@ ul.b-workshop-list{
 		margin: 10px;
 	}
 
-	.icon-more:before, .icon-full-size:before, .icon-small-size:before {
+	.icon-full-size:before, .icon-small-size:before {
 		font-size: 25px !important;
 	}
 
@@ -4557,18 +4580,25 @@ ul.b-workshop-list{
 	.iconMore{
 		margin-left: 25px;
 	}
-	.blockButtons{
-		width: 400px;
-	}
 	.panelDecor{
 		height: 120px;
 	}
 	.mainTexture, .mainTextureContainer{
-		width: 240px;
+		width: 120px;
 		height: 120px;
 	}
 	.textures, .fullSize{
 	    display: none;
+	}
+	.contentLeft{
+		width: 300px;
+	}
+	.blockRight{
+		width: 230px;
+		display: inline-block;
+	}
+	.iconDecors, .share {
+	    margin: 0;
 	}
 }
 
