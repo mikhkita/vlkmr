@@ -301,6 +301,7 @@ isRetina = (isMobile)?false:retina();
 <!--Конструктор-->
 				<div class="windowConstructor">
 				<div class="toolbar">
+				<div class="panelDecor">
 					<div class="displayTable">
 						<div class="blockLeft tableCell">
 							<div class="contentLeft">
@@ -409,7 +410,7 @@ isRetina = (isMobile)?false:retina();
 					<div id="progressbar">
 					</div>
 				</div>
-				<div class="fullSize" title="Во всю ширину">
+				<div class="fullSize" title="Во всю ширину" data-title-small="Уместить по высоте" data-title-full="Во всю ширину">
 					<span class="icon-full-size"></span>
 					<span class="icon-small-size"></span>
 				</div>

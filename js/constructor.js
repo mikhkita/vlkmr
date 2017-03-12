@@ -39,6 +39,12 @@ $(document).ready(function(){
 	function ProgressBarInc(value){
 	  	progressbarValue += value;
         bar.animate(progressbarValue);
+        if(progressbarValue === 0.7){
+        	bar.animate(0.99,{
+			    duration: 30000,
+			    easing: 'easeOut'
+			});
+        }
 	}
 
 	$('.popUpTexture').each(function(){
@@ -300,10 +306,6 @@ $(document).ready(function(){
 	  	});
 	});
 
-	$('.share, .iconDecors, .mainTextureContainer').click(function(){
-		$('.iconDecorsQtip').qtip('hide');
-	});
-
 	$("body").on("scroll mousewheel", ".fancybox-inner",function(){
 		 $('.popUpTexture[title]').qtip('hide');
 	});
@@ -506,14 +508,6 @@ $(document).ready(function(){
 		    }else{
 		      	circle.setText(value+'%');
 		    }
-		    //console.log(progressbarValue);
-		    /*if(value >= 70 && checkLoad === true) {
-		    	checkLoad = false;
-		    	bar.animate(0.99, {
-				    duration: 5000,
-				    easing: 'easeOut'
-				});
-		    }*/
 		    if(value >= 100) {
 		    	//bar.animate(1);
 		    	if( isIE ){
@@ -533,13 +527,16 @@ $(document).ready(function(){
 					$('.popUpTexture').slice(0,3).click();
 				}
 	            $('.popUpTexture').eq(0).click();
+	            $('.share, .iconDecors, .currentTexture, .mainTextureContainer').click(function(){
+					$('.iconDecorsQtip').qtip('hide');
+				});
 			    $('.iconDecorsQtip[title]').qtip({
 					position: {
 			            my: 'right center',
 			            at: 'right center',
 			            adjust: {
 				            x: -50,
-				            y: 12
+				            y: 11
 				        }
 			        },
 			        style: {
@@ -627,6 +624,7 @@ $(document).ready(function(){
 				"xlink:href": path,
 				"data-id": this.floor
 			});
+			//$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
 
 			for(var i=0; i < +this.countSVG; i++)
 			{
@@ -689,6 +687,8 @@ $(document).ready(function(){
 						"xlink:href": path,
 						"data-id": this.floor
 					});
+					//prevFloor = $('.floorIMG[data-id="'+this.floor+'"]');
+					//$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
 	            }else{
 	            	path = $('.floors[data-id="'+this.defaultFloor+'"]').attr("data-src");
 	            	if($('.floorIMG').hasClass("kitchenClass")){
