@@ -15,7 +15,7 @@ var stackTexturesCopy = [];
 var stackTexturesCount;
 
 $(document).ready(function(){
-	var valueInc = 0.4 / ($('.popUpTexture').length + $('.floors').length);
+	var valueInc = 0.3 / ($('.popUpTexture').length + $('.floors').length);
 	var height = 140;
 	if( isIE ){
     	$('.rel').addClass("hide");
@@ -39,9 +39,9 @@ $(document).ready(function(){
 	function ProgressBarInc(value){
 	  	progressbarValue += value;
         bar.animate(progressbarValue);
-        if(progressbarValue === 0.7){
+        if(progressbarValue >= 0.599 && progressbarValue <= 0.6){
         	bar.animate(0.99,{
-			    duration: 30000,
+			    duration: 40000,
 			    easing: 'easeOut'
 			});
         }
@@ -91,7 +91,7 @@ $(document).ready(function(){
 	var imgRoom = new Image();
     imgRoom.src = $('#room').attr("src");
    	imgRoom.onload = function(){
-   		ProgressBarInc(0.3);
+   		ProgressBarInc(0.4);
     }
     /*-----------------------------------*/
 
