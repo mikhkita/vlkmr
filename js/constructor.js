@@ -38,10 +38,14 @@ $(document).ready(function(){
     /*------Прогрессбар----------*/
 	function ProgressBarInc(value){
 	  	progressbarValue += value;
-        bar.animate(progressbarValue);
+	  	console.log(progressbarValue);
+        bar.animate(progressbarValue,{
+		    duration: 3000,
+		    easing: 'easeInOut'
+		});
         if(progressbarValue >= 0.599 && progressbarValue <= 0.6){
         	bar.animate(0.99,{
-			    duration: 40000,
+			    duration: 30000,
 			    easing: 'easeOut'
 			});
         }
@@ -49,7 +53,7 @@ $(document).ready(function(){
 
 	$('.popUpTexture').each(function(){
 		var src;
-		if(isRetina || isMobile){
+		if(isRetina || isMobile || isSmallTablet){
 			src = $(this).attr("data-retina-image-mini");
 			$(this).attr("data-src", $(this).attr("data-retina-image"));
 		}else{
@@ -67,7 +71,7 @@ $(document).ready(function(){
     });
 
 	$('.floors').each(function(){
-        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+        var src = $(this).attr( (isRetina || isMobile || isSmallTablet)?"data-retina-image":"data-image");
         $(this).attr("data-src", src);
         var img = new Image();
     	img.src = src;
@@ -82,12 +86,12 @@ $(document).ready(function(){
 
 	//Загрузка полов в выпадающей панели
 	$('.floorIMG').each(function(){
-        var src = $(this).attr( (isRetina || isMobile)?"data-retina-image":"data-image");
+        var src = $(this).attr( (isRetina || isMobile || isSmallTablet)?"data-retina-image":"data-image");
         $(this).attr("data-src", src);
     });
 
 	//Загрузка комнаты
-    $('#room').attr("src", $('#room').attr( (isRetina || isMobile)?"data-retina-image":"data-image"));
+    $('#room').attr("src", $('#room').attr( (isRetina || isMobile || isSmallTablet)?"data-retina-image":"data-image"));
 	var imgRoom = new Image();
     imgRoom.src = $('#room').attr("src");
    	imgRoom.onload = function(){
@@ -172,6 +176,7 @@ $(document).ready(function(){
 	$(window).load(function(e){
 		//начать загружать большие декоры
 		$('.popUpTexture').each(function(){
+			console.log($(this).attr("data-src"));
 	        var src = $(this).attr("data-src");
 	        //$(this).css("background-image", "url('"+src+"')");
 	        var img = new Image();
@@ -503,70 +508,82 @@ $(document).ready(function(){
 		svgStyle: null,
 		step: function(state, circle) {
 		    var value = Math.round(circle.value() * 100);
-		    if (value === 0) {
+		    if (circle.value() === 0) {
 		      	circle.setText('');
 		    }else{
 		      	circle.setText(value+'%');
 		    }
-		    if(value >= 100) {
-		    	//bar.animate(1);
-		    	if( isIE ){
-		    		$('.progressbarContain').fadeOut(250);
-	                $('.rel').fadeIn(500);
-	            }else{
-	            	$('.progressbarContain').addClass("hideContent");
-	            	$('.rel').addClass("showContent");
-	            }
-	            if(window.innerWidth >= 1240){
-					$('.popUpTexture').slice(0,9).click();
-				}
-				if(window.innerWidth < 1240 && window.innerWidth > 1024){
-					$('.popUpTexture').slice(0,6).click();
-				}
-				if(window.innerWidth <= 1024 && window.innerWidth > 768){
-					$('.popUpTexture').slice(0,3).click();
-				}
-	            $('.popUpTexture').eq(0).click();
-	            $('.share, .iconDecors, .currentTexture, .mainTextureContainer').click(function(){
-					$('.iconDecorsQtip').qtip('hide');
-				});
-			    $('.iconDecorsQtip[title]').qtip({
-					position: {
-			            my: 'right center',
-			            at: 'right center',
-			            adjust: {
-				            x: -50,
-				            y: 11
-				        }
-			        },
-			        style: {
-						classes: 'qtipFont qtipCustom qtip-light',
-			        	tip: {
-			        		width: 22, height: 11, border: 0
-			        	}
-			        },
-			        show: {
-			            ready: true // Show the tooltip when ready
-			        },
-				    hide: {
-				        event: 'click'
-				    },
-				    events: {
-				        hide: function (event, api) {
-				            var $qtip = api;
-				            $qtip.destroy();
-				        }
-				    }
-				});
-				qtipScroll();
-	        	$(window).resize();
+		    console.log(state, circle);
+		    if(progressbarValue >= 0.999 && checkLoad === true) {
+		    	checkLoad = false;
+		    	circle.setText('100%');
+		    	console.log("+++");
+		    	bar.animate(1,{
+				    duration: 800,
+				    easing: 'easeInOut'
+				}, function() {
+					   if( isIE ){
+				    		$('.progressbarContain').fadeOut(250);
+			                $('.rel').fadeIn(500);
+			            }else{
+			            	$('.progressbarContain').addClass("hideContent");
+			            	$('.rel').addClass("showContent");
+			            }
+			            if(window.innerWidth >= 1240){
+							$('.popUpTexture').slice(0,9).click();
+						}
+						if(window.innerWidth < 1240 && window.innerWidth > 1024){
+							$('.popUpTexture').slice(0,6).click();
+						}
+						if(window.innerWidth <= 1024 && window.innerWidth > 768){
+							$('.popUpTexture').slice(0,3).click();
+						}
+			            $('.popUpTexture').eq(0).click();
+			            $('.share, .iconDecors, .currentTexture, .mainTextureContainer').click(function(){
+							$('.iconDecorsQtip').qtip('hide');
+						});
+					    $('.iconDecorsQtip[title]').qtip({
+							position: {
+					            my: 'right center',
+					            at: 'right center',
+					            adjust: {
+						            x: -50,
+						            y: 11
+						        }
+					        },
+					        style: {
+								classes: 'qtipFont qtipCustom qtip-light',
+					        	tip: {
+					        		width: 22, height: 11, border: 0
+					        	}
+					        },
+					        show: {
+					            ready: true // Show the tooltip when ready
+					        },
+						    hide: {
+						        event: 'click'
+						    },
+						    events: {
+						        hide: function (event, api) {
+						            var $qtip = api;
+						            $qtip.destroy();
+						        }
+						    }
+						});
+						qtipScroll();
+			        	$(window).resize();
+					});
+		    	
 		    }
 		}
 	});
 
 	bar.text.style.fontSize = '20px';
 	bar.text.style.fontWeight = 700;
-	bar.animate(progressbarValue);
+	bar.animate(progressbarValue,{
+	    duration: 20000,
+	    easing: 'easeOut'
+	});
 
 	//Работа с хэшем
 
@@ -624,7 +641,8 @@ $(document).ready(function(){
 				"xlink:href": path,
 				"data-id": this.floor
 			});
-			//$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
+			prevFloor = $('.floorIMG[data-id="'+this.floor+'"]');
+			$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
 
 			for(var i=0; i < +this.countSVG; i++)
 			{
@@ -687,8 +705,8 @@ $(document).ready(function(){
 						"xlink:href": path,
 						"data-id": this.floor
 					});
-					//prevFloor = $('.floorIMG[data-id="'+this.floor+'"]');
-					//$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
+					prevFloor = $('.floorIMG[data-id="'+this.floor+'"]');
+					$('.floorIMG[data-id="'+this.floor+'"] .b-floor-cont').addClass("activeFloor");
 	            }else{
 	            	path = $('.floors[data-id="'+this.defaultFloor+'"]').attr("data-src");
 	            	if($('.floorIMG').hasClass("kitchenClass")){
@@ -792,7 +810,7 @@ $(document).ready(function(){
 		//$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
 		//и поставить на новое
 		$('.textures').prepend($('.mainTextureContainer .mainTexture').removeClass("mainTexture activeTextureSlider").addClass("currentTexture"));
-		$('.mainTextureContainer').prepend(currentTexture.addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture"));
+		$('.mainTextureContainer').prepend(currentTexture.addClass("mainTexture activeTextureSlider").removeClass("currentTexture"));
 		//$('.textures').prepend($(this));
 		//$('.textures div').first().addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture");
 		prevTexturePopup.removeClass("activeTextureFancy");
@@ -853,9 +871,9 @@ $(document).ready(function(){
 			$('.textures').prepend($('.mainTextureContainer .mainTexture').removeClass("mainTexture activeTextureSlider").addClass("currentTexture"));
 			//поставить новую
 			$('.mainTextureContainer').prepend(thisTexture);
-			currentTexture = thisTexture.addClass("mainTexture activeTextureSlider fancy").removeClass("currentTexture");
+			currentTexture = thisTexture.addClass("mainTexture activeTextureSlider").removeClass("currentTexture");
 			stackTexturesCopy = [].concat(stackTextures);
-			thisTexture.click();
+			//thisTexture.click();
 			//console.log("!!!AFTER",stackTexturesCount, "length - ",stackTextures.length);
 	        $.fancybox.close();
 		}
