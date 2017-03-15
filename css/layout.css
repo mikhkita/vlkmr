@@ -3986,6 +3986,7 @@ ul.b-workshop-list{
    	-o-transition: opacity 500ms ease-out;
 	transition: opacity 500ms ease-out;
 	opacity: 0;
+	overflow: hidden;
 	/*height: 1000px;*/
 }
 

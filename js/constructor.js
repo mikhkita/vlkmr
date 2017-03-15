@@ -101,15 +101,20 @@ $(document).ready(function(){
     }
     /*-----------------------------------*/
 
-	$('.relBackground').css({"height": $(window).height() - height});
-	$('.progressbarContain').css({
-		"top": ($(window).height() - height)/2 - 40
-	});
+	
 	if($(window).width() < $('.b-wide-block').width()){
+		$('.relBackground').css({"height": $(window).height() - height});
+		$('.progressbarContain').css({
+			"top": ($(window).height() - height)/2 - 40
+		});
 		$('.progressbarContain').css({
 			"left": ($(window).width())/2 - 40
 		});
 	}else{
+		$('.relBackground').css({"height": 1100 - height});
+		$('.progressbarContain').css({
+			"top": (1100 - height)/2 - 40
+		});
 		$('.progressbarContain').css({
 			"left": ($('.relBackground').width())/2 - 40
 		});
