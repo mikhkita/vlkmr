@@ -101,8 +101,7 @@ $(document).ready(function(){
     }
     /*-----------------------------------*/
 
-	
-	if($(window).width() < $('.b-wide-block').width()){
+	if($(window).width() <= $('.b-wide-block').width()){
 		$('.relBackground').css({"height": $(window).height() - height});
 		$('.progressbarContain').css({
 			"top": ($(window).height() - height)/2 - 40
@@ -558,7 +557,7 @@ $(document).ready(function(){
 						        }
 					        },
 					        style: {
-								classes: 'qtipFontMobile qtipCustom qtip-light',
+								classes: 'qtipFontMobile qtipCustom qtip-light qtip-decors',
 					        	tip: {
 					        		width: 22, height: 11, border: 0
 					        	}
@@ -587,7 +586,7 @@ $(document).ready(function(){
 						        }
 					        },
 					        style: {
-								classes: 'qtipFont qtipCustom qtip-light',
+								classes: 'qtipFont qtipCustom qtip-light qtip-decors',
 					        	tip: {
 					        		width: 22, height: 11, border: 0
 					        	}
