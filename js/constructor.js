@@ -15,6 +15,13 @@ var stackTexturesCopy = [];
 var stackTexturesCount;
 
 $(document).ready(function(){
+	
+	if($('#default-hash').attr("data-countReflection")){
+		var dataStack = +$('#default-hash').attr("data-countReflection") + +$('#default-hash').attr("data-stack");
+	}else{
+		var dataStack = +$('#default-hash').attr("data-stack");
+	}
+
 	function supportHistory() {
 		return !!(window.history && history.pushState);
 	}
@@ -155,21 +162,16 @@ $(document).ready(function(){
 
 	function stackTexturesUpdate(elements){
 		if(stackTexturesCount !== elements){
-			//var stackTexturesCopy = [].concat(stackTextures);
-			//console.log("++++++",stackTexturesCount,elements);
 			if(stackTexturesCount > elements){//значит мы сужаем окно
 				$(".currentTexture:gt("+(elements-2)+")").addClass("hide");
 				stackTextures.splice(elements, stackTexturesCount-elements);
-				//console.log("------",stackTexturesCopy,stackTextures);
 			}else{//значит мы расширяем окно
+				$(".currentTexture:gt("+(elements-2)+")").addClass("hide");
 				$(".currentTexture:lt("+(elements-1)+")").removeClass("hide");
 				stackTextures = [].concat(stackTexturesCopy);
-				//console.log("*******",stackTexturesCopy,stackTextures);
 			}
 			stackTexturesCount = elements;
-			//console.log("AFTER",stackTexturesCount,elements, "length - ",stackTextures.length);
 		}
-		
 	}
 
 	if(getCookie("size") === "full"){
@@ -534,17 +536,9 @@ $(document).ready(function(){
 		            	$('.progressbarContain').addClass("hideContent");
 		            	$('.rel').addClass("showContent");
 		            }
-		            if(window.innerWidth >= 1240){
-						$('.popUpTexture').slice(0,9).click();
-					}
-					if(window.innerWidth < 1240 && window.innerWidth > 1024){
-						$('.popUpTexture').slice(0,6).click();
-					}
-					if(window.innerWidth <= 1024 && window.innerWidth > 768){
-						$('.popUpTexture').slice(0,3).click();
-					}
+					$('.popUpTexture').slice(0,9).click();
 		            $('.popUpTexture').eq(0).click();
-		            $('.share, .iconDecors, .currentTexture, .mainTextureContainer').click(function(){
+		            $('.share, .iconDecors, .classSVGFront, .mainTextureContainer').click(function(){
 						$('.iconDecorsQtip').qtip('hide');
 					});
 					if(isMobile || isSmallTablet){
@@ -633,7 +627,7 @@ $(document).ready(function(){
 		this.events = {};
 		this.default = {};
 		this.defaultFloor = "";
-		this.countSVG = $('#default-hash').attr("data-stack");
+		this.countSVG = dataStack;
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
 
@@ -998,21 +992,19 @@ $(document).ready(function(){
 	var stack = [];
 	//Заполняем стек начальными текстурами
 	$('.classSVG').each(function(){
-		/*var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("xlink:href"));
-		stack.push(stackAdd);
-		var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
-		blocks.push(blockAdd);*/
 		var stackAdd = new clickArea($(this).attr("id"), $('#image'+$(this).attr("id")).children().attr("data-id"));
 		stack.push(stackAdd);
 		var blockAdd = new areaSVG($('#'+$(this).attr("id")), $('#'+$(this).attr("data-clip")), $(this).attr("data-radius"));
 		blocks.push(blockAdd);
 	});
+
 	var stackRepeat = [];
 	var stackCancel = false;
 	var checkConnectPrev = false;
 	var checkConnectPrevThree = 0;
 	var checkConnectNext = false;
 	var checkConnectNextThree = 0;
+
 	//Отменить
 	$('.repeatPrevClick').click(function(e){
 		if(stack.length != 0)
@@ -1055,7 +1047,7 @@ $(document).ready(function(){
 			else{
 				stack.push(lastElemStack);
 			}
-			if(stack.length > $('#default-hash').attr("data-stack"))
+			if(stack.length > dataStack)
 			{
 				$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 				
@@ -1118,50 +1110,50 @@ $(document).ready(function(){
 		this.circle = circle;
 		this.radius = radius;
 		this.animateSVG = function(x, y, clickEl, currentTextureLoc){
-	   	circle.attr({
-		  	'cx': x + '%',
-		  	'cy': y + '%'
-		});
-		var circleID = circle.parent().attr("id");
-		path.css({
-		  	"clip-path":"url(#"+circleID+")",
-		  	"opacity" : "1"
-		});
-		circle.css({
-		  	'r': 0
-		});
-		//Изменение хэша
-		var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
-		var textureEl = currentTextureLoc.attr("data-id");
-		urlCommands.urlPush(positionEl, textureEl);
-		//urlCommands.urlUpdate();
-		circle.animate(
-			{
-			  	'r': radius
-			},{
-		  		duration: 550,
-		   		step: function(now, fx) {
-		   			$(this).attr({"r": now});
-		   			if(stackCancel === true){
-		   				$('#image'+clickEl).children().attr({
-							"x": tempX,
-							"y": tempY
-						});
-						return
-		   			}
-		   		},
-		   		complete: function(){
-		   			if(stackCancel === false){
-			   			$('#image'+clickEl+'Back').children().attr({
-			   				"xlink:href": currentTextureLoc.attr("data-src"),
-			   				"data-id": currentTextureLoc.attr("data-id"),
-							"x": $('#image'+clickEl).children().attr("x"),
-							"y": $('#image'+clickEl).children().attr("y")
-						});
-					stackCancel = false;
-			   		}
-		   		}
+		   	circle.attr({
+			  	'cx': x + '%',
+			  	'cy': y + '%'
 			});
+			var circleID = circle.parent().attr("id");
+			path.css({
+			  	"clip-path":"url(#"+circleID+")",
+			  	"opacity" : "1"
+			});
+			circle.css({
+			  	'r': 0
+			});
+			//Изменение хэша
+			var positionEl = clickEl.slice(5) - 1; // из block12 получаем 12
+			var textureEl = currentTextureLoc.attr("data-id");
+			urlCommands.urlPush(positionEl, textureEl);
+			//urlCommands.urlUpdate();
+			circle.animate(
+				{
+				  	'r': radius
+				},{
+			  		duration: 550,
+			   		step: function(now, fx) {
+			   			$(this).attr({"r": now});
+			   			if(stackCancel === true){
+			   				$('#image'+clickEl).children().attr({
+								"x": tempX,
+								"y": tempY
+							});
+							return
+			   			}
+			   		},
+			   		complete: function(){
+			   			if(stackCancel === false){
+				   			$('#image'+clickEl+'Back').children().attr({
+				   				"xlink:href": currentTextureLoc.attr("data-src"),
+				   				"data-id": currentTextureLoc.attr("data-id"),
+								"x": $('#image'+clickEl).children().attr("x"),
+								"y": $('#image'+clickEl).children().attr("y")
+							});
+						stackCancel = false;
+				   		}
+			   		}
+				});
 	   };
 	};
 	
@@ -1203,7 +1195,7 @@ $(document).ready(function(){
 		    var elemRepeat = false;
 		    var stackObj = new clickArea(clickElem, $('#image'+clickElem).children().attr("data-id"));
 			stack.push(stackObj);
-		    if(stack.length > $('#default-hash').attr("data-stack")){//Если с анимацией пола то 22
+		    if(stack.length > dataStack){//Если с анимацией пола то 22
 				$('.repeatPrev').removeClass('repeatPrev').addClass('repeatPrev2');
 			}else{
 				$('.repeatPrev2').removeClass('repeatPrev2').addClass('repeatPrev');
