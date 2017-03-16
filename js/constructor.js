@@ -311,7 +311,8 @@ $(document).ready(function(){
 	        hide: {
 		        effect: function(offset) {
 		        	$(this).slideDown(100); // "this" refers to the tooltip
-		        }
+		        },
+		        event: 'click mouseleave'
 		    }
 	  	});
 	});
@@ -924,7 +925,7 @@ $(document).ready(function(){
 	            	}
 	            },
 	            hide:{
-			        event: 'click mouseleave'
+			        event: 'mouseleave click'
 			    }
 		  	});
 		  	//console.log($('.textures div').first());
