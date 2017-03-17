@@ -109,9 +109,9 @@ $(document).ready(function(){
     /*-----------------------------------*/
 
 	if($(window).width() <= $('.b-wide-block').width()){
-		$('.relBackground').css({"height": $(window).height() - height});
+		$('.relBackground').css({"height": myHeight - height});
 		$('.progressbarContain').css({
-			"top": ($(window).height() - height)/2 - 40
+			"top": (myHeight - height)/2 - 40
 		});
 		$('.progressbarContain').css({
 			"left": ($(window).width())/2 - 40
@@ -130,7 +130,7 @@ $(document).ready(function(){
 			FullWidth();
 		}else{
 			$('#room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').css({
-				"height": $(window).height() - height,
+				"height": myHeight - height,
 				"width": "auto"
 			});
 		}
@@ -143,7 +143,7 @@ $(document).ready(function(){
 		//$('.rel').css("display", "block");
 		
 		$('.rel').css({"width": $('#room').width(), "height": $('#room').height()});
-		$('.relBackground').css({"height": ""});
+		if( !checkLoad ) $('.relBackground').css({"height": ""});
 		
 		if(window.innerWidth >= 1240){
 			stackTexturesUpdate(9);//считается вместе с главной текстурой
@@ -226,16 +226,16 @@ $(document).ready(function(){
 			setCookie("size","full", date);
 			fullSizeCheck = true;
 		}else 
-			if(fullSizeCheck === true && $('.rel').height() > $(window).height() - 100){
+			if(fullSizeCheck === true && $('.rel').height() > myHeight - 100){
 				var curHeight = $('#room').height();
 				$('#room, #floorRoom, #floorRoomBack').css({
-					"height": $(window).height() - height,
+					"height": myHeight - height,
 					"width": "auto"
 				});
 				var autoWidth = $('#room').width();
 				$('.rel, #room, #floorRoom, #floorRoomBack, #roomSVG, #roomSVGFront, #roomSVGBack').height(curHeight).animate(
 				{
-					height: $(window).height() - height,
+					height: myHeight - height,
 					width: autoWidth
 				});
 				$('.fullSize').qtip('option', 'content.text', $(this).attr("data-title-full"));
