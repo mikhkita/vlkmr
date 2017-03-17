@@ -1012,7 +1012,7 @@ isRetina = (isMobile)?false:retina();
 
 	</svg>
 
-	<div id="default-hash" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3" data-countSVG="16" data-countTextures="3" data-stack="15"></div>
+	<div id="default-hash" data-hash="1|1,1,1,1,3,3,3,3,3,3,3,3,3,3,3" data-countSVG="16" data-countTextures="3" data-stack="15" data-countReflection="14"></div>
 			</div><!--rel-->
 			</div>
 		</div><!--b-wide-->

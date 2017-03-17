@@ -4467,9 +4467,6 @@ ul.b-workshop-list{
 		width: 960px;
 		margin-left:-480px;
 	}
-	.floorIMG{
-		width: 30%;
-	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -4494,7 +4491,6 @@ ul.b-workshop-list{
 		margin-left:-350px;
 	}
 	.floorIMG{
-		width: 30%;
 		margin: 5px;
 	}
 	.b-popup-share-content{
@@ -4566,7 +4562,6 @@ ul.b-workshop-list{
 	}
 	.floorIMG{
 		display: block;
-		width: 30%;
 		margin: 5px auto;
 	}
 	.ya-share2__item_service_vkontakte .ya-share2__icon:before,

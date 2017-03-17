@@ -583,7 +583,7 @@ isRetina = (isMobile)?false:retina();
 			<polygon class="classSVGFront" id="block9Front" data-id="block9" points="610.1,362 608.8,362 608.6,361.8 461,348 459.8,348 459.6,348.5 459.7,442.9 459.9,443.4 608.9,474.7   609.1,474.7 609.3,474.5 610.3,474.3 611,473.8 611.1,362.5 "/>
 		</svg>
 
-		<div id="default-hash" data-hash="3,3,3,3,3,3,3,3,3" data-countSVG="9" data-countTextures="3" data-stack="9"></div>
+		<div id="default-hash" data-hash="2,2,2,2,2,2,1,1,1" data-countSVG="9" data-countTextures="3" data-stack="9"></div>
 
 		</div><!--rel-->
 		</div>
