@@ -1,3 +1,6 @@
+var myWidth = null,
+    myHeight = null;
+
 $(document).ready(function(){	
     $("h1.b-title").click(function(){
 
