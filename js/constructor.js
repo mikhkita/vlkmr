@@ -627,7 +627,7 @@ $(document).ready(function(){
 		this.events = {};
 		this.default = {};
 		this.defaultFloor = "";
-		this.countSVG = dataStack;
+		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
 
