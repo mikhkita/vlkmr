@@ -3812,7 +3812,7 @@ ul.b-workshop-list{
 }
 
 .allTextures{
-	max-width: 1130px;
+	max-width: 1144px;
 	width: 100%;
 	/*margin: 0 auto;*/
 	padding: 40px 60px 50px 60px;
@@ -4457,8 +4457,8 @@ ul.b-workshop-list{
 		margin-right: 8px;
 	}
 	.allTextures{
-		max-width: 895px;
-		padding: 40px 45px 50px 53px;
+		max-width: 903px;
+		padding: 40px 53px 50px 53px;
 	}
 	.b-title-constructor{
 		margin-bottom: -28px;
@@ -4484,7 +4484,7 @@ ul.b-workshop-list{
 		margin-right: 9px;
 	}
 	.allTextures{
-		max-width: 670px;
+		max-width: 687px;
 	}
 	.panelFloor{
 		width: 700px;
@@ -4554,7 +4554,7 @@ ul.b-workshop-list{
 
 	.allTextures{
 		max-width: 630px;
-		padding: 40px 40px 50px 53px;
+		padding: 40px 65px 50px 65px;
 	}
 	.panelFloor{
 		width: 650px;

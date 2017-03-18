@@ -12,7 +12,8 @@ var decorsID = [];
 var floorsID = [];
 var stackTextures = [];
 var stackTexturesCopy = [];
-var stackTexturesCount;
+var stackTexturesCount,
+	progressbarStart = false;
 
 $(document).ready(function(){
 	
@@ -52,9 +53,11 @@ $(document).ready(function(){
 		    duration: 3000,
 		    easing: 'easeInOut'
 		});
-        if(progressbarValue >= 0.599 && progressbarValue <= 0.6){
+        if(progressbarValue >= 0.58 && !progressbarStart){
+        	// console.log();
+        	progressbarStart = true;
         	bar.animate(0.99,{
-			    duration: 30000,
+			    duration: 10000,
 			    easing: 'easeOut'
 			});
         }
@@ -183,6 +186,9 @@ $(document).ready(function(){
 
 	$(window).load(function(e){
 		//начать загружать большие декоры
+		$("body, html").animate({
+			scrollTop : $(".panelDecor").offset().top
+		},100);
 		$('.popUpTexture').each(function(){
 	        var src = $(this).attr("data-src");
 	        //$(this).css("background-image", "url('"+src+"')");
@@ -475,6 +481,10 @@ $(document).ready(function(){
 		$('.panelFloor').toggleClass("showContent");
 		clickLayers = true;
 	});
+
+	$("body, html").animate({
+		scrollTop : $(".panelDecor").offset().top
+	},800);
 
 	function openFloor(){
 		if( isIE ){
