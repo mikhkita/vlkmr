@@ -26,6 +26,7 @@ $(document).ready(function(){
 	function supportHistory() {
 		return !!(window.history && history.pushState);
 	}
+
 	var valueInc = 0.3 / ($('.popUpTexture').length + $('.floors').length);
 	var height = 140;
 	if( isIE ){
@@ -637,7 +638,7 @@ $(document).ready(function(){
 		this.events = {};
 		this.default = {};
 		this.defaultFloor = "";
-		this.countSVG = dataStack;
+		this.countSVG = $('#default-hash').attr("data-stack");
 		this.countTextures = $('#default-hash').attr("data-countTextures");
 
 
@@ -743,6 +744,7 @@ $(document).ready(function(){
 		}
 
 		this.parse = function() {
+			console.log("PARSE");
 			var path;
 			var data = this.get;
 			if(!supportHistory()){
@@ -817,6 +819,8 @@ $(document).ready(function(){
 				return
 			}
 			this.params[position] = texture;
+			var dataColor = $('.popUpTexture[data-id="'+this.params[position]+'"]').attr("data-color");
+			$('.block'+(+position+1)+'BackSmall').attr("fill", dataColor);
 			this.urlUpdate(false);
 		}
 		this.urlPushFloor = function(texture) {
