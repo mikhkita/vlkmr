@@ -51,17 +51,18 @@ $(document).ready(function(){
 	function ProgressBarInc(value){
 	  	progressbarValue += value;
         bar.animate(progressbarValue,{
-		    duration: 3000,
+		    duration: 5000,
 		    easing: 'easeInOut'
+		}, function(){
+			console.log(progressbarValue);
+			if(progressbarValue >= 0.58 && !progressbarStart){
+	        	progressbarStart = true;
+	        	bar.animate(0.99,{
+				    duration: 10000,
+				    easing: 'easeOut'
+				});
+	        }
 		});
-        if(progressbarValue >= 0.58 && !progressbarStart){
-        	// console.log();
-        	progressbarStart = true;
-        	bar.animate(0.99,{
-			    duration: 10000,
-			    easing: 'easeOut'
-			});
-        }
 	}
 
 	$('.popUpTexture').each(function(){
@@ -548,79 +549,81 @@ $(document).ready(function(){
 				    easing: 'easeInOut'
 				},  
 				function() {
-				    if( isIE ){
-			    		$('.progressbarContain').fadeOut(250);
-		                $('.rel').fadeIn(500);
-		            }else{
-		            	$('.progressbarContain').addClass("hideContent");
-		            	$('.rel').addClass("showContent");
-		            }
-					$('.popUpTexture').slice(0,9).click();
-		            $('.popUpTexture').eq(0).click();
-		            $('.share, .iconDecors, .classSVGFront, .mainTextureContainer').click(function(){
-						$('.iconDecorsQtip').qtip('hide');
-					});
-					if(isMobile || isSmallTablet){
-						$('.iconDecorsQtip[title]').qtip({
-							position: {
-					            my: 'right center',
-					            at: 'right center',
-					            adjust: {
-						            x: -72,
-						            y: 18
-						        }
-					        },
-					        style: {
-								classes: 'qtipFontMobile qtipCustom qtip-light qtip-decors',
-					        	tip: {
-					        		width: 22, height: 11, border: 0
-					        	}
-					        },
-					        show: {
-					            ready: true // Show the tooltip when ready
-					        },
-						    hide: {
-						        event: 'click'
-						    },
-						    events: {
-						        hide: function (event, api) {
-						            var $qtip = api;
-						            $qtip.destroy();
-						        }
-						    }
+					setTimeout(function(){
+						if( isIE ){
+				    		$('.progressbarContain').fadeOut(250);
+			                $('.rel').fadeIn(500);
+			            }else{
+			            	$('.progressbarContain').addClass("hideContent");
+			            	$('.rel').addClass("showContent");
+			            }
+						$('.popUpTexture').slice(0,9).click();
+			            $('.popUpTexture').eq(0).click();
+			            $('.share, .iconDecors, .classSVGFront, .mainTextureContainer').click(function(){
+							$('.iconDecorsQtip').qtip('hide');
 						});
-					}else{
-						$('.iconDecorsQtip[title]').qtip({
-							position: {
-					            my: 'right center',
-					            at: 'right center',
-					            adjust: {
-						            x: -50,
-						            y: 10
-						        }
-					        },
-					        style: {
-								classes: 'qtipFont qtipCustom qtip-light qtip-decors',
-					        	tip: {
-					        		width: 22, height: 11, border: 0
-					        	}
-					        },
-					        show: {
-					            ready: true // Show the tooltip when ready
-					        },
-						    hide: {
-						        event: 'click'
-						    },
-						    events: {
-						        hide: function (event, api) {
-						            var $qtip = api;
-						            $qtip.destroy();
-						        }
-						    }
-						});
-					}
-					qtipScroll();
-		        	$(window).resize();
+						if(isMobile || isSmallTablet){
+							$('.iconDecorsQtip[title]').qtip({
+								position: {
+						            my: 'right center',
+						            at: 'right center',
+						            adjust: {
+							            x: -72,
+							            y: 18
+							        }
+						        },
+						        style: {
+									classes: 'qtipFontMobile qtipCustom qtip-light qtip-decors',
+						        	tip: {
+						        		width: 22, height: 11, border: 0
+						        	}
+						        },
+						        show: {
+						            ready: true // Show the tooltip when ready
+						        },
+							    hide: {
+							        event: 'click'
+							    },
+							    events: {
+							        hide: function (event, api) {
+							            var $qtip = api;
+							            $qtip.destroy();
+							        }
+							    }
+							});
+						}else{
+							$('.iconDecorsQtip[title]').qtip({
+								position: {
+						            my: 'right center',
+						            at: 'right center',
+						            adjust: {
+							            x: -50,
+							            y: 10
+							        }
+						        },
+						        style: {
+									classes: 'qtipFont qtipCustom qtip-light qtip-decors',
+						        	tip: {
+						        		width: 22, height: 11, border: 0
+						        	}
+						        },
+						        show: {
+						            ready: true // Show the tooltip when ready
+						        },
+							    hide: {
+							        event: 'click'
+							    },
+							    events: {
+							        hide: function (event, api) {
+							            var $qtip = api;
+							            $qtip.destroy();
+							        }
+							    }
+							});
+						}
+						qtipScroll();
+			        	$(window).resize();
+					},200);
 				});
 		    }
 		}
@@ -752,7 +755,7 @@ $(document).ready(function(){
 		}
 
 		this.parse = function() {
-			// console.log("PARSE");
+			console.log("PARSE");
 			var path;
 			var data = this.get;
 			if(!supportHistory()){
