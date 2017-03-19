@@ -4044,8 +4044,12 @@ ul.b-workshop-list{
 }
 
 .progressbarContain{
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
 	position: absolute;
 	z-index: 10;
 	-webkit-transition: opacity 300ms ease-out;

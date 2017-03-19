@@ -752,7 +752,7 @@ $(document).ready(function(){
 		}
 
 		this.parse = function() {
-			// console.log("PARSE");
+			console.log("PARSE");
 			var path;
 			var data = this.get;
 			if(!supportHistory()){
