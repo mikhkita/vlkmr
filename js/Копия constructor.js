@@ -161,15 +161,6 @@ $(document).ready(function(){
 		if(window.innerWidth <= 768){
 			stackTexturesUpdate(0);
 		}
-
-		console.log($('.b-wide-block').width(), "room ", $('#room').width());
-		if($(window).width() >= $('.b-wide-block').width()
-			&& $('#room').height() < myHeight - height
-			&& $('#room').width() === $('.b-wide-block').width()){
-			$('.fullSize').addClass("hide");
-		}else{
-			$('.fullSize').removeClass("hide");
-		}
 	});
 
 	function stackTexturesUpdate(elements){
@@ -345,7 +336,7 @@ $(document).ready(function(){
 
 	function qtipScroll(){
 		//console.log($(this).scrollTop(),  $(".panelDecor").offset().top);
-		if($(window).scrollTop() + 55 > $(".panelDecor").offset().top){
+		if($(this).scrollTop() + 55 > $(".panelDecor").offset().top){
 			if( !isMobile && !isSmallTablet ){
 				$('.repeatPrev[title], .repeatPrev2[title], .repeatNext[title], .repeatNext2[title], .layers[title]').qtip({
 				  	position: {
@@ -761,7 +752,7 @@ $(document).ready(function(){
 		}
 
 		this.parse = function() {
-			// console.log("PARSE");
+			console.log("PARSE");
 			var path;
 			var data = this.get;
 			if(!supportHistory()){
@@ -934,50 +925,28 @@ $(document).ready(function(){
 				stackTextures.pop();
 			}
 			stackTextures.unshift(thisTexture.attr("data-id"));
-
+			//console.log(stackTextures);
 			thisTexture.addClass("mainTexture").removeClass("popUpTexture");
-			if($(window).scrollTop() + 55 > $(".panelDecor").offset().top){
-				if( !isMobile && !isSmallTablet )
-					thisTexture.qtip({
-				  		position: {
-			                at: 'bottom center',
-			                my: 'top center',
-			                adjust: {
-					            y: 9
-					        }
-			            },
-				        style: {
-			    			classes: 'qtipFont qtipCustomBrown qtip-light',
-			            	tip: {
-			            		width: 22, height: 11, border: 0
-			            	}
-			            },
-			            hide: {
-					        event: 'click mouseleave'
-					    }
-				  	});
-			}else{
-				if( !isMobile && !isSmallTablet ){
-					thisTexture.qtip({
-				  		position: {
-			                my: 'bottom center',
-			                at: 'top center',
-			                adjust: {
-					            y: -8
-					        }
-			            },
-			            style: {
-			    			classes: 'qtipFont qtipCustom qtip-light',
-			            	tip: {
-			            		width: 22, height: 11, border: 0
-			            	}
-			            },
-			            hide:{
-					        event: 'mouseleave click'
-					    }
-				  	});
-				}
-			}
+
+			if( !isMobile && !isSmallTablet )
+				thisTexture.qtip({
+			  		position: {
+		                my: 'bottom center',
+		                at: 'top center',
+		                adjust: {
+				            y: -8
+				        }
+		            },
+		            style: {
+		    			classes: 'qtipFont qtipCustom qtip-light',
+		            	tip: {
+		            		width: 22, height: 11, border: 0
+		            	}
+		            },
+		            hide:{
+				        event: 'mouseleave click'
+				    }
+			  	});
 		  	//console.log($('.textures div').first());
 		  	/*$('.textures div').first().addClass("currentTexture").removeClass("mainTexture activeTextureSlider fancy");
 			$('.textures').prepend(thisTexture);
