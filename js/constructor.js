@@ -12,15 +12,48 @@ var decorsID = [];
 var floorsID = [];
 var stackTextures = [];
 var stackTexturesCopy = [];
+var closeQtip = true;
 var stackTexturesCount,
 	progressbarStart = false;
 
 $(document).ready(function(){
-	
+
 	if($('#default-hash').attr("data-countReflection")){
 		var dataStack = +$('#default-hash').attr("data-countReflection") + +$('#default-hash').attr("data-stack");
 	}else{
 		var dataStack = +$('#default-hash').attr("data-stack");
+	}
+
+	function bindClickQtip(){
+		console.log(!$(this).hasClass("activeTextureFancy"));
+		//if(!$('prevTexturePopup').hasClass("activeTextureFancy"))
+		closeQtip = false;
+		$('.clickQtip[title]').qtip({
+			position: {
+	            my: 'bottom center',
+				at: 'top left',
+	        },
+	        style: {
+				classes: 'qtipFontMobile qtipCustom qtip-light qtip-decors qtip-flashing',
+	        	tip: {
+	        		width: 22, height: 11, border: 0
+	        	}
+	        },
+	        show: {
+	            ready: true // Show the tooltip when ready
+	        },
+		    hide: {
+		        event: 'click'
+		    },
+		    events: {
+		        hide: function (event, api) {
+		            var $qtip = api;
+		            $qtip.destroy();
+		            console.log("UN-BIND");
+		            closeQtip = true;
+		        }
+		    }
+		});
 	}
 
 	function supportHistory() {
@@ -236,6 +269,12 @@ $(document).ready(function(){
 				{
 					height: autoHeight,
 					width: $('.b-wide-block').width()
+				},{
+					complete: function(){
+						if(!closeQtip){
+							bindClickQtip();
+						}
+					}
 				});
 			$('.fullSize').qtip('option', 'content.text', $(this).attr("data-title-small"));
 			$('.icon-small-size').css("display", "inline-block");
@@ -254,6 +293,12 @@ $(document).ready(function(){
 				{
 					height: myHeight - height,
 					width: autoWidth
+				},{
+					complete: function(){
+						if(!closeQtip){
+							bindClickQtip();
+						}
+					}
 				});
 				$('.fullSize').qtip('option', 'content.text', $(this).attr("data-title-full"));
 				$('.icon-small-size').css("display", "none");
@@ -570,7 +615,16 @@ $(document).ready(function(){
 			            $('.popUpTexture').eq(0).click();
 			            $('.share, .iconDecors, .classSVGFront, .mainTextureContainer').click(function(){
 							$('.iconDecorsQtip').qtip('hide');
+							$('.clickQtip').qtip('hide');
 						});
+
+						$('.clickQtip').css({
+							"left": $('.clickQtip').attr("data-Qtip-x"),
+							"top": $('.clickQtip').attr("data-Qtip-y")
+						});
+			            $('.currentTexture, .popUpTexture').bind('click', bindClickQtip);
+			            $('.activeTextureFancy').unbind('click', bindClickQtip);
+
 						if(isMobile || isSmallTablet){
 							$('.iconDecorsQtip[title]').qtip({
 								position: {
@@ -1231,6 +1285,7 @@ $(document).ready(function(){
 
 	//Кликнули по любой области SVG
 	$('.classSVGFront').click(function(e){
+		$('.currentTexture, .popUpTexture').unbind('click', bindClickQtip);
 		clickElem = $(this).attr("data-id");//block1
 		if(currentTexture != undefined && currentTexture.attr("data-src") != $('#image'+clickElem).children().attr("xlink:href"))
 		{
